@@ -1,0 +1,113 @@
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+	padding: 0;
+	margin: 0;
+	background-color: #f4f4f4;
+}
+/*global*/
+.container{
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+	/* if something goes outside of a div	*/
+}
+.button1{
+	height: 38px;
+	background: #9D2235;
+	border: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #ffffff; 
+}
+.links{
+	border: 2px black;
+}
+/*header*/
+header{
+	background: white;
+	color: #ffffff;
+	padding-top: 30px;
+	min-height: 70px;
+	border-bottom: #9D2235 3px solid;
+}
+/*all of the links in the header*/
+header a{
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+header ul{
+	border: 20px black;
+}
+header li{
+	
+	display: inline-block;
+	width: 15%;
+	padding: 10px;
+}
+header #branding{
+	float: left;
+}
+header #branding img{
+	width: 300px;
+}
+header nav{
+	width: 50%;
+	float: right;
+	margin-top: 10px;
+}
+header .highlight, header .current a{
+	color: #9D2235;
+	font-weight: bold;
+}
+header a:hover{
+	color: #cccccc;
+	font-weight: bold;
+}
+/*showcase*/
+#showcase{
+	min-height: 400px;
+	/* 0 is the x axis, -400 means move up 400px*/
+	background: url("./images/background.jpg") no-repeat 0 0;
+	text-align: center;
+	color: #ffffff;
+}
+#showcase h1{
+	color: #9D2235;
+	font-weight: bold;
+	margin-top: 100px;
+	font-size: 55px;
+	margin-bottom: 10px;
+}
+#showcase p{
+	font-size: 20px;
+	color: #9D2235;
+	font-weight: italic;
+}
+/*boxes*/
+#boxes{
+	margin-top: 20px;
+}
+#boxes .box{
+	float: left;
+	width: 30%;
+	padding: 10px;
+	text-align: center;
+}
+#boxes .box img{
+	width: 90px;
+}
+footer{
+	padding: 20px;
+	margin-top: 20px;
+	color: #ffffff;
+	background-color: #9D2235;
+	text-align: center;
+	position:absolute;
+    bottom:0;
+    width:100%;
+}
+
+

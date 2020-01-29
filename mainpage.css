@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+body {
+	font-family: "Lora", serif;
+	font-size: 15pt;
+	background-image: url("images/landingbackground.jpg");
+}
+
+#welcome {
+	font-family: "Tangerine";
+	text-align: center;
+	font-size: 45pt;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+#existingSyllabi {
+	margin-left: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	font-family: "Lora", serif;
+	text-shadow: -5px 5px 10px #9c9b9b;
+	font-weight: bold;
+	font-size: 30pt;	
+}
+
+hr {
+	border-top: 2px dashed black;
+}
+
+footer {
+	font-family: "Lora", serif;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}	
+
+footer p {
+	padding-left: 10px;
+}
+
+.navbar {
+	font-family: "Lora", serif;
+	font-size: 15pt;
+}
+
+.prof-course-info {
+	font-family: "Lora", serif;
+	text-align: center;
+	margin: auto;
+	display: block-inline;
+}
+
+.prof-course-info button {
+	font-family: "Lora", serif;
+	background-color: #343a40;
+	border-color: black;
+	margin-left: 10px;
+	margin-right: 10px;
+	box-shadow: -5px 10px 8px grey;
+}
+
+.prof-course-info a {
+	font-family: "Lora", serif;
+	text-decoration: none;
+	color: white;
+	background-color: #343a40;
+	
+}
+
+.prof-course-info button:hover, .syllabusList button:hover {
+	background-color: #343a40;
+	text-decoration: none;
+}
+
+.prof-course-info a:hover, .syllabusList a:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.prof-course-info button:active, .syllabusList button:active {
+  background-color: #343a40;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  text-decoration: none;
+}
+
+.prof-course-info a:active {
+	background-color: #343a40;
+}
+
+.syllabusList {
+	margin-left: 20px;
+}
+
+.syllabusList a {
+	font-family: "Lora", serif;
+	text-decoration: none;
+	color: white;
+	font-size: 10pt;
+}
+
+.syllabusList button {
+	font-family: "Lora", serif;
+	background-color: #343a40;
+	border-color: black;
+	margin-left: 10px;
+	margin-right: 10px;
+	box-shadow: -5px 10px 8px grey;
+	display: inline;
+	
+}
+
+.syllabusList button:active {
+  background-color: #343a40;
+  color: #343a40;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.syllabusList ul {
+	font-family: "Lora", serif;
+	font-size: 20pt;
+}
+
+.syllabusList ul li {
+	padding-bottom: 15px;
+}
+
+
+
+
+
+
+
