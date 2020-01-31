@@ -14,7 +14,7 @@ if($_GET['error']==1){
 	<link rel="stylesheet" type="text/css" href="landingpage.css">
   	<div class="container"> 
   	  <div id="branding">
-  	  	<a href="index.html"><span class="highlight"><img src="./images/logofinal.png"></span></a>
+  	  	<a href="landingpage.html"><span class="highlight"><img src="./images/logofinal.png"></span></a>
   	  </div><!--end branding-->
   	  <nav>
         <div id="links">
