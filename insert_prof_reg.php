@@ -1,5 +1,7 @@
 <?php
 error_reporting(0);
+require("session_info.php");
+
 
 
 $servername="localhost";
@@ -57,8 +59,13 @@ $address=htmlentities($_REQUEST['address'],ENT_QUOTES);
 					
 					 //echo "$strQuery";exit;
 		 $conn->query($strQuery);
+		 $last_id = $conn->insert_id;
 		 
-		 header("Location:landingpage.php");
+		 $_SESSION["FKPROFID"] = $last_id;
+
+ 		//echo $last_id; exit;
+
+		 header("Location:mainpage.php");
 }
 else {
 	echo "Passwords Do Not Match. Please Try Again.";	

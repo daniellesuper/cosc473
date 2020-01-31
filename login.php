@@ -14,12 +14,12 @@ if($_GET['error']==1){
 	<link rel="stylesheet" type="text/css" href="landingpage.css">
   	<div class="container"> 
   	  <div id="branding">
-  	  	<a href="index.html"><span class="highlight"><img src="./images/logofinal.png"></span></a>
+  	  	<a href="landingpage.html"><span class="highlight"><img src="./images/logofinal.png"></span></a>
   	  </div><!--end branding-->
   	  <nav>
         <div id="links">
   	  	<ul>
-  	  	  <li class="current"><a href="index.html">Home</a></li>
+  	  	  <li class="current"><a href="landingpage.html">Home</a></li>
           <li class="current"><a href="contact.php">Contact</a></li>
           <li class="current"><a href="register.php">Register</a></li>
           <li class="current"><a href="index.php">Login</a></li>  

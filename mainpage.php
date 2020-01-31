@@ -12,7 +12,7 @@ if($conn-> connect_error){
 die("Connection Failed". $conn->connect_error);
 }
 
-$profID = $_SESSION["FKPROFID"]
+$profID = $_SESSION["FKPROFID"];
 ?>
 
 <html>
@@ -71,7 +71,7 @@ $profID = $_SESSION["FKPROFID"]
     function get_course_list($conn)
     {
  
-        $sql = "SELECT * FROM courseinfo";
+        $sql = "SELECT * FROM courseinfo WHERE FKprofID = $profID";
         $result = $conn->query($sql);
 		
 		$row = mysqli_num_rows($result);

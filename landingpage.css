@@ -6,6 +6,7 @@ body{
 	margin: 0;
 	background-color: #f4f4f4;
 }
+
 /*global*/
 .container{
 	width: 80%;
@@ -21,8 +22,8 @@ body{
 	padding-right: 20px;
 	color: #ffffff; 
 }
-.links{
-	border: 2px black;
+nav .links{
+	width: 100%;
 }
 /*header*/
 header{
@@ -37,9 +38,6 @@ header a{
 	color: #ffffff;
 	text-decoration: none;
 	text-transform: uppercase;
-}
-header ul{
-	border: 20px black;
 }
 header li{
 	
