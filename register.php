@@ -1,11 +1,29 @@
 <html>
 <body>
 <link rel="stylesheet" type="text/css" href="landingpage.css">
-<form name="register" action="insert_prof_reg.php" method="post">
 
- 
- <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" >
- <?php error_reporting(0); 
+<header>
+<header>
+    <div class="container"> 
+      <div id="branding">
+        <a href="landingpage.html"><span class="highlight"><img src="./images/logofinal.png"></span></a>
+      </div><!--end branding-->
+      <nav>
+        <div id="links">
+        <ul>
+          <li class="current"><a href="landingpage.html">Home</a></li>
+          <li class="current"><a href="about.php">About</a></li>
+          <li class="current"><a href="contact.php">Contact</a></li>
+          <li class="current"><a href="register.php">Register</a></li>
+          <li class="current"><a href="index.php">Login</a></li>  
+        </ul>
+        </div><!--end links-->
+      </nav>
+    </div><!--end container-->
+  </header>
+  <form name="register" action="insert_prof_reg.php" method="post">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" >
+<?php error_reporting(0); 
  $error=0;
  
    if($_REQUEST['error']==1){ 
@@ -127,4 +145,7 @@
 </table>
 </form>
 </body>
+<footer>
+    <p>PSH Web Design, Don't Copy Shit &copy; 2020</p>
+  </footer>
 </html>
