@@ -19,10 +19,10 @@ if($_GET['error']==1){
   	  <nav>
         <div id="links">
   	  	<ul>
-  	  	  <li class="current"><a href="index.html">Home</a></li>
+  	  	  <li class="current"><a href="landingpage.html">Home</a></li>
           <li class="current"><a href="contact.php">Contact</a></li>
           <li class="current"><a href="register.php">Register</a></li>
-          <li class="current"><a href="index.php">Login</a></li>  
+          <li class="current"><a href="login.php">Login</a></li>  
   	  	</ul>
         </div><!--end links-->
   	  </nav>
