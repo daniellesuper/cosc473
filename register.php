@@ -1,8 +1,6 @@
 <html>
 <body>
 <link rel="stylesheet" type="text/css" href="landingpage.css">
-
-<header>
 <header>
     <div class="container"> 
       <div id="branding">
