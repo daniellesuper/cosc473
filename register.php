@@ -145,6 +145,6 @@
 </form>
 </body>
 <footer>
-    <p>PSH Web Design, Don't Copy Shit &copy; 2020</p>
+    <p>PSH Web Design, Don't Copy This &copy; 2020</p>
   </footer>
 </html>
