@@ -9,9 +9,8 @@ body{
 
 /*global*/
 .container{
-	width: 90%;
+	width: 80%;
 	margin: auto;
-	padding: 15px;
 	overflow: hidden;
 	/* if something goes outside of a div	*/
 }
@@ -65,7 +64,6 @@ header #branding{
 }
 header #branding img{
 	width: 300px;
-	margin-left: 0px;
 }
 header nav{
 	float: right;
@@ -81,7 +79,8 @@ header a:hover{
 }
 /*showcase*/
 #showcase{
-	min-height: 600px;
+	min-height: 400px;
+	/* 0 is the x axis, -400 means move up 400px*/
 	background: url("./images/background.jpg") no-repeat 0 0;
 	text-align: center;
 	color: #ffffff;
@@ -98,19 +97,33 @@ header a:hover{
 	color: #9D2235;
 	font-weight: italic;
 }
-
-.It-support-center{
-
-	margin-left: 60px;
+/*boxes*/
+#boxes{
+	margin-top: 20px;
+}
+#boxes .box{
+	float: left;
+	width: 30%;
+	padding: 10px;
+	text-align: center;
+}
+#boxes .box img{
+	width: 90px;
 }
 
+.It-support-center{
+	margin-left: 100px;
+}
+
+
 .It-office-hours{
-	display: inline-block;
 	position: relative;
 	float: right;
 	bottom: 215px;
-	margin-right: 60px;
+	margin-right: 600px;
+	
 }
+
 
 footer{
 	padding: 20px;
