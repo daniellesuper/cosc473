@@ -97,6 +97,21 @@ header a:hover{
 #boxes .box img{
 	width: 90px;
 }
+
+.It-support-center{
+	margin-left: 100px;
+}
+
+
+.It-office-hours{
+	position: relative;
+	float: right;
+	bottom: 215px;
+	margin-right: 600px;
+	
+}
+
+
 footer{
 	padding: 20px;
 	margin-top: 20px;
