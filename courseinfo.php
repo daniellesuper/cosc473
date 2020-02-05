@@ -38,10 +38,6 @@ $topicname1 =$row[topicname1];
 //end of if
 ?>
 
-
-
-<header>
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
 <!-- jQuery library -->
@@ -51,25 +47,7 @@ $topicname1 =$row[topicname1];
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script src="https://cdn.ckeditor.com/4.11.2/standard/ckeditor.js"></script>
 <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
-</header>
 
-<head>
-	<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">InfoSyllabus&copy;</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="mainpage.php">Home</a></li> 
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-    </ul>
-  </div>
-</nav>
-
-</head>
 
 <h1 style="padding-left: 25px">Course Information</h1>
 
@@ -148,4 +126,3 @@ Weight: &nbsp <input type="text" length="25" name="weight1"> <br><br>
 </script>
 	
 </form>
-
