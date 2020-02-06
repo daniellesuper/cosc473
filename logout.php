@@ -10,12 +10,9 @@ $_SESSION = NULL;
 $_SESSION = [];
 session_unset();
 
-
-
 session_destroy();
 $PKID = $_SESSION["FKPROFID"];
-
-header("location: landingpage.html");
+header("location: index.html");
 
 //echo $PKID;
 
