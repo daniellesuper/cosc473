@@ -1,11 +1,17 @@
 <?php
 
 
+//echo "testing"; exit;
+
 //pointvalue1=$_REQUEST['weight1'];
-//echo $_REQUEST['weight2'];exit;
+//cho $_REQUEST['weight2'];exit;
 
 
 require("session_info.php");
+
+$FKPROFID = $_SESSION['FKPROFID'];
+
+
 error_reporting(0);
 
 $servername="localhost";
@@ -74,7 +80,7 @@ if ($fp) {
      //         where prof-info(PKID) = '8'
        //       ";
 	//$conn->query($strQuery);
-	
+	/*
 	$result = $conn->query($sql);
 	$row=mysqli_num_rows($result);
 
@@ -82,8 +88,11 @@ if ($fp) {
 		@header("Location: mainpage.php");
      exit;
    }else{
+   	*/
 	   
-	    $FKPROFID = $_SESSION['FKPROFID'];
+	
+	    
+	   
          $strQuery="insert into courseinfo
                       (
                        FKProfID, coursecode, coursename, meetingday, bookname, bookisbn, bookauthor, bookpicture, 
@@ -98,14 +107,27 @@ if ($fp) {
                      )
                     ";
 		
-        //echo $strQuery;exit;
+
+              /*  $strQuery="insert into courseinfo
+                      (
+                       FKProfID, coursecode, coursename, meetingday, bookname, important_points,bookisbn, bookauthor,topicname1,pointvalue1,topicname2, pointvalue2
+                      )
+                     values
+                     (
+                       $FKPROFID, '$courseCode', '$courseName', '$meetingDays', '$bookName', '$importantPoints', '$isbn', '$author','$topicname1',    '$pointvalue1','$topicname2', '$pointvalue2'
+                    "; */
+
+
+
+      //echo $strQuery;exit;
 	
 		$conn->query($strQuery);
 		
+		exit;
 		
-		 header("Location: mainpage.php");
+		 header("Location: courseinfo.php");
 		 exit;
-	}
+	
 	
 	
          //@header('Location: index.php?page=register&added=1');
