@@ -45,9 +45,9 @@ if($_GET['error']==1){
 			<label for="psw"><b>Password</b></label>
 			<input type="password" placeholder="Enter Password" name="psw" required><br><br>
 			
-			<button type="submit" class="btn btn-outline-secondary">Login</button>
+			<button type="submit" class="btn btn-outline-secondary">Login</button><br><br>
 			<!-- <button type="button" class="btn btn-outline-secondary">Login With Google</button>		-->
-			<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div> 			
+			<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div> <br>			
     			<script>
       				function onSignIn(googleUser) { 
         			// Useful data for your client-side scripts:
@@ -76,6 +76,4 @@ if($_GET['error']==1){
 <footer>
   	<p>PSH Web Design, Don't Copy This &copy; 2020</p>
   </footer>
-  
 </body>
- 
