@@ -87,7 +87,6 @@ Class Days &nbsp <select name="meetingDays">
 				<option value="0"> -- </option>
 				<option value="online"> online </option>
 				<option value="MWF"> MWF </option>
-				<option value="TR"> MWF </option>
 				<option value="MF"> MF </option>
 				<option value="WF"> WF </option>
 				<option value="MW"> MW </option>
