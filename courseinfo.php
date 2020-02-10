@@ -182,34 +182,34 @@ Weight: &nbsp <input type="text" length="25" name="weight7" value="0"> <br>
 		gradeId++;
 		var grade = 'gradeName' + gradeId;
 		var divName = 'grade' + gradeId;
-<<<<<<< Updated upstream
+
 		var html = 
 					'Name: <input type="text" length="25" name="gradeName'+gradeId+'"> &nbsp' +
 					'Weight: &nbsp <input type="text" length="25" name="weight' + gradeId + '"> &nbsp'
 					+'<a href="" onclick="removeElement(divName); return false;">Remove</a>'
-=======
+
 		alert (divName);
 		var html = 
 					'Name: <input type="text" length="25" name="gradeName'+gradeId+'"> &nbsp' +
 					'Weight: &nbsp <input type="text" length="25" name="weight' + gradeId + '"> &nbsp'
 					+'<a href="" onClick="removeElement(divName);return false;">Remove</a>'
->>>>>>> Stashed changes
+
 					;
 		addElement('gradeWeight', 'p', 'grade' + gradeId, html);
 	}
 	
 	function removeElement(elementId){
-<<<<<<< Updated upstream
+
 		var element = document.getElementById(elementId);
 		element.remove();
 		alert ("removed successfully!");
 	}
-=======
+
 		
 		var element = document.getElementById(elementId);
 		element.parentNode.removeChild(element);
 	}*/
->>>>>>> Stashed changes
+
 </script>
 </form>
 </body>
