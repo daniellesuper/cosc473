@@ -58,7 +58,7 @@ $profID = $_SESSION["FKPROFID"];
 	<h2 id="existingSyllabi">Existing Syllabi</h2>
 	
 	<?php
-	$servername = "localhost";
+	/*$servername = "localhost";
 	$username = "root";
 	$password = "";
 	$dbname = "info-syllabus";
@@ -67,8 +67,9 @@ $profID = $_SESSION["FKPROFID"];
 	if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 	} 
-	
-    function get_course_list($conn)
+	*/
+
+    function get_course_list($conn, $profID)
     {
  
         $sql = "SELECT * FROM courseinfo WHERE FKprofID = $profID";
@@ -87,7 +88,7 @@ $profID = $_SESSION["FKPROFID"];
         return $ret;
     }
 	
-      $courses = get_course_list($conn); 
+      $courses = get_course_list($conn, $profID); 
       foreach($courses as $ap) {
           $course = $ap['coursecode'];
 		  $courseID = $ap['PKID'];

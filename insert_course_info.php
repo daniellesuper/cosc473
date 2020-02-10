@@ -1,8 +1,22 @@
 <?php
 
 
+<<<<<<< Updated upstream
 //pointvalue1=$_REQUEST['weight1'];
 //echo $_REQUEST['weight2'];exit;
+=======
+//echo "testing"; exit;
+
+
+//echo $_REQUEST['weight2'];
+
+//$pointvalue2=htmlentities($_REQUEST['weight2'],ENT_QUOTES);
+
+//echo $pointvalue2;
+
+//exit;
+
+>>>>>>> Stashed changes
 
 
 require("session_info.php");
@@ -82,9 +96,14 @@ if ($fp) {
 		@header("Location: mainpage.php");
      exit;
    }else{
+<<<<<<< Updated upstream
 	   
 	    $FKPROFID = $_SESSION['FKPROFID'];
          $strQuery="insert into courseinfo
+=======
+   	*/ 
+        /*  $strQuery="insert into courseinfo
+>>>>>>> Stashed changes
                       (
                        FKProfID, coursecode, coursename, meetingday, bookname, bookisbn, bookauthor, bookpicture, 
 					   important_points, topicname1, pointvalue1, topicname2, pointvalue2, topicname3, pointvalue3, 
@@ -100,6 +119,7 @@ if ($fp) {
 					   '$topicname5','$pointvalue5', '$topicname6',
 					   '$pointvalue6', '$topicname7', '$pointvalue7','$img_mime'
                      )
+<<<<<<< Updated upstream
                     ";
 		
 <<<<<<< Updated upstream
@@ -108,15 +128,22 @@ if ($fp) {
 =======
 
               /*  $strQuery="insert into courseinfo
+=======
+                    ";*/
+                    $strQuery="insert into courseinfo
+>>>>>>> Stashed changes
                       (
-                       FKProfID, coursecode, coursename, meetingday, bookname, important_points,bookisbn, bookauthor,topicname1,pointvalue1,topicname2, pointvalue2
+                       FKProfID, coursecode, coursename, meetingday, bookname, bookisbn, bookauthor,
+					   important_points, topicname1, pointvalue1, topicname2, pointvalue2, topicname3, pointvalue3, 
+					   topicname4, pointvalue4, topicname5, pointvalue5, topicname6, pointvalue6, topicname7, pointvalue7,img_mime
                       )
                      values
                      (
-                       $FKPROFID, '$courseCode', '$courseName', '$meetingDays', '$bookName', '$importantPoints', '$isbn', '$author','$topicname1',    '$pointvalue1','$topicname2', '$pointvalue2'
-                    "; */
-
-
+                       $FKPROFID, '$courseCode', '$courseName', '$meetingDays', '$bookName', '$isbn', '$author', 
+					   '$importantPoints', '$topicname1', '$pointvalue1', '$topicname2', '$pointvalue2', '$topicname3', '$pointvalue3',
+					   '$topicname4', '$pointvalue4', '$topicname5','$pointvalue5', '$topicname6','$pointvalue6', '$topicname7', '$pointvalue7','$img_mime'
+                     )
+                    ";
 
       //echo $strQuery;exit;
 
