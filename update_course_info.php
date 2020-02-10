@@ -54,7 +54,7 @@ if ($fp) {
 
 	if($row > 0){
 		@header("Location: mainpage.php");
-     exit;
+     exit; 
    }else{
 		 $FKPROFID = $_SESSION['PKID'];
          $strQuery="update courseinfo 

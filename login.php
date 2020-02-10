@@ -21,12 +21,15 @@ if($_GET['error']==1){
   	  	<a href="index.html"><span class="highlight"><img src="./images/logofinal.png"></span></a>
   	  </div><!--end branding-->
   	  <nav>
-  	  	  <ul>
-  	  	    <li class="current"><a href="index.html">Home</a></li>
+
+        <div id="links">
+  	  	   <ul>
+            <li class="current"><a href="index.html">Home</a></li>
             <li class="current"><a href="contact.html">Contact</a></li>
             <li class="current"><a href="register.php">Register</a></li>
             <li class="current"><a href="login.php">Login</a></li>  
-  	  	  </ul>
+          </ul>
+        </div><!--end links-->
   	  </nav>
   	</div><!--end container-->
 </header>

@@ -13,7 +13,7 @@ $password="";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if($conn-> connect_error){
 die("Username and Password Invaid!". $conn->connect_error);
-}
+}  
 
 $sql =" Select     
 topicname1, topicname2, topicname3, topicname4, topicname5, topicname6, topicname7, 
@@ -46,7 +46,25 @@ $topicname1 =$row[topicname1];
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script src="https://cdn.ckeditor.com/4.11.2/standard/ckeditor.js"></script>
 <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
-
+<header>
+	<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">InfoSyllabus&copy;</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="about.php">About</a></li>
+      <li><a href="contact.php">Contact</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+	
+	<hr />
+	</header>
 
 <head>
 	<link href="mainpage.css" type="text/css" rel="stylesheet" />
@@ -87,7 +105,6 @@ Class Days &nbsp <select name="meetingDays">
 				<option value="0"> -- </option>
 				<option value="online"> online </option>
 				<option value="MWF"> MWF </option>
-				<option value="TR"> MWF </option>
 				<option value="MF"> MF </option>
 				<option value="WF"> WF </option>
 				<option value="MW"> MW </option>
@@ -116,16 +133,42 @@ Book Image: <input type="file" name="bookImage" /><br><br>
 Grade Breakdown: <br><br>
 
 <div id="gradeWeight">
-<p>
+<p id="grade1">
 Name: <input type="text" length="25" name="gradeName1"> &nbsp 
-Weight: &nbsp <input type="text" length="25" name="weight1"> <br><br>
+Weight: &nbsp <input type="text" length="25" name="weight1" value="0"> <br>
 </p>
+<p id="grade2">
+Name: <input type="text" length="25" name="gradeName2"> &nbsp 
+Weight: &nbsp <input type="text" length="25" name="weight2" value="0"> <br>
+</p>
+<p id="grade3">
+Name: <input type="text" length="25" name="gradeName3"> &nbsp 
+Weight: &nbsp <input type="text" length="25" name="weight3" value="0"> <br>
+</p>
+<p id="grade4">
+Name: <input type="text" length="25" name="gradeName4"> &nbsp 
+Weight: &nbsp <input type="text" length="25" name="weight4" value="0"> <br>
+</p>
+<p id="grade5">
+Name: <input type="text" length="25" name="gradeName5"> &nbsp 
+Weight: &nbsp <input type="text" length="25" name="weight5" value="0"> <br>
+</p>
+<p id="grade6">
+Name: <input type="text" length="25" name="gradeName6"> &nbsp 
+Weight: &nbsp <input type="text" length="25" name="weight6" value="0"> <br>
+</p>
+<p id="grade7">
+Name: <input type="text" length="25" name="gradeName7"> &nbsp 
+Weight: &nbsp <input type="text" length="25" name="weight7" value="0"> <br>
+</p>
+
 </div>
 
-<button type="button" class="btn btn-info" onClick="addGrade();">Add More</button><br><br>
+<!-- <button type="button" class="btn btn-info" onClick="addGrade();">Add More</button><br><br>-->
 <button type="submit" class="btn btn-primary">Submit</button>
 
 <script type="text/javascript">
+	/*
 	function addElement(parentid, elementTag, elementid, html){
 		var p = document.getElementById(parentid);
 		var newElement = document.createElement(elementTag);
@@ -138,19 +181,35 @@ Weight: &nbsp <input type="text" length="25" name="weight1"> <br><br>
 	function addGrade(){
 		gradeId++;
 		var grade = 'gradeName' + gradeId;
+		var divName = 'grade' + gradeId;
+<<<<<<< Updated upstream
 		var html = 
 					'Name: <input type="text" length="25" name="gradeName'+gradeId+'"> &nbsp' +
 					'Weight: &nbsp <input type="text" length="25" name="weight' + gradeId + '"> &nbsp'
-					+'<a href="" onClick="removeElement(\'grade\''+gradeId+');return false;">Remove</a>'
+					+'<a href="" onclick="removeElement(divName); return false;">Remove</a>'
+=======
+		alert (divName);
+		var html = 
+					'Name: <input type="text" length="25" name="gradeName'+gradeId+'"> &nbsp' +
+					'Weight: &nbsp <input type="text" length="25" name="weight' + gradeId + '"> &nbsp'
+					+'<a href="" onClick="removeElement(divName);return false;">Remove</a>'
+>>>>>>> Stashed changes
 					;
 		addElement('gradeWeight', 'p', 'grade' + gradeId, html);
 	}
 	
 	function removeElement(elementId){
-		
-		var element = document.getElementById(elementid);
-		element.parentNode.removeChild(element);
+<<<<<<< Updated upstream
+		var element = document.getElementById(elementId);
+		element.remove();
+		alert ("removed successfully!");
 	}
+=======
+		
+		var element = document.getElementById(elementId);
+		element.parentNode.removeChild(element);
+	}*/
+>>>>>>> Stashed changes
 </script>
-	
 </form>
+</body>
