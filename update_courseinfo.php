@@ -81,7 +81,6 @@ Class Days &nbsp <select name="meetingDays" selected ="<?php echo "$meetingDays"
 				<option value=""> -- </option>
 				<option value="online"> online </option>
 				<option value="MWF"> MWF </option>
-				<option value="TR"> MWF </option>
 				<option value="MF"> MF </option>
 				<option value="WF"> WF </option>
 				<option value="MW"> MW </option>
@@ -110,9 +109,33 @@ Book Image: <input type="file" name="bookImage" /><br><br>
 Grade Breakdown: <br><br>
 
 <div id="gradeWeight">
-<p>
+<p id="grade1">
 Name: <input type="text" length="25" name="gradeName1"> &nbsp 
-Weight: &nbsp <input type="text" length="25" name="weight1"> <br><br>
+Weight: &nbsp <input type="text" length="25" name="weight1" value="0"> <br>
+</p>
+<p id="grade2">
+Name: <input type="text" length="25" name="gradeName2"> &nbsp 
+Weight: &nbsp <input type="text" length="25" name="weight2" value="0"> <br>
+</p>
+<p id="grade3">
+Name: <input type="text" length="25" name="gradeName3"> &nbsp 
+Weight: &nbsp <input type="text" length="25" name="weight3" value="0"> <br>
+</p>
+<p id="grade4">
+Name: <input type="text" length="25" name="gradeName4"> &nbsp 
+Weight: &nbsp <input type="text" length="25" name="weight4" value="0"> <br>
+</p>
+<p id="grade5">
+Name: <input type="text" length="25" name="gradeName5"> &nbsp 
+Weight: &nbsp <input type="text" length="25" name="weight5" value="0"> <br>
+</p>
+<p id="grade6">
+Name: <input type="text" length="25" name="gradeName6"> &nbsp 
+Weight: &nbsp <input type="text" length="25" name="weight6" value="0"> <br>
+</p>
+<p id="grade7">
+Name: <input type="text" length="25" name="gradeName7"> &nbsp 
+Weight: &nbsp <input type="text" length="25" name="weight7" value="0"> <br>
 </p>
 </div>
 
