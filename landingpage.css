@@ -9,8 +9,9 @@ body{
 
 /*global*/
 .container{
-	width: 80%;
+	width: 90%;
 	margin: auto;
+	padding: 15px;
 	overflow: hidden;
 	/* if something goes outside of a div	*/
 }
@@ -22,8 +23,28 @@ body{
 	padding-right: 20px;
 	color: #ffffff; 
 }
-nav .links{
-	width: 100%;
+/*nav bar*/
+nav {
+text-align: center;
+margin: 20px 0 0 ;
+padding: 10px 0;
+}
+
+nav ul{
+  list-style: none;
+  margin: 0 2px;
+  padding: 0;
+}
+
+nav li {
+   display: inline-block;
+   margin: 5px;
+}
+
+nav a {
+  font-weight: normal;
+  padding: 2px;
+  font-size: 18px;
 }
 /*header*/
 header{
@@ -39,20 +60,14 @@ header a{
 	text-decoration: none;
 	text-transform: uppercase;
 }
-header li{
-	
-	display: inline-block;
-	width: 15%;
-	padding: 10px;
-}
 header #branding{
 	float: left;
 }
 header #branding img{
 	width: 300px;
+	margin-left: 0px;
 }
 header nav{
-	width: 50%;
 	float: right;
 	margin-top: 10px;
 }
@@ -66,8 +81,7 @@ header a:hover{
 }
 /*showcase*/
 #showcase{
-	min-height: 400px;
-	/* 0 is the x axis, -400 means move up 400px*/
+	min-height: 600px;
 	background: url("./images/background.jpg") no-repeat 0 0;
 	text-align: center;
 	color: #ffffff;
@@ -84,19 +98,20 @@ header a:hover{
 	color: #9D2235;
 	font-weight: italic;
 }
-/*boxes*/
-#boxes{
-	margin-top: 20px;
+
+.It-support-center{
+
+	margin-left: 60px;
 }
-#boxes .box{
-	float: left;
-	width: 30%;
-	padding: 10px;
-	text-align: center;
+
+.It-office-hours{
+	display: inline-block;
+	position: relative;
+	float: right;
+	bottom: 215px;
+	margin-right: 60px;
 }
-#boxes .box img{
-	width: 90px;
-}
+
 footer{
 	padding: 20px;
 	margin-top: 20px;

@@ -1,3 +1,36 @@
+
+<head>
+  <link href="mainpage.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> 
+  </head>
+  <body>
+  <header>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">InfoSyllabus&copy;</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="mainpage.php">Welcome, Professor!</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+  
+  <hr />
+
+  </header>
+
+
+
+
+
 <?php
 require("session_info.php");
 error_reporting(0);

@@ -1,8 +1,6 @@
 <html>
 <body>
 <link rel="stylesheet" type="text/css" href="landingpage.css">
-
-<header>
 <header>
     <div class="container"> 
       <div id="branding">
@@ -12,7 +10,7 @@
         <div id="links">
         <ul>
           <li class="current"><a href="index.html">Home</a></li>
-          <li class="current"><a href="contact.php">Contact</a></li>
+          <li class="current"><a href="contact.html">Contact</a></li>
           <li class="current"><a href="register.php">Register</a></li>
           <li class="current"><a href="login.php">Login</a></li>  
         </ul>
@@ -145,6 +143,6 @@
 </form>
 </body>
 <footer>
-    <p>PSH Web Design, Don't Copy Shit &copy; 2020</p>
+    <p>PSH Web Design, Don't Copy This &copy; 2020</p>
   </footer>
 </html>

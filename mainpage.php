@@ -31,17 +31,17 @@ $profID = $_SESSION["FKPROFID"];
       <a class="navbar-brand" href="index.html">InfoSyllabus&copy;</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="about.php">About</a></li>
-      <li><a href="contact.php">Contact</a></li>
+      <!-- <li class="active"><a href="#">Home</a></li> -->
+      <li><a href="contact.html">Contact</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      <li><a href="index.html"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
     </ul>
   </div>
 </nav>
 	
 	<hr />
+
 	</header>
 	
 	<div style="font-family: Tangerine; text-align: center; font-size: 45pt; font-weight: bold; margin-bottomm: 20px;">
@@ -58,6 +58,7 @@ $profID = $_SESSION["FKPROFID"];
 	<h2 id="existingSyllabi">Existing Syllabi</h2>
 	
 	<?php
+
 	/*$servername = "localhost";
 	$username = "root";
 	$password = "";
@@ -68,7 +69,6 @@ $profID = $_SESSION["FKPROFID"];
     die("Connection failed: " . $conn->connect_error);
 	} 
 	*/
-
     function get_course_list($conn, $profID)
     {
  
@@ -79,6 +79,7 @@ $profID = $_SESSION["FKPROFID"];
 		
 		if($row == 0){
 			echo "No Syllabus Created"; exit;
+
 		}
 
         while($ar = mysqli_fetch_assoc($result))

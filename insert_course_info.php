@@ -1,10 +1,8 @@
 <?php
 
-
-<<<<<<< Updated upstream
 //pointvalue1=$_REQUEST['weight1'];
 //echo $_REQUEST['weight2'];exit;
-=======
+
 //echo "testing"; exit;
 
 
@@ -16,10 +14,18 @@
 
 //exit;
 
->>>>>>> Stashed changes
+
+//echo "testing"; exit;
+
+//pointvalue1=$_REQUEST['weight1'];
+//cho $_REQUEST['weight2'];exit;
 
 
 require("session_info.php");
+
+$FKPROFID = $_SESSION['FKPROFID'];
+
+
 error_reporting(0);
 
 $servername="localhost";
@@ -88,7 +94,7 @@ if ($fp) {
      //         where prof-info(PKID) = '8'
        //       ";
 	//$conn->query($strQuery);
-	
+	/*
 	$result = $conn->query($sql);
 	$row=mysqli_num_rows($result);
 
@@ -96,14 +102,14 @@ if ($fp) {
 		@header("Location: mainpage.php");
      exit;
    }else{
-<<<<<<< Updated upstream
+   	*/
 	   
-	    $FKPROFID = $_SESSION['FKPROFID'];
+
          $strQuery="insert into courseinfo
-=======
-   	*/ 
-        /*  $strQuery="insert into courseinfo
->>>>>>> Stashed changes
+
+   	
+          $strQuery="insert into courseinfo
+
                       (
                        FKProfID, coursecode, coursename, meetingday, bookname, bookisbn, bookauthor, bookpicture, 
 					   important_points, topicname1, pointvalue1, topicname2, pointvalue2, topicname3, pointvalue3, 
@@ -119,47 +125,37 @@ if ($fp) {
 					   '$topicname5','$pointvalue5', '$topicname6',
 					   '$pointvalue6', '$topicname7', '$pointvalue7','$img_mime'
                      )
-<<<<<<< Updated upstream
+
                     ";
 		
-<<<<<<< Updated upstream
         //echo $strQuery;exit;
-	
-=======
 
               /*  $strQuery="insert into courseinfo
-=======
-                    ";*/
-                    $strQuery="insert into courseinfo
->>>>>>> Stashed changes
                       (
-                       FKProfID, coursecode, coursename, meetingday, bookname, bookisbn, bookauthor,
-					   important_points, topicname1, pointvalue1, topicname2, pointvalue2, topicname3, pointvalue3, 
-					   topicname4, pointvalue4, topicname5, pointvalue5, topicname6, pointvalue6, topicname7, pointvalue7,img_mime
+                       FKProfID, coursecode, coursename, meetingday, bookname, important_points,bookisbn, bookauthor,topicname1,pointvalue1,topicname2, pointvalue2
                       )
                      values
                      (
-                       $FKPROFID, '$courseCode', '$courseName', '$meetingDays', '$bookName', '$isbn', '$author', 
-					   '$importantPoints', '$topicname1', '$pointvalue1', '$topicname2', '$pointvalue2', '$topicname3', '$pointvalue3',
-					   '$topicname4', '$pointvalue4', '$topicname5','$pointvalue5', '$topicname6','$pointvalue6', '$topicname7', '$pointvalue7','$img_mime'
-                     )
-                    ";
+                       $FKPROFID, '$courseCode', '$courseName', '$meetingDays', '$bookName', '$importantPoints', '$isbn', '$author','$topicname1',    '$pointvalue1','$topicname2', '$pointvalue2'
+                    "; */
+
+
 
       //echo $strQuery;exit;
 
->>>>>>> Stashed changes
 		$conn->query($strQuery);
 		
-		
-<<<<<<< Updated upstream
+		exit;
 		 header("Location: mainpage.php");
-=======
+
 
 }
 		 header("Location: courseinfo.php");
->>>>>>> Stashed changes
+
+		 header("Location: courseinfo.php");
+
 		 exit;
-	}
+	
 	
 	
          //@header('Location: index.php?page=register&added=1');
