@@ -92,18 +92,45 @@ if ($fp) {
                       )
                      values
                      (
-                       $FKPROFID, '$courseCode', '$courseName', '$meetingDays', '$bookName', '$isbn', '$author', '$bookImage', 
-					   '$importantPoints', '$topicname1', '$pointvalue1', '$topicname2', '$pointvalue2', '$topicname3', '$pointvalue3',
-					   '$topicname4', '$pointvalue4', '$topicname5','$pointvalue5', '$topicname6','$pointvalue6', '$topicname7', '$pointvalue7','$img_mime'
+                       $FKPROFID, '$courseCode', '$courseName', '$meetingDays', 
+                       '$bookName', '$isbn', '$author', '$bookImage', 
+					   '$importantPoints', '$topicname1', '$pointvalue1', 
+					   '$topicname2', '$pointvalue2', '$topicname3', 
+					   '$pointvalue3','$topicname4', '$pointvalue4', 
+					   '$topicname5','$pointvalue5', '$topicname6',
+					   '$pointvalue6', '$topicname7', '$pointvalue7','$img_mime'
                      )
                     ";
 		
+<<<<<<< Updated upstream
         //echo $strQuery;exit;
 	
+=======
+
+              /*  $strQuery="insert into courseinfo
+                      (
+                       FKProfID, coursecode, coursename, meetingday, bookname, important_points,bookisbn, bookauthor,topicname1,pointvalue1,topicname2, pointvalue2
+                      )
+                     values
+                     (
+                       $FKPROFID, '$courseCode', '$courseName', '$meetingDays', '$bookName', '$importantPoints', '$isbn', '$author','$topicname1',    '$pointvalue1','$topicname2', '$pointvalue2'
+                    "; */
+
+
+
+      //echo $strQuery;exit;
+
+>>>>>>> Stashed changes
 		$conn->query($strQuery);
 		
 		
+<<<<<<< Updated upstream
 		 header("Location: mainpage.php");
+=======
+
+}
+		 header("Location: courseinfo.php");
+>>>>>>> Stashed changes
 		 exit;
 	}
 	

@@ -87,7 +87,7 @@ Book Image: <input type="file" name="bookImage" /><br><br>
 Grade Breakdown: <br><br>
 
 <div id="gradeWeight">
-<p>
+<p id="grade1">
 Name: <input type="text" length="25" name="gradeName1"> &nbsp 
 Weight: &nbsp <input type="text" length="25" name="weight1"> <br><br>
 </p>
@@ -109,19 +109,20 @@ Weight: &nbsp <input type="text" length="25" name="weight1"> <br><br>
 	function addGrade(){
 		gradeId++;
 		var grade = 'gradeName' + gradeId;
+		var divName = 'grade' + gradeId;
 		var html = 
 					'Name: <input type="text" length="25" name="gradeName'+gradeId+'"> &nbsp' +
 					'Weight: &nbsp <input type="text" length="25" name="weight' + gradeId + '"> &nbsp'
-					+'<a href="" onClick="removeElement(\'grade\''+gradeId+');return false;">Remove</a>'
+					+'<a href="" onclick="removeElement(divName); return false;">Remove</a>'
 					;
 		addElement('gradeWeight', 'p', 'grade' + gradeId, html);
 	}
 	
 	function removeElement(elementId){
-		
-		var element = document.getElementById(elementid);
-		element.parentNode.removeChild(element);
+		var element = document.getElementById(elementId);
+		element.remove();
+		alert ("removed successfully!");
 	}
 </script>
-	
 </form>
+</body>
