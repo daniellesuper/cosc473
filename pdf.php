@@ -13,18 +13,18 @@ die("Connection Failed". $conn->connect_error);
 }
 
 $FKPROFID = $_SESSION["FKPROFID"];
-
+ 
 ?>
 
  <?php 
  
-$sql = "SELECT title, fullname, email FROM profinfo WHERE PKID = $FKPROFID";
+$sql = "SELECT title, fullname, officeaddress, email FROM profinfo WHERE PKID = $FKPROFID";
 $result = $conn->query($sql);
 
 if($result->num_rows > 0) {
 	// output data of each row
 	while($row = $result->fetch_assoc()) {
-		echo $row["title"]. " ". $row["fullname"]. " ". $row["email"];
+		echo $row["title"]. " ". $row["fullname"]." ".$row["officeaddress"]. " " .$row["email"];
 		
 	}
 } else {
