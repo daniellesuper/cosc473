@@ -45,7 +45,7 @@ $importantPoints=htmlentities($_REQUEST['importantpoints'],ENT_QUOTES);
 $bookName=htmlentities($_REQUEST['bookName'],ENT_QUOTES);
 $isbn=htmlentities($_REQUEST['isbn'],ENT_QUOTES);
 $author=htmlentities($_REQUEST['author'],ENT_QUOTES);
-//$bookImage=htmlentities($_REQUEST['bookImage'],ENT_QUOTES);
+$bookImage=htmlentities($_REQUEST['bookImage'],ENT_QUOTES);
 $topicname1=htmlentities($_REQUEST['gradeName1'],ENT_QUOTES);
 $pointvalue1=htmlentities($_REQUEST['weight1'],ENT_QUOTES);
 $topicname2=htmlentities($_REQUEST['gradeName2'],ENT_QUOTES);
@@ -103,11 +103,7 @@ if ($fp) {
      exit;
    }else{
    	*/
-	   
 
-         $strQuery="insert into courseinfo
-
-   	
           $strQuery="insert into courseinfo
 
                       (
@@ -124,32 +120,14 @@ if ($fp) {
 					   '$pointvalue3','$topicname4', '$pointvalue4', 
 					   '$topicname5','$pointvalue5', '$topicname6',
 					   '$pointvalue6', '$topicname7', '$pointvalue7','$img_mime'
-                     )
-
-                    ";
-		
-        //echo $strQuery;exit;
-
-              /*  $strQuery="insert into courseinfo
-                      (
-                       FKProfID, coursecode, coursename, meetingday, bookname, important_points,bookisbn, bookauthor,topicname1,pointvalue1,topicname2, pointvalue2
-                      )
-                     values
-                     (
-                       $FKPROFID, '$courseCode', '$courseName', '$meetingDays', '$bookName', '$importantPoints', '$isbn', '$author','$topicname1',    '$pointvalue1','$topicname2', '$pointvalue2'
-                    "; */
-
-
-
-      //echo $strQuery;exit;
+                     )";
+    //echo $strQuery;exit;
 
 		$conn->query($strQuery);
 		
 		exit;
 		 header("Location: mainpage.php");
 
-
-}
 		 header("Location: courseinfo.php");
 
 		 header("Location: courseinfo.php");
