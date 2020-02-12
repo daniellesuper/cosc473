@@ -12,13 +12,13 @@ if($conn-> connect_error){
 die("Connection Failed". $conn->connect_error);
 }
 
-$profName = $_SESSION["FULLNAME"];
+$FKPROFID = $_SESSION["FKPROFID"];
 
 ?>
 
  <?php 
  
-$sql = "SELECT title, fullname FROM profinfo WHERE username = 'joe'";
+$sql = "SELECT title, fullname FROM profinfo WHERE PKID = $FKPROFID";
 $result = $conn->query($sql);
 
 if($result->num_rows > 0) {
@@ -34,4 +34,3 @@ $conn->close();
 
 
 ?> 
-	
