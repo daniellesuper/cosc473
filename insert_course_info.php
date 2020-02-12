@@ -125,12 +125,7 @@ if ($fp) {
 
 		$conn->query($strQuery);
 		
-		exit;
 		 header("Location: mainpage.php");
-
-		 header("Location: courseinfo.php");
-
-		 header("Location: courseinfo.php");
 
 		 exit;
 	
