@@ -18,14 +18,14 @@ $FKPROFID = $_SESSION["FKPROFID"];
 
  <?php 
  
-$sql = "SELECT title, officeaddress, fullname FROM profinfo WHERE PKID = $FKPROFID";
+$sql = "SELECT title, fullname, email FROM profinfo WHERE PKID = $FKPROFID";
 $result = $conn->query($sql);
 
 if($result->num_rows > 0) {
 	// output data of each row
 	while($row = $result->fetch_assoc()) {
-		echo $row["title"]. " ". $row["fullname"];
-		echo $row["officeaddress"]. " ". $row["officeaddress"];
+		echo $row["title"]. " ". $row["fullname"]. " ". $row["email"];
+		
 	}
 } else {
 	echo "no results";
