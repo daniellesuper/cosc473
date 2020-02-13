@@ -39,7 +39,7 @@ if($result->num_rows > 0) {
 		
 ?> 	
 
-<div class = "officeinfo">
+<div class = "officeinfo">  
 
 	<div id="titleName">
 		<?php
