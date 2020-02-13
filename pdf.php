@@ -57,7 +57,7 @@ if($result->num_rows > 0) {
 	</div><!-- div end for titleName -->
 		
 
-
+ 
 
 <div class = "officeinfo">  
 
