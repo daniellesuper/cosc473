@@ -11,12 +11,10 @@ $conn= new mysqli($servername, $username, $password, $dbname);
 if($conn-> connect_error){
 die("Connection Failed". $conn->connect_error);
 }
-
+ 
 $FKPROFID = $_SESSION["FKPROFID"];
  
 ?>
-
- 
 
  <html>
  <head>
@@ -26,18 +24,40 @@ $FKPROFID = $_SESSION["FKPROFID"];
  </head>
 
  <body>
- 
+
  <?php
 
 $sql = "SELECT title, fullname, officeaddress, email, officephone, monday, tuesday, wednesday, thursday, friday FROM profinfo WHERE PKID = $FKPROFID";
 
+$bar = "SELECT coursecode, coursename FROM courseinfo WHERE PKID = $FKPROFID";
+
 $result = $conn->query($sql);
+$result1 = $conn->query($bar); /* used for coursecode */
+
 
 if($result->num_rows > 0) {
+	
+	//used for profinfo items
 	// output data of each row
 	while($row = $result->fetch_assoc()) {
+
+		
+		/* used for cousecode */		
+		if($result1->num_rows > 0) {	
+	// output data of each row
+	while($bar = $result1->fetch_assoc()) {
 		
 ?> 	
+
+	<div id="coursecode">
+		<?php
+		echo $bar["coursecode"]." "."<br>"; 
+		echo $bar["coursename"];
+		?>
+	</div><!-- div end for titleName -->
+		
+
+
 
 <div class = "officeinfo">  
 
@@ -95,7 +115,8 @@ if($result->num_rows > 0) {
 
 </div><!-- officeinfo div -->
 
-		<?php
+
+		<?php 	
 	}
 
 
@@ -105,11 +126,20 @@ if($result->num_rows > 0) {
 
 $conn->close();
 
+?> 
 
+		<?php 	
+	}
+
+
+} else {
+	echo "no results";
+}
+
+$conn->close();
 
 ?> 
 
 </body>
 
 </html>
-
