@@ -16,17 +16,89 @@ $FKPROFID = $_SESSION["FKPROFID"];
  
 ?>
 
- <?php 
  
-$sql = "SELECT title, fullname, officeaddress, email FROM profinfo WHERE PKID = $FKPROFID";
+
+ <html>
+ <head>
+
+ 	<link href="pdf.css" type="text/css" rel="stylesheet" />
+
+ </head>
+
+ <body>
+ 
+ <?php
+
+$sql = "SELECT title, fullname, officeaddress, email, officephone, monday, tuesday, wednesday, thursday, friday FROM profinfo WHERE PKID = $FKPROFID";
+
 $result = $conn->query($sql);
 
 if($result->num_rows > 0) {
 	// output data of each row
 	while($row = $result->fetch_assoc()) {
-		echo $row["title"]. " ". $row["fullname"]." ".$row["officeaddress"]. " " .$row["email"];
 		
+?> 	
+
+<div class = "officeinfo">
+
+	<div id="titleName">
+		<?php
+		echo $row["title"]." ";
+		echo $row["fullname"];
+		
+		?>
+	</div><!-- div end for titleName -->
+		
+	<div id="officeEmailPhone">
+		
+		<p>Faculty Office</p><?
+		echo "<b>".$row["officeaddress"]."</b>";
+		
+		?>
+		
+		<p>Contact Email</p><?
+		echo "<b>".$row["email"]."</b>";
+
+		?>
+		<p>Office Phone</p><?
+		echo "<b>".$row["officephone"]."</b>";
+		
+		?>
+	</div><!-- end div for officeEmailPhone -->
+
+	<div id="officeHours">
+
+		<p>Office Hours</p>
+		
+		<p>Monday:</p><?
+		echo "<b>".$row["monday"]."</b>";
+		?>
+		
+		<p>Tuesday:</p><?
+		echo "<b>".$row["tuesday"]."</b>";
+		?>
+
+		<p>Wednesday:</p><?
+		echo "<b>".$row["wednesday"]."</b>";
+		?>
+
+		<p>Thursday:</p><?
+		echo "<b>".$row["thursday"]."</b>";
+		?>
+
+		<p>Friday:</p><?
+		echo "<b>".$row["friday"]."</b>";
+		?>
+		<p> *or by appointment</p>
+
+	</div><!-- end div for officeHours -->
+
+</div><!-- officeinfo div -->
+
+		<?php
 	}
+
+
 } else {
 	echo "no results";
 }
@@ -37,5 +109,7 @@ $conn->close();
 
 ?> 
 
-?> 
+</body>
+
+</html>
 
