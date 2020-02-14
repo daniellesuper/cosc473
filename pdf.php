@@ -129,7 +129,7 @@ if($result->num_rows > 0) {
 </div><!-- officeinfo div -->
 
 <div class="importantpoints">
-
+ 
 	<h>Important Points</h><?
 	echo"<b>".$points["importantpoints1"]."</b>";
 	echo"<b>".$points["importantpoints2"]."</b>";
