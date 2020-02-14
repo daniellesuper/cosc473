@@ -34,7 +34,7 @@ $bar = "SELECT coursecode, coursename FROM courseinfo WHERE PKID = $FKPROFID";
 $result = $conn->query($sql);
 $result1 = $conn->query($bar); /* used for coursecode */
 
-
+     
 if($result->num_rows > 0) {
 	
 	//used for profinfo items
