@@ -115,7 +115,7 @@ if($result->num_rows > 0) {
 
 </div><!-- officeinfo div -->
 
-
+ 	<!-- if else for professor info -->
 		<?php 	
 	}
 
@@ -128,6 +128,7 @@ $conn->close();
 
 ?> 
 
+	<!-- if else for courseinfo -->
 		<?php 	
 	}
 
