@@ -1,3 +1,4 @@
+
 <?php
 error_reporting(0);
  $servername="localhost";
@@ -117,6 +118,7 @@ $dataPoints = array(
 <!DOCTYPE HTML>
 <html>
 <head>
+	<link href="pdf.css" type="text/css" rel="stylesheet" />
 <script>
 window.onload = function() { 
  
@@ -126,7 +128,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		text: "Grades"
 	},
 	subtitles: [{
-		text: "August 2019"
+		text: ""
 	}],
 	data: [{
 		type: "pie",
@@ -137,23 +139,14 @@ var chart = new CanvasJS.Chart("chartContainer", {
 });
 chart.render();
 // setTimeout(function(){ window.print(); }, 3000); // print pop up
-
- 
 }
 </script>
-<script src="canvasjs.min.js"></script>
+<div id="chart">
+	<script src="canvasjs.min.js"></script>
+</div>
 </head>
-<body> 
-
-<table border=1 width="900px" height="900px">
-  <tr>
-    <td width="500px" valign="top">
-		<div id="chartContainer" ></div>
-	</td>
-    <td width="500" valign="top">
-	    <input type="button" value ="Print" onClick="print();"> 		
-    </td>
-  </tr>	
-</table>
+<body>
+	<div id="chartContainer"></div>
+	<input id="printButton" type="button" value ="Print" onClick="print();">
 </body>
 </html>

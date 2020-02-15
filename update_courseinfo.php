@@ -156,37 +156,8 @@ Weight: &nbsp <input type="text" length="25" name="weight7" value="0"> <br>
 </p>
 </div>
 
-<button type="button" class="btn btn-info" onClick="addGrade();">Add More</button><br><br>
-
 <input type="hidden" name = "courseID" value="<?php echo $courseID ?>">
 <button type="submit" class="btn btn-primary">Update</button>
 
-<script type="text/javascript">
-	function addElement(parentid, elementTag, elementid, html){
-		var p = document.getElementById(parentid);
-		var newElement = document.createElement(elementTag);
-		newElement.setAttribute('id', elementid);
-		newElement.innerHTML = html;
-		p.appendChild(newElement);
-	}
-	
-	var gradeId = 1;
-	function addGrade(){
-		gradeId++;
-		var grade = 'gradeName' + gradeId;
-		var html = 
-					'Name: <input type="text" length="25" name="gradeName'+gradeId+'"> &nbsp' +
-					'Weight: &nbsp <input type="text" length="25" name="weight' + gradeId + '"> &nbsp'
-					+'<a href="" onClick="removeElement(\'grade\''+gradeId+');return false;">Remove</a>'
-					;
-		addElement('gradeWeight', 'p', 'grade' + gradeId, html);
-	}
-	
-	function removeElement(elementId){
-		
-		var element = document.getElementById(elementid);
-		element.parentNode.removeChild(element);
-	}
-</script>
-	
+<?php echo $strQuery; exit; ?>
 </form>
