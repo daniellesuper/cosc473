@@ -1,7 +1,7 @@
 
 <?php
 error_reporting(0);
- $servername="localhost";
+$servername="localhost";
 $dbname="info-syllabus";
 $username="root";
 $password="";
@@ -31,8 +31,6 @@ $row=$result->fetch_array();
 
 
 $topicname1 =$row[topicname1];
-
-
 $topicname2 =$row[topicname2];
 $topicname3 =$row[topicname3];
 $topicname4 =$row[topicname4];
