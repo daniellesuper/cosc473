@@ -141,7 +141,7 @@ $conn->close();
 	echo "no results";
 }
 $conn->close();
-?> 
+?>
 <!-- pieChart link -->
 <div id="pieChart">
 	<div><?php include 'pieChart.php' ?></div>
