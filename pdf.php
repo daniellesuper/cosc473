@@ -25,7 +25,7 @@ $FKPROFID = $_SESSION["FKPROFID"];
  <?php
 $sql = "SELECT title, fullname, officeaddress, email, officephone, monday, tuesday, wednesday, thursday, friday FROM profinfo WHERE PKID = $FKPROFID";
 
-$sql = "SELECT coursecode, coursename FROM courseinfo WHERE PKID = $FKPROFID";
+$sql = "SELECT coursecode, coursename FROM courseinfo WHERE PKID = $_GET[courseID]";
 
 $result = $conn->query($sql);
 
@@ -40,6 +40,7 @@ if($result->num_rows > 0) {
 		<div id="ribbon">
 			<span id="content">
 				<?php
+				
 				echo $row["title"]." ";
 				echo $row["fullname"];
 				?>
@@ -100,6 +101,7 @@ $assignments ="SELECT topicname1, topicname2, topicname3, topicname4, topicname5
 
 $sql = "SELECT coursecode, coursename, bookname, bookisbn, bookauthor, important_points FROM courseinfo WHERE PKID = $_GET[courseID]"; 
 
+
 $result = $conn->query($sql); /* used for coursecode */
 if($result->num_rows > 0) {
 	//used for profinfo items
@@ -114,9 +116,7 @@ if($result->num_rows > 0) {
 			
 		</div>
 		<div id="bookImage">
-				<?php
-				// echo $book["bookpicture"];
-				?>
+				
 				BOOK IMAGE GOES HERE </div>
 		<div id="bookName">
 			<?php
@@ -162,13 +162,13 @@ $conn->close();
 	<div><?php include 'pieChart.php' ?></div>
 		<div id="breakdown">
 			<?php
-			echo $assignments["topicname1"]."<br>";
-			echo $assignments["topicname2"]."<br>";
-			echo $assignments["topicname3"]."<br>";
-			echo $assignments["topicname4"]."<br>";
-			echo $assignments["topicname5"]."<br>";
-			echo $assignments["topicname6"]."<br>";
-			echo $assignments["topicname7"];
+			echo $row["topicname1"]."<br>";
+			echo $row["topicname2"]."<br>";
+			echo $row["topicname3"]."<br>";
+			echo $row["topicname4"]."<br>";
+			echo $row["topicname5"]."<br>";
+			echo $row["topicname6"]."<br>";
+			echo $row["topicname7"];
 			?>
 		</div><!--end breakdown-->
 </div><!--end piechart-->
