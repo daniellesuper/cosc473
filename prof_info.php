@@ -124,13 +124,43 @@ $friday =$row['friday'];
     <td>Title: </td>
     <td colspan=2>
       <SELECT NAME="title">
-       <OPTION VALUE="0">Select</option>
-       
-         <OPTION VALUE="Dr.">Dr.</option>
-		 <OPTION VALUE="Mr.">Mr.</option>
-		 <OPTION VALUE="Mrs.">Mrs.</option>
-		 <OPTION VALUE="Ms.">Ms.</option>
-		 <OPTION VALUE="Prof.">Prof.</option>     
+      <OPTION VALUE="0">Select</option>
+       <?php
+             if($title=="Dr.")
+             {
+                echo " <OPTION VALUE=\"Dr.\"  selected>Dr.</option>";
+             }else{
+              echo " <OPTION VALUE=\"Dr.\"  >Dr.</option>";
+             }
+
+             if($title=="Mr.")
+             {
+                echo " <OPTION VALUE=\"Mr.\"  selected>Mr.</option>";
+             }else{
+              echo " <OPTION VALUE=\"Mr.\"  >Mr.</option>";
+             }
+
+             if($title=="Mrs.")
+             {
+                echo " <OPTION VALUE=\"Mrs.\"  selected>Mrs.</option>";
+             }else{
+              echo " <OPTION VALUE=\"Mrs.\"  >Mrs.</option>";
+             }
+
+             if($title=="Ms.")
+             {
+                echo " <OPTION VALUE=\"Ms.\"  selected>Ms.</option>";
+             }else{
+              echo " <OPTION VALUE=\"Ms.\"  >Ms.</option>";
+             }
+
+             if($title=="Prof.")
+             {
+                echo " <OPTION VALUE=\"Prof.\"  selected>Prof.</option>";
+             }else{
+              echo " <OPTION VALUE=\"Prof.\"  >Prof.</option>";
+             }
+            ?>     
       </SELECT>
     </td>
   </tr>
