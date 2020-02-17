@@ -17,7 +17,7 @@ $sql =" Select
 topicname1, topicname2, topicname3, topicname4, topicname5, topicname6, topicname7, 
 pointvalue1, pointvalue2, pointvalue3, pointvalue4, pointvalue5, pointvalue6, pointvalue7 FROM courseinfo where PKID = $courseID  ";
 
-
+//echo $sql; exit;
 $result = $conn->query($sql);
 
 
