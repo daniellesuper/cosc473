@@ -1,10 +1,9 @@
 #topBox{
   width: 80%;
   height: auto;
-  background-color: transparent;
+  background-color: red;
   padding: 5px;
   margin-top: 20px;
-  
   display: flex;
   flex-direction: column;
   top: 0;
@@ -89,7 +88,7 @@ h1{
 .box{
     width: 200px;
     height: 130px;
-    background-color: lightgray;
+    background-color: red;
     border: solid 1px black;
     position: relative;
     margin: 15px;
@@ -105,17 +104,10 @@ h1{
   border-left: 26px solid lightgray;
   border-bottom: 13px solid transparent;
 }
-/*
 .circle{
-  width:40px;
-  height:40px;
-  border-radius:50px;
-  font-size:10px;
-  color:#fff;
-  line-height:100px;
-  text-align:center;
-  background:#000;
-  position: flex;
-  align-items: left;
+  height: 100px;
+   width: 100px;
+   border-radius: 50px; /*this only needs to be half of the total width*/
+   background: orange; /*background color of the tag*/
+   border: 2px solid black; /*sets the border width, type, and color*/
 }
-*/
