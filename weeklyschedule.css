@@ -1,0 +1,126 @@
+#topBox{
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  padding: 5px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+h1{
+  padding: 5px;
+  margin: 0;
+}
+#springBreak h4{
+  text-align: center;
+}
+#ribbon {
+  padding: 0 ;
+  margin: 5px;
+  width: 100%;
+  position:relative;
+  color: #ffffff;
+  font: 16pt 'Patua One', sans-serif;
+  text-align: center;
+  letter-spacing:0.1em;
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.3);
+  box-shadow: inset 0px 1px 0px rgba(255,255,255,.3),
+        inset 0px 0px 20px rgba(0,0,0,0.1),
+        0px 1px 1px rgba(0,0,0,0.4);
+  background: -webkit-linear-gradient(top,#17a7d2, #17a7d2);
+  display: inline-block;
+}
+#ribbon:before, #ribbon:after {
+  content: "";
+  width:.2em;
+  bottom:-.5em;
+  position:absolute;
+  display:block;
+  border: .9em solid #17a7d2;
+  box-shadow:0px 1px 0px rgba(0,0,0,0.4);
+  z-index:-2;
+}
+#ribbon:before {
+  left:-1.35em;
+  border-right-width: .75em;
+  border-left-color:transparent;
+}
+#ribbon:after {
+  right:-1.35em;
+  border-left-width: .75em;
+  border-right-color:transparent;
+  margin-right: 3px;
+}
+#content:before, #content:after {
+  content:"";
+  bottom:-.5em;
+  position:absolute;
+  display:block;
+  border-style:solid;
+  border-color: #0675b3 transparent transparent transparent;
+  z-index:-1;
+}
+#content:before {
+  left: 0;
+  border-width: .5em 0 0 .5em;
+}
+#content:after {
+  right: 0;
+  border-width: .5em .5em 0 0;
+}
+.row{
+  border: 3px solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 190px;
+  padding: 5px;
+}
+#printButton{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.box{
+    width: 200px;
+    height: 130px;
+    background-color: lightgray;
+    border: solid 1px black;
+    position: relative;
+    margin: 15px;
+}
+.box:after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 26px;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-left: 26px solid lightgray;
+  border-bottom: 13px solid transparent;
+}
+/*
+.circle{
+  width:40px;
+  height:40px;
+  border-radius:50px;
+  font-size:10px;
+  color:#fff;
+  line-height:100px;
+  text-align:center;
+  background:#000;
+  position: flex;
+  align-items: left;
+}
+*/
+@media print {
+  .pagebreak { 
+    clear: both;
+    page-break-before: always; 
+  } 
+}
