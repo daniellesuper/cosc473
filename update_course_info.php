@@ -1,4 +1,5 @@
 <?php
+//new file
 require("session_info.php");
 error_reporting(0);
 

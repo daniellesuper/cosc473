@@ -1,5 +1,5 @@
 #topBox{
-  width: auto;
+  width: 80%;
   height: auto;
   background-color: transparent;
   padding: 5px;
@@ -21,7 +21,7 @@ h1{
 #ribbon {
   padding: 0 ;
   margin: 15px;
-  width: 100%;
+  width: 90%;
   position:relative;
   color: #ffffff;
   font: 16pt 'Patua One', sans-serif;
