@@ -196,9 +196,8 @@ $conn->close();
 <!-- pieChart link -->
 <div id="pieChart">
 	<div><?php include 'pieChart.php' ?></div>
-
+		<div id="breakdown">
 			<?php
-
 			echo $assignments["topicname1"]."<br>";
 			echo $assignments["topicname2"]."<br>";
 			echo $assignments["topicname3"]."<br>";
@@ -206,9 +205,8 @@ $conn->close();
 			echo $assignments["topicname5"]."<br>";
 			echo $assignments["topicname6"]."<br>";
 			echo $assignments["topicname7"];
-
 			?>
-
+		</div><!--end breakdown-->
 </div><!--end piechart-->
 
 <!--
