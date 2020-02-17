@@ -101,7 +101,8 @@ $profID = $_SESSION["FKPROFID"];
 				<a href="update_courseinfo.php?courseID=<?php echo $courseID ?>" ><button type="button" class= "btn btn-primary btn-lg"> Update Course Info </a></button>
 				<a href="update_weekly_infohtml.php?courseID=<?php echo $courseID ?>" ><button type="button" class="btn btn-primary btn-lg">Weekly Schedule</a></button>
 				<a href="pieChart.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Preview</a></button>
-				<a href="pdf.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Download</a></button></li>
+				<a href="pdf.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Download</a></button>
+				<a href="weeklyschedule.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">weekly</a></button></li>
 		  </ul>
           </div>
           <?php 

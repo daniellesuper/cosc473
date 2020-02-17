@@ -14,9 +14,6 @@ die("Connection Failed". $conn->connect_error);
 }
  
 $FKPROFID = $_SESSION["FKPROFID"];
-
-
- 
 ?>
  <html>
  <head> 
@@ -26,18 +23,13 @@ $FKPROFID = $_SESSION["FKPROFID"];
  
  <?php
 $sql = "SELECT title, fullname, officeaddress, email, officephone, monday, tuesday, wednesday, thursday, friday FROM profinfo WHERE PKID = $FKPROFID";
-
-
-
-
+$sql = "SELECT coursecode, coursename FROM courseinfo WHERE PKID = $FKPROFID";
 $result = $conn->query($sql);
-
 
 if($result->num_rows > 0) {
 	//used for profinfo items
 	// output data of each row
 	$row = $result->fetch_assoc(); 
-
 ?>
 
 <div class = "officeinfo">  

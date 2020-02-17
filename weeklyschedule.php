@@ -1,3 +1,20 @@
+<?php
+require("session_info.php");
+
+error_reporting(0);
+
+$servername="localhost";
+$dbname="info-syllabus";
+$username="root";
+$password="";
+
+$conn= new mysqli($servername, $username, $password, $dbname);
+if($conn-> connect_error){
+die("Connection Failed". $conn->connect_error);
+}
+ 
+$FKPROFID = $_SESSION["FKPROFID"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
