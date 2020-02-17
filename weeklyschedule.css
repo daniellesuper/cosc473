@@ -118,3 +118,9 @@ h1{
   align-items: left;
 }
 */
+@media print {
+  .pagebreak { 
+    clear: both;
+    page-break-before: always; 
+  } 
+}

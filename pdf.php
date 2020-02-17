@@ -146,6 +146,17 @@ $conn->close();
 <div id="pieChart">
 	<div><?php include 'pieChart.php' ?></div>
 </div><!--end piechart-->
+<div class="pagebreak"> </div>
+<div class="pagebreak"> </div>
+<div id="page2">
+	<div><?php include 'weeklyschedule.php' ?></div>
+</div><!--end page2-->
+<?
+require "pdfcrowd.php";
+
+$api = new \Pdfcrowd\HtmlToPdfClient("demo", "ce544b6ea52a5621fb9d55f8b542d14d");
+$api->convertUrlToFile("http://localhost/473/pdf.php?courseID=15", "syllabus.pdf");
+?>
 </body>
 
 </html>
