@@ -24,7 +24,9 @@ $FKPROFID = $_SESSION["FKPROFID"];
  
  <?php
 $sql = "SELECT title, fullname, officeaddress, email, officephone, monday, tuesday, wednesday, thursday, friday FROM profinfo WHERE PKID = $FKPROFID";
+
 $sql = "SELECT coursecode, coursename FROM courseinfo WHERE PKID = $FKPROFID";
+
 $result = $conn->query($sql);
 
 if($result->num_rows > 0) {
@@ -64,8 +66,7 @@ if($result->num_rows > 0) {
 
 	<div id="officeHours">
 		<h3>Office Hours:</h3>
- 
-		Monday:<?php 
+ 		Monday: <?php
 
 		echo "<b>".$row["monday"]."</b>";?><br>
 		Tuesday:<?php
@@ -75,7 +76,8 @@ if($result->num_rows > 0) {
 		Thursday:<?php
 		echo "<b>".$row["thursday"]."</b>";?><br>
 		Friday:<?php
-		echo "<b>".$row["friday"]."</b>";?>
+		echo "<b>".$row["friday"]."</b>";
+		?>
 
 		<br>*or by appointment
 	</div><!-- end div for officeHours -->
