@@ -14,6 +14,8 @@ die("Connection Failed". $conn->connect_error);
 }
  
 $FKPROFID = $_SESSION["FKPROFID"];
+
+
  
 ?>
  <html>
@@ -25,43 +27,17 @@ $FKPROFID = $_SESSION["FKPROFID"];
  <?php
 $sql = "SELECT title, fullname, officeaddress, email, officephone, monday, tuesday, wednesday, thursday, friday FROM profinfo WHERE PKID = $FKPROFID";
 
-$bar = "SELECT coursecode, coursename, important_points FROM courseinfo WHERE PKID = $_GET[courseID]"; 
 
-$points = "SELECT importantpoint1, importantpoint2, importantpoint3, importantpoint4, importantpoint5 FROM courseinfo WHERE PKID = $FKPROFID";
 
-$book = "SELECT bookname, bookisbn, bookauthor, bookpicture FROM courseinfo WHERE PKID = $_GET[courseID]";
-
-$assignments ="SELECT topicname1, topicname2, topicname3, topicname4, topicname5, topicname6, topicname7 FROM courseinfo WHERE PKID = $FKPROFID";
 
 $result = $conn->query($sql);
-$result1 = $conn->query($bar); /* used for coursecode */
-$result2 = $conn->query($points); /* used for importantpoints */
-$result3 = $conn->query($book); // used for pulling book information
-$result4 = $conn->query($assignments);
+
 
 if($result->num_rows > 0) {
 	//used for profinfo items
 	// output data of each row
-	while($row = $result->fetch_assoc()) {
-		/* used for cousecode */		
-		if($result1->num_rows > 0) {	
-	// output data of each row
-	while($bar = $result1->fetch_assoc()) {
-		/* used for cousecode */		 
-		if($result2->num_rows > 0) {	
-	// output data of each row 
-	while($points = $result2->fetch_assoc()) { 
+	$row = $result->fetch_assoc(); 
 
-		// used for book information
-		if($result3->num_rows > 0) {	
-	// output data of each row
-	while($book = $result3->fetch_assoc()) {
-
-
-		// used for assignemt information
-		if($result4->num_rows > 0) {	
-	// output data of each row
-	while($assignments = $result4->fetch_assoc()) {
 ?>
 
 <div class = "officeinfo">  
@@ -77,38 +53,64 @@ if($result->num_rows > 0) {
 		<div class = "courseinfo">
 			<div id="ribbon">
 				<?php
-				echo $bar["coursecode"]." "."<br>"; 
-				echo $bar["coursename"]." "."<br>";
+				echo $row["coursecode"]." "."<br>"; 
+				echo $row["coursename"]." "."<br>";
 				?>
 			</div><!-- div end for ribbon -->
 		</div><!-- end of courseinfo div -->
 	</div><!--nameBanner-->
 
 	<div id="officeEmailPhone">
-		Faculty Office<br><?
+		Faculty Office<br><?php
 		echo "<b>".$row["officeaddress"]."</b>";?><br>
-		Contact Email<br><?
+		Contact Email<br><?php
 		echo "<b>".$row["email"]."</b>";?><br>
-		Office Phone<br><?
+		Office Phone<br><?php
 		echo "<b>".$row["officephone"]."</b>";?>
 	</div><!-- end div for officeEmailPhone -->
 
 	<div id="officeHours">
 		<h3>Office Hours:</h3>
-		Monday:<? 
+		Monday:<?php 
 		echo "<b>".$row["monday"]."</b>";?><br>
-		Tuesday:<?
+		Tuesday:<?php
 		echo "<b>".$row["tuesday"]."</b>";?><br>
-		Wednesday:<?
+		Wednesday:<?php
 		echo "<b>".$row["wednesday"]."</b>";?><br>
-		Thursday:<?
+		Thursday:<?php
 		echo "<b>".$row["thursday"]."</b>";?><br>
-		Friday:<?
+		Friday:<?php
 		echo "<b>".$row["friday"]."</b>";?>
 		<br>*or by appointment
 	</div><!-- end div for officeHours -->
 </div><!-- officeinfo div -->
 
+<?php } // end if prof info
+
+
+// start course info
+
+
+/*
+$points = "SELECT importantpoint1, importantpoint2, importantpoint3, importantpoint4, importantpoint5 FROM courseinfo WHERE PKID = $FKPROFID";
+
+$book = "SELECT bookname, bookisbn, bookauthor, bookpicture FROM courseinfo WHERE PKID = $_GET[courseID]";
+
+$assignments ="SELECT topicname1, topicname2, topicname3, topicname4, topicname5, topicname6, topicname7 FROM courseinfo WHERE PKID = $FKPROFID";
+*/
+
+
+$sql = "SELECT coursecode, coursename, bookname, bookisbn, bookauthor, important_points FROM courseinfo WHERE PKID = $_GET[courseID]"; 
+
+$result = $conn->query($sql); /* used for coursecode */
+if($result->num_rows > 0) {
+	//used for profinfo items
+	// output data of each row
+	$row = $result->fetch_assoc(); 
+
+
+
+?>
 <div class="bookInfo">
 		<div id="topBox">
 			
@@ -120,9 +122,9 @@ if($result->num_rows > 0) {
 				BOOK IMAGE GOES HERE </div>
 		<div id="bookName">
 			<?php
-				echo $book["bookname"]."<br>";
-				echo "ISBN:".$book["bookisbn"]."<br>";
-				echo "Author: ".$book["bookauthor"];
+				echo $row["bookname"]."<br>";
+				echo "ISBN:".$row["bookisbn"]."<br>";
+				echo "Author: ".$row["bookauthor"];
 			?></div>
 </div><!--end bookInfo-->
 
@@ -130,7 +132,7 @@ if($result->num_rows > 0) {
 	<div id="ribbon2">Important Points</div>
 	<div id="pointsContainer">
 		<?php
-		$imp_points = $bar["important_points"];
+		$imp_points = $row["important_points"];
 
 		$imp_points = html_entity_decode($imp_points);
 		echo"$imp_points";
@@ -150,49 +152,15 @@ if($result->num_rows > 0) {
 
 	<!--if else for professor info -->
 		<?php 	
-	}
-} else { 
-	echo "no results";
+	} // end if course info
+ else { 
+	echo "no results prof info";
 }
 
 $conn->close();
 ?> 
-	<!-- if else for courseinfo -->
-		<?php 	
-	}
-} else {
-	echo "no results";
-}
-$conn->close();
-?> 
-	<!-- if else for importantpoint -->
-		<?php 	
-	}
-} else {
-	echo "no results";
-}
-$conn->close();
-?>
+	
 
-<!-- used for book information -->
-<?php 	
-	}
-} else {
-	echo "no results";
-}
-
-$conn->close();
-?>
-
-<!-- used for assignment information -->
-<?php 	
-	}
-} else {
-	echo "no results";
-}
-
-$conn->close();
-?>
 <!-- pieChart link -->
 <div id="pieChart">
 	<div><?php include 'pieChart.php' ?></div>
