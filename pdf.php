@@ -142,9 +142,7 @@ if($result->num_rows > 0) {
 		echo"<b>".$points["importantpoints4"]."</b>";
 		echo"<b>".$points["importantpoints5"]."</b>";*/
 		?>
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde omnis molestias rem. Nostrum voluptatibus quos debitis magni asperiores natus vel fugiat beatae quod quisquam assumenda quibusdam, odit consequuntur. Corporis, nobis?
-		</p>
+		
 	</div> <!--end pointsContainer-->
 </div> <!-- end of div for importantpoints -->
 	
@@ -158,9 +156,9 @@ if($result->num_rows > 0) {
 }
 
 $conn->close();
+//echo "---------------------------------<hr>"; exit;
 ?> 
 	
-
 <!-- pieChart link -->
 <div id="pieChart">
 	<div><?php include 'pieChart.php' ?></div>
@@ -182,9 +180,9 @@ $conn->close();
 <div class="pagebreak"> </div>
 <div id="page2">
 	<div><?php //include 'weeklyschedule.php' ?></div>
-</div><!--end page2-->
+</div>
+<?php
 
-<?
 //require "pdfcrowd.php";
 
 //$api = new \Pdfcrowd\HtmlToPdfClient("demo", //"ce544b6ea52a5621fb9d55f8b542d14d");
