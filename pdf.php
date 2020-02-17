@@ -71,11 +71,7 @@ if($result->num_rows > 0) {
 
 	<div id="officeHours">
 		<h3>Office Hours:</h3>
-
-		
-		
-		
-
+ 
 		Monday:<?php 
 
 		echo "<b>".$row["monday"]."</b>";?><br>
@@ -87,7 +83,6 @@ if($result->num_rows > 0) {
 		echo "<b>".$row["thursday"]."</b>";?><br>
 		Friday:<?php
 		echo "<b>".$row["friday"]."</b>";?>
-
 
 		<br>*or by appointment
 	</div><!-- end div for officeHours -->
