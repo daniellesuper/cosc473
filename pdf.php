@@ -117,7 +117,7 @@ if($result->num_rows > 0) {
 				<?php
 				// echo $book["bookpicture"];
 				?>
-			BOOK IMAGE GOES HERE </div>
+				BOOK IMAGE GOES HERE </div>
 		<div id="bookName">
 			<?php
 				echo $book["bookname"]."<br>";
@@ -215,7 +215,7 @@ $conn->close();
 <div class="pagebreak"> </div>
 <div class="pagebreak"> </div>
 <div id="page2">
-	<div><?php include 'weeklyschedule.php' ?></div>
+	<div><?php //include 'weeklyschedule.php' ?></div>
 </div><!--end page2-->
 
 <?
