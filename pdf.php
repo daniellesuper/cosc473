@@ -21,11 +21,12 @@ $FKPROFID = $_SESSION["FKPROFID"];
  	<link href="pdf.css" type="text/css" rel="stylesheet" />
  </head> 
  <body>
- 
+  
  <?php
-$sql = "SELECT title, fullname, officeaddress, email, officephone, monday, tuesday, wednesday, thursday, friday FROM profinfo WHERE PKID = $FKPROFID";
+$sql = "SELECT title, fullname, officeaddress, email, officephone, monday, tuesday, wednesday, thursday, friday FROM profinfo WHERE PKID = $FKPROFID;";
 
 $sql = "SELECT coursecode, coursename FROM courseinfo WHERE PKID = $_GET[courseID]";
+ 
 
 $result = $conn->query($sql);
 
@@ -33,6 +34,7 @@ if($result->num_rows > 0) {
 	//used for profinfo items
 	// output data of each row
 	$row = $result->fetch_assoc(); 
+	
 ?>
 
 <div class = "officeinfo">  
@@ -83,7 +85,6 @@ if($result->num_rows > 0) {
 		<br>*or by appointment
 	</div><!-- end div for officeHours -->
 </div><!-- officeinfo div -->
-
 <?php } // end if prof info
 
 
@@ -156,6 +157,7 @@ if($result->num_rows > 0) {
 $conn->close();
 //echo "---------------------------------<hr>"; exit;
 ?> 
+
 	
 <!-- pieChart link -->
 <div id="pieChart">
@@ -173,20 +175,19 @@ $conn->close();
 		</div><!--end breakdown-->
 </div><!--end piechart-->
 
-<!--
+
 <div class="pagebreak"> </div>
 <div class="pagebreak"> </div>
 <div id="page2">
 	<div><?php //include 'weeklyschedule.php' ?></div>
 </div>
-<?php
 
+<!--
 //require "pdfcrowd.php";
 
 //$api = new \Pdfcrowd\HtmlToPdfClient("demo", //"ce544b6ea52a5621fb9d55f8b542d14d");
 //$api->convertUrlToFile("http://localhost/473/pdf.php?//courseID=15", "syllabus.pdf");
-?>
-
+-->
 
 </body>
 
