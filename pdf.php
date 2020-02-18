@@ -46,7 +46,7 @@ if($result->num_rows > 0) {
 		<div id="ribbon">
 			<span id="content">
 				<?php
-				
+				   
 				echo $row["title"]." ";
 				echo $row["fullname"];
 				?>
@@ -97,9 +97,7 @@ if($result->num_rows > 0) {
 
 /*
 $points = "SELECT importantpoint1, importantpoint2, importantpoint3, importantpoint4, importantpoint5 FROM courseinfo WHERE PKID = $FKPROFID";
-
 $book = "SELECT bookname, bookisbn, bookauthor, bookpicture FROM courseinfo WHERE PKID = $_GET[courseID]";
-
 $assignments ="SELECT topicname1, topicname2, topicname3, topicname4, topicname5, topicname6, topicname7 FROM courseinfo WHERE PKID = $FKPROFID";
 */
 
@@ -188,7 +186,6 @@ $conn->close();
 
 <!--
 //require "pdfcrowd.php";
-
 //$api = new \Pdfcrowd\HtmlToPdfClient("demo", //"ce544b6ea52a5621fb9d55f8b542d14d");
 //$api->convertUrlToFile("http://localhost/473/pdf.php?//courseID=15", "syllabus.pdf");
 -->
