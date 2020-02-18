@@ -79,7 +79,7 @@ if($result->num_rows > 0) {
 		echo "Monday: "."<b>".$row["monday"]."</b>"."<br>";
 		} else { echo "";
 		}?>
-		 
+		  
 	<?php
 		if(!empty($row['tuesday'])){
 		echo "Tuesday: "."<b>".$row["tuesday"]."</b>"."<br>";
@@ -155,17 +155,36 @@ if($result->num_rows > 0) {
 
 		$imp_points = html_entity_decode($imp_points);
 		echo"$imp_points";
-		
-		/*echo"<b>".$points["importantpoints2"]."</b>";
-		echo"<b>".$points["importantpoints3"]."</b>";
-		echo"<b>".$points["importantpoints4"]."</b>";
-		echo"<b>".$points["importantpoints5"]."</b>";*/
 		?>
 		
 	</div> <!--end pointsContainer-->
 </div> <!-- end of div for importantpoints -->
-	
+	   
+<?php
 
+	$sql = "SELECT topicname1,topicname2,topicname3,topicname4,topicname5,topicname6,topicname7 FROM courseinfo WHERE PKID = $_GET[courseID]"; 
+
+	 $result = $conn->query($sql); /* used for coursecode */
+if($result->num_rows > 0) {
+	//used for profinfo items
+	// output data of each row
+	$row = $result->fetch_assoc(); 
+
+?>
+		
+	<!-- this is the topic breakdown for piechart -->   	
+		<div id="breakdown">
+			<?php
+			echo $row["topicname1"]."<br>";
+			echo $row["topicname2"]."<br>";
+			echo $row["topicname3"]."<br>";
+			echo $row["topicname4"]."<br>";
+			echo $row["topicname5"]."<br>";
+			echo $row["topicname6"]."<br>"; 
+			echo $row["topicname7"];
+			?>
+		</div><!--end breakdown-->
+		
 
 	<!--if else for professor info -->
 		<?php 	
@@ -178,21 +197,21 @@ $conn->close();
 //echo "---------------------------------<hr>"; exit;
 ?> 
 
+
+<?php 	/* used for topicname */
+	} // end if course info
+ else { 
+	echo "no results prof info";
+}
+
+$conn->close();
+//echo "---------------------------------<hr>"; exit;
+?> 
 	
 <!-- pieChart link -->
 <div id="pieChart">
 	<div><?php include 'pieChart.php' ?></div>
-		<div id="breakdown">
-			<?php
-			echo $row["topicname1"]."<br>";
-			echo $row["topicname2"]."<br>";
-			echo $row["topicname3"]."<br>";
-			echo $row["topicname4"]."<br>";
-			echo $row["topicname5"]."<br>";
-			echo $row["topicname6"]."<br>";
-			echo $row["topicname7"];
-			?>
-		</div><!--end breakdown-->
+		
 </div><!--end piechart-->
 
 
