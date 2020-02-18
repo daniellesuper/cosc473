@@ -73,20 +73,38 @@ if($result->num_rows > 0) {
 
 	<div id="officeHours">
 		<h3>Office Hours:</h3>
- 		Monday: <?php
+ 	 
+ 	 <?php
+ 		if(!empty($row['monday'])){
+		echo "Monday: "."<b>".$row["monday"]."</b>"."<br>";
+		} else { echo "";
+		}?>
+		 
+	<?php
+		if(!empty($row['tuesday'])){
+		echo "Tuesday: "."<b>".$row["tuesday"]."</b>"."<br>";
+		} else { echo "";
+		}?>
+		
+	<?php
+		if(!empty($row["wednesday"])){
+		echo "Wednesday: "."<b>".$row["wednesday"]."</b>"."<br>";
+		} else { echo "";
+		}?>
+		
+	<?php
+		if(!empty($row["thursday"])){
+		echo "Thursday: "."<b>".$row["thursday"]."</b>"."<br>";
+		 } else { echo "";
+		}?>
+		 
+	<?php
+		if(!empty($row["friday"])){
+		echo "Friday: "."<b>".$row["friday"]."</b>"."<br>";
+		} else { echo ""; 
+		}?>
 
-		echo "<b>".$row["monday"]."</b>";?><br>
-		Tuesday:<?php
-		echo "<b>".$row["tuesday"]."</b>";?><br>
-		Wednesday:<?php
-		echo "<b>".$row["wednesday"]."</b>";?><br>
-		Thursday:<?php
-		echo "<b>".$row["thursday"]."</b>";?><br>
-		Friday:<?php
-		echo "<b>".$row["friday"]."</b>";
-		?>
-
-		<br>*or by appointment
+		<b>*or by appointment</b>
 	</div><!-- end div for officeHours -->
 </div><!-- officeinfo div -->
 <?php } // end if prof info
