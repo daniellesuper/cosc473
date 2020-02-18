@@ -23,17 +23,21 @@ $FKPROFID = $_SESSION["FKPROFID"];
  <body>
   
  <?php
-$sql = "SELECT title, fullname, officeaddress, email, officephone, monday, tuesday, wednesday, thursday, friday FROM profinfo WHERE PKID = $FKPROFID;";
+$sql1 = "SELECT title, fullname, officeaddress, email, officephone, monday, tuesday, wednesday, thursday, friday FROM profinfo WHERE PKID = $FKPROFID;";
 
 $sql = "SELECT coursecode, coursename FROM courseinfo WHERE PKID = $_GET[courseID]";
  
-
-$result = $conn->query($sql);
+$result2 = $conn->query($sql); //used for courseinfo
+$result = $conn->query($sql1); // used for profinfo
 
 if($result->num_rows > 0) {
 	//used for profinfo items
 	// output data of each row
 	$row = $result->fetch_assoc(); 
+
+	if($result2->num_rows > 0){
+		$bar = $result2->fetch_assoc(); // used for courseinfo
+	}
 	
 ?>
 
@@ -51,8 +55,8 @@ if($result->num_rows > 0) {
 		<div class = "courseinfo">
 			<div id="ribbon">
 				<?php
-				echo $row["coursecode"]." "."<br>"; 
-				echo $row["coursename"]." "."<br>";
+				echo $bar["coursecode"]." "."<br>"; 
+				echo $bar["coursename"]." "."<br>";
 				?>
 			</div><!-- div end for ribbon -->
 		</div><!-- end of courseinfo div -->
