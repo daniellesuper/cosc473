@@ -12,21 +12,20 @@ $conn= new mysqli($servername, $username, $password, $dbname);
 if($conn-> connect_error){
 die("Connection Failed". $conn->connect_error);
 }
- 
+
 $FKPROFID = $_SESSION["FKPROFID"];
 
 ?>
- <html>
- <head> 
- 	<link href="pdf.css" type="text/css" rel="stylesheet" />
- </head> 
- <body>
-  
- <?php
+<html>
+<head> 
+	<link href="pdf.css" type="text/css" rel="stylesheet" />
+</head> 
+<body>
+<?php
 $sql1 = "SELECT title, fullname, officeaddress, email, officephone, monday, tuesday, wednesday, thursday, friday FROM profinfo WHERE PKID = $FKPROFID;";
 
 $sql = "SELECT coursecode, coursename FROM courseinfo WHERE PKID = $_GET[courseID]";
- 
+
 $result2 = $conn->query($sql); //used for courseinfo
 $result = $conn->query($sql1); // used for profinfo
 
@@ -38,7 +37,6 @@ if($result->num_rows > 0) {
 	if($result2->num_rows > 0){
 		$bar = $result2->fetch_assoc(); // used for courseinfo
 	}
-	
 ?>
 
 <div class = "officeinfo">  
@@ -63,7 +61,7 @@ if($result->num_rows > 0) {
 	</div><!--nameBanner-->
 
 	<div id="officeEmailPhone">
-		Faculty Office<br><?php
+		<br /><br />Faculty Office<br><?php
 		echo "<b>".$row["officeaddress"]."</b>";?><br>
 		Contact Email<br><?php
 		echo "<b>".$row["email"]."</b>";?><br>
@@ -72,38 +70,33 @@ if($result->num_rows > 0) {
 	</div><!-- end div for officeEmailPhone -->
 
 	<div id="officeHours">
-		<h3>Office Hours:</h3>
- 	 
- 	 <?php
- 		if(!empty($row['monday'])){
+		<br /><br /><br />
+		<span id="officeHeading">Office Hours:</span>
+	 <?php
+		if(!empty($row['monday'])){
 		echo "Monday: "."<b>".$row["monday"]."</b>"."<br>";
 		} else { echo "";
-		}?>
-		  
+		}?> 
 	<?php
 		if(!empty($row['tuesday'])){
 		echo "Tuesday: "."<b>".$row["tuesday"]."</b>"."<br>";
 		} else { echo "";
-		}?>
-		
+		}?>	
 	<?php
 		if(!empty($row["wednesday"])){
 		echo "Wednesday: "."<b>".$row["wednesday"]."</b>"."<br>";
 		} else { echo "";
 		}?>
-		
 	<?php
 		if(!empty($row["thursday"])){
 		echo "Thursday: "."<b>".$row["thursday"]."</b>"."<br>";
 		 } else { echo "";
 		}?>
-		 
 	<?php
 		if(!empty($row["friday"])){
 		echo "Friday: "."<b>".$row["friday"]."</b>"."<br>";
 		} else { echo ""; 
 		}?>
-
 		<b>*or by appointment</b>
 	</div><!-- end div for officeHours -->
 </div><!-- officeinfo div -->
@@ -112,29 +105,17 @@ if($result->num_rows > 0) {
 
 // start course info
 
-
-/*
-$points = "SELECT importantpoint1, importantpoint2, importantpoint3, importantpoint4, importantpoint5 FROM courseinfo WHERE PKID = $FKPROFID";
-$book = "SELECT bookname, bookisbn, bookauthor, bookpicture FROM courseinfo WHERE PKID = $_GET[courseID]";
-$assignments ="SELECT topicname1, topicname2, topicname3, topicname4, topicname5, topicname6, topicname7 FROM courseinfo WHERE PKID = $FKPROFID";
-*/
-
-
 $sql = "SELECT coursecode, coursename, bookname, bookisbn, bookauthor, important_points FROM courseinfo WHERE PKID = $_GET[courseID]"; 
-
 
 $result = $conn->query($sql); /* used for coursecode */
 if($result->num_rows > 0) {
 	//used for profinfo items
 	// output data of each row
 	$row = $result->fetch_assoc(); 
-
-
-
 ?>
 <div class="bookInfo">
-		<div id="topBox">
-			
+		<div id="infoBox">
+			this is the box for random info that we dont know where it comes from
 		</div>
 		<div id="bookImage">
 				
@@ -156,23 +137,21 @@ if($result->num_rows > 0) {
 		$imp_points = html_entity_decode($imp_points);
 		echo"$imp_points";
 		?>
-		
 	</div> <!--end pointsContainer-->
 </div> <!-- end of div for importantpoints -->
 	   
 <?php
-
 	$sql = "SELECT topicname1,topicname2,topicname3,topicname4,topicname5,topicname6,topicname7 FROM courseinfo WHERE PKID = $_GET[courseID]"; 
 
 	 $result = $conn->query($sql); /* used for coursecode */
-if($result->num_rows > 0) {
-	//used for profinfo items
-	// output data of each row
-	$row = $result->fetch_assoc(); 
+	if($result->num_rows > 0) {
+		//used for profinfo items
+		// output data of each row
+		$row = $result->fetch_assoc(); 
 
 ?>
 		
-	<!-- this is the topic breakdown for piechart -->   	
+		<!-- this is the topic breakdown for piechart -->   	
 		<div id="breakdown">
 			<?php
 			echo $row["topicname1"]."<br>";
@@ -184,23 +163,19 @@ if($result->num_rows > 0) {
 			echo $row["topicname7"];
 			?>
 		</div><!--end breakdown-->
-		
-
 	<!--if else for professor info -->
 		<?php 	
 	} // end if course info
- else { 
+else { 
 	echo "no results prof info";
 }
-
 $conn->close();
 //echo "---------------------------------<hr>"; exit;
 ?> 
 
-
 <?php 	/* used for topicname */
 	} // end if course info
- else { 
+else { 
 	echo "no results prof info";
 }
 
@@ -209,24 +184,14 @@ $conn->close();
 ?> 
 	
 <!-- pieChart link -->
-<div id="pieChart">
-	<div><?php include 'pieChart.php' ?></div>
-		
-</div><!--end piechart-->
+	<div id="pieChart">
+		<?php include 'pieChart.php' ?>
+	</div><!--end piechart-->
 
-
-<div class="pagebreak"> </div>
-<div class="pagebreak"> </div>
-<div id="page2">
-	<div><?php //include 'weeklyschedule.php' ?></div>
-</div>
-
-<!--
-//require "pdfcrowd.php";
-//$api = new \Pdfcrowd\HtmlToPdfClient("demo", //"ce544b6ea52a5621fb9d55f8b542d14d");
-//$api->convertUrlToFile("http://localhost/473/pdf.php?//courseID=15", "syllabus.pdf");
--->
-
+	<div class="pagebreak"> </div>
+	<div class="pagebreak"> </div>
+	<div id="page2">
+		<div><?php //include 'weeklyschedule.php' ?></div>
+	</div>
 </body>
-
 </html>
