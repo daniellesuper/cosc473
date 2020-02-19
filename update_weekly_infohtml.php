@@ -105,6 +105,24 @@ if ($_GET['ok'] == 1) {
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<header>
+	<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">InfoSyllabus&copy;</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="mainpage.php">Welcome, Professor</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<hr />
+</header>
 </head>
 <body>
 <h1 style="padding-left: 25px;">Weekly Calendar</h1>

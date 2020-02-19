@@ -77,8 +77,7 @@ $isbn = $row[bookisbn];
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="mainpage.php">Welcome, Professor</a></li>
-      <li><a href="about.php">About</a></li>
-      <li><a href="contact.php">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
