@@ -52,7 +52,7 @@ error_reporting(0);
 <body>
 <h1 style="padding-left: 25px;">Weekly Calendar</h1>
 
-<form action="update_weekly_info.php" form="get" style="padding-left: 25px;">
+<form action="insert_weekly_info.php" form="get" style="padding-left: 25px;"> 
 
 Break:	&nbsp <select name="holiday_name">
 		<option value="0">Select</option>
@@ -66,7 +66,7 @@ Date End: &nbsp <input type="date" name="enddate" value=""> <br><br>
 Week of &nbsp <input type="text" name="weekofheading1" value=""> <br><br>
 Description &nbsp   <input type="text" length="255" name="week1_info" value=""> &nbsp
 Assesment Due &nbsp <input type="text" length="255" name="week1assessment" value="" > &nbsp
-Image &nbsp <select name="symbol21">
+Image &nbsp <select name="symbol1">
 			<option value=""> --</option>
 			<option value="star">Star</option>
 			<option value="point">Exclamation Point</option>
