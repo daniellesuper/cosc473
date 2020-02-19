@@ -126,6 +126,8 @@ $dataPoints = array(
 <script src="https://cdn.ckeditor.com/4.11.2/standard/ckeditor.js"></script>
 <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
 <header>
+	
+<!--
 	<nav class="navbar navbar-inverse">
     <div class="container-fluid">
     <div class="navbar-header">
@@ -141,6 +143,7 @@ $dataPoints = array(
   </div>
 </nav>
 <hr />
+-->
 </header>
 	<link href="pdf.css" type="text/css" rel="stylesheet" />
 
