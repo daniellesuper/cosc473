@@ -61,7 +61,8 @@ if($result->num_rows > 0) {
 	</div><!--nameBanner-->
 
 	<div id="officeEmailPhone">
-		<br /><br />Faculty Office<br><?php
+		<img src="images/email-logo.png" id="emailLogo">
+		Faculty Office<br><?php
 		echo "<b>".$row["officeaddress"]."</b>";?><br>
 		Contact Email<br><?php
 		echo "<b>".$row["email"]."</b>";?><br>
@@ -70,7 +71,7 @@ if($result->num_rows > 0) {
 	</div><!-- end div for officeEmailPhone -->
 
 	<div id="officeHours">
-		<br /><br /><br />
+		<img src="images/house.png" id="houseLogo">
 		<span id="officeHeading">Office Hours:</span>
 	 <?php
 		if(!empty($row['monday'])){
