@@ -155,13 +155,52 @@ if($result->num_rows > 0) {
 		<!-- this is the topic breakdown for piechart -->   	
 		<div id="breakdown">
 			<?php
-			echo $row["topicname1"]."<br>";
-			echo $row["topicname2"]."<br>";
+			
+			$image = images/rectangle.png; 
+
+			if(!empty($row["topicname1"])){
+				echo '<img src="images/rectangle1.png" width="30px"/>'. $row["topicname1"]."<br>";
+			} else { echo ""; }
+
+			if(!empty($row["topicname2"])){
+				echo '<img src="images/rectangle2.png" width="30px"/>'. $row["topicname2"]."<br>";
+			} else { echo ""; }
+
+			if(!empty($row["topicname3"])){
+				echo '<img src="images/rectangle3.png" width="30px"/>'. $row["topicname3"]."<br>";
+			} else { echo ""; }
+ 
+			if(!empty($row["topicname4"])){ 
+				echo '<img src="images/rectangle4.png" width="30px"/>'. $row["topicname4"]."<br>";
+			} else { echo ""; }
+
+			if(!empty($row["topicname5"])){
+				echo '<img src="images/rectangle5.png" width="30px"/>'. $row["topicname5"]."<br>";
+			} else { echo ""; }
+
+			if(!empty($row["topicname6"])){
+				echo '<img src="images/rectangle6.png" width="30px"/>'. $row["topicname6"]."<br>";
+			} else { echo ""; }
+
+			if(!empty($row["topicname7"])){
+				echo '<img src="images/rectangle7.png" width="30px"/>'. $row["topicname7"]."<br>";
+			} else { echo ""; } 
+
+			 
+			/*
+			echo "<img src=images/rectangle.png>".$row["topicname2"]."<br>";
+			
 			echo $row["topicname3"]."<br>";
+			
 			echo $row["topicname4"]."<br>";
+			
 			echo $row["topicname5"]."<br>";
+			
 			echo $row["topicname6"]."<br>"; 
+			
 			echo $row["topicname7"];
+
+			*/
 			?>
 		</div><!--end breakdown-->
 	<!--if else for professor info -->
