@@ -229,8 +229,8 @@ Image &nbsp <select name="symbol7">
 <br><br>
 
 Week of &nbsp <input type="text" name="week8_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?php echo $subheading8; ?>" > &nbsp
-Assesment Due &nbsp <input type="text" length="255" name="week8assessment" value="<?php echo $week8assessment; ?>" > &nbsp
+Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?php echo $subheading8; ?>" > &nbsp;
+Assesment Due &nbsp <input type="text" length="255" name="week8assessment" value="<?php echo $week8assessment; ?>" > &nbsp;
 Image &nbsp <select name="symbol8">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
@@ -242,8 +242,8 @@ Image &nbsp <select name="symbol8">
 <br><br>
 
 Week of &nbsp <input type="text" name="week9_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?php echo $subheading9; ?>" > &nbsp
-Assesment Due &nbsp <input type="text" length="255" name="week9assessment" value="<?php echo $week9assessment; ?>" > &nbsp
+Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?php echo $subheading9; ?>" > &nbsp;
+Assesment Due &nbsp <input type="text" length="255" name="week9assessment" value="<?php echo $week9assessment; ?>" > &nbsp;
 Image &nbsp <select name="symbol9">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
@@ -255,8 +255,8 @@ Image &nbsp <select name="symbol9">
 <br><br>
 
 Week of &nbsp <input type="text" name="week10_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?php echo $subheading10; ?>" > &nbsp
-Assesment Due &nbsp <input type="text" length="255" name="week10assessment" value="<?php echo $week10assessment; ?>" > &nbsp
+Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?php echo $subheading10; ?>" > &nbsp;
+Assesment Due &nbsp <input type="text" length="255" name="week10assessment" value="<?php echo $week10assessment; ?>" > &nbsp;
 Image &nbsp <select name="symbol10">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
@@ -268,8 +268,8 @@ Image &nbsp <select name="symbol10">
 <br><br>
 
 Week of &nbsp <input type="text" name="week11_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?php echo $subheading11; ?>" > &nbsp
-Assesment Due &nbsp <input type="text" length="255" name="week11assessment" value="<?php echo $week11assessment; ?>" > &nbsp
+Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?php echo $subheading11; ?>" > &nbsp;
+Assesment Due &nbsp <input type="text" length="255" name="week11assessment" value="<?php echo $week11assessment; ?>" > &nbsp;
 Image &nbsp <select name="symboll1">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
@@ -281,8 +281,8 @@ Image &nbsp <select name="symboll1">
 <br><br>
 
 Week of &nbsp <input type="text" name="week12_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?php echo $subheading12; ?>" > &nbsp
-Assesment Due &nbsp <input type="text" length="255" name="week12assessment" value="<?php echo $week12assessment; ?>" > &nbsp
+Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?php echo $subheading12; ?>" > &nbsp;
+Assesment Due &nbsp <input type="text" length="255" name="week12assessment" value="<?php echo $week12assessment; ?>" > &nbsp;
 Image &nbsp <select name="symbol12">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
@@ -294,8 +294,8 @@ Image &nbsp <select name="symbol12">
 <br><br>
 
 Week of &nbsp <input type="text" name="week13_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?php echo $subheading13; ?>" > &nbsp
-Assesment Due &nbsp <input type="text" length="255" name="week13assessment" value="<?php echo $week13assessment; ?>" > &nbsp
+Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?php echo $subheading13; ?>" > &nbsp;
+Assesment Due &nbsp <input type="text" length="255" name="week13assessment" value="<?php echo $week13assessment; ?>" > &nbsp;
 Image &nbsp <select name="symbol13">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
@@ -307,8 +307,8 @@ Image &nbsp <select name="symbol13">
 <br><br>
 
 Week of &nbsp <input type="text" name="week14_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?php echo $subheading14; ?>" > &nbsp
-Assesment Due &nbsp <input type="text" length="255" name="week14assessment" value="<?php echo $week14assessment; ?>" > &nbsp
+Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?php echo $subheading14; ?>" > &nbsp;
+Assesment Due &nbsp <input type="text" length="255" name="week14assessment" value="<?php echo $week14assessment; ?>" > &nbsp;
 Image &nbsp <select name="symbol14">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
@@ -320,8 +320,8 @@ Image &nbsp <select name="symbol14">
 <br><br>
 
 Week of &nbsp <input type="text" name="week15_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?php echo $subheading15; ?>" > &nbsp
-Assesment Due &nbsp <input type="text" length="255" name="week15assessment" value="<?php echo $week15assessment; ?>" > &nbsp
+Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?php echo $subheading15; ?>" > &nbsp;
+Assesment Due &nbsp <input type="text" length="255" name="week15assessment" value="<?php echo $week15assessment; ?>" > &nbsp;
 Image &nbsp <select name="symbol15">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
