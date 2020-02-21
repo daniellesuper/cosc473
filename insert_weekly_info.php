@@ -14,13 +14,18 @@ $FKPROFID = $_SESSION['FKPROFID'];
 
 $courseID = htmlentities($_REQUEST['courseID'],ENT_QUOTES);
 $holiday_name=htmlentities($_REQUEST['holiday_name'],ENT_QUOTES);
-$startdate=htmlentities($_REQUEST['startdate'],ENT_QUOTES);
+
 $enddate=htmlentities($_REQUEST['enddate'],ENT_QUOTES);
+$startdate1=htmlentities($_REQUEST['startdate1'],ENT_QUOTES); 
 
 
 
 $weekofheading1 = htmlentities($_REQUEST['weekofheading1'],ENT_QUOTES);
-$week1_info = htmlentities($_REQUEST['week1_info'],ENT_QUOTES);
+$week1_desc= htmlentities($_REQUEST['week1_desc'],ENT_QUOTES);
+$week1_of = htmlentities($_REQUEST['week1_of'],ENT_QUOTES);
+$symbol1 = htmlentities($_REQUEST['symbol1'],ENT_QUOTES);
+
+
 //$week1assessment = htmlentities($_REQUEST['week1assessment'],ENT_QUOTES);
 
 
@@ -29,15 +34,15 @@ $week1_info = htmlentities($_REQUEST['week1_info'],ENT_QUOTES);
 	
          $strQuery="insert into weeklyinfo
                       (
-                       fkcourseid,fkprofid,holiday, startdate, enddate, weekofheading1, subheading1
+                       fkcourseid,fkprofid,holiday, startdate, enddate, week1_desc, week1_of, symbol1
                       )
                      values
                      (
-                      $courseID, $FKPROFID , '$holiday_name', '$startdate', '$enddate', '$weekofheading1', '$week1_info'
+                      $courseID, $FKPROFID , '$holiday_name', '$startdate1', '$enddate',  '$week1_desc', '$week1_of', '$symbol1'
 					 )
                     ";
 		 
- echo $strQuery; exit;
+ //echo $strQuery; exit;
 		 $conn->query($strQuery);
 		
 		 header("Location: mainpage.php");

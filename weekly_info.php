@@ -63,7 +63,7 @@ Break:	&nbsp <select name="holiday_name">
 Date To: &nbsp <input type="date" name="startdate" value =""> &nbsp
 Date End: &nbsp <input type="date" name="enddate" value=""> <br><br>
 
-Week of &nbsp <input type="text" name="weekofheading1" value=""> <br><br>
+Week of &nbsp <input type="text" name="week1_of" value=""> <br><br>
 Description &nbsp   <input type="text" length="255" name="week1_info" value=""> &nbsp
 Assesment Due &nbsp <input type="text" length="255" name="week1assessment" value="" > &nbsp
 Image &nbsp <select name="symbol1">
