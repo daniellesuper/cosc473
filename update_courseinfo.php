@@ -100,7 +100,7 @@ Class Days &nbsp <select name="meetingDays" selected ="<?php echo "$meetingDays"
 				<option value="MF"> MF </option>
 				<option value="WF"> WF </option>
 				<option value="MW"> MW </option>
-				<option value="TR"> TR </option>
+				<option value="TTR"> TR </option>
 				<option value="M"> M </option>
 				<option value="T"> T </option>
 				<option value="W"> W </option>
@@ -138,11 +138,11 @@ Class Days &nbsp <select name="meetingDays" selected ="<?php echo "$meetingDays"
             }else{
 				echo " <OPTION VALUE=\"MW\"  >MW</option>";
 			}  
-				if($meetingDays=="TH")
+				if($meetingDays=="TTR")
 			{
-				echo " <OPTION VALUE=\"TH\"  selected>TH</option>";
+				echo " <OPTION VALUE=\"TTR\"  selected>TTR</option>";
 			}else{
-				echo " <OPTION VALUE=\"TH\"  >TH</option>";
+				echo " <OPTION VALUE=\"TTR\"  >TTR</option>";
 			}
 				if($meetingDays=="M")
             {
