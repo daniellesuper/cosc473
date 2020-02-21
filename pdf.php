@@ -149,13 +149,10 @@ if($result->num_rows > 0) {
 		//used for profinfo items
 		// output data of each row
 		$row = $result->fetch_assoc(); 
-
 ?>
-		
 		<!-- this is the topic breakdown for piechart -->   	
 		<div id="breakdown">
 			<?php
-			
 			$image = images/rectangle.png; 
 
 			if(!empty($row["topicname1"])){
@@ -184,9 +181,7 @@ if($result->num_rows > 0) {
 
 			if(!empty($row["topicname7"])){
 				echo '<img src="images/rectangle7.png" width="30px"/>'. $row["topicname7"]."<br>";
-			} else { echo ""; } 
-
-			 
+			} else { echo ""; }  
 			/*
 			echo "<img src=images/rectangle.png>".$row["topicname2"]."<br>";
 			
@@ -202,6 +197,7 @@ if($result->num_rows > 0) {
 
 			*/
 			?>
+			
 		</div><!--end breakdown-->
 	<!--if else for professor info -->
 		<?php 	
@@ -225,6 +221,7 @@ $conn->close();
 	
 <!-- pieChart link -->
 	<div id="pieChart">
+		<div id="gradeRibbon">Grades</div>
 		<?php include 'pieChart.php' ?>
 	</div><!--end piechart-->
 
@@ -233,5 +230,6 @@ $conn->close();
 	<div id="page2">
 		<div><?php //include 'weeklyschedule.php' ?></div>
 	</div>
+	<input id="printButton" type="button" value ="Print" onClick="print();">
 </body>
 </html>

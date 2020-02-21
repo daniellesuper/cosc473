@@ -46,8 +46,6 @@ $pointvalue6 =$row[pointvalue6];
 $pointvalue7 =$row[pointvalue7];
 }
 
-
-
 $dataPoints = array();
 
  if($topicname1 !="" || $topicname1!=null || !empty($topicname1))
@@ -110,23 +108,21 @@ $dataPoints = array(
 	array("label"=>$topicname7, "y"=>$pointvalue7)
 )*/
 
-
-
 ?>
 <!DOCTYPE HTML>
 <html>
 <head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
-<!-- jQuery library -->
+<!-- jQuery library --><!--
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<!-- Latest compiled JavaScript -->
+<!-- Latest compiled JavaScript --><!--
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script src="https://cdn.ckeditor.com/4.11.2/standard/ckeditor.js"></script>
 <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
 <header>
-	
+-->
 <!--
 	<nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -145,16 +141,12 @@ $dataPoints = array(
 <hr />
 -->
 </header>
-	<link href="pdf.css" type="text/css" rel="stylesheet" />
-
-
+<link href="pdf.css" type="text/css" rel="stylesheet" />
 <script>
 window.onload = function() { 
- 
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	title: {
-		text: "Grades"
 	},
 	subtitles: [{
 		text: ""
@@ -176,6 +168,5 @@ chart.render();
 </head>
 <body>
 	<div id="chartContainer"></div>
-	<input id="printButton" type="button" value ="Print" onClick="print();">
 </body>
 </html>
