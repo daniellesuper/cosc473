@@ -94,19 +94,95 @@ $isbn = $row[bookisbn];
 Course Code&nbsp <input type="text" length="25" name="courseCode" value="<?php echo $course_code?>" required > &nbsp Example: COSC 473<br><br>
 Course Name&nbsp <input type="text" length="50" name="courseName" value="<?php echo $course_name?>" required> &nbsp 
 Class Days &nbsp <select name="meetingDays" selected ="<?php echo "$meetingDays"; ?>" required>
-				<option value=""> -- </option>
-				<option value="online"> online </option>
+				<option value="">--</option>
+			<!--<option value="online"> online </option>
 				<option value="MWF"> MWF </option>
 				<option value="MF"> MF </option>
 				<option value="WF"> WF </option>
 				<option value="MW"> MW </option>
-				<option value="TR"> TR </option>
+				<option value="TTR"> TR </option>
 				<option value="M"> M </option>
 				<option value="T"> T </option>
 				<option value="W"> W </option>
 				<option value="R"> R </option>
 				<option value="F"> F </option>
-				<option value="other"> other </option>
+				<option value="other"> other </option> -->
+			<?php
+				if($meetingDays=="online")
+            {
+                echo " <OPTION VALUE=\"Online\"  selected>Online</option>";
+            }else{
+            	echo " <OPTION VALUE=\"Online\"  >Online</option>";
+			} 
+				if($meetingDays=="MWF")
+            {
+                echo " <OPTION VALUE=\"MWF\"  selected>MWF</option>";
+            }else{
+				echo " <OPTION VALUE=\"MWF\"  >MWF</option>";
+			}  
+				if($meetingDays=="MF")
+            {
+                echo " <OPTION VALUE=\"MF\"  selected>MF</option>";
+            }else{
+				echo " <OPTION VALUE=\"MF\"  >MF</option>";
+			}  
+				if($meetingDays=="WF")
+            {
+                echo " <OPTION VALUE=\"WF\"  selected>WF</option>";
+            }else{
+				echo " <OPTION VALUE=\"WF\"  >WF</option>";
+			}  
+				if($meetingDays=="MW")
+            {
+                echo " <OPTION VALUE=\"MW\"  selected>MW</option>";
+            }else{
+				echo " <OPTION VALUE=\"MW\"  >MW</option>";
+			}  
+				if($meetingDays=="TTR")
+			{
+				echo " <OPTION VALUE=\"TTR\"  selected>TTR</option>";
+			}else{
+				echo " <OPTION VALUE=\"TTR\"  >TTR</option>";
+			}
+				if($meetingDays=="M")
+            {
+                echo " <OPTION VALUE=\"M\"  selected>M</option>";
+            }else{
+				echo " <OPTION VALUE=\"M\"  >M</option>";
+			}  
+				if($meetingDays=="T")
+            {
+                echo " <OPTION VALUE=\"T\"  selected>T</option>";
+            }else{
+				echo " <OPTION VALUE=\"T\"  >T</option>";
+			}  
+				if($meetingDays=="W")
+            {
+                echo " <OPTION VALUE=\"W\"  selected>W</option>";
+            }else{
+				echo " <OPTION VALUE=\"W\"  >W</option>";
+			}  
+				if($meetingDays=="R")
+            {
+                echo " <OPTION VALUE=\"R\"  selected>R</option>";
+            }else{
+				echo " <OPTION VALUE=\"R\"  >R</option>";
+			}  
+				if($meetingDays=="F")
+            {
+                echo " <OPTION VALUE=\"F\"  selected>F</option>";
+            }else{
+				echo " <OPTION VALUE=\"F\"  >F</option>";
+			}
+			if($meetingDays=="Other")
+            {
+                echo " <OPTION VALUE=\"Other\"  selected>Other</option>";
+            }else{
+				echo " <OPTION VALUE=\"Other\"  >Other</option>";
+			}
+			  ?>
+			</SELECT>
+
 				<!-- Code for other option when clicked text box appears -->
 			</select><br><br>
 Important Points:<br><br>
