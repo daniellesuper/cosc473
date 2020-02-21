@@ -51,7 +51,7 @@ $profID = $_SESSION["FKPROFID"];
 	<div class="prof-course-info">
 		<a href="prof_info.php?profID=<?php echo $profID ?>" ><button type="button" class="btn btn-primary btn-lg"> Update Professor Info</a></button>
 		<a href="courseinfo.php"><button type="button" class="btn btn-primary btn-lg">New Course Info</a></button>
-		<a href="weekly_info.php"><button type="button" class="btn btn-primary btn-lg">New Weekly Schedule</a></button>
+		
 		
 	</div>
 	
