@@ -40,9 +40,6 @@ $conn->close();
 
 */
 -->
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,7 +54,8 @@ $conn->close();
 
 $sql1 = "SELECT  meetingday FROM courseinfo WHERE PKID = $_GET[courseID]";
  //echo $sql1; exit;
-$sql2 = "SELECT week1_of, week2_of, week3_of, week4_of, week5_of, week6_of, week7_of, week8_of, week9_of, week10_of, week11_of, week12_of, week13_of, week14_of, week15_of, week1_desc, week2_desc, week3_desc, week4_desc, week5_desc, week6_desc, week7_desc, week8_desc, week9_desc, week10_desc, week11_desc, week12_desc, week13_desc, week14_desc, week15_desc, holiday, startdate, enddate FROM weeklyinfo WHERE PKID = 11";
+$sql2 = "SELECT week1_of, week2_of, week3_of, week4_of, week5_of, week6_of, week7_of, week8_of, week9_of, week10_of, week11_of, week12_of, week13_of, week14_of, week15_of, week1_desc, week2_desc, week3_desc, week4_desc, week5_desc, week6_desc, week7_desc, week8_desc, week9_desc, week10_desc, week11_desc, week12_desc, week13_desc, week14_desc, week15_desc, holiday, startdate, enddate FROM weeklyinfo WHERE fkcourseid= $_GET[courseID]";
+//
 
 $result1 = $conn->query($sql1);
 $result2 = $conn->query($sql2);
@@ -80,7 +78,7 @@ $result2 = $conn->query($sql2);
       <h1>Weekly Schedule</h1>
     </div>
     <div id="springBreak">
-      <h4> <?php  echo $bar["holiday"]; 
+      <h4> <?php  echo $bar["holiday"]. " "; 
                   echo $bar["startdate"].$bar["enddate"];
             ?> <!--insert spring break dates here--></h4>
     </div>
@@ -97,7 +95,7 @@ $result2 = $conn->query($sql2);
 
             if($row["meetingday"] == "TR"){
             echo "helllloooooooooooo".$row["meetingday"]; ?>
-
+           
             <select id="symbols">
                 <option value="star">Star</option>
                 <option value="Exclamation">Exclamation Point</option>
@@ -281,7 +279,22 @@ $result2 = $conn->query($sql2);
       <div class="box">
       <div class="circle">15</div>
       </div>
-      <div class="box">key</div>
+      
+      key:
+      <div class="box">
+
+        <img src="images/star.png" width="30px" height="20px"/><br>
+        <img src="images/x.png" width="30px" height="20px"/><br>
+        <img src="images/checkmark.png" width="30px" height="20px"/><br>
+        <img src="images/exclamation.png" width="20px" height="20px"/><br>
+        <img src="images/circle.png" width="20px" height="20px"/>
+
+      </div>
+
+        
+
+
+
   </div>
 </div> <!-- boxes div -->
 
