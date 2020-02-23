@@ -16,30 +16,6 @@ die("Connection Failed". $conn->connect_error);
 $FKPROFID = $_SESSION["FKPROFID"];
 ?>
  
-
-<!--
- /*
-
-$sql = "SELECT week1_of, week2_of, week3_of, week4_of, week5_of, week6_of, week7_of, week8_of, week9_of, week10_of, week11_of, week12_of, week13_of, week14_of, week15_of, week1_desc, week2_desc, week3_desc, week4_desc, week5_desc, week6_desc, week7_desc, week8_desc, week9_desc, week10_desc, week11_desc, week12_desc, week13_desc, week14_desc, week15_desc FROM weeklyinfo WHERE PKID = $_GET[courseID]";
-
-//echo $sql; exit;
-
-$result = $conn->query($sql);
-
-if($result->num_rows > 0) {
-  //used for profinfo items
-  // output data of each row
-  $row = $result->fetch_assoc(); 
-
-  }   // end if course info
-else { 
-  echo "no weekly info";
-}
-$conn->close();
-//echo "---------------------------------<hr>"; exit;
-
-*/
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1016,7 +992,7 @@ $result2 = $conn->query($sql2);
             
             if($row["meetingday"] == "MWF"){
 
-            echo "hhhhhhhhhhhhhhhhh". $row["meetingday"]; ?><br>
+            ?><br>
                
            
             <select id="symbols"> 
