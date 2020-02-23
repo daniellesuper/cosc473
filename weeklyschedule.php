@@ -72,13 +72,14 @@ $result2 = $conn->query($sql2);
             if($row["meetingday"] == "TR"){
             ?>
            
-            <select id="symbols">
+            <select id="symbols" onchange="swapImage()">
                 <option value="star">Star</option>
                 <option value="Exclamation">Exclamation Point</option>
                 <option value="Circle">Circle</option>
                 <option value="X">X</option>
                 <option value="CheckMark">CheckMark</option>
             </select>
+
             <?php echo "T"; ?><br>
 
             <select id="symbols">
@@ -1179,14 +1180,14 @@ $result2 = $conn->query($sql2);
         ?>
       </div>
       
-      key:
+      key: 
       <div class="box">
 
-        <img src="images/star.png" width="30px" height="20px"/><br>
-        <img src="images/x.png" width="30px" height="20px"/><br>
-        <img src="images/checkmark.png" width="30px" height="20px"/><br>
-        <img src="images/exclamation.png" width="20px" height="20px"/><br>
-        <img src="images/circle.png" width="20px" height="20px"/>
+        <img src="images/star.jpeg" width="30px" height="20px"/> - <br>
+        <img src="images/x.jpeg" width="30px" height="20px"/> - <br>
+        <img src="images/checkmark.jpeg" width="30px" height="20px"/> - <br>
+        <img src="images/exclamation1.png" width="20px" height="30px"/> - <br>
+        <img src="images/circle.png" width="20px" height="20px"/> -
 
       </div>
 
