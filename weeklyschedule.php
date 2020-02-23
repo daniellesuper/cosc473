@@ -1174,7 +1174,7 @@ $result2 = $conn->query($sql2);
             <?php echo "F" ?><br>
 
         <?php
-              }
+              } 
            }
  
         ?>
