@@ -53,40 +53,26 @@ $conn->close();
 </head>
 <body>
 
-
-<?php
-
-
-$sql = "SELECT week1_of, week2_of, week3_of, week4_of, week5_of, week6_of, week7_of, week8_of, week9_of, week10_of, week11_of, week12_of, week13_of, week14_of, week15_of, week1_desc, week2_desc, week3_desc, week4_desc, week5_desc, week6_desc, week7_desc, week8_desc, week9_desc, week10_desc, week11_desc, week12_desc, week13_desc, week14_desc, week15_desc, holiday, startdate, enddate FROM weeklyinfo WHERE PKID = $_GET[courseID]";
-
-
-
- /* echo $sql1; exit; */ 
-
- $result = $conn->query($sql);
-
- if($result->num_rows > 0) {
-  //used for profinfo items
-  // output data of each row
-  $row = $result->fetch_assoc(); 
-
-}
-
-?>
-
-
 <?php
 
 $sql1 = "SELECT  meetingday FROM courseinfo WHERE PKID = $_GET[courseID]";
  //echo $sql1; exit;
+$sql2 = "SELECT week1_of, week2_of, week3_of, week4_of, week5_of, week6_of, week7_of, week8_of, week9_of, week10_of, week11_of, week12_of, week13_of, week14_of, week15_of, week1_desc, week2_desc, week3_desc, week4_desc, week5_desc, week6_desc, week7_desc, week8_desc, week9_desc, week10_desc, week11_desc, week12_desc, week13_desc, week14_desc, week15_desc, holiday, startdate, enddate FROM weeklyinfo WHERE PKID = 11";
 
 $result1 = $conn->query($sql1);
-
+$result2 = $conn->query($sql2);
+ 
  if($result1->num_rows > 0) {
   //used for profinfo items
   // output data of each row
   $row = $result1->fetch_assoc(); 
 
+  
+
+  if($result2->num_rows > 0){
+    $bar = $result2->fetch_assoc();
+  }
+//echo $sql2;exit;
 ?>
 <div class="boxes">
   <div id="topBox">
@@ -94,7 +80,9 @@ $result1 = $conn->query($sql1);
       <h1>Weekly Schedule</h1>
     </div>
     <div id="springBreak">
-      <h4> <?php  echo "Holiday"; ?> <!--insert spring break dates here--></h4>
+      <h4> <?php  echo $bar["holiday"]; 
+                  echo $bar["startdate"].$bar["enddate"];
+            ?> <!--insert spring break dates here--></h4>
     </div>
   </div>  
 
@@ -103,6 +91,9 @@ $result1 = $conn->query($sql1);
       <div class="box">
         <div class="circle">1</div>
         <?php 
+
+            echo "Week of ".$bar["week1_of"]."<br>";
+            echo $bar["week1_desc"]."<br>";
 
             if($row["meetingday"] == "TR"){
             echo "helllloooooooooooo".$row["meetingday"]; ?>
@@ -174,6 +165,76 @@ $result1 = $conn->query($sql1);
 
       <div class="box">
         <div class="circle">2</div>
+          <?php 
+
+            echo "Week of ".$bar["week2_of"]."<br>";
+            echo $bar["week2_desc"]."<br>";
+
+            if($row["meetingday"] == "TR"){
+            echo "helllloooooooooooo".$row["meetingday"]; ?>
+
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "T"; ?><br>
+
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "TR"; ?><br>
+            
+            <?php
+
+          }
+           else {
+            
+            if($row["meetingday"] == "MWF"){
+
+            echo "hhhhhhhhhhhhhhhhh". $row["meetingday"]; ?><br>
+               
+           
+            <select id="symbols"> 
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "M"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "W"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "F" ?><br>
+
+        <?php
+              }
+           }
+
+        ?>
       </div>
       <div class="box">
         <div class="circle">3</div>
