@@ -94,7 +94,7 @@ $result2 = $conn->query($sql2);
             echo $bar["week1_desc"]."<br>";
 
             if($row["meetingday"] == "TR"){
-            echo "helllloooooooooooo".$row["meetingday"]; ?>
+            ?>
            
             <select id="symbols">
                 <option value="star">Star</option>
@@ -121,7 +121,7 @@ $result2 = $conn->query($sql2);
             
             if($row["meetingday"] == "MWF"){
 
-            echo "hhhhhhhhhhhhhhhhh". $row["meetingday"]; ?><br>
+            ?><br>
                
            
             <select id="symbols"> 
@@ -169,8 +169,828 @@ $result2 = $conn->query($sql2);
             echo $bar["week2_desc"]."<br>";
 
             if($row["meetingday"] == "TR"){
-            echo "helllloooooooooooo".$row["meetingday"]; ?>
+            ?>
 
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "T"; ?><br>
+
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "TR"; ?><br>
+            
+            <?php
+
+          }
+           else {
+            
+            if($row["meetingday"] == "MWF"){
+
+            ?><br>
+               
+           
+            <select id="symbols"> 
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "M"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "W"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "F" ?><br>
+
+        <?php
+              }
+           }
+
+        ?>
+      </div>
+      <div class="box">
+        <div class="circle">3</div>
+
+        <?php 
+
+            echo "Week of ".$bar["week3_of"]."<br>";
+            echo $bar["week3_desc"]."<br>";
+
+            if($row["meetingday"] == "TR"){
+            ?>
+           
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "T"; ?><br>
+
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "TR"; ?><br>
+            
+            <?php
+
+          }
+           else {
+            
+            if($row["meetingday"] == "MWF"){
+
+            ?><br>
+               
+           
+            <select id="symbols"> 
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "M"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "W"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "F" ?><br>
+
+        <?php
+              }
+           }
+
+        ?>
+      </div>
+      <div class="box">
+        <div class="circle">4</div>
+
+        <?php 
+
+            echo "Week of ".$bar["week4_of"]."<br>";
+            echo $bar["week4_desc"]."<br>";
+
+            if($row["meetingday"] == "TR"){
+            ?>
+           
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "T"; ?><br>
+
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "TR"; ?><br>
+            
+            <?php
+
+          }
+           else {
+            
+            if($row["meetingday"] == "MWF"){
+
+           ?><br>
+               
+           
+            <select id="symbols"> 
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "M"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "W"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "F" ?><br>
+
+        <?php
+              }
+           }
+
+        ?>
+      </div>
+  </div>  
+  <div class="row">
+      <div class="box">
+        <div class="circle">5</div>
+
+        <?php 
+
+            echo "Week of ".$bar["week5_of"]."<br>";
+            echo $bar["week5_desc"]."<br>";
+
+            if($row["meetingday"] == "TR"){
+            ?>
+           
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "T"; ?><br>
+
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "TR"; ?><br>
+            
+            <?php
+
+          }
+           else {
+            
+            if($row["meetingday"] == "MWF"){
+
+            ?><br>
+               
+           
+            <select id="symbols"> 
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "M"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "W"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "F" ?><br>
+
+        <?php
+              }
+           }
+
+        ?>
+      </div>
+      <div class="box">
+        <div class="circle">6</div>
+
+        <?php 
+
+            echo "Week of ".$bar["week6_of"]."<br>";
+            echo $bar["week6_desc"]."<br>";
+
+            if($row["meetingday"] == "TR"){
+            ?>
+           
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "T"; ?><br>
+
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "TR"; ?><br>
+            
+            <?php
+
+          }
+           else {
+            
+            if($row["meetingday"] == "MWF"){
+
+            ?><br>
+               
+           
+            <select id="symbols"> 
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "M"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "W"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "F" ?><br>
+
+        <?php
+              }
+           }
+
+        ?>
+      </div>
+      <div class="box">
+        <div class="circle">7</div>
+
+        <?php 
+
+            echo "Week of ".$bar["week7_of"]."<br>";
+            echo $bar["week7_desc"]."<br>";
+
+            if($row["meetingday"] == "TR"){
+            ?>
+           
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "T"; ?><br>
+
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "TR"; ?><br>
+            
+            <?php
+
+          }
+           else {
+            
+            if($row["meetingday"] == "MWF"){
+
+            ?><br>
+               
+           
+            <select id="symbols"> 
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "M"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "W"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "F" ?><br>
+
+        <?php
+              }
+           }
+
+        ?>
+      </div>
+      <div class="box">
+        <div class="circle">8</div>
+
+        <?php 
+
+            echo "Week of ".$bar["week8_of"]."<br>";
+            echo $bar["week8_desc"]."<br>";
+
+            if($row["meetingday"] == "TR"){
+            ?>
+           
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "T"; ?><br>
+
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "TR"; ?><br>
+            
+            <?php
+
+          }
+           else {
+            
+            if($row["meetingday"] == "MWF"){
+
+            ?><br>
+               
+           
+            <select id="symbols"> 
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "M"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "W"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "F" ?><br>
+
+        <?php
+              }
+           }
+
+        ?>
+      </div>
+  </div>
+  <div class="row">
+      <div class="box">
+        <div class="circle">9</div>
+
+        <?php 
+
+            echo "Week of ".$bar["week9_of"]."<br>";
+            echo $bar["week9_desc"]."<br>";
+
+            if($row["meetingday"] == "TR"){
+            ?>
+           
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "T"; ?><br>
+
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "TR"; ?><br>
+            
+            <?php
+
+          }
+           else {
+            
+            if($row["meetingday"] == "MWF"){
+
+            ?><br>
+               
+           
+            <select id="symbols"> 
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "M"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "W"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "F" ?><br>
+
+        <?php
+              }
+           }
+
+        ?>
+      </div>
+      <div class="box">
+        <div class="circle">10</div>
+
+        <?php 
+
+            echo "Week of ".$bar["week10_of"]."<br>";
+            echo $bar["week10_desc"]."<br>";
+
+            if($row["meetingday"] == "TR"){
+            ?>
+           
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "T"; ?><br>
+
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "TR"; ?><br>
+            
+            <?php
+
+          }
+           else {
+            
+            if($row["meetingday"] == "MWF"){
+
+            ?><br>
+               
+           
+            <select id="symbols"> 
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "M"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "W"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "F" ?><br>
+
+        <?php
+              }
+           }
+
+        ?>
+      </div>
+      <div class="box">
+        <div class="circle">11</div>
+
+        <?php 
+
+            echo "Week of ".$bar["week11_of"]."<br>";
+            echo $bar["week11_desc"]."<br>";
+
+            if($row["meetingday"] == "TR"){
+            ?>
+           
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "T"; ?><br>
+
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "TR"; ?><br>
+            
+            <?php
+
+          }
+           else {
+            
+            if($row["meetingday"] == "MWF"){
+
+            ?><br>
+               
+           
+            <select id="symbols"> 
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "M"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "W"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "F" ?><br>
+
+        <?php
+              }
+           }
+
+        ?>
+      </div>
+      <div class="box">
+        <div class="circle">12</div>
+
+        <?php 
+
+            echo "Week of ".$bar["week12_of"]."<br>";
+            echo $bar["week12_desc"]."<br>";
+
+            if($row["meetingday"] == "TR"){
+             ?>
+           
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "T"; ?><br>
+
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "TR"; ?><br>
+            
+            <?php
+
+          }
+           else {
+            
+            if($row["meetingday"] == "MWF"){
+
+            ?><br>
+               
+           
+            <select id="symbols"> 
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "M"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "W"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "F" ?><br>
+
+        <?php
+              }
+           }
+
+        ?>
+      </div>
+  </div>
+  <div class="row">
+      <div class="box">
+      <div class="circle">13</div>
+
+      <?php 
+
+            echo "Week of ".$bar["week13_of"]."<br>";
+            echo $bar["week13_desc"]."<br>";
+
+            if($row["meetingday"] == "TR"){
+            ?>
+           
             <select id="symbols">
                 <option value="star">Star</option>
                 <option value="Exclamation">Exclamation Point</option>
@@ -235,49 +1055,152 @@ $result2 = $conn->query($sql2);
         ?>
       </div>
       <div class="box">
-        <div class="circle">3</div>
-      </div>
-      <div class="box">
-        <div class="circle">4</div>
-      </div>
-  </div>  
-  <div class="row">
-      <div class="box">
-        <div class="circle">5</div>
-      </div>
-      <div class="box">
-        <div class="circle">6</div>
-      </div>
-      <div class="box">
-        <div class="circle">7</div>
-      </div>
-      <div class="box">
-        <div class="circle">8</div>
-      </div>
-  </div>
-  <div class="row">
-      <div class="box">
-        <div class="circle">9</div>
-      </div>
-      <div class="box">
-        <div class="circle">10</div>
-      </div>
-      <div class="box">
-        <div class="circle">11</div>
-      </div>
-      <div class="box">
-        <div class="circle">12</div>
-      </div>
-  </div>
-  <div class="row">
-      <div class="box">
-      <div class="circle">13</div>
-      </div>
-      <div class="box">
       <div class="circle">14</div>
+
+      <?php 
+
+            echo "Week of ".$bar["week14_of"]."<br>";
+            echo $bar["week14_desc"]."<br>";
+
+            if($row["meetingday"] == "TR"){
+             ?> 
+           
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "T"; ?><br>
+
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "TR"; ?><br>
+            
+            <?php
+
+          }
+           else {
+            
+            if($row["meetingday"] == "MWF"){
+
+            ?><br>
+               
+           
+            <select id="symbols"> 
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "M"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "W"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "F" ?><br>
+
+        <?php
+              }
+           }
+
+        ?>
       </div>
       <div class="box">
       <div class="circle">15</div>
+
+      <?php 
+
+            echo "Week of ".$bar["week15_of"]."<br>";
+            echo $bar["week15_desc"]."<br>";
+
+            if($row["meetingday"] == "TR"){
+             ?>
+           
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "T"; ?><br>
+
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "TR"; ?><br>
+            
+            <?php
+
+          }
+           else {
+            
+            if($row["meetingday"] == "MWF"){
+
+            ?><br>
+               
+           
+            <select id="symbols"> 
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "M"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "W"; ?><br>
+
+            
+            <select id="symbols">
+                <option value="star">Star</option>
+                <option value="Exclamation">Exclamation Point</option>
+                <option value="Circle">Circle</option>
+                <option value="X">X</option>
+                <option value="CheckMark">CheckMark</option>
+            </select>
+            <?php echo "F" ?><br>
+
+        <?php
+              }
+           }
+
+        ?>
       </div>
       
       key:
