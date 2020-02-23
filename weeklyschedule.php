@@ -1183,11 +1183,20 @@ $result2 = $conn->query($sql2);
       key: 
       <div class="box">
 
-        <img src="images/star.jpeg" width="30px" height="20px"/> - <br>
-        <img src="images/x.jpeg" width="30px" height="20px"/> - <br>
-        <img src="images/checkmark.jpeg" width="30px" height="20px"/> - <br>
-        <img src="images/exclamation1.png" width="20px" height="30px"/> - <br>
+        <img src="images/star.jpeg" width="30px" height="20px"/> - 
+        <input type="text"></input><br>
+        
+        <img src="images/x.jpeg" width="30px" height="20px"/> - 
+        <input type="text"></input><br>
+        
+        <img src="images/checkmark.jpeg" width="30px" height="20px"/> - 
+        <input type="text"></input><br>
+        
+        <img src="images/exclamation1.png" width="20px" height="30px"/> - 
+        <input type="text"></input><br>
+        
         <img src="images/circle.png" width="20px" height="20px"/> -
+        <input type="text"></input>
 
       </div>
 
