@@ -1,6 +1,6 @@
 <?php
 require("session_info.php");
-
+   
 if(isset($_GET['courseID'])){
 	$courseID = $_GET['courseID'];
 	

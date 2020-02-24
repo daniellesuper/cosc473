@@ -71,7 +71,7 @@ $result2 = $conn->query($sql2);
             echo "Week of ".$bar["week1_of"]."<br>";
             echo $bar["week1_desc"]."<br>";
 
-            if($row["meetingday"] == "TR"){
+            if($row["meetingday"] == "TR" || "online"){
             ?>
            
             <select id="symbols">
