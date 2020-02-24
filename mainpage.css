@@ -94,7 +94,14 @@ footer p {
 .syllabusList {
 	margin-left: 20px;
 }
-
+.syllabusList #courseName {
+	
+}
+.syllabusList #buttons {
+	float: right;
+	clear: left;
+	padding-right: 3rem;
+}
 .syllabusList a {
 	font-family: "Lora", serif;
 	text-decoration: none;
@@ -126,8 +133,9 @@ footer p {
 }
 
 .syllabusList ul li {
+	list-style-type: none;
 	padding-bottom: 15px;
-}
+	
 
 
 

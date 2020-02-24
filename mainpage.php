@@ -95,19 +95,21 @@ $profID = $_SESSION["FKPROFID"];
 		  $courseID = $ap['PKID'];
 	
           ?>
-          <div class="syllabusList">
+      <div class="syllabusList">
 		  <ul>
 				<li>
-					<?php echo $course; ?>
-					<a href="update_courseinfo.php?courseID=<?php echo $courseID ?>" ><button type="button" class= "btn btn-primary btn-lg"> Update Course Info </a></button>
-					<a href="update_weekly_infohtml.php?courseID=<?php echo $courseID ?>" ><button type="button" class="btn btn-primary btn-lg">Weekly Schedule</a></button>
-					<a href="pieChart.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Preview</a></button>
-					<a href="pdf.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Download</a></button>
-					<a href="weeklyschedule.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">weekly</a></button>
-					<a href="<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Delete</a></button>
+					<span id="courseName"><?php echo $course; ?></span>
+					<div id="buttons">
+						<a href="update_courseinfo.php?courseID=<?php echo $courseID ?>" ><button type="button" class= "btn btn-primary btn-lg"> Update Course Info </a></button>
+						<a href="update_weekly_infohtml.php?courseID=<?php echo $courseID ?>" ><button type="button" class="btn btn-primary btn-lg">Weekly Schedule</a></button>
+						<a href="pieChart.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Preview</a></button>
+						<a href="pdf.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Download</a></button>
+						<a href="weeklyschedule.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">weekly</a></button>
+						<a href="<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Delete</a></button>
+					</div>
 				</li>
 		  </ul>
-          </div>
+      </div>
           <?php 
      } ?>
 	
