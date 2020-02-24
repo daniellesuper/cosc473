@@ -54,8 +54,8 @@ $result2 = $conn->query($sql2);
       <h1>Weekly Schedule</h1>
     </div>
     <div id="springBreak">
-      <h4> <?php  echo $bar["holiday"]. " "; 
-                  echo $bar["startdate"].$bar["enddate"];
+      <h4> <?php  echo $bar["holiday"]. " break is "; 
+                  echo $bar["startdate"]." through ".$bar["enddate"];
             ?> <!--insert spring break dates here--></h4>
     </div>
   </div>  
@@ -73,7 +73,7 @@ $result2 = $conn->query($sql2);
 
             if($row["meetingday"] == "TR"){
             ?>
-           
+               
             <select id="symbols">
                 <option value="star">Star</option>
                 <option value="Exclamation">Exclamation Point</option>
@@ -81,6 +81,7 @@ $result2 = $conn->query($sql2);
                 <option value="X">X</option>
                 <option value="CheckMark">CheckMark</option>
             </select> 
+
 
             <?php echo "T"; ?><br>
 

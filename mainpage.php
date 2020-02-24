@@ -55,7 +55,7 @@ $profID = $_SESSION["FKPROFID"];
 		
 	</div>
 	
-	<h2 id="existingSyllabi">Existing Syllabi</h2>
+	<h2 id="existingSyllabi"><u>Existing Syllabi</u></h2>
 	
 	<?php
 
