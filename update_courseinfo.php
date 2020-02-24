@@ -16,11 +16,18 @@ if($conn-> connect_error){
 die("Username and Password Invaid!". $conn->connect_error);
 }
 
-$sql =" Select     
+$FKPROFID = $_SESSION["FKPROFID"];
+?>
+
+<?php
+
+$sql = "SELECT      
 coursecode, coursename, bookname, bookisbn, bookauthor, bookpicture, 
 topicname1, topicname2, topicname3, topicname4, topicname5, topicname6, topicname7,  
 pointvalue1, pointvalue2, pointvalue3, pointvalue4, pointvalue5, pointvalue6, pointvalue7,
-important_points, meetingday, img_mime FROM courseinfo where PKID = $courseID  ";
+important_points, meetingday, img_mime FROM courseinfo where PKID = $_GET[courseID]";
+
+//echo $sql; exit;
 
 $result = $conn->query($sql);
 
@@ -34,27 +41,27 @@ if($row>0){ // if course info avaliable
 $row=$result->fetch_array();
 
 
-$course_code =$row[coursecode];
-$course_name =$row[coursename];
-$book_name = $row[bookname];
-$book_author = $row[bookauthor];
-$topicname1 = $row[topicname1];
-$topicname2 = $row[topicname2];
-$topicname3 = $row[topicname3];
-$topicname4 = $row[topicname4];
-$topicname5 = $row[topicname5];
-$topicname6 = $row[topicname6];
-$topicname7 = $row[topicname7];
-$pointvalue1 = $row[pointvalue1];
-$pointvalue2 = $row[pointvalue2];
-$pointvalue3 = $row[pointvalue3];
-$pointvalue4 = $row[pointvalue4];
-$pointvalue5 = $row[pointvalue5];
-$pointvalue6 = $row[pointvalue6];
-$pointvalue7 = $row[pointvalue7];
-$important_points = $row[important_points];
-$meetingDays = $row[meetingday];
-$isbn = $row[bookisbn];
+$course_code =$row['coursecode'];
+$course_name =$row['coursename'];
+$book_name = $row['bookname'];
+$book_author = $row['bookauthor'];
+$topicname1 = $row['topicname1'];
+$topicname2 = $row['topicname2'];
+$topicname3 = $row['topicname3'];
+$topicname4 = $row['topicname4'];
+$topicname5 = $row['topicname5'];
+$topicname6 = $row['topicname6'];
+$topicname7 = $row['topicname7'];
+$pointvalue1 = $row['pointvalue1'];
+$pointvalue2 = $row['pointvalue2'];
+$pointvalue3 = $row['pointvalue3'];
+$pointvalue4 = $row['pointvalue4'];
+$pointvalue5 = $row['pointvalue5'];
+$pointvalue6 = $row['pointvalue6'];
+$pointvalue7 = $row['pointvalue7'];
+$important_points = $row['important_points'];
+$meetingDays = $row['meetingday'];
+$isbn = $row['bookisbn'];
 }
 }
 //end of if
