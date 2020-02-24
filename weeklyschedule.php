@@ -66,24 +66,26 @@ $result2 = $conn->query($sql2);
         <div class="circle">1</div>
         <?php 
 
+        $image = images/star.jpeg;
+
             echo "Week of ".$bar["week1_of"]."<br>";
             echo $bar["week1_desc"]."<br>";
 
             if($row["meetingday"] == "TR"){
             ?>
            
-            <select id="symbols" onchange="swapImage()">
+            <select id="symbols">
                 <option value="star">Star</option>
                 <option value="Exclamation">Exclamation Point</option>
                 <option value="Circle">Circle</option>
                 <option value="X">X</option>
                 <option value="CheckMark">CheckMark</option>
-            </select>
+            </select> 
 
             <?php echo "T"; ?><br>
 
             <select id="symbols">
-                <option value="star">Star</option>
+                <option value="Star">Star</option>
                 <option value="Exclamation">Exclamation Point</option>
                 <option value="Circle">Circle</option>
                 <option value="X">X</option>
@@ -1192,10 +1194,10 @@ $result2 = $conn->query($sql2);
         <img src="images/checkmark.jpeg" width="30px" height="20px"/> - 
         <input type="text"></input><br>
         
-        <img src="images/exclamation1.png" width="20px" height="30px"/> - 
+        <img src="images/exclamation1.png" width="30px" height="20px"/> - 
         <input type="text"></input><br>
         
-        <img src="images/circle.png" width="20px" height="20px"/> -
+        <img src="images/circle.png" width="30px" height="20px"/> -
         <input type="text"></input>
 
       </div>

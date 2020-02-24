@@ -95,18 +95,7 @@ Course Code&nbsp <input type="text" length="25" name="courseCode" value="<?php e
 Course Name&nbsp <input type="text" length="50" name="courseName" value="<?php echo $course_name?>" required> &nbsp 
 Class Days &nbsp <select name="meetingDays" selected ="<?php echo "$meetingDays"; ?>" required>
 				<option value="">--</option>
-			<!--<option value="online"> online </option>
-				<option value="MWF"> MWF </option>
-				<option value="MF"> MF </option>
-				<option value="WF"> WF </option>
-				<option value="MW"> MW </option>
-				<option value="TTR"> TR </option>
-				<option value="M"> M </option>
-				<option value="T"> T </option>
-				<option value="W"> W </option>
-				<option value="R"> R </option>
-				<option value="F"> F </option>
-				<option value="other"> other </option> -->
+			
 			<?php
 				if($meetingDays=="online")
             {
