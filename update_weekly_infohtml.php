@@ -1,5 +1,5 @@
 <?php
-
+  
 
 require("session_info.php");
 error_reporting(0);
