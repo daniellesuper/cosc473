@@ -47,7 +47,7 @@ die("Connection Failed". $conn->connect_error);
 
 $profID = $_SESSION["FKPROFID"];
 
-$sql =" Select     
+$sql =" SELECT     
      title, fullname, username, password, email, officephone, officeaddress, monday, tuesday, wednesday, thursday, friday FROM profinfo where PKID= $profID ";
 
 //echo $sql; exit;
