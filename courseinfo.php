@@ -24,7 +24,7 @@ $result = $conn->query($sql);
 
 $row=mysqli_num_rows($result);
   
-  //echo $topicname1; exit;
+
 
 if($row>0){ // if course info avaliable
 
@@ -35,6 +35,7 @@ $topicname1 =$row[topicname1];
 }
 }
 //end of if
+
 ?>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">

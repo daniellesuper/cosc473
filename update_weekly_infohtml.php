@@ -144,7 +144,7 @@ Assesment Due &nbsp <input type="text" length="255" name="week1assessment" value
 Image &nbsp <select name="symbol1">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Cirlce</option>
+			<option value="Circle">Circle</option>
 			<option value="X">X</option>
 			<option value="Check Mark">Check Mark</option> 
 			</select>
@@ -156,7 +156,7 @@ Assesment Due &nbsp <input type="text" length="255" name="week2assessment" value
 Image &nbsp <select name="symbol2">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Cirlce</option>
+			<option value="Circle">Circle</option>
 			<option value="X">X</option>
 			<option value="Check Mark">Check Mark</option> 
 			</select>
@@ -169,7 +169,7 @@ Assesment Due &nbsp <input type="text" length="255" name="week3assessment" value
 Image &nbsp <select name="symbol3">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Cirlce</option>
+			<option value="Circle">Circle</option>
 			<option value="X">X</option>
 			<option value="Check Mark">Check Mark</option> 
 			</select>
@@ -182,7 +182,7 @@ Assesment Due &nbsp <input type="text" length="255" name="week4assessment" value
 Image &nbsp <select name="symbol4">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Cirlce</option>
+			<option value="Circle">Circle</option>
 			<option value="X">X</option>
 			<option value="Check Mark">Check Mark</option> 
 			</select>
@@ -195,7 +195,7 @@ Assesment Due &nbsp <input type="text" length="255" name="week5assessment" value
 Image &nbsp <select name="symbol5">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Cirlce</option>
+			<option value="Circle">Circle</option>
 			<option value="X">X</option>
 			<option value="Check Mark">Check Mark</option> 
 			</select>
@@ -208,7 +208,7 @@ Assesment Due &nbsp <input type="text" length="255" name="week6assessment" value
 Image &nbsp <select name="symbol6">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Cirlce</option>
+			<option value="Circle">Circle</option>
 			<option value="X">X</option>
 			<option value="Check Mark">Check Mark</option> 
 			</select>
@@ -221,7 +221,7 @@ Assesment Due &nbsp <input type="text" length="255" name="week7assessment" value
 Image &nbsp <select name="symbol7">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Cirlce</option>
+			<option value="Circle">Circle</option>
 			<option value="X">X</option>
 			<option value="Check Mark">Check Mark</option> 
 			</select>
@@ -234,7 +234,7 @@ Assesment Due &nbsp <input type="text" length="255" name="week8assessment" value
 Image &nbsp <select name="symbol8">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Cirlce</option>
+			<option value="Circle">Circle</option>
 			<option value="X">X</option>
 			<option value="Check Mark">Check Mark</option> 
 			</select>
@@ -247,7 +247,7 @@ Assesment Due &nbsp <input type="text" length="255" name="week9assessment" value
 Image &nbsp <select name="symbol9">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Cirlce</option>
+			<option value="Circle">Circle</option>
 			<option value="X">X</option>
 			<option value="Check Mark">Check Mark</option> 
 			</select>
@@ -260,7 +260,7 @@ Assesment Due &nbsp <input type="text" length="255" name="week10assessment" valu
 Image &nbsp <select name="symbol10">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Cirlce</option>
+			<option value="Circle">Circle</option>
 			<option value="X">X</option>
 			<option value="Check Mark">Check Mark</option> 
 			</select>
@@ -273,7 +273,7 @@ Assesment Due &nbsp <input type="text" length="255" name="week11assessment" valu
 Image &nbsp <select name="symboll1">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Cirlce</option>
+			<option value="Circle">Circle</option>
 			<option value="X">X</option>
 			<option value="Check Mark">Check Mark</option> 
 			</select>
@@ -286,7 +286,7 @@ Assesment Due &nbsp <input type="text" length="255" name="week12assessment" valu
 Image &nbsp <select name="symbol12">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Cirlce</option>
+			<option value="Circle">Circle</option>
 			<option value="X">X</option>
 			<option value="Check Mark">Check Mark</option> 
 			</select>
@@ -299,7 +299,7 @@ Assesment Due &nbsp <input type="text" length="255" name="week13assessment" valu
 Image &nbsp <select name="symbol13">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Cirlce</option>
+			<option value="Circle">Circle</option>
 			<option value="X">X</option>
 			<option value="Check Mark">Check Mark</option> 
 			</select>
@@ -312,7 +312,7 @@ Assesment Due &nbsp <input type="text" length="255" name="week14assessment" valu
 Image &nbsp <select name="symbol14">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Cirlce</option>
+			<option value="Circle">Circle</option>
 			<option value="X">X</option>
 			<option value="Check Mark">Check Mark</option> 
 			</select>
@@ -325,7 +325,7 @@ Assesment Due &nbsp <input type="text" length="255" name="week15assessment" valu
 Image &nbsp <select name="symbol15">
 			<option value="star">Star</option>
 			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Cirlce</option>
+			<option value="Circle">Circle</option>
 			<option value="X">X</option>
 			<option value="Check Mark">Check Mark</option> 
 			</select>
