@@ -15,7 +15,7 @@ die("Connection Failed". $conn->connect_error);
 $profID = $_SESSION["FKPROFID"];
 ?>
 
-<html>
+<html> 
 	<head>
 	<link href="mainpage.css" type="text/css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">

@@ -94,7 +94,7 @@ Date End: &nbsp <input type="date" name="enddate" value="<?php echo $enddate; ?>
                 <option value="X">X</option>
                 <option value="CheckMark">CheckMark</option>
             </select> 
-        
+         
             <?php echo "T"; ?><br>
  
             <select id="symbols">

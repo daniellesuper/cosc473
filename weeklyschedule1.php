@@ -83,7 +83,7 @@ Date End: &nbsp <input type="date" name="enddate" value="<?php echo $enddate; ?>
 
         for($i = 0; $i < 15; $i++){
 
-        ?> 
+        ?>  
         
         <div class="box">
         <div class="circle">1</div>
