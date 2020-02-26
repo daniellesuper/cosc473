@@ -37,9 +37,28 @@ $topicname6=htmlentities($_REQUEST['gradeName6'],ENT_QUOTES);
 $pointvalue6=htmlentities($_REQUEST['weight6'],ENT_QUOTES);
 $topicname7=htmlentities($_REQUEST['gradeName7'],ENT_QUOTES);
 $pointvalue7=htmlentities($_REQUEST['weight7'],ENT_QUOTES);
-
-
-
+/*
+$symbol1 =htmlentities($_REQUEST['symbol1']),ENT_QUOTES);
+$symbol2 =htmlentities($_REQUEST['symbol2']),ENT_QUOTES);
+$symbol3 =htmlentities($_REQUEST['symbol3']),ENT_QUOTES);
+$symbol4 =htmlentities($_REQUEST['symbol4']),ENT_QUOTES);
+$symbol5 =htmlentities($_REQUEST['symbol5']),ENT_QUOTES);
+$symbol6 =htmlentities($_REQUEST['symbol6']),ENT_QUOTES);
+$symbol7 =htmlentities($_REQUEST['symbol7']),ENT_QUOTES);
+$symbol8 =htmlentities($_REQUEST['symbol8']),ENT_QUOTES);
+$symbol9 =htmlentities($_REQUEST['symbol9']),ENT_QUOTES);
+$symbol10 =htmlentities($_REQUEST['symbol10']),ENT_QUOTES);
+$assign1 =htmlentities($_REQUEST['assign1']),ENT_QUOTES);
+$assign2 =htmlentities($_REQUEST['assign2']),ENT_QUOTES);
+$assign3 =htmlentities($_REQUEST['assign3']),ENT_QUOTES);
+$assign4 =htmlentities($_REQUEST['assign4']),ENT_QUOTES);
+$assign5=htmlentities($_REQUEST['assign5']),ENT_QUOTES);
+$assign6 =htmlentities($_REQUEST['assign6']),ENT_QUOTES);
+$assign7 =htmlentities($_REQUEST['assign7']),ENT_QUOTES);
+$assign8 =htmlentities($_REQUEST['assign8']),ENT_QUOTES);
+$assign9 =htmlentities($_REQUEST['assign9']),ENT_QUOTES);
+$assign10 =htmlentities($_REQUEST['assign10']),ENT_QUOTES);
+*/
 
 
 $fp = fopen($_FILES['bookImage']['tmp_name'], "r");	
@@ -86,7 +105,7 @@ if ($fp) {
                       (
                        FKProfID, coursecode, coursename, meetingday, bookname, bookisbn, bookauthor, bookpicture, 
 					   important_points, topicname1, pointvalue1, topicname2, pointvalue2, topicname3, pointvalue3, 
-					   topicname4, pointvalue4, topicname5, pointvalue5, topicname6, pointvalue6, topicname7, pointvalue7,img_mime
+					   topicname4, pointvalue4, topicname5, pointvalue5, topicname6, pointvalue6, topicname7, pointvalue7,img_mime, symbol1, symbol2, symbol3, symbol4, symbol5, symbol6, symbol7, symbol8, symbol9, symbol10, assign1, assign2, assign3, assign4, assign5, assign6, assign7, assign8, assign9, assign10
                       )
                      values
                      (
@@ -96,7 +115,7 @@ if ($fp) {
 					   '$topicname2', '$pointvalue2', '$topicname3', 
 					   '$pointvalue3','$topicname4', '$pointvalue4', 
 					   '$topicname5','$pointvalue5', '$topicname6',
-					   '$pointvalue6', '$topicname7', '$pointvalue7','$img_mime'
+					   '$pointvalue6', '$topicname7', '$pointvalue7','$img_mime','$symbol1', '$symbol2', '$symbol3', '$symbol4', '$symbol5', '$symbol6', '$symbol7', '$symbol8', '$symbol9', '$symbol10', '$assign1', '$assign2', '$assign3', '$assign4', '$assign5', '$assign6', '$assign7', '$assign8', '$assign9', '$assign10'
                      )";
     //echo $strQuery;exit;
 

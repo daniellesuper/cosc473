@@ -105,6 +105,7 @@ if ($_GET['ok'] == 1) {
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ <link href="weeklyschedule.css" type="text/css" rel="stylesheet" />
 
 <header>
 	<nav class="navbar navbar-inverse">

@@ -15,7 +15,7 @@ if($conn-> connect_error){
 die("Username and Password Invaid!". $conn->connect_error);
 }  
 
-$sql =" Select     
+$sql =" SELECT     
 topicname1, topicname2, topicname3, topicname4, topicname5, topicname6, topicname7, 
 pointvalue1, pointvalue2, pointvalue3, pointvalue4, pointvalue5, pointvalue6, pointvalue7,
 bookname, bookisbn, bookauthor, bookpicture, bookpicture, img_mime, important_points FROM courseinfo where PKID = $courseID   ";
@@ -30,9 +30,29 @@ if($row>0){ // if course info avaliable
 
 $row=$result->fetch_array();
 
-
-$topicname1 =$row[topicname1];
-}
+$course_code =$row['coursecode'];
+$course_name =$row['coursename'];
+$book_name = $row['bookname'];
+$book_author = $row['bookauthor'];
+$topicname1 = $row['topicname1'];
+$topicname2 = $row['topicname2'];
+$topicname3 = $row['topicname3'];
+$topicname4 = $row['topicname4'];
+$topicname5 = $row['topicname5'];
+$topicname6 = $row['topicname6'];
+$topicname7 = $row['topicname7'];
+$pointvalue1 = $row['pointvalue1'];
+$pointvalue2 = $row['pointvalue2'];
+$pointvalue3 = $row['pointvalue3'];
+$pointvalue4 = $row['pointvalue4'];
+$pointvalue5 = $row['pointvalue5'];
+$pointvalue6 = $row['pointvalue6'];
+$pointvalue7 = $row['pointvalue7'];
+$important_points = $row['important_points'];
+$meetingDays = $row['meetingday'];
+$isbn = $row['bookisbn'];
+	
+	}
 }
 //end of if
 
@@ -87,6 +107,7 @@ Class Days &nbsp <select name="meetingDays">
 				<option value="0"> -- </option>
 				<option value="online"> online </option>
 				<option value="MWF"> MWF </option>
+				<option value="TTR"> TTR </option>
 				<option value="MF"> MF </option>
 				<option value="WF"> WF </option>
 				<option value="MW"> MW </option>
@@ -143,6 +164,63 @@ Weight: &nbsp <input type="text" length="25" name="weight6" value="0"> <br>
 Name: <input type="text" length="25" name="gradeName7"> &nbsp 
 Weight: &nbsp <input type="text" length="25" name="weight7" value="0"> <br>
 </p>
+
+Course symbol & Name: <br><br>
+<div id="symbol_Name">
+
+<p id="symbol1">
+Symbol1: <input type="text" length="25" name="symbol1"> &nbsp;
+Name of Assigment: &nbsp; <input type="text" length="25" name="assign1"> <br>
+</p>
+
+<p id="symbol2">
+Symbol2: <input type="text" length="25" name="symbol2"> &nbsp;
+Name of Assigment: &nbsp; <input type="text" length="25" name="assign2"> <br>
+</p>
+
+<p id="symbol3">
+Symbol3: <input type="text" length="25" name="symbol3"> &nbsp;
+Name of Assigment: &nbsp; <input type="text" length="25" name="assign3"> <br>
+</p>
+
+<p id="symbol4">
+Symbol4: <input type="text" length="25" name="symbol3"> &nbsp;
+Name of Assigment: &nbsp; <input type="text" length="25" name="assign3"> <br>
+</p>
+
+<p id="symbol5">
+Symbol5: <input type="text" length="25" name="symbol4"> &nbsp;
+Name of Assigment: &nbsp; <input type="text" length="25" name="assign4"> <br>
+</p>
+</div>
+
+<p id="symbol6">
+Symbol6: <input type="text" length="25" name="symbol4"> &nbsp;
+Name of Assigment: &nbsp; <input type="text" length="25" name="assign4"> <br>
+</p>
+
+<p id="symbol7">
+Symbol7: <input type="text" length="25" name="symbol5"> &nbsp;
+Name of Assigment: &nbsp; <input type="text" length="25" name="assign5"> <br>
+</p>
+
+<p id="symbol8">
+Symbol8: <input type="text" length="25" name="symbol6"> &nbsp;
+Name of Assigment: &nbsp; <input type="text" length="25" name="assign6"> <br>
+</p>
+
+<p id="symbol9">
+Symbol9: <input type="text" length="25" name="symbol7"> &nbsp;
+Name of Assigment: &nbsp; <input type="text" length="25" name="assign7"> <br>
+</p>
+
+<p id="symbol10">
+Symbol10: <input type="text" length="25" name="symbol8"> &nbsp;
+Name of Assigment: &nbsp; <input type="text" length="25" name="assign8"> <br>
+</p>
+
+<input type="hidden" name = "courseID" value="<?php echo $courseID ?>">
+
 
 </div>
 

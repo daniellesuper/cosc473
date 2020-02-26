@@ -61,6 +61,20 @@ $result2 = $conn->query($sql2);
     </div>
   </div>  
 
+
+<form action="insert_weekly_info.php" form="get" style="padding-left: 25px;">
+
+Break:  &nbsp <select name="holiday_name">
+        <option value="">Select</option>
+        <option value="Thanksgiving">Thanksgiving</option> 
+        <option value="Spring">Spring</option>
+        </select> &nbsp
+        
+Date To: &nbsp <input type="date" name="startdate1" value ="<?php echo $startdate; ?>"> &nbsp;
+Date End: &nbsp <input type="date" name="enddate" value="<?php echo $enddate; ?>"> <br><br>
+
+
+
   <div class="row">
       
       <div class="box">
@@ -73,8 +87,8 @@ $result2 = $conn->query($sql2);
             if($row["meetingday"] == "TR"){
             ?>
 
-            <select id="symbols">
-                <option value="star">Star</option>
+            <select id="symbols" onChange="swapImage()">
+                <option value="Star">Star</option>
                 <option value="Exclamation">Exclamation Point</option>
                 <option value="Circle">Circle</option>
                 <option value="X">X</option>
@@ -1221,7 +1235,7 @@ $conn->close();
 
   <input id="printButton" type="button" value ="Print" onClick="print();">
 
-
+</form>
 </body>
 
 </html>

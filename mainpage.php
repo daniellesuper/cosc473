@@ -105,6 +105,7 @@ $profID = $_SESSION["FKPROFID"];
 						<a href="pieChart.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Preview</a></button>
 						<a href="pdf.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Download</a></button>
 						<a href="weeklyschedule.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">weekly</a></button>
+						<a href="weeklyschedule1.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">weekly1</a></button>
 						<a href="<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Delete</a></button>
 					</div>
 				</li>
