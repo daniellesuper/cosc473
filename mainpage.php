@@ -96,6 +96,7 @@ $profID = $_SESSION["FKPROFID"];
 	
           ?>
       <div class="syllabusList">
+
 		  <ul>
 				<li>
 					<span id="courseName"><?php echo $course; ?></span>
@@ -110,14 +111,30 @@ $profID = $_SESSION["FKPROFID"];
 					</div>
 				</li>
 		  </ul>
+
+				<ul>
+					<li>
+						<span id="courseName"><?php echo $course; ?></span>
+						<div id="buttons">
+							<a href="update_courseinfo.php?courseID=<?php echo $courseID ?>" ><button type="button" class= "btn btn-primary btn-lg"> Update Course Info </a></button>
+							<a href="update_weekly_infohtml.php?courseID=<?php echo $courseID ?>" ><button type="button" class="btn btn-primary btn-lg">Weekly Schedule</a></button>
+							<a href="pieChart.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Preview</a></button>
+							<a href="pdf.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Download</a></button>
+							<a href="weeklyschedule.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">weekly</a></button>
+							<a href="<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Delete</a></button>
+						</div>
+					</li>
+				</ul>
+
       </div>
           <?php 
      } ?>
 	
 
 	</body>
+	<div id="spacer"></div>
 	<footer>
 		<hr />
-		<p>&copy; 2019 Info-Syllabus</p>
+		<p>&copy; 2020 Info-Syllabus</p>
 	</footer>
 </html>
