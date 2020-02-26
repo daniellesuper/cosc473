@@ -12,7 +12,7 @@ $password="";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if($conn-> connect_error){
-die("Username and Password Invaid!". $conn->connect_error);
+die("Username and Password Invalid!". $conn->connect_error);
 }
 
 $holiday = $_REQUEST['holiday_name'];

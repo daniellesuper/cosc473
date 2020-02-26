@@ -13,13 +13,14 @@ $password="";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if($conn-> connect_error){
-die("Username and Password Invaid!". $conn->connect_error);
+die("Username and Password Invalid!". $conn->connect_error);
 }
 $FKPROFID = $_SESSION['PKID'];
 //$FKPROFID = $_SESSION["FKPROFID"];
 ?>
 
 <?php
+
 
 $sql = "SELECT      
 coursecode, coursename, bookname, bookisbn, bookauthor, bookpicture, 
@@ -62,9 +63,65 @@ $pointvalue7 = $row['pointvalue7'];
 $important_points = $row['important_points'];
 $meetingDays = $row['meetingday'];
 $isbn = $row['bookisbn'];
+ 
+
+/*
+$course_code =$_REQUEST['coursecode'];
+$course_name =$_REQUEST['coursename'];
+$book_name = $_REQUEST['bookname'];
+$book_author = $_REQUEST['bookauthor'];
+$topicname1 = $_REQUEST['topicname1'];
+$topicname2 = $_REQUEST['topicname2'];
+$topicname3 = $_REQUEST['topicname3'];
+$topicname4 = $_REQUEST['topicname4'];
+$topicname5 = $_REQUEST['topicname5'];
+$topicname6 = $_REQUEST['topicname6'];
+$topicname7 = $_REQUEST['topicname7'];
+$pointvalue1 = $_REQUEST['pointvalue1'];
+$pointvalue2 = $_REQUEST['pointvalue2'];
+$pointvalue3 = $_REQUEST['pointvalue3'];
+$pointvalue4 = $_REQUEST['pointvalue4'];
+$pointvalue5 = $_REQUEST['pointvalue5'];
+$pointvalue6 = $_REQUEST['pointvalue6'];
+$pointvalue7 = $_REQUEST['pointvalue7'];
+$important_points = $_REQUEST['important_points'];
+$meetingDays = $_REQUEST['meetingday'];
+$isbn = $_REQUEST['bookisbn'];
+
+$sql =" Update courseinfo
+       set
+
+       	course_code = '$coursecode',
+       	course_name = '$oursename',
+       	book_name = '$bookname',
+       	book_author = '$bookauthor',
+       	topicname1 = '$topicname1',
+       	topicname2 = '$topicname2',
+       	topicname3 = 'topicname3',
+       	topicname4 = 'topicname4',
+       	topicname5 = 'topicname5',
+       	topicname6 = 'topicname7',
+       	pointvalue1 = '$pointvalue1',
+       	pointvalue2 = '$pointvalue2',
+       	pointvalue3 = '$pointvalue3',
+       	pointvalue4 = '$pointvalue4',
+       	pointvalue5 = '$pointvalue5',
+       	pointvalue6 = '$pointvalue6',
+       	pointvalue7 = '$pointvalue7',
+       	important_points = '$important_points',
+       	meetingDays = '$meetinday',
+        isbn = '$bookisbn'
+
+        where FKprofID = $courseID ";
+
+        //echo $sql;exit;
+        $result = $conn->query($sql);
+        */
+
 }
 }
 //end of if
+
 ?>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -196,7 +253,7 @@ Book Image: <input type="file" name="bookImage" /><br><br>
 
 Grade Breakdown: <br><br>
 
-<div id="gradeWeight">
+<div id="gradeWeight"> 
 <p id="grade1">
 Name: <input type="text" length="25" name="gradeName1"> &nbsp 
 Weight: &nbsp <input type="text" length="25" name="weight1" value="0"> <br>

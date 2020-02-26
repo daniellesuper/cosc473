@@ -182,20 +182,7 @@ if($result->num_rows > 0) {
 			if(!empty($row["topicname7"])){
 				echo '<img src="images/rectangle7.png" width="30px"/>'. $row["topicname7"]."<br>";
 			} else { echo ""; }  
-			/*
-			echo "<img src=images/rectangle.png>".$row["topicname2"]."<br>";
 			
-			echo $row["topicname3"]."<br>";
-			
-			echo $row["topicname4"]."<br>";
-			
-			echo $row["topicname5"]."<br>";
-			
-			echo $row["topicname6"]."<br>"; 
-			
-			echo $row["topicname7"];
-
-			*/
 			?>
 			
 		</div><!--end breakdown-->

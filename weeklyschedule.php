@@ -23,6 +23,7 @@ $FKPROFID = $_SESSION["FKPROFID"];
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weekly Schedule</title>
   <link href="weeklyschedule.css" type="text/css" rel="stylesheet" />
+   
 </head>
 <body>
 
@@ -66,14 +67,12 @@ $result2 = $conn->query($sql2);
         <div class="circle">1</div>
         <?php 
 
-        $image = images/star.jpeg;
-
             echo "Week of ".$bar["week1_of"]."<br>";
             echo $bar["week1_desc"]."<br>";
 
             if($row["meetingday"] == "TR"){
             ?>
-               
+
             <select id="symbols">
                 <option value="star">Star</option>
                 <option value="Exclamation">Exclamation Point</option>
@@ -81,10 +80,9 @@ $result2 = $conn->query($sql2);
                 <option value="X">X</option>
                 <option value="CheckMark">CheckMark</option>
             </select> 
-
-
+        
             <?php echo "T"; ?><br>
-
+ 
             <select id="symbols">
                 <option value="Star">Star</option>
                 <option value="Exclamation">Exclamation Point</option>

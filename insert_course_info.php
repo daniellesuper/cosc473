@@ -1,31 +1,6 @@
 <?php
 
-//pointvalue1=$_REQUEST['weight1'];
-//echo $_REQUEST['weight2'];exit;
-
-//echo "testing"; exit;
-
-
-//echo $_REQUEST['weight2'];
-
-//$pointvalue2=htmlentities($_REQUEST['weight2'],ENT_QUOTES);
-
-//echo $pointvalue2;
-
-//exit;
-
-
-//echo "testing"; exit;
-
-//pointvalue1=$_REQUEST['weight1'];
-//cho $_REQUEST['weight2'];exit;
-
-
 require("session_info.php");
-
-$FKPROFID = $_SESSION['FKPROFID'];
-
-
 error_reporting(0);
 
 $servername="localhost";
@@ -37,6 +12,8 @@ $conn= new mysqli($servername, $username, $password, $dbname);
 if($conn-> connect_error){
 die("Connection Failed". $conn->connect_error);
 }
+$FKPROFID = $_SESSION['FKPROFID'];
+
 
 $courseCode=htmlentities($_REQUEST['courseCode'],ENT_QUOTES);
 $courseName=htmlentities($_REQUEST['courseName'],ENT_QUOTES);
