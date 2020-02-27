@@ -136,10 +136,7 @@ if ($fp) {
          $strQuery="update courseinfo 
 		            set coursecode = '$courseCode', coursename = '$courseName', bookName = '$bookName', 				bookAuthor = '$bookAuthor',topicname1 = '$topicname1',topicname2 = '$topicname2',
 		            	topicname3 = '$topicname3', topicname4 = '$topicname4', topicname5 = '$topicname5',
-		            	topicname6 = '$topicname6', topicname7 = '$topicname7',
-		            	pointvalue1 = '$pointvalue1',pointvalue2 = '$pointvalue2',pointvalue3 = '$pointvalue3',
-     					pointvalue4 = '$pointvalue4',pointvalue5 = '$pointvalue5',pointvalue6 = '$pointvalue6',
-       					pointvalue7 = '$pointvalue7', important_points = '$important_points', meetingDays = '$meetingDays' 
+		            	topicname6 = '$topicname6', topicname7 = '$topicname7'
 					where PKID = $courseID
                     ";
 		//echo $strQuery;exit;
