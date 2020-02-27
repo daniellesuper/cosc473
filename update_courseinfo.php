@@ -42,10 +42,10 @@ if($row>0){ // if course info avaliable
 $row=$result->fetch_array();
 
 
-$course_code =$row['coursecode'];
-$course_name =$row['coursename'];
-$book_name = $row['bookname'];
-$book_author = $row['bookauthor'];
+$courseCode =$row['courseCode'];
+$courseName =$row['courseName'];
+$bookName = $row['bookName'];
+$bookaAuthor = $row['bookAuthor'];
 $topicname1 = $row['topicname1'];
 $topicname2 = $row['topicname2'];
 $topicname3 = $row['topicname3'];
@@ -61,8 +61,8 @@ $pointvalue5 = $row['pointvalue5'];
 $pointvalue6 = $row['pointvalue6'];
 $pointvalue7 = $row['pointvalue7'];
 $important_points = $row['important_points'];
-$meetingDays = $row['meetingday'];
-$isbn = $row['bookisbn'];
+$meetingDays = $row['meetingDays'];
+$bookisbn = $row['bookisbn'];
 $symbol1 = $row['symbol1'];
 $symbol2 = $row['symbol2'];
 $symbol3 = $row['symbol3'];
@@ -175,8 +175,8 @@ $sql =" Update courseinfo
 
 <form method="post" action="update_course_info.php" style="padding-left: 25px;" enctype="multipart/form-data">
 
-Course Code&nbsp <input type="text" length="25" name="courseCode" value="<?php echo $course_code?>" required > &nbsp; Example: COSC 473<br><br>
-Course Name&nbsp; <input type="text" length="50" name="courseName" value="<?php echo $course_name?>" required> &nbsp; 
+Course Code&nbsp <input type="text" length="25" name="courseCode" value="<?php echo $courseCode?>" required > &nbsp; Example: COSC 473<br><br>
+Course Name&nbsp; <input type="text" length="50" name="courseName" value="<?php echo $courseName?>" required> &nbsp; 
 Class Days &nbsp; <select name="meetingDays" selected ="<?php echo "$meetingDays"; ?>" required>
 				<option value="">--</option>
 			
@@ -265,9 +265,9 @@ Important Points:<br><br>
 
 	<!-- Users will have the abilty to customize the look of these points -->
 	
-Book Name: &nbsp; <input type="text" length="90" name="bookName" value="<?php echo $book_name?>" >&nbsp; 
+Book Name: &nbsp; <input type="text" length="90" name="bookName" value="<?php echo $bookName?>" >&nbsp; 
 ISBN:&nbsp; <input type="text" length="90" name="isbn" value="<?php echo $isbn?>"> &nbsp;
-Author: &nbsp; <input type="text" length="90" name="author" value="<?php echo $book_author?>"> <br><br>
+Author: &nbsp; <input type="text" length="90" name="author" value="<?php echo $bookAuthor?>"> <br><br>
 
 Book Image: <input type="file" name="bookImage" /><br><br>
 

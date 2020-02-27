@@ -80,9 +80,12 @@ $result2 = $conn->query($sql2);
                 <?php 
                     echo $bar["symbol1"]."<br>";
                     if($bar["symbol1"]=="Exclamation Point"){
-                        $image1 = images/exclamation1.jpeg;
-                        echo $image1;
+                       echo "<img src='images/exclamation1.png' height='30px'>";
                     }
+
+                    if($bar["symbol1"]=="X"){
+                       echo "<img src='images/X.jpeg' height='30px'>";
+                   }
                     
                  ?>
             
