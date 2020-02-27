@@ -122,7 +122,7 @@ $symbol15 = htmlentities($_REQUEST['symbol15'],ENT_QUOTES);
  //echo $strQuery; exit;
 		 $conn->query($strQuery);
 		
-		 header("Location: mainpage.php");
+		 header("Location: redirectschedule.php");
 		 exit;
 
 	
