@@ -112,6 +112,7 @@ $profID = $_SESSION["FKPROFID"];
 				</li>
 		  </ul>
 
+		  	<!--
 				<ul>
 					<li>
 						<span id="courseName"><?php echo $course; ?></span>
@@ -125,7 +126,7 @@ $profID = $_SESSION["FKPROFID"];
 						</div>
 					</li>
 				</ul>
-
+			-->
       </div>
           <?php 
      } ?>

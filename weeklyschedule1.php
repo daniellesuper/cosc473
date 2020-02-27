@@ -74,74 +74,56 @@ Break:  &nbsp <select name="holiday_name">
 Date To: &nbsp <input type="date" name="startdate1" value ="<?php echo $startdate; ?>"> &nbsp;
 Date End: &nbsp <input type="date" name="enddate" value="<?php echo $enddate; ?>"> <br><br>
 
-
-
 <?php
-
+ 
 
     function load_info(){
 
         for($i = 0; $i < 15; $i++){
-
-        ?>  
-        
-        <div class="box">
-        <div class="circle">1</div>
-        
-        <?php
+            echo "<div class='row'>";
+            echo "<div class='box'>"."<br>";
+            echo "<div class='circle'>"."</div>";
+            
             echo "Week of: "."<input type='text'>"."<br>";
             echo "Assigment: ". "<input type='text'>"."<br>";
 
-            
-            
-            
-             if($row["meetingday"] == "TR"){
-            ?>
 
-            <select id="symbols">
-                <option value="Star">Star</option>
-                <option value="Exclamation">Exclamation Point</option>
-                <option value="Circle">Circle</option>
-                <option value="X">X</option>
-                <option value="CheckMark">CheckMark</option>
-            </select> 
+           echo  "<select id='symbols'>";
+                echo "<option value='Star'>Star</option>";
+                echo "<option value='Exclamation'>Exclamation Point</option>";
+                echo "<option value='Circle'>Circle</option>";
+                echo "<option value='X'>X</option>";
+                echo "<option value='CheckMark'>CheckMark</option>";
+           echo  "</select>"; 
+         
+             echo "T"; ?><br><?php
+
+            echo  "<select id='symbols'>";
+                echo "<option value='Star'>Star</option>";
+                echo "<option value='Exclamation'>Exclamation Point</option>";
+                echo "<option value='Circle'>Circle</option>";
+                echo "<option value='X'>X</option>";
+                echo "<option value='CheckMark'>CheckMark</option>";
+            echo "</select>"; 
         
-            <?php echo "T"; ?><br>
+            echo "TH"; ?><br><?php
 
-            <select id="symbols">
-                <option value="Star">Star</option>
-                <option value="Exclamation">Exclamation Point</option>
-                <option value="Circle">Circle</option>
-                <option value="X">X</option>
-                <option value="CheckMark">CheckMark</option>
-            </select>
-            <?php echo "TR"; }?><br>
-
-
-       
-        
-        </div> <!-- box div -->
-        <?php 
-        
-           
-
-           
+            echo "</div>"; // circle div 
+            echo "</div>"; // box div
+            echo "</div>"; //row div
+                  
 
         } // for loop bracket
 
     } //function bracket
 
  load_info();
-?>
+ }
 
-
-
-
-  <?php }
   $conn->close();
   ?>
 
-      
+ 
 
   <input id="printButton" type="button" value ="Print" onClick="print();">
 
