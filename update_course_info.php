@@ -136,7 +136,8 @@ if ($fp) {
          $strQuery="update courseinfo 
 		            set coursecode = '$courseCode', coursename = '$courseName', bookName = '$bookName', 				bookAuthor = '$bookAuthor',topicname1 = '$topicname1',topicname2 = '$topicname2',
 		            	topicname3 = '$topicname3', topicname4 = '$topicname4', topicname5 = '$topicname5',
-		            	topicname6 = '$topicname6', topicname7 = '$topicname7'
+		            	topicname6 = '$topicname6', topicname7 = '$topicname7', pointvalue1 = '$pointvalue1',
+		            	pointvalue2 = '$pointvalue2', pointvalue3 = '$pointvalue3',
 					where PKID = $courseID
                     ";
 		//echo $strQuery;exit;

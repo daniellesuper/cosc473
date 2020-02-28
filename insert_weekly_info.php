@@ -106,7 +106,7 @@ $symbol15 = htmlentities($_REQUEST['symbol15'],ENT_QUOTES);
 //$week1assessment = htmlentities($_REQUEST['week1assessment'],ENT_QUOTES);
 
 
-
+/*
  
 	
          $strQuery="insert into weeklyinfo
@@ -118,8 +118,18 @@ $symbol15 = htmlentities($_REQUEST['symbol15'],ENT_QUOTES);
                       $courseID, $FKPROFID , '$holiday_name', '$startdate1', '$enddate',  '$week1_desc', '$week1_of', '$symbol1', '$week2_desc', '$week2_of', '$symbol2',  '$week3_desc', '$week3_of', '$symbol3', '$week4_desc', '$week4_of', '$symbol4', '$week5_desc', '$week5_of', '$symbol5', '$week6_desc', '$week6_of', '$symbol6', '$week7_desc', '$week7_of', '$symbol7', '$week8_desc', '$week8_of', '$symbol8', '$week9_desc', '$week9_of', '$symbol9', '$week10_desc', '$week10_of', '$symbol10', '$week11_desc', '$week11_of', '$symbol11', '$week12_desc', '$week12_of', '$symbol12', '$week13_desc', '$week13_of', '$symbol13', '$week14_desc', '$week14_of', '$symbol14', '$week15_desc', '$week15_of', '$symbol15'
 					 )
                     ";
+                    */
+
+  $sql= "insert into weeklyinfo
+                      (
+                       fkcourseid,fkprofid,holiday, startdate, enddate,";
+
+  $sql_week1="week1_desc, week1_of, symbol1,";
+
+
+  $strQuery = $sql.$sql_week1;
 		 
- //echo $strQuery; exit;
+ echo $strQuery; exit;
 		 $conn->query($strQuery);
 		
 		 header("Location: mainpage.php");
