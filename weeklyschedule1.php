@@ -170,7 +170,7 @@ Date End: &nbsp <input type="date" name="enddate" value="<?php echo $enddate; ?>
 
 Week of &nbsp <input type="text" name="week1_of" value =""> &nbsp; <br>
 Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?php echo $subheading1; ?>" > 
-            <select name="symbol1">
+            <select name="symbol1_week1">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -179,7 +179,7 @@ Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?p
             </select>
          
             <?php echo "T"; ?><br>
-            <select name="symbol1">
+            <select name="symbol2_week1">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -201,7 +201,7 @@ Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?p
            
 Week of &nbsp <input type="text" name="week1_of" value =""> &nbsp; <br>
 Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?php echo $subheading1; ?>" > 
-            <select name="symbol1">
+            <select name="symbol1_week1">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -211,7 +211,7 @@ Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?p
             <?php echo "M"; ?><br>
 
             
-            <select name="symbol1">
+            <select name="symbol2_week1">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -221,7 +221,7 @@ Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?p
             <?php echo "W"; ?><br>
 
             
-            <select name="symbol1">
+            <select name="symbol3_week1">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -247,7 +247,7 @@ Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?p
 
 Week of &nbsp <input type="text" name="week2_of" value ="<?php echo $startdate; ?>"> &nbsp;<br>
 Description   &nbsp <input type="text" length="255" name="week2_desc" value="<?php echo $subheading2; ?>" > 
-         <select name="symbol2">
+         <select name="symbol1_week2">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -256,7 +256,7 @@ Description   &nbsp <input type="text" length="255" name="week2_desc" value="<?p
             </select>
             <?php echo "T"; ?><br>
 
-            <select name="symbol2">
+            <select name="symbol2_week2">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -276,7 +276,7 @@ Description   &nbsp <input type="text" length="255" name="week2_desc" value="<?p
                
 Week of &nbsp <input type="text" name="week2_of" value ="<?php echo $startdate; ?>"> &nbsp;<br>
 Description   &nbsp <input type="text" length="255" name="week2_desc" value="<?php echo $subheading2; ?>" > 
-         <select name="symbol2">
+         <select name="symbol1_week2">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -285,7 +285,7 @@ Description   &nbsp <input type="text" length="255" name="week2_desc" value="<?p
             </select>
             <?php echo "T"; ?><br>
 
-            <select name="symbol2">
+            <select name="symbol2_week2">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -295,7 +295,7 @@ Description   &nbsp <input type="text" length="255" name="week2_desc" value="<?p
             <?php echo "W"; ?><br>
 
             
-            <select id="symbols">
+            <select id="symbol3_week2">
                 <option value="star">Star</option>
                 <option value="Exclamation">Exclamation Point</option>
                 <option value="Circle">Circle</option>
@@ -321,7 +321,7 @@ Description   &nbsp <input type="text" length="255" name="week2_desc" value="<?p
 Week of &nbsp <input type="text" name="week3_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week3_desc" value="<?php echo $subheading3; ?>" > 
 
-            <select name="symbol3">
+            <select name="symbol1_week3">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -330,7 +330,7 @@ Description   &nbsp <input type="text" length="255" name="week3_desc" value="<?p
             </select>
             <?php echo "T"; ?><br>
 
-            <select name="symbol3">
+            <select name="symbol2_week3">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -353,7 +353,7 @@ Description   &nbsp <input type="text" length="255" name="week3_desc" value="<?p
 Week of &nbsp <input type="text" name="week3_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week3_desc" value="<?php echo $subheading3; ?>" > 
 
-            <select name="symbol3">
+            <select name="symbol1_week3">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -363,7 +363,7 @@ Description   &nbsp <input type="text" length="255" name="week3_desc" value="<?p
             <?php echo "M"; ?><br>
 
             
-            <select name="symbol3">
+            <select name="symbol2_week3">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -373,7 +373,7 @@ Description   &nbsp <input type="text" length="255" name="week3_desc" value="<?p
             <?php echo "W"; ?><br>
 
             
-            <select name="symbol3">
+            <select name="symbol3_week3">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -397,7 +397,7 @@ Description   &nbsp <input type="text" length="255" name="week3_desc" value="<?p
            
 Week of &nbsp <input type="text" name="week4_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week4_desc" value="<?php echo $subheading4; ?>" > 
-            <select name="symbol4">
+            <select name="symbol1_week4">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -406,7 +406,7 @@ Description   &nbsp <input type="text" length="255" name="week4_desc" value="<?p
             </select>
             <?php echo "T"; ?><br>
 
-            <select name="symbol4">
+            <select name="symbol2_week4">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -427,7 +427,7 @@ Description   &nbsp <input type="text" length="255" name="week4_desc" value="<?p
            
 Week of &nbsp <input type="text" name="week4_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week4_desc" value="<?php echo $subheading4; ?>" > 
-            <select name="symbol4">
+            <select name="symbol1_week4">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -437,7 +437,7 @@ Description   &nbsp <input type="text" length="255" name="week4_desc" value="<?p
             <?php echo "M"; ?><br>
 
             
-            <select name="symbol4">
+            <select name="symbol2_week4">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -447,7 +447,7 @@ Description   &nbsp <input type="text" length="255" name="week4_desc" value="<?p
             <?php echo "W"; ?><br>
 
             
-            <select name="symbol4">
+            <select name="symbol3_week4">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -473,7 +473,7 @@ Description   &nbsp <input type="text" length="255" name="week4_desc" value="<?p
            
 Week of &nbsp <input type="text" name="week5_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week5_desc" value="<?php echo $subheading5; ?>" > 
-            <select name="symbol5">
+            <select name="symbol1_week5">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -482,7 +482,7 @@ Description   &nbsp <input type="text" length="255" name="week5_desc" value="<?p
             </select>
             <?php echo "T"; ?><br>
 
-            <select name="symbol5">
+            <select name="symbol2_week5">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -502,7 +502,7 @@ Description   &nbsp <input type="text" length="255" name="week5_desc" value="<?p
                
 Week of &nbsp <input type="text" name="week5_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week5_desc" value="<?php echo $subheading5; ?>" > 
-            <select name="symbol5">
+            <select name="symbol1_week5">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -512,7 +512,7 @@ Description   &nbsp <input type="text" length="255" name="week5_desc" value="<?p
             <?php echo "M"; ?><br>
 
             
-           <select name="symbol5">
+           <select name="symbol2_week5">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -522,7 +522,7 @@ Description   &nbsp <input type="text" length="255" name="week5_desc" value="<?p
             <?php echo "W"; ?><br>
 
             
-            <select name="symbol5">
+            <select name="symbol3_week5">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -546,7 +546,7 @@ Description   &nbsp <input type="text" length="255" name="week5_desc" value="<?p
            
 Week of &nbsp <input type="text" name="week6_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week6_desc" value="<?php echo $subheading6; ?>" > 
-            <select name="symbol6">
+            <select name="symbol1_week6">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -556,7 +556,7 @@ Description   &nbsp <input type="text" length="255" name="week6_desc" value="<?p
         
             <?php echo "T"; ?><br>
 
-            <select name="symbol6">
+            <select name="symbol2_week6">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -577,7 +577,7 @@ Description   &nbsp <input type="text" length="255" name="week6_desc" value="<?p
            
 Week of &nbsp <input type="text" name="week6_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week6_desc" value="<?php echo $subheading6; ?>" > 
-            <select name="symbol6">
+            <select name="symbol1_week6">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -587,7 +587,7 @@ Description   &nbsp <input type="text" length="255" name="week6_desc" value="<?p
             <?php echo "M"; ?><br>
 
             
-            <select name="symbol6">
+            <select name="symbol2_week6">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -597,7 +597,7 @@ Description   &nbsp <input type="text" length="255" name="week6_desc" value="<?p
             <?php echo "W"; ?><br>
 
             
-            <select name="symbol6">
+            <select name="symbol3_week6">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -621,7 +621,7 @@ Description   &nbsp <input type="text" length="255" name="week6_desc" value="<?p
            
 Week of &nbsp <input type="text" name="week7_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week7_desc" value="<?php echo $subheading7; ?>" > 
-            <select name="symbol7">
+            <select name="symbol1_week7">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -630,7 +630,7 @@ Description   &nbsp <input type="text" length="255" name="week7_desc" value="<?p
             </select>
             <?php echo "T"; ?><br>
 
-           <select name="symbol7">
+           <select name="symbol2_week7">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -651,7 +651,7 @@ Description   &nbsp <input type="text" length="255" name="week7_desc" value="<?p
            
 Week of &nbsp <input type="text" name="week7_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week7_desc" value="<?php echo $subheading7; ?>" > 
-            <select name="symbol7">
+            <select name="symbol1_week7">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -661,7 +661,7 @@ Description   &nbsp <input type="text" length="255" name="week7_desc" value="<?p
             <?php echo "M"; ?><br>
 
             
-            <select name="symbol7">
+            <select name="symbol2_week7">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -671,7 +671,7 @@ Description   &nbsp <input type="text" length="255" name="week7_desc" value="<?p
             <?php echo "W"; ?><br>
 
             
-            <select name="symbol7">
+            <select name="symbol3_week7">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -695,7 +695,7 @@ Description   &nbsp <input type="text" length="255" name="week7_desc" value="<?p
            
 Week of &nbsp <input type="text" name="week8_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?php echo $subheading8; ?>" > 
-            <select name="symbol8">
+            <select name="symbol1_week8">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -704,7 +704,7 @@ Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?p
             </select>
             <?php echo "T"; ?><br>
 
-            <select name="symbol8">
+            <select name="symbol2_week8">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -725,7 +725,7 @@ Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?p
            
 Week of &nbsp <input type="text" name="week8_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?php echo $subheading8; ?>" > 
-            <select name="symbol8">
+            <select name="symbol1_week8">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -735,7 +735,7 @@ Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?p
             <?php echo "M"; ?><br>
 
             
-            <select name="symbol8">
+            <select name="symbol2_week8">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -745,7 +745,7 @@ Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?p
             <?php echo "W"; ?><br>
 
             
-            <select id="symbols">
+            <select id="symbol3_week8">
                 <option value="star">Star</option>
                 <option value="Exclamation">Exclamation Point</option>
                 <option value="Circle">Circle</option>
@@ -772,7 +772,7 @@ Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?p
            
 Week of &nbsp <input type="text" name="week9_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?php echo $subheading9; ?>" >
-            <select name="symbol9">
+            <select name="symbol1_week9">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -781,7 +781,7 @@ Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?p
             </select>
             <?php echo "T"; ?><br>
 
-            <select name="symbol9">
+            <select name="symbol2_week9">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -802,7 +802,7 @@ Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?p
            
 Week of &nbsp <input type="text" name="week9_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?php echo $subheading9; ?>" > 
-            <select name="symbol9">
+            <select name="symbol1_week9">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -812,7 +812,7 @@ Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?p
             <?php echo "M"; ?><br>
 
             
-            <select name="symbol9">
+            <select name="symbol2_week9">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -822,7 +822,7 @@ Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?p
             <?php echo "W"; ?><br>
 
             
-            <select name="symbol9">
+            <select name="symbol3_week9">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -847,7 +847,7 @@ Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?p
            
 Week of &nbsp <input type="text" name="week10_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?php echo $subheading10; ?>" > 
-            <select name="symbol10">
+            <select name="symbol1_week10">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -856,7 +856,7 @@ Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?
             </select>
             <?php echo "T"; ?><br>
 
-            <select name="symbol10">
+            <select name="symbol2_week10">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -877,7 +877,7 @@ Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?
            
 Week of &nbsp <input type="text" name="week10_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?php echo $subheading10; ?>" > 
-            <select name="symbol10">
+            <select name="symbol1_week10">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -887,7 +887,7 @@ Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?
             <?php echo "M"; ?><br>
 
             
-            <select name="symbol10">
+            <select name="symbol2_week10">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -897,7 +897,7 @@ Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?
             <?php echo "W"; ?><br>
 
             
-            <select name="symbol10">
+            <select name="symbol3_week10">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -920,7 +920,7 @@ Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?
             ?>
 Week of &nbsp <input type="text" name="week11_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?php echo $subheading11; ?>" > 
-            <select name="symboll1">
+            <select name="symbol1_week11">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -929,7 +929,7 @@ Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?
             </select>
             <?php echo "T"; ?><br>
 
-            <select name="symboll1">
+            <select name="symbol2_week11">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -950,7 +950,7 @@ Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?
 
 Week of &nbsp <input type="text" name="week11_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?php echo $subheading11; ?>" > 
-            <select name="symboll1">
+            <select name="symbol1_week11">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -960,7 +960,7 @@ Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?
             <?php echo "M"; ?><br>
 
             
-            <select name="symboll1">
+            <select name="symbol2_week11">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -970,7 +970,7 @@ Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?
             <?php echo "W"; ?><br>
 
             
-            <select name="symboll1">
+            <select name="symbol3_week11">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -994,7 +994,7 @@ Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?
 
 Week of &nbsp <input type="text" name="week12_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?php echo $subheading12; ?>" > 
-            <select name="symbol12">
+            <select name="symbol1_week12">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -1003,7 +1003,7 @@ Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?
             </select>
             <?php echo "T"; ?><br>
 
-           <select name="symbol12">
+           <select name="symbol2_week12">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -1024,7 +1024,7 @@ Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?
            
 Week of &nbsp <input type="text" name="week12_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?php echo $subheading12; ?>" > 
-            <select name="symbol12">
+            <select name="symbol1_week12">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -1034,7 +1034,7 @@ Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?
             <?php echo "M"; ?><br>
 
             
-            <select name="symbol12">
+            <select name="symbol2_week12">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -1044,7 +1044,7 @@ Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?
             <?php echo "W"; ?><br>
 
             
-            <select name="symbol12">
+            <select name="symbol3_week12">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -1070,7 +1070,7 @@ Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?
 
 Week of &nbsp <input type="text" name="week13_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?php echo $subheading13; ?>" > 
-            <select name="symbol13">
+            <select name="symbol1_week13">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -1079,7 +1079,7 @@ Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?
             </select>
             <?php echo "T"; ?><br>
 
-            <select name="symbol13">
+            <select name="symbol2_week13">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -1100,7 +1100,7 @@ Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?
            
 Week of &nbsp <input type="text" name="week13_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?php echo $subheading13; ?>" > 
-            <select name="symbol13">
+            <select name="symbol1_week13">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -1110,7 +1110,7 @@ Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?
             <?php echo "M"; ?><br>
 
             
-            <select name="symbol13">
+            <select name="symbol2_week13">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -1120,7 +1120,7 @@ Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?
             <?php echo "W"; ?><br>
 
             
-            <select name="symbol13">
+            <select name="symbol3_week13">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -1145,7 +1145,7 @@ Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?
            
 Week of &nbsp <input type="text" name="week14_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?php echo $subheading14; ?>" > 
-            <select name="symbol14">
+            <select name="symbol1_week14">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -1154,7 +1154,7 @@ Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?
             </select>
             <?php echo "T"; ?><br>
 
-            <select name="symbol14">
+            <select name="symbol2_week14">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -1174,7 +1174,7 @@ Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?
                
 Week of &nbsp <input type="text" name="week14_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?php echo $subheading14; ?>" > 
-            <select name="symbol14">
+            <select name="symbol1_week14">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -1184,7 +1184,7 @@ Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?
             <?php echo "M"; ?><br>
 
             
-            <select name="symbol14">
+            <select name="symbol2_week14">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -1194,7 +1194,7 @@ Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?
             <?php echo "W"; ?><br>
 
             
-            <select name="symbol14">
+            <select name="symbol3_week14">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -1218,7 +1218,7 @@ Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?
            
 Week of &nbsp <input type="text" name="week15_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?php echo $subheading15; ?>" > 
-            <select name="symbol15">
+            <select name="symbol1_week15">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -1227,7 +1227,7 @@ Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?
             </select>
             <?php echo "T"; ?><br>
 
-            <select name="symbol15">
+            <select name="symbol2_week15">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -1248,7 +1248,7 @@ Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?
 
 Week of &nbsp <input type="text" name="week15_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?php echo $subheading15; ?>" > 
-            <select name="symbol15">
+            <select name="symbol1_week15">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -1258,7 +1258,7 @@ Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?
             <?php echo "M"; ?><br>
 
             
-            <select name="symbol15">
+            <select name="symbol2_week15">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
@@ -1269,7 +1269,7 @@ Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?
 
             
            
-            <select name="symbol15">
+            <select name="symbol3_week15">
             <option value="star">Star</option>
             <option value="Exclamation Point">Exclamation Point</option>
             <option value="Circle">Circle</option>
