@@ -33,7 +33,8 @@ $row=$result->fetch_array();
 $course_code =$row['coursecode'];
 $course_name =$row['coursename'];
 $book_name = $row['bookname'];
-$book_author = $row['bookauthor'];
+$bookisn = $row['bookisbn'];
+$bookauthor = $row['bookauthor'];
 $topicname1 = $row['topicname1'];
 $topicname2 = $row['topicname2'];
 $topicname3 = $row['topicname3'];
@@ -50,7 +51,7 @@ $pointvalue6 = $row['pointvalue6'];
 $pointvalue7 = $row['pointvalue7'];
 $important_points = $row['important_points'];
 $meetingDays = $row['meetingday'];
-$isbn = $row['bookisbn'];
+
 	
 	}
 }

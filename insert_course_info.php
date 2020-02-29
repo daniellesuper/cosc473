@@ -18,10 +18,10 @@ $FKPROFID = $_SESSION['FKPROFID'];
 $courseCode=htmlentities($_REQUEST['courseCode'],ENT_QUOTES);
 $courseName=htmlentities($_REQUEST['courseName'],ENT_QUOTES);
 $meetingDays=htmlentities($_REQUEST['meetingDays'],ENT_QUOTES);
-$importantPoints=htmlentities($_REQUEST['importantpoints'],ENT_QUOTES);
+$important_points=htmlentities($_REQUEST['important_points'],ENT_QUOTES);
 $bookName=htmlentities($_REQUEST['bookName'],ENT_QUOTES);
-$isbn=htmlentities($_REQUEST['isbn'],ENT_QUOTES);
-$author=htmlentities($_REQUEST['author'],ENT_QUOTES);
+$bookisbn=htmlentities($_REQUEST['bookisbn'],ENT_QUOTES);
+$bookauthor=htmlentities($_REQUEST['bookauthor'],ENT_QUOTES);
 $bookImage=htmlentities($_REQUEST['bookImage'],ENT_QUOTES);
 $topicname1=htmlentities($_REQUEST['gradeName1'],ENT_QUOTES);
 $pointvalue1=htmlentities($_REQUEST['weight1'],ENT_QUOTES);
@@ -37,7 +37,6 @@ $topicname6=htmlentities($_REQUEST['gradeName6'],ENT_QUOTES);
 $pointvalue6=htmlentities($_REQUEST['weight6'],ENT_QUOTES);
 $topicname7=htmlentities($_REQUEST['gradeName7'],ENT_QUOTES);
 $pointvalue7=htmlentities($_REQUEST['weight7'],ENT_QUOTES);
-/*
 $symbol1 =htmlentities($_REQUEST['symbol1']),ENT_QUOTES);
 $symbol2 =htmlentities($_REQUEST['symbol2']),ENT_QUOTES);
 $symbol3 =htmlentities($_REQUEST['symbol3']),ENT_QUOTES);
@@ -58,7 +57,7 @@ $assign7 =htmlentities($_REQUEST['assign7']),ENT_QUOTES);
 $assign8 =htmlentities($_REQUEST['assign8']),ENT_QUOTES);
 $assign9 =htmlentities($_REQUEST['assign9']),ENT_QUOTES);
 $assign10 =htmlentities($_REQUEST['assign10']),ENT_QUOTES);
-*/
+
 
 
 $fp = fopen($_FILES['bookImage']['tmp_name'], "r");	
@@ -110,8 +109,8 @@ if ($fp) {
                      values
                      (
                        $FKPROFID, '$courseCode', '$courseName', '$meetingDays', 
-                       '$bookName', '$isbn', '$author', '$bookImage', 
-					   '$importantPoints', '$topicname1', '$pointvalue1', 
+                       '$bookName', '$bookisbn', '$bookauthor', '$bookImage', 
+					   '$important_points', '$topicname1', '$pointvalue1', 
 					   '$topicname2', '$pointvalue2', '$topicname3', 
 					   '$pointvalue3','$topicname4', '$pointvalue4', 
 					   '$topicname5','$pointvalue5', '$topicname6',

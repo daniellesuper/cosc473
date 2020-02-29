@@ -117,7 +117,7 @@ if ($_GET['ok'] == 1) {
 
 <?php
 
-$sql1 = "SELECT  meetingday FROM courseinfo WHERE PKID = $_GET[courseID]";
+$sql1 = "SELECT  meetingDays FROM courseinfo WHERE PKID = $_GET[courseID]";
  //echo $sql1; exit;
 $sql2 = "SELECT week1_of, week2_of, week3_of, week4_of, week5_of, week6_of, week7_of, week8_of, week9_of, week10_of, week11_of, week12_of, week13_of, week14_of, week15_of, week1_desc, week2_desc, week3_desc, week4_desc, week5_desc, week6_desc, week7_desc, week8_desc, week9_desc, week10_desc, week11_desc, week12_desc, week13_desc, week14_desc, week15_desc, holiday, startdate, enddate FROM weeklyinfo WHERE fkcourseid= $_GET[courseID]";
 //  
@@ -165,7 +165,7 @@ Date End: &nbsp <input type="date" name="enddate" value="<?php echo $enddate; ?>
         <div class="circle">1</div>
         <?php 
 
-            if($row["meetingday"] == "TR"){
+            if($row["meetingDays"] == "TTR"){
             ?>
 
 Week of &nbsp <input type="text" name="week1_of" value =""> &nbsp; <br>
@@ -194,7 +194,7 @@ Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?p
           }
            else {
             
-            if($row["meetingday"] == "MWF"){
+            if($row["meetingDays"] == "MWF"){
 
             ?><br>
                
@@ -242,7 +242,7 @@ Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?p
         <div class="circle">2</div>
           <?php 
 
-            if($row["meetingday"] == "TR"){
+            if($row["meetingDays"] == "TTR"){
             ?>
 
 Week of &nbsp <input type="text" name="week2_of" value ="<?php echo $startdate; ?>"> &nbsp;<br>
@@ -270,7 +270,7 @@ Description   &nbsp <input type="text" length="255" name="week2_desc" value="<?p
           }
            else {
             
-            if($row["meetingday"] == "MWF"){
+            if($row["meetingDays"] == "MWF"){
 
             ?><br>
                
@@ -315,7 +315,7 @@ Description   &nbsp <input type="text" length="255" name="week2_desc" value="<?p
 
         <?php 
 
-            if($row["meetingday"] == "TR"){
+            if($row["meetingDays"] == "TTR"){
             ?>
            
 Week of &nbsp <input type="text" name="week3_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
@@ -344,7 +344,7 @@ Description   &nbsp <input type="text" length="255" name="week3_desc" value="<?p
           }
            else {
             
-            if($row["meetingday"] == "MWF"){
+            if($row["meetingDays"] == "MWF"){
 
             ?><br>
                
@@ -392,7 +392,7 @@ Description   &nbsp <input type="text" length="255" name="week3_desc" value="<?p
         <div class="circle">4</div>
 
         <?php 
-            if($row["meetingday"] == "TR"){
+            if($row["meetingDays"] == "TTR"){
             ?>
            
 Week of &nbsp <input type="text" name="week4_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
@@ -420,7 +420,7 @@ Description   &nbsp <input type="text" length="255" name="week4_desc" value="<?p
           }
            else {
             
-            if($row["meetingday"] == "MWF"){
+            if($row["meetingDays"] == "MWF"){
 
            ?><br>
                
@@ -468,7 +468,7 @@ Description   &nbsp <input type="text" length="255" name="week4_desc" value="<?p
         <div class="circle">5</div>
 
         <?php 
-            if($row["meetingday"] == "TR"){
+            if($row["meetingDays"] == "TTR"){
             ?>
            
 Week of &nbsp <input type="text" name="week5_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
@@ -496,7 +496,7 @@ Description   &nbsp <input type="text" length="255" name="week5_desc" value="<?p
           }
            else {
             
-            if($row["meetingday"] == "MWF"){
+            if($row["meetingDays"] == "MWF"){
 
             ?><br>
                
@@ -541,7 +541,7 @@ Description   &nbsp <input type="text" length="255" name="week5_desc" value="<?p
         <div class="circle">6</div>
 
         <?php 
-            if($row["meetingday"] == "TR"){
+            if($row["meetingDays"] == "TTR"){
             ?>
            
 Week of &nbsp <input type="text" name="week6_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
@@ -570,7 +570,7 @@ Description   &nbsp <input type="text" length="255" name="week6_desc" value="<?p
           }
            else {
             
-            if($row["meetingday"] == "MWF"){
+            if($row["meetingDays"] == "MWF"){
 
             ?><br>
                
@@ -616,7 +616,7 @@ Description   &nbsp <input type="text" length="255" name="week6_desc" value="<?p
         <div class="circle">7</div>
 
         <?php 
-            if($row["meetingday"] == "TR"){
+            if($row["meetingDays"] == "TTR"){
             ?>
            
 Week of &nbsp <input type="text" name="week7_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
@@ -644,7 +644,7 @@ Description   &nbsp <input type="text" length="255" name="week7_desc" value="<?p
           }
            else {
             
-            if($row["meetingday"] == "MWF"){
+            if($row["meetingDays"] == "MWF"){
 
             ?><br>
                
@@ -690,7 +690,7 @@ Description   &nbsp <input type="text" length="255" name="week7_desc" value="<?p
         <div class="circle">8</div>
 
         <?php 
-            if($row["meetingday"] == "TR"){
+            if($row["meetingDays"] == "TTR"){
             ?>
            
 Week of &nbsp <input type="text" name="week8_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
@@ -718,7 +718,7 @@ Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?p
           }
            else {
             
-            if($row["meetingday"] == "MWF"){
+            if($row["meetingDays"] == "MWF"){
 
             ?><br>
                
@@ -767,7 +767,7 @@ Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?p
 
         <?php 
             
-            if($row["meetingday"] == "TR"){
+            if($row["meetingDays"] == "TTR"){
             ?>
            
 Week of &nbsp <input type="text" name="week9_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
@@ -795,7 +795,7 @@ Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?p
           }
            else {
             
-            if($row["meetingday"] == "MWF"){
+            if($row["meetingDays"] == "MWF"){
 
             ?><br>
                
@@ -842,7 +842,7 @@ Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?p
 
         <?php 
 
-            if($row["meetingday"] == "TR"){
+            if($row["meetingDays"] == "TTR"){
             ?>
            
 Week of &nbsp <input type="text" name="week10_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
@@ -870,7 +870,7 @@ Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?
           }
            else {
             
-            if($row["meetingday"] == "MWF"){
+            if($row["meetingDays"] == "MWF"){
 
             ?><br>
                
@@ -916,7 +916,7 @@ Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?
         <div class="circle">11</div>
 
         <?php 
-            if($row["meetingday"] == "TR"){
+            if($row["meetingDays"] == "TTR"){
             ?>
 Week of &nbsp <input type="text" name="week11_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?php echo $subheading11; ?>" > 
@@ -943,7 +943,7 @@ Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?
           }
            else {
             
-            if($row["meetingday"] == "MWF"){
+            if($row["meetingDays"] == "MWF"){
 
             ?><br>
                
@@ -989,7 +989,7 @@ Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?
         <div class="circle">12</div>
 
         <?php 
-            if($row["meetingday"] == "TR"){
+            if($row["meetingDays"] == "TTR"){
              ?>
 
 Week of &nbsp <input type="text" name="week12_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
@@ -1017,7 +1017,7 @@ Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?
           }
            else {
             
-            if($row["meetingday"] == "MWF"){
+            if($row["meetingDays"] == "MWF"){
 
             ?><br>
                
@@ -1065,7 +1065,7 @@ Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?
       <div class="circle">13</div>
 
       <?php 
-            if($row["meetingday"] == "TR"){
+            if($row["meetingDays"] == "TTR"){
             ?>
 
 Week of &nbsp <input type="text" name="week13_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
@@ -1093,7 +1093,7 @@ Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?
           }
            else {
             
-            if($row["meetingday"] == "MWF"){
+            if($row["meetingDays"] == "MWF"){
 
             ?><br>
                
@@ -1140,7 +1140,7 @@ Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?
 
       <?php 
 
-            if($row["meetingday"] == "TR"){
+            if($row["meetingDays"] == "TTR"){
              ?> 
            
 Week of &nbsp <input type="text" name="week14_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
@@ -1168,7 +1168,7 @@ Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?
           }
            else {
             
-            if($row["meetingday"] == "MWF"){
+            if($row["meetingDays"] == "MWF"){
 
             ?><br>
                
@@ -1213,7 +1213,7 @@ Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?
       <div class="circle">15</div>
 
       <?php 
-            if($row["meetingday"] == "TR"){
+            if($row["meetingDays"] == "TTR"){
              ?>
            
 Week of &nbsp <input type="text" name="week15_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
@@ -1241,7 +1241,7 @@ Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?
           }
            else {
             
-            if($row["meetingday"] == "MWF"){
+            if($row["meetingDays"] == "MWF"){
 
             ?><br>
                

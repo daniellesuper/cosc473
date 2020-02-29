@@ -19,7 +19,7 @@ $meetingDays=htmlentities($_REQUEST['meetingDays'],ENT_QUOTES);
 $important_points=htmlentities($_REQUEST['important_points'],ENT_QUOTES);
 $bookName=htmlentities($_REQUEST['bookName'],ENT_QUOTES);
 $bookisbn=htmlentities($_REQUEST['bookisbn'],ENT_QUOTES);
-$author=htmlentities($_REQUEST['author'],ENT_QUOTES);
+$bookauthor=htmlentities($_REQUEST['bookauthor'],ENT_QUOTES);
 //$bookImage=htmlentities($_REQUEST['bookImage'],ENT_QUOTES);
 $topicname1=htmlentities($_REQUEST['gradeName1'],ENT_QUOTES);
 $pointvalue1=htmlentities($_REQUEST['weight1'],ENT_QUOTES);
@@ -38,7 +38,6 @@ $pointvalue7=htmlentities($_REQUEST['weight7'],ENT_QUOTES);
 $symbol1 = htmlentities($_REQUEST['symbol1'],ENT_QUOTES);
 $symbol2 = htmlentities($_REQUEST['symbol2'],ENT_QUOTES);
 $symbol3 = htmlentities($_REQUEST['symbol3'],ENT_QUOTES);
-$symbol4 = htmlentities($_REQUEST['symbol4'],ENT_QUOTES);
 $symbol4 = htmlentities($_REQUEST['symbol4'],ENT_QUOTES);
 $symbol5 = htmlentities($_REQUEST['symbol5'],ENT_QUOTES);
 $symbol6 = htmlentities($_REQUEST['symbol6'],ENT_QUOTES);
@@ -63,7 +62,7 @@ $sql =" Update courseinfo
        	courseCode = '$courseCode',
        	courseName = '$courseName',
        	bookName = '$bookName',
-       	bookAuthor = '$bookAuthor',
+       	bookauthor = '$bookauthor',
        	topicname1 = '$topicname1',
        	topicname2 = '$topicname2',
        	topicname3 = '$topicname3',
@@ -89,8 +88,8 @@ $sql =" Update courseinfo
         symbol6 = '$symbol6',
         symbol7 = '$symbol7',
         symbol8 = '$symbol8',
-        symbol8 = '$symbol8',
-        symbol8 = '$symbol8',
+        symbol9 = '$symbol9',
+        symbol10 = '$symbol10',
         assign1 = '$assign1',
         assign2 = '$assign2',
         assign3 = '$assign3',
@@ -134,10 +133,19 @@ if ($fp) {
    }else{
 		 $FKPROFID = $_SESSION['PKID'];
          $strQuery="update courseinfo 
-		            set coursecode = '$courseCode', coursename = '$courseName', bookName = '$bookName', 				bookAuthor = '$bookAuthor',topicname1 = '$topicname1',topicname2 = '$topicname2',
+		            set coursecode = '$courseCode', coursename = '$courseName', bookName = '$bookName', bookauthor = '$bookauthor',
+                  topicname1 = '$topicname1',topicname2 = '$topicname2',
 		            	topicname3 = '$topicname3', topicname4 = '$topicname4', topicname5 = '$topicname5',
 		            	topicname6 = '$topicname6', topicname7 = '$topicname7', pointvalue1 = '$pointvalue1',
-		            	pointvalue2 = '$pointvalue2', pointvalue3 = '$pointvalue3',
+		            	pointvalue2 = '$pointvalue2', pointvalue3 = '$pointvalue3', pointvalue4 = '$pointvalue4',
+                  pointvalue5 = '$pointvalue5', pointvalue6 = '$pointvalue6', pointvalue7 = '$pointvalue7',
+                  important_points = '$important_points', meetingDays = '$meetingDays', bookisbn = '$bookisbn',
+                  symbol1 = '$symbol1', symbol2 = '$symbol2', symbol3 = '$symbol3', symbol4 = '$symbol4',
+                  symbol5 = '$symbol5', symbol6 = '$symbol6', symbol7 = '$symbol7', symbol8 = '$symbol8',
+                  symbol9 = '$symbol9', symbol10 = '$symbol10', assign1 = '$assign1', assign2 = '$assign2',
+                  assign3 = '$assign3', assign4 = '$assign4', assign5 = '$assign5', assign6 = '$assign6',
+                  assign7 = '$assign7', assign8 = '$assign8', assign9 = '$assign9', assign10 = '$assign10'
+
 					where PKID = $courseID
                     ";
 		//echo $strQuery;exit;

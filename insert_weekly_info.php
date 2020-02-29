@@ -162,7 +162,32 @@ $symbol3_week15 = htmlentities($_REQUEST['symbol3_week15'],ENT_QUOTES);
                     ";
                     */
 
+/*                    
   $sql= "insert into weeklyinfo
+                      (
+                       fkcourseid,fkprofid,holiday, startdate, enddate)
+				values
+                     (
+                      $courseID, $FKPROFID , '$holiday_name', '$startdate1', '$enddate')";
+
+
+
+  $sql_week1="insert into weeklyinfo
+  						(
+  						week1_desc, week1_of, symbol1_week1, symbol2_week1, symbol3_week1)
+  				values
+  						(
+  						'$week1_desc', '$week1_of', '$symbol1_week1', '$symbol2_week1', '$symbol3_week1')";
+
+  $sql_week2="insert into weeklyinfo
+  						(
+  							week2_desc, week2_of, symbol1_week2, symbol2_week2, symbol3_week2)
+  					values
+  						(
+  							'$week2_desc', '$week2_of', '$symbol1_week2', '$symbol2_week2', '$symbol3_week2')";
+  */
+
+  $sql= "INSERT INTO weeklyinfo
                       (
                        fkcourseid,fkprofid,holiday, startdate, enddate,";
 
@@ -216,8 +241,8 @@ $symbol3_week15 = htmlentities($_REQUEST['symbol3_week15'],ENT_QUOTES);
                       '$week15_desc', '$week15_of', '$symbol1_week15', '$symbol2_week15', '$symbol3_week15'
                       )";
 
-  $strQuery = $sql.$sql_week1.$sql_week2.$sql_week3.$sql_week4.$sql_week5.$sql_week6.$sql_week7.$sql_week8.$sql_week9
-  				.$sql_week10.$sql_week11.$sql_week12.$sql_week13.$sql_week14.$sql_week15;
+  $strQuery = $sql. $sql_week1. $sql_week2. $sql_week3. $sql_week4. $sql_week5. $sql_week6. $sql_week7. $sql_week8. $sql_week9
+  				.$sql_week10. $sql_week11. $sql_week12. $sql_week13. $sql_week14. $sql_week15;
 		 
  echo $strQuery; exit;
 		 $conn->query($strQuery);

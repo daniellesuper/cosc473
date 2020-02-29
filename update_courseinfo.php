@@ -45,7 +45,7 @@ $row=$result->fetch_array();
 $courseCode =$row['courseCode'];
 $courseName =$row['courseName'];
 $bookName = $row['bookName'];
-$bookaAuthor = $row['bookAuthor'];
+$bookauthor = $row['bookauthor'];
 $topicname1 = $row['topicname1'];
 $topicname2 = $row['topicname2'];
 $topicname3 = $row['topicname3'];
@@ -266,8 +266,8 @@ Important Points:<br><br>
 	<!-- Users will have the abilty to customize the look of these points -->
 	
 Book Name: &nbsp; <input type="text" length="90" name="bookName" value="<?php echo $bookName?>" >&nbsp; 
-ISBN:&nbsp; <input type="text" length="90" name="isbn" value="<?php echo $isbn?>"> &nbsp;
-Author: &nbsp; <input type="text" length="90" name="author" value="<?php echo $bookAuthor?>"> <br><br>
+ISBN:&nbsp; <input type="text" length="90" name="isbn" value="<?php echo $bookisbn?>"> &nbsp;
+Author: &nbsp; <input type="text" length="90" name="author" value="<?php echo $bookauthor?>"> <br><br>
 
 Book Image: <input type="file" name="bookImage" /><br><br>
 
