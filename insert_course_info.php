@@ -18,10 +18,10 @@ $FKPROFID = $_SESSION['FKPROFID'];
 $courseCode=htmlentities($_REQUEST['courseCode'],ENT_QUOTES);
 $courseName=htmlentities($_REQUEST['courseName'],ENT_QUOTES);
 $meetingDays=htmlentities($_REQUEST['meetingDays'],ENT_QUOTES);
-$important_points=htmlentities($_REQUEST['important_points'],ENT_QUOTES);
+$importantpoints=htmlentities($_REQUEST['importantpoints'],ENT_QUOTES);
 $bookName=htmlentities($_REQUEST['bookName'],ENT_QUOTES);
 $bookisbn=htmlentities($_REQUEST['bookisbn'],ENT_QUOTES);
-$bookauthor=htmlentities($_REQUEST['bookauthor'],ENT_QUOTES);
+$bookAuthor=htmlentities($_REQUEST['bookAuthor'],ENT_QUOTES);
 $bookImage=htmlentities($_REQUEST['bookImage'],ENT_QUOTES);
 $topicname1=htmlentities($_REQUEST['gradeName1'],ENT_QUOTES);
 $pointvalue1=htmlentities($_REQUEST['weight1'],ENT_QUOTES);
@@ -102,15 +102,15 @@ if ($fp) {
           $strQuery="insert into courseinfo
 
                       (
-                       FKProfID, coursecode, coursename, meetingday, bookname, bookisbn, bookauthor, bookpicture, 
-					   important_points, topicname1, pointvalue1, topicname2, pointvalue2, topicname3, pointvalue3, 
+                       FKProfID, coursecode, coursename, meetingday, bookname, bookisbn, bookAuthor, bookpicture, 
+					   importantpoints, topicname1, pointvalue1, topicname2, pointvalue2, topicname3, pointvalue3, 
 					   topicname4, pointvalue4, topicname5, pointvalue5, topicname6, pointvalue6, topicname7, pointvalue7,img_mime, symbol1, symbol2, symbol3, symbol4, symbol5, symbol6, symbol7, symbol8, symbol9, symbol10, assign1, assign2, assign3, assign4, assign5, assign6, assign7, assign8, assign9, assign10
                       )
                      values
                      (
                        $FKPROFID, '$courseCode', '$courseName', '$meetingDays', 
-                       '$bookName', '$bookisbn', '$bookauthor', '$bookImage', 
-					   '$important_points', '$topicname1', '$pointvalue1', 
+                       '$bookName', '$bookisbn', '$bookAuthor', '$bookImage', 
+					   '$importantpoints', '$topicname1', '$pointvalue1', 
 					   '$topicname2', '$pointvalue2', '$topicname3', 
 					   '$pointvalue3','$topicname4', '$pointvalue4', 
 					   '$topicname5','$pointvalue5', '$topicname6',
