@@ -106,7 +106,7 @@ if($result->num_rows > 0) {
 
 // start course info
 
-$sql = "SELECT coursecode, coursename, bookname, bookisbn, bookauthor, important_points FROM courseinfo WHERE PKID = $_GET[courseID]"; 
+$sql = "SELECT coursecode, coursename, bookname, bookisbn, bookAuthor, importantpoints FROM courseinfo WHERE PKID = $_GET[courseID]"; 
 
 $result = $conn->query($sql); /* used for coursecode */
 if($result->num_rows > 0) {
@@ -125,7 +125,7 @@ if($result->num_rows > 0) {
 			<?php
 				echo $row["bookname"]."<br>";
 				echo "ISBN:".$row["bookisbn"]."<br>";
-				echo "Author: ".$row["bookauthor"];
+				echo "Author: ".$row["bookAuthor"];
 			?></div>
 </div><!--end bookInfo-->
 
@@ -133,7 +133,7 @@ if($result->num_rows > 0) {
 	<div id="ribbon2">Important Points</div>
 	<div id="pointsContainer">
 		<?php
-		$imp_points = $row["important_points"];
+		$imp_points = $row["importantpoints"];
 
 		$imp_points = html_entity_decode($imp_points);
 		echo"$imp_points";
