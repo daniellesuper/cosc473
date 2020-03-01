@@ -295,7 +295,7 @@ Description   &nbsp <input type="text" length="255" name="week2_desc" value="<?p
             <?php echo "W"; ?><br>
 
             
-            <select id="symbol3_week2">
+            <select name="symbol3_week2">
                 <option value="star">Star</option>
                 <option value="Exclamation">Exclamation Point</option>
                 <option value="Circle">Circle</option>
@@ -745,7 +745,7 @@ Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?p
             <?php echo "W"; ?><br>
 
             
-            <select id="symbol3_week8">
+            <select name="symbol3_week8">
                 <option value="star">Star</option>
                 <option value="Exclamation">Exclamation Point</option>
                 <option value="Circle">Circle</option>
@@ -1288,20 +1288,20 @@ Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?
       key: 
       <div class="box">
 
-        <img src="images/star.jpeg" width="30px" height="20px"/> - 
-        <input type="text"></input><br>
+        <img src="images/star.jpeg"  width="30px" height="20px"/> - 
+        <input type="text" name="symbol_field1"></input><br>
         
-        <img src="images/x.jpeg" width="30px" height="20px"/> - 
-        <input type="text"></input><br>
+        <img src="images/x.jpeg"  width="30px" height="20px"/> - 
+        <input type="text" name="symbol_field2"></input><br>
         
-        <img src="images/checkmark.jpeg" width="30px" height="20px"/> - 
-        <input type="text"></input><br>
+        <img src="images/checkmark.jpeg"  width="30px" height="20px"/> - 
+        <input type="text" name="symbol_field3"></input><br>
         
-        <img src="images/exclamation1.png" width="30px" height="20px"/> - 
-        <input type="text"></input><br>
+        <img src="images/exclamation1.png"  width="30px" height="20px"/> - 
+        <input type="text" name="symbol_field4"></input><br>
         
-        <img src="images/circle.png" width="30px" height="20px"/> -
-        <input type="text"></input>
+        <img src="images/circle.png"  width="30px" height="20px"/> -
+        <input type="text" name="symbol_field5"></input>
 
       </div>
   </div>

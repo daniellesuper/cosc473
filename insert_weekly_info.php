@@ -139,28 +139,12 @@ $symbol1_week15 = htmlentities($_REQUEST['symbol1_week15'],ENT_QUOTES);
 $symbol2_week15 = htmlentities($_REQUEST['symbol2_week15'],ENT_QUOTES);
 $symbol3_week15 = htmlentities($_REQUEST['symbol3_week15'],ENT_QUOTES);
 
+$symbol_field1 = htmlentities($_REQUEST['symbol_field1'],ENT_QUOTES);
+$symbol_field2 = htmlentities($_REQUEST['symbol_field2'],ENT_QUOTES);
+$symbol_field3 = htmlentities($_REQUEST['symbol_field3'],ENT_QUOTES);
+$symbol_field4 = htmlentities($_REQUEST['symbol_field4'],ENT_QUOTES);
+$symbol_field5 = htmlentities($_REQUEST['symbol_field5'],ENT_QUOTES);
 
-
-
-
-
-
-//$week1assessment = htmlentities($_REQUEST['week1assessment'],ENT_QUOTES);
-
-
-
- /*
-	
-         $strQuery="insert into weeklyinfo
-                      (
-                       fkcourseid,fkprofid,holiday, startdate, enddate, week1_desc, week1_of, symbol1, week2_desc, week2_of, symbol2,  week3_desc, week3_of, symbol3, week4_desc, week4_of, symbol4, week5_desc, week5_of, symbol5, week6_desc, week6_of, symbol6, week7_desc, week7_of, symbol7, week8_desc, week8_of, symbol8, week9_desc, week9_of, symbol9, week10_desc, week10_of, symbol10, week11_desc, week11_of, symbol11, week12_desc, week12_of, symbol12, week13_desc, week13_of, symbol13, week14_desc, week14_of, symbol14, week15_desc, week15_of, symbol15
-                      )
-                     values
-                     (
-                      $courseID, $FKPROFID , '$holiday_name', '$startdate1', '$enddate',  '$week1_desc', '$week1_of', '$symbol1', '$week2_desc', '$week2_of', '$symbol2',  '$week3_desc', '$week3_of', '$symbol3', '$week4_desc', '$week4_of', '$symbol4', '$week5_desc', '$week5_of', '$symbol5', '$week6_desc', '$week6_of', '$symbol6', '$week7_desc', '$week7_of', '$symbol7', '$week8_desc', '$week8_of', '$symbol8', '$week9_desc', '$week9_of', '$symbol9', '$week10_desc', '$week10_of', '$symbol10', '$week11_desc', '$week11_of', '$symbol11', '$week12_desc', '$week12_of', '$symbol12', '$week13_desc', '$week13_of', '$symbol13', '$week14_desc', '$week14_of', '$symbol14', '$week15_desc', '$week15_of', '$symbol15'
-					 )
-                    ";
-                    */
   $sql= "INSERT INTO weeklyinfo
                       (
                        fkcourseid,fkprofid,holiday, startdate, enddate,";
@@ -193,7 +177,9 @@ $symbol3_week15 = htmlentities($_REQUEST['symbol3_week15'],ENT_QUOTES);
 
   $sql_week14="week14_desc, week14_of, symbol1_week14, symbol2_week14, symbol3_week14,";
 
-  $sql_week15="week15_desc, week15_of, symbol1_week15, symbol2_week15, symbol3_week15)";
+  $sql_week15="week15_desc, week15_of, symbol1_week15, symbol2_week15, symbol3_week15,";
+
+  $sql_symbols="symbol_field1, symbol_field2, symbol_field3, symbol_field4, symbol_field5)";
 
  	$sql_values = "values
                      (
@@ -212,12 +198,13 @@ $symbol3_week15 = htmlentities($_REQUEST['symbol3_week15'],ENT_QUOTES);
                       '$week12_desc', '$week12_of', '$symbol1_week12', '$symbol2_week12', '$symbol3_week12',
                       '$week13_desc', '$week13_of', '$symbol1_week13', '$symbol2_week13', '$symbol3_week13',
                       '$week14_desc', '$week14_of', '$symbol1_week14', '$symbol2_week14', '$symbol3_week14',
-                      '$week15_desc', '$week15_of', '$symbol1_week15', '$symbol2_week15', '$symbol3_week15'
+                      '$week15_desc', '$week15_of', '$symbol1_week15', '$symbol2_week15', '$symbol3_week15',
+                      '$symbol_field1', '$symbol_field2', '$symbol_field3', '$symbol_field4', '$symbol_field5'
                       )"; 
   $strQuery = $sql. $sql_week1. $sql_week2. $sql_week3. $sql_week4. $sql_week5. $sql_week6. $sql_week7. $sql_week8. $sql_week9
-  				.$sql_week10. $sql_week11. $sql_week12. $sql_week13. $sql_week14. $sql_week15. $sql_values;
+  				.$sql_week10. $sql_week11. $sql_week12. $sql_week13. $sql_week14. $sql_week15. $sql_symbols. $sql_values;
 		 
- echo $strQuery; exit;
+ //echo $strQuery; exit;
 		 $conn->query($strQuery);
 		
 		 header("Location: mainpage.php");
