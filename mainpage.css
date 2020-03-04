@@ -116,7 +116,7 @@ hr {
 	border-radius: 50%;
 }
 .deleteButton:hover {
-	color: red;
+	font: 12pt red;
 }
 
 #buttons {
