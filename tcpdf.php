@@ -32,12 +32,39 @@ $pdf->setPrintHeader(false);
 $pdf->setPrintFooter(false);
 $pdf->setTitle('Weekly Schedule');
 
-
-// add page
+// add 1st page
 $pdf->AddPage();
+$pdf->Cell(190,50,'Prof Info', 1, 1, 'C');
 
+//pie chart code
+$pdf->Write(0, 'Grades');
+
+$xc = 105;
+$yc = 100;
+$r = 50;
+
+$pdf->SetFillColor(0, 0, 255);
+$pdf->PieSector($xc, $yc, $r, 20, 120, 'FD', false, 0, 2);
+
+$pdf->SetFillColor(0, 255, 0);
+$pdf->PieSector($xc, $yc, $r, 120, 250, 'FD', false, 0, 2);
+
+$pdf->SetFillColor(255, 0, 0);
+$pdf->PieSector($xc, $yc, $r, 250, 20, 'FD', false, 0, 2);
+
+// write labels
+$pdf->SetTextColor(255,255,255);
+$pdf->Text(105, 65, 'BLUE');
+$pdf->Text(60, 95, 'GREEN');
+$pdf->Text(120, 115, 'RED');
+
+
+// add 2nd page
+$pdf->AddPage();
 // add content
-$pdf->Cell(190,10,'Weekly Schedule', 1, 1, 'C');
+$pdf->Cell(190,20,'Weekly Schedule', 1, 1, 'C');
+
+
 
 
 function fetch_data(){
@@ -58,7 +85,6 @@ function fetch_data(){
 	return $output;
 }
 //output
-
 $pdf->output('info-syllabus.pdf', 'I');
 ?>
 <html>
