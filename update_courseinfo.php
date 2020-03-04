@@ -153,6 +153,7 @@ $sql =" Update courseinfo
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script src="https://cdn.ckeditor.com/4.11.2/standard/ckeditor.js"></script>
 <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
+
 <header>
 	<nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -304,59 +305,104 @@ Weight: &nbsp; <input type="text" length="25" name="weight7" value="0"> <br>
 </p><br>
 </div>
 
-Course symbol & Name: <br><br>
+Course symbol & Name: <br><br><!-- make dropdown -->
+
+
+
 <div id="symbol_Name">
 
+<?php
+
+function display_symbols(){
+
+  echo" <option value='0'> Select Symbol</option>
+        <option value='Star'> Star </option>
+        <option value='X'> X </option>
+        <option value='CheckMark'> CheckMark </option>
+        <option value='Exclamationpoint'> Exclamation Point </option>
+        <option value='Circle'> Circle </option>
+        <option value='Kite'> Kite </option>
+        <option value='Square'> Square </option>
+        <option value='Rectangle'> Rectangle </option>
+        <option value='Trefoil'> Trefoil </option>
+        <option value='Heart'> Heart </option>
+    ";
+}
+
+?>
+
 <p id="symbol1">
-Symbol1: <input type="text" length="25" name="symbol1"> &nbsp;
+Symbol1:  <select name="symbol1" onchange="changeImage()">
+      <?php display_symbols(); ?>
+    </select>
+
 Name of Assigment: &nbsp; <input type="text" length="25" name="assign1"> <br>
 </p>
 
 <p id="symbol2">
-Symbol2: <input type="text" length="25" name="symbol2"> &nbsp;
+Symbol2:  <select name="symbol2" onchange="changeImage()">
+      <?php display_symbols(); ?>
+          </select>
 Name of Assigment: &nbsp; <input type="text" length="25" name="assign2"> <br>
 </p>
 
 <p id="symbol3">
-Symbol3: <input type="text" length="25" name="symbol3"> &nbsp;
+Symbol3: <select name="symbol3" onchange="changeImage()">
+    <?php display_symbols(); ?>
+    </select>
 Name of Assigment: &nbsp; <input type="text" length="25" name="assign3"> <br>
 </p>
 
 <p id="symbol4">
-Symbol4: <input type="text" length="25" name="symbol4"> &nbsp;
+Symbol4:<select name="symbol4" onchange="changeImage()">
+      <?php display_symbols(); ?>
+          </select>
 Name of Assigment: &nbsp; <input type="text" length="25" name="assign4"> <br>
 </p>
 
 <p id="symbol5">
-Symbol5: <input type="text" length="25" name="symbol5"> &nbsp;
+Symbol5: <select name="symbol5" onchange="changeImage()">
+      <?php display_symbols(); ?>
+          </select>
 Name of Assigment: &nbsp; <input type="text" length="25" name="assign5"> <br>
 </p>
 </div>
 
 <p id="symbol6">
-Symbol6: <input type="text" length="25" name="symbol6"> &nbsp;
+Symbol6: <select name="symbol6" onchange="changeImage()">
+      <?php display_symbols(); ?>
+          </select>
 Name of Assigment: &nbsp; <input type="text" length="25" name="assign6"> <br>
 </p>
 
 <p id="symbol7">
-Symbol7: <input type="text" length="25" name="symbol7"> &nbsp;
+Symbol7: <select name="symbol7" onchange="changeImage()">
+      <?php display_symbols(); ?>
+          </select>
 Name of Assigment: &nbsp; <input type="text" length="25" name="assign7"> <br>
 </p>
 
 <p id="symbol8">
-Symbol8: <input type="text" length="25" name="symbol8"> &nbsp;
+Symbol8: <select name="symbol8" onchange="changeImage()">
+      <?php display_symbols(); ?>
+          </select>
 Name of Assigment: &nbsp; <input type="text" length="25" name="assign8"> <br>
 </p>
 
 <p id="symbol9">
-Symbol9: <input type="text" length="25" name="symbol9"> &nbsp;
+Symbol9: <select name="symbol9" onchange="changeImage()">
+      <?php display_symbols(); ?>
+          </select>
 Name of Assigment: &nbsp; <input type="text" length="25" name="assign9"> <br>
 </p>
 
 <p id="symbol10">
-Symbol10: <input type="text" length="25" name="symbol10"> &nbsp;
+Symbol10: <select name="symbol10" onchange="changeImage()">
+      <?php display_symbols(); ?>
+          </select>
 Name of Assigment: &nbsp; <input type="text" length="25" name="assign10"> <br>
 </p>
+</div>
 
 <input type="hidden" name = "courseID" value="<?php echo $courseID ?>">
 <button type="submit" class="btn btn-primary">Update</button>

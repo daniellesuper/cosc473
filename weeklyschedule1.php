@@ -1288,6 +1288,16 @@ Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?
       key: 
       <div class="box">
 
+        <?php
+
+            if(!(empty("symbol1"))){
+                ?>
+                 <img src="images/star.jpeg"  width="30px" height="20px"/><br>
+                 <?php
+            } 
+
+        ?>
+
         <img src="images/star.jpeg"  width="30px" height="20px"/> - 
         <input type="text" name="symbol_field1"></input><br>
         
