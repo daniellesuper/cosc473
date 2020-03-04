@@ -112,16 +112,15 @@ hr {
 	padding-bottom: 15px;
 	width: 100vw;
 }
+#buttons {
+	float: right;
+	margin-right: 9rem;
+}
 .deleteButton {
 	border-radius: 50%;
 }
 .deleteButton:hover {
-	font: 12pt red;
-}
-
-#buttons {
-	float: right;
-	margin-right: 9rem;
+	color: red;
 }
 footer {
 	font-family: "Lora", serif;

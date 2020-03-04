@@ -57,19 +57,13 @@ function fetch_data(){
 
 	return $output;
 }
-
-
 //output
 
 $pdf->output('info-syllabus.pdf', 'I');
 ?>
-
 <html>
-
-<body>
-
-</body>
-
+	<body>
+	</body>
 </html>
 
 
