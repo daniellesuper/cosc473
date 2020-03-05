@@ -171,20 +171,30 @@ Date End: &nbsp <input type="date" name="enddate" value="<?php echo $enddate; ?>
 Week of &nbsp <input type="text" name="week1_of" value =""> &nbsp; <br>
 Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?php echo $subheading1; ?>" > 
             <select name="symbol1_week1">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+                <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
          
             <?php echo "T"; ?><br>
             <select name="symbol2_week1">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+                <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
            
             <?php echo "TR"; ?><br>
@@ -202,31 +212,46 @@ Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?p
 Week of &nbsp <input type="text" name="week1_of" value =""> &nbsp; <br>
 Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?php echo $subheading1; ?>" > 
             <select name="symbol1_week1">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+                <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "M"; ?><br>
 
             
             <select name="symbol2_week1">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+                <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option>  
             </select>
             <?php echo "W"; ?><br>
 
             
             <select name="symbol3_week1">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+                <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "F" ?><br>
 
@@ -248,20 +273,30 @@ Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?p
 Week of &nbsp <input type="text" name="week2_of" value ="<?php echo $startdate; ?>"> &nbsp;<br>
 Description   &nbsp <input type="text" length="255" name="week2_desc" value="<?php echo $subheading2; ?>" > 
          <select name="symbol1_week2">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+                <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option>  
             </select>
             <?php echo "T"; ?><br>
 
             <select name="symbol2_week2">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+                <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option>  
             </select>
             <?php echo "TR"; ?><br>
             
@@ -277,30 +312,45 @@ Description   &nbsp <input type="text" length="255" name="week2_desc" value="<?p
 Week of &nbsp <input type="text" name="week2_of" value ="<?php echo $startdate; ?>"> &nbsp;<br>
 Description   &nbsp <input type="text" length="255" name="week2_desc" value="<?php echo $subheading2; ?>" > 
          <select name="symbol1_week2">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+                <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "T"; ?><br>
 
             <select name="symbol2_week2">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+                <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "W"; ?><br>
 
             
             <select name="symbol3_week2">
-                <option value="star">Star</option>
-                <option value="Exclamation">Exclamation Point</option>
-                <option value="Circle">Circle</option>
-                <option value="X">X</option>
-                <option value="CheckMark">CheckMark</option>
+                <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "F" ?><br>
 
@@ -322,20 +372,30 @@ Week of &nbsp <input type="text" name="week3_of" value ="<?php echo $startdate; 
 Description   &nbsp <input type="text" length="255" name="week3_desc" value="<?php echo $subheading3; ?>" > 
 
             <select name="symbol1_week3">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option>  
             </select>
             <?php echo "T"; ?><br>
 
             <select name="symbol2_week3">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <<option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "TR"; ?><br>
             
@@ -354,31 +414,46 @@ Week of &nbsp <input type="text" name="week3_of" value ="<?php echo $startdate; 
 Description   &nbsp <input type="text" length="255" name="week3_desc" value="<?php echo $subheading3; ?>" > 
 
             <select name="symbol1_week3">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "M"; ?><br>
 
             
             <select name="symbol2_week3">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "W"; ?><br>
 
             
             <select name="symbol3_week3">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "F" ?><br>
 
@@ -398,20 +473,30 @@ Description   &nbsp <input type="text" length="255" name="week3_desc" value="<?p
 Week of &nbsp <input type="text" name="week4_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week4_desc" value="<?php echo $subheading4; ?>" > 
             <select name="symbol1_week4">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "T"; ?><br>
 
             <select name="symbol2_week4">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "TR"; ?><br>
             
@@ -428,31 +513,46 @@ Description   &nbsp <input type="text" length="255" name="week4_desc" value="<?p
 Week of &nbsp <input type="text" name="week4_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week4_desc" value="<?php echo $subheading4; ?>" > 
             <select name="symbol1_week4">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option>  
             </select>
             <?php echo "M"; ?><br>
 
             
             <select name="symbol2_week4">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "W"; ?><br>
 
             
             <select name="symbol3_week4">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option>  
             </select>
             <?php echo "F" ?><br>
 
@@ -474,20 +574,30 @@ Description   &nbsp <input type="text" length="255" name="week4_desc" value="<?p
 Week of &nbsp <input type="text" name="week5_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week5_desc" value="<?php echo $subheading5; ?>" > 
             <select name="symbol1_week5">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "T"; ?><br>
 
             <select name="symbol2_week5">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "TR"; ?><br>
             
@@ -503,31 +613,46 @@ Description   &nbsp <input type="text" length="255" name="week5_desc" value="<?p
 Week of &nbsp <input type="text" name="week5_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week5_desc" value="<?php echo $subheading5; ?>" > 
             <select name="symbol1_week5">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "M"; ?><br>
 
             
            <select name="symbol2_week5">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "W"; ?><br>
 
             
             <select name="symbol3_week5">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "F" ?><br>
 
@@ -547,21 +672,31 @@ Description   &nbsp <input type="text" length="255" name="week5_desc" value="<?p
 Week of &nbsp <input type="text" name="week6_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week6_desc" value="<?php echo $subheading6; ?>" > 
             <select name="symbol1_week6">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
         
             <?php echo "T"; ?><br>
 
             <select name="symbol2_week6">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "TR"; ?><br>
             
@@ -578,31 +713,46 @@ Description   &nbsp <input type="text" length="255" name="week6_desc" value="<?p
 Week of &nbsp <input type="text" name="week6_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week6_desc" value="<?php echo $subheading6; ?>" > 
             <select name="symbol1_week6">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option>  
             </select>
             <?php echo "M"; ?><br>
 
             
             <select name="symbol2_week6">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option>  
             </select>
             <?php echo "W"; ?><br>
 
             
             <select name="symbol3_week6">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option>  
             </select>
             <?php echo "F" ?><br>
 
@@ -622,20 +772,30 @@ Description   &nbsp <input type="text" length="255" name="week6_desc" value="<?p
 Week of &nbsp <input type="text" name="week7_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week7_desc" value="<?php echo $subheading7; ?>" > 
             <select name="symbol1_week7">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "T"; ?><br>
 
            <select name="symbol2_week7">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "TR"; ?><br>
             
@@ -652,31 +812,46 @@ Description   &nbsp <input type="text" length="255" name="week7_desc" value="<?p
 Week of &nbsp <input type="text" name="week7_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week7_desc" value="<?php echo $subheading7; ?>" > 
             <select name="symbol1_week7">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "M"; ?><br>
 
             
             <select name="symbol2_week7">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option>  
             </select>
             <?php echo "W"; ?><br>
 
             
             <select name="symbol3_week7">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "F" ?><br>
 
@@ -696,20 +871,30 @@ Description   &nbsp <input type="text" length="255" name="week7_desc" value="<?p
 Week of &nbsp <input type="text" name="week8_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?php echo $subheading8; ?>" > 
             <select name="symbol1_week8">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "T"; ?><br>
 
             <select name="symbol2_week8">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "TR"; ?><br>
             
@@ -726,31 +911,46 @@ Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?p
 Week of &nbsp <input type="text" name="week8_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?php echo $subheading8; ?>" > 
             <select name="symbol1_week8">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "M"; ?><br>
 
             
             <select name="symbol2_week8">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option>  
             </select>
             <?php echo "W"; ?><br>
 
             
             <select name="symbol3_week8">
-                <option value="star">Star</option>
-                <option value="Exclamation">Exclamation Point</option>
-                <option value="Circle">Circle</option>
-                <option value="X">X</option>
-                <option value="CheckMark">CheckMark</option>
+                <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "F" ?><br>
 
@@ -773,20 +973,30 @@ Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?p
 Week of &nbsp <input type="text" name="week9_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?php echo $subheading9; ?>" >
             <select name="symbol1_week9">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "T"; ?><br>
 
             <select name="symbol2_week9">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "TR"; ?><br>
             
@@ -803,31 +1013,46 @@ Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?p
 Week of &nbsp <input type="text" name="week9_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?php echo $subheading9; ?>" > 
             <select name="symbol1_week9">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "M"; ?><br>
 
             
             <select name="symbol2_week9">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "W"; ?><br>
 
             
             <select name="symbol3_week9">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "F" ?><br>
 
@@ -848,20 +1073,30 @@ Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?p
 Week of &nbsp <input type="text" name="week10_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?php echo $subheading10; ?>" > 
             <select name="symbol1_week10">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "T"; ?><br>
 
             <select name="symbol2_week10">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "TR"; ?><br>
             
@@ -878,31 +1113,46 @@ Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?
 Week of &nbsp <input type="text" name="week10_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?php echo $subheading10; ?>" > 
             <select name="symbol1_week10">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "M"; ?><br>
 
             
             <select name="symbol2_week10">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "W"; ?><br>
 
             
             <select name="symbol3_week10">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option>  
             </select>
             <?php echo "F" ?><br>
 
@@ -921,20 +1171,30 @@ Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?
 Week of &nbsp <input type="text" name="week11_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?php echo $subheading11; ?>" > 
             <select name="symbol1_week11">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option>  
             </select>
             <?php echo "T"; ?><br>
 
             <select name="symbol2_week11">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "TR"; ?><br>
             
@@ -951,31 +1211,46 @@ Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?
 Week of &nbsp <input type="text" name="week11_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?php echo $subheading11; ?>" > 
             <select name="symbol1_week11">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option>  
             </select>
             <?php echo "M"; ?><br>
 
             
             <select name="symbol2_week11">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "W"; ?><br>
 
             
             <select name="symbol3_week11">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "F" ?><br>
 
@@ -995,20 +1270,30 @@ Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?
 Week of &nbsp <input type="text" name="week12_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?php echo $subheading12; ?>" > 
             <select name="symbol1_week12">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "T"; ?><br>
 
            <select name="symbol2_week12">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "TR"; ?><br>
             
@@ -1025,31 +1310,46 @@ Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?
 Week of &nbsp <input type="text" name="week12_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?php echo $subheading12; ?>" > 
             <select name="symbol1_week12">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "M"; ?><br>
 
             
             <select name="symbol2_week12">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "W"; ?><br>
 
             
             <select name="symbol3_week12">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option>  
             </select>
             <?php echo "F" ?><br>
 
@@ -1071,20 +1371,30 @@ Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?
 Week of &nbsp <input type="text" name="week13_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?php echo $subheading13; ?>" > 
             <select name="symbol1_week13">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "T"; ?><br>
 
             <select name="symbol2_week13">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "TR"; ?><br>
             
@@ -1101,31 +1411,46 @@ Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?
 Week of &nbsp <input type="text" name="week13_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?php echo $subheading13; ?>" > 
             <select name="symbol1_week13">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "M"; ?><br>
 
             
             <select name="symbol2_week13">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "W"; ?><br>
 
             
             <select name="symbol3_week13">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "F" ?><br>
 
@@ -1146,20 +1471,30 @@ Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?
 Week of &nbsp <input type="text" name="week14_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?php echo $subheading14; ?>" > 
             <select name="symbol1_week14">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "T"; ?><br>
 
             <select name="symbol2_week14">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option>  
             </select>
             <?php echo "TR"; ?><br>
             
@@ -1175,31 +1510,46 @@ Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?
 Week of &nbsp <input type="text" name="week14_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?php echo $subheading14; ?>" > 
             <select name="symbol1_week14">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "M"; ?><br>
 
             
             <select name="symbol2_week14">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option>  
             </select>
             <?php echo "W"; ?><br>
 
             
             <select name="symbol3_week14">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "F" ?><br>
 
@@ -1219,20 +1569,30 @@ Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?
 Week of &nbsp <input type="text" name="week15_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?php echo $subheading15; ?>" > 
             <select name="symbol1_week15">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option>  
             </select>
             <?php echo "T"; ?><br>
 
             <select name="symbol2_week15">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "TR"; ?><br>
             
@@ -1249,32 +1609,47 @@ Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?
 Week of &nbsp <input type="text" name="week15_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
 Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?php echo $subheading15; ?>" > 
             <select name="symbol1_week15">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option>  
             </select>
             <?php echo "M"; ?><br>
 
             
             <select name="symbol2_week15">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option>  
             </select>
             <?php echo "W"; ?><br>
 
             
            
             <select name="symbol3_week15">
-            <option value="star">Star</option>
-            <option value="Exclamation Point">Exclamation Point</option>
-            <option value="Circle">Circle</option>
-            <option value="X">X</option>
-            <option value="Check Mark">Check Mark</option> 
+            <option value='Star'> Star </option>
+                <option value='X'> X </option>
+                <option value='CheckMark'> CheckMark </option>
+                <option value='Exclamationpoint'> Exclamation Point </option>
+                <option value='Circle'> Circle </option>
+                <option value='Kite'> Kite </option>
+                <option value='Square'> Square </option>
+                <option value='Rectangle'> Rectangle </option>
+                <option value='Trefoil'> Trefoil </option>
+                <option value='Heart'> Heart </option> 
             </select>
             <?php echo "F" ?><br>
 
@@ -1285,19 +1660,26 @@ Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?
         ?>
       </div>
       
+<?php
+
+    $sql = "SELECT symbol1, symbol2, symbol3, symbol4, symbol5, symbol6, symbol7, symbol8, symbol9, symbol10, 
+                assign1, assign2, assign3, assign4, assign5, assign6, assign7, assign8, assign9, assign10 
+            FROM courseinfo WHERE PKID = $_GET[courseID]";
+
+    $result = $conn->query($sql);
+ 
+ if($result->num_rows > 0) {
+  //used for profinfo items
+  // output data of each row
+  $row = $result->fetch_assoc(); 
+}
+
+
+?>
+
       key: 
       <div class="box">
-
-        <?php
-
-            if(!(empty("symbol1"))){
-                ?>
-                 <img src="images/star.jpeg"  width="30px" height="20px"/><br>
-                 <?php
-            } 
-
-        ?>
-
+    
         <img src="images/star.jpeg"  width="30px" height="20px"/> - 
         <input type="text" name="symbol_field1"></input><br>
         
