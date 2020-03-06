@@ -200,6 +200,7 @@ Symbol1:  <select name="symbol1" onchange="changeImage()">
 Name of Assigment: &nbsp; <input type="text" length="25" name="assign1"> <br>
 </p>
 
+
 <p id="symbol2">
 Symbol2:  <select name="symbol2" onchange="changeImage()">
 			<?php	display_symbols(); ?>
