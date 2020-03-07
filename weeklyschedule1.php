@@ -1272,11 +1272,11 @@ $sql_assign ="SELECT assign1, assign2, assign3, assign4, assign5, assign6, assig
       <div class="box">
 
         <?php
-                /*
+                
                 foreach($row as $symbol){
                     echo $symbol."<br>";
                 }
-                */
+              
 
                 foreach($col as $assignment){
                     echo $assignment."<br>";
