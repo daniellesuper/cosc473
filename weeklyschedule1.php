@@ -1242,13 +1242,12 @@ Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?
 <?php
 
 
-    $symbol1 = ['symbol1'];
-    $symbol2 = ['symbol2'];
 
-    $sql = "SELECT symbol1, symbol2, symbol3, symbol4, symbol5, symbol6, symbol7, symbol8, symbol9, symbol10
+$sql = "SELECT symbol1, symbol2, symbol3, symbol4, symbol5, symbol6, symbol7, symbol8, symbol9, symbol10
             FROM courseinfo WHERE PKID = $_GET[courseID]";
-   
-    $sql_assign ="SELECT assign1, assign2, assign3, assign4, assign5, assign6, assign7, assign8, assign9, assign10 
+
+
+$sql_assign ="SELECT assign1, assign2, assign3, assign4, assign5, assign6, assign7, assign8, assign9, assign10 
                     FROM courseinfo WHERE PKID = $_GET[courseID]";
 
     $result = $conn->query($sql);
@@ -1262,6 +1261,7 @@ Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?
 
   if ($result_assign->num_rows > 0){
     $col = $result_assign->fetch_assoc();
+ 
   }
 }
 
@@ -1271,29 +1271,19 @@ Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?
       key: 
       <div class="box">
 
-                <?php
-                    
-                    function display_key(symbol1){
+        <?php
+                /*
+                foreach($row as $symbol){
+                    echo $symbol."<br>";
+                }
+                */
 
-                       echo "<SELECT NAME='symbol1'>";
-
-                       if($symbol1 == "Star"){
-                        echo '<img src="images/star.jpeg"  width="30px" height="20px"/>';
-                       }
-
-                       echo "</SELECT>"; 
-                    }
-
-                    display_key(symbol1);
-                ?>
-
-            <?php
-                // used for outputting assignments
-                foreach($col as $assign_value){
-                    echo $assign_value."<br>";
+                foreach($col as $assignment){
+                    echo $assignment."<br>";
                 }
 
-            ?>
+        ?>
+
 
         <!--
         <img src="images/star.jpeg"  width="30px" height="20px"/> - 
