@@ -1268,82 +1268,70 @@ $sql_assign ="SELECT assign1, assign2, assign3, assign4, assign5, assign6, assig
 
 ?>
 
-      key: 
+      key:
       <div class="box">
 
         <?php
                 
                 foreach($row as $symbol){
-                    echo $symbol."<br>";
+                    //echo $symbol;
 
                     if ($symbol == "Star"){
-                      echo '<img src="images/star.jpeg"  width="30px" height="20px"/>';
+                      echo '<img src="images/star.jpeg"  width="30px" height="20px"/>'."<br>";
+                    
                     }
 
                     if ($symbol == "X"){
-                      echo '<img src="images/x.jpeg"  width="30px" height="20px"/>';
+                      echo '<img src="images/x.jpeg"  width="30px" height="20px"/>'."<br>";
                     }
 
                     if ($symbol == "CheckMark"){
-                      echo '<img src="images/checkmark.jpeg"  width="30px" height="20px"/>';
+                      echo '<img src="images/checkmark.jpeg"  width="30px" height="20px"/>'."<br>";
                     }
 
                     if ($symbol == "Exclamationpoint"){
-                      echo '<img src="images/exclamation1.png"  width="30px" height="20px"/>';
+                      echo '<img src="images/exclamation1.png"  width="40px" height="40px"/>'."<br>";
                     }
 
                     if ($symbol == "Circle"){
-                      echo '<img src="images/circle.png"  width="30px" height="20px"/>';
+                      echo '<img src="images/circle.png"  width="30px" height="20px"/>'."<br>";
                     }
 
                     if ($symbol == "Kite"){
-                      echo '<img src="images/Kite.png"  width="30px" height="20px"/>';
+                      echo '<img src="images/Kite.png"  width="30px" height="20px"/>'."<br>";
                     }
 
                     if ($symbol == "Square"){
-                      echo '<img src="images/Square.png"  width="30px" height="20px"/>';
+                      echo '<img src="images/Square.jpeg"  width="20px" height="20px"/>'."<br>";
                     }
 
                     if ($symbol == "Rectangle"){
-                      echo '<img src="images/Rectangle.png"  width="30px" height="20px"/>';
+                      echo '<img src="images/Rectangle.png"  width="40px" height="20px"/>'."<br>";
                     }
 
                     if ($symbol == "Trefoil"){
-                      echo '<img src="images/Trefoil.png"  width="30px" height="20px"/>';
+                      echo '<img src="images/Trefoil.png"  width="30px" height="20px"/>'."<br>";
                     }
                     
                     if ($symbol == "Heart"){
-                      echo '<img src="images/Heart.png"  width="30px" height="20px"/>';
+                      echo '<img src="images/Heart.png"  width="30px" height="20px"/>'."<br>";
                     }
-
                 }
 
+              ?>
 
-              
-
+            <div id="assignmentList">
+              <?php
+               
                 foreach($col as $assignment){
-                    echo $assignment."<br>";
+                  echo  $assignment."<br>";
+              
                 }
+                
+              ?>
+                </div>
 
-        ?>
-
-
-        <!--
-        <img src="images/star.jpeg"  width="30px" height="20px"/> - 
-        <input type="text" name="symbol_field1"></input><br>
         
-        <img src="images/x.jpeg"  width="30px" height="20px"/> - 
-        <input type="text" name="symbol_field2"></input><br>
-        
-        <img src="images/checkmark.jpeg"  width="30px" height="20px"/> - 
-        <input type="text" name="symbol_field3"></input><br>
-        
-        <img src="images/exclamation1.png"  width="30px" height="20px"/> - 
-        <input type="text" name="symbol_field4"></input><br>
-        
-        <img src="images/circle.png"  width="30px" height="20px"/> -
-        <input type="text" name="symbol_field5"></input>
-        -->
       </div>
   </div>
 </div> <!-- boxes div -->
