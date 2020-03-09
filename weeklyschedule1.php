@@ -1303,6 +1303,19 @@ $sql_assign ="SELECT assign1, assign2, assign3, assign4, assign5, assign6, assig
                     if ($symbol == "Square"){
                       echo '<img src="images/Square.png"  width="30px" height="20px"/>';
                     }
+
+                    if ($symbol == "Rectangle"){
+                      echo '<img src="images/Rectangle.png"  width="30px" height="20px"/>';
+                    }
+
+                    if ($symbol == "Trefoil"){
+                      echo '<img src="images/Trefoil.png"  width="30px" height="20px"/>';
+                    }
+                    
+                    if ($symbol == "Heart"){
+                      echo '<img src="images/Heart.png"  width="30px" height="20px"/>';
+                    }
+
                 }
 
 
