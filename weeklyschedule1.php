@@ -1275,7 +1275,37 @@ $sql_assign ="SELECT assign1, assign2, assign3, assign4, assign5, assign6, assig
                 
                 foreach($row as $symbol){
                     echo $symbol."<br>";
+
+                    if ($symbol == "Star"){
+                      echo '<img src="images/star.jpeg"  width="30px" height="20px"/>';
+                    }
+
+                    if ($symbol == "X"){
+                      echo '<img src="images/x.jpeg"  width="30px" height="20px"/>';
+                    }
+
+                    if ($symbol == "CheckMark"){
+                      echo '<img src="images/checkmark.jpeg"  width="30px" height="20px"/>';
+                    }
+
+                    if ($symbol == "Exclamationpoint"){
+                      echo '<img src="images/exclamation1.png"  width="30px" height="20px"/>';
+                    }
+
+                    if ($symbol == "Circle"){
+                      echo '<img src="images/circle.png"  width="30px" height="20px"/>';
+                    }
+
+                    if ($symbol == "Kite"){
+                      echo '<img src="images/Kite.png"  width="30px" height="20px"/>';
+                    }
+
+                    if ($symbol == "Square"){
+                      echo '<img src="images/Square.png"  width="30px" height="20px"/>';
+                    }
                 }
+
+
               
 
                 foreach($col as $assignment){
