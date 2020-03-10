@@ -1280,7 +1280,7 @@ $sql_assign ="SELECT assign1, assign2, assign3, assign4, assign5, assign6, assig
                       echo '<img src="images/star.jpeg"  width="30px" height="20px"/>'."<br>";
                     
                     }
-
+ 
                     if ($symbol == "X"){
                       echo '<img src="images/x.jpeg"  width="30px" height="20px"/>'."<br>";
                     }
