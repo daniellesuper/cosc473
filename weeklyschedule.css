@@ -82,7 +82,7 @@ h1{
 #printButton{
   position: fixed;
   bottom: 0;
-  right: 0;
+  left: 0;
 }
 .box{
     width: 200px;
@@ -116,4 +116,38 @@ h1{
    top: -20px;
    text-align: center;
    line-height: 2.7rem;
+}
+
+#submitbutton{
+  background-color: Crimson;
+  border-radius: 12px;
+  border: 2px solid black;
+  color: white;
+  font-size: 16px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+#assignmentList{
+  text-align: : right;
+}
+
+.symbolassignment{
+ 
+}
+#symbols{
+  
+  width: 40%;
+  float:left;
+}
+#assignmentList{
+  
+  float:left;
+
+
+}
+.breakheader{
+  color: black;
+  width: 35%;
+  margin:auto;
 }

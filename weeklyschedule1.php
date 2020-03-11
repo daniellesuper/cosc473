@@ -168,7 +168,7 @@ $result2 = $conn->query($sql2);
 
 <form action="insert_weekly_info.php" form="get" style="padding-left: 25px;">
 
-
+<div class="breakheader">
 Break:  &nbsp <select name="holiday_name">
         <option value="">Select</option>
         <option value="Thanksgiving">Thanksgiving</option> 
@@ -178,7 +178,7 @@ Break:  &nbsp <select name="holiday_name">
 Date To: &nbsp <input type="date" name="startdate1" value ="<?php echo $startdate; ?>"> &nbsp;
 Date End: &nbsp <input type="date" name="enddate" value="<?php echo $enddate; ?>"> <br><br>
 
-
+</div><!-- end of breakheader div -->
 
   <div class="row">
       
@@ -1270,16 +1270,18 @@ $sql_assign ="SELECT assign1, assign2, assign3, assign4, assign5, assign6, assig
 
       key:
       <div class="box">
+        <div class="symbolassignment">
+          <div id="symbols">
 
         <?php
-                
+
                 foreach($row as $symbol){
                     //echo $symbol;
 
                     if ($symbol == "Star"){
                       echo '<img src="images/star.jpeg"  width="30px" height="20px"/>'."<br>";
                     
-                    }
+                    } 
  
                     if ($symbol == "X"){
                       echo '<img src="images/x.jpeg"  width="30px" height="20px"/>'."<br>";
@@ -1319,7 +1321,9 @@ $sql_assign ="SELECT assign1, assign2, assign3, assign4, assign5, assign6, assig
                 }
 
               ?>
-
+            </div><!-- symbols id div -->
+              
+          
             <div id="assignmentList">
               <?php
                
@@ -1329,8 +1333,8 @@ $sql_assign ="SELECT assign1, assign2, assign3, assign4, assign5, assign6, assig
                 }
                 
               ?>
-                </div>
-
+            </div> <!-- end of assignmentList div --> 
+          </div><!-- symbol assignment class div -->
         
       </div>
   </div>
@@ -1347,9 +1351,11 @@ $conn->close();
 //echo "---------------------------------<hr>"; exit;
 ?> 
 
+
   <input id="printButton" type="button" value ="Print" onClick="print();">
   <input type="hidden" name = "courseID" value="<?php echo $courseID ?>">
-  <button type="submit" class="btn btn-primary" onclick="myFunction()">Update Weekly Calendar</button>
+  <button id="submitbutton" type="submit" class="btn btn-primary" onclick="myFunction()">Update Weekly Calendar</button>
+
 
 <script>
      function myFunction(){
