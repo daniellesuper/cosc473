@@ -128,23 +128,18 @@ h1{
   bottom: 0;
   right: 0;
 }
-#assignmentList{
-  text-align: : right;
-}
 
 .symbolassignment{
  
 }
 #symbols{
-  
+  border: 3px solid red;
   width: 40%;
   float:left;
 }
 #assignmentList{
-  
   float:left;
-
-
+  border: 3px solid green;
 }
 .breakheader{
   color: black;

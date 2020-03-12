@@ -1267,26 +1267,22 @@ $sql_assign ="SELECT assign1, assign2, assign3, assign4, assign5, assign6, assig
 
 
 ?>
-
       key:
       <div class="box">
         <div class="symbolassignment">
           <div id="symbols">
-
-        <?php
-
-                foreach($row as $symbol){
-                    //echo $symbol;
-
+            <?php
+                foreach($row as $symbol){ 
+                 
                     if ($symbol == "Star"){
                       echo '<img src="images/star.jpeg"  width="30px" height="20px"/>'."<br>";
-                    
                     } 
  
                     if ($symbol == "X"){
-                      echo '<img src="images/x.jpeg"  width="30px" height="20px"/>'."<br>";
+                      echo '<img src="images/x.jpeg"  width="30px" height="=20px"/>'."<br>";
+                
                     }
-
+                    
                     if ($symbol == "CheckMark"){
                       echo '<img src="images/checkmark.jpeg"  width="30px" height="20px"/>'."<br>";
                     }
@@ -1317,10 +1313,9 @@ $sql_assign ="SELECT assign1, assign2, assign3, assign4, assign5, assign6, assig
                     
                     if ($symbol == "Heart"){
                       echo '<img src="images/Heart.png"  width="30px" height="20px"/>'."<br>";
-                    }
+                    } 
                 }
-
-              ?>
+               ?>  
             </div><!-- symbols id div -->
               
           
@@ -1339,8 +1334,6 @@ $sql_assign ="SELECT assign1, assign2, assign3, assign4, assign5, assign6, assig
       </div>
   </div>
 </div> <!-- boxes div -->
-
-
 
 <?php   
 } // end if course info
