@@ -1272,6 +1272,7 @@ $sql_assign ="SELECT assign1, assign2, assign3, assign4, assign5, assign6, assig
         <div class="symbolassignment">
           <div id="symbols">
             <?php
+
                 foreach($row as $symbol){ 
                  
                     if ($symbol == "Star"){
@@ -1279,7 +1280,7 @@ $sql_assign ="SELECT assign1, assign2, assign3, assign4, assign5, assign6, assig
                     } 
  
                     if ($symbol == "X"){
-                      echo '<img src="images/x.jpeg"  width="30px" height="=20px"/>'."<br>";
+                      echo '<img src="images/x.jpeg"  width="30px" height="10px"/>'."<br>";
                 
                     }
                     
@@ -1288,7 +1289,7 @@ $sql_assign ="SELECT assign1, assign2, assign3, assign4, assign5, assign6, assig
                     }
 
                     if ($symbol == "Exclamationpoint"){
-                      echo '<img src="images/exclamation1.png"  width="40px" height="40px"/>'."<br>";
+                      echo '<img src="images/exclamation1.png"  width="40px" height="20px"/>'."<br>";
                     }
 
                     if ($symbol == "Circle"){
@@ -1315,15 +1316,16 @@ $sql_assign ="SELECT assign1, assign2, assign3, assign4, assign5, assign6, assig
                       echo '<img src="images/Heart.png"  width="30px" height="20px"/>'."<br>";
                     } 
                 }
+
                ?>  
             </div><!-- symbols id div -->
               
           
             <div id="assignmentList">
-              <?php
+              <?php 
                
                 foreach($col as $assignment){
-                  echo  $assignment."<br>";
+                  echo $assignment."<br>";
               
                 }
                 

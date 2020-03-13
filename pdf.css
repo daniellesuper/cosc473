@@ -1,3 +1,7 @@
+body{
+	background-color: white;
+}
+
 /*top info bar*/
 .officeinfo{
 	display: flex;
@@ -70,7 +74,7 @@
 	float: left;
 	width: 50%;
 	height: 30%;
-	background-color: green;
+	background-color: whitesmoke;
 	border: black 4px solid ;
 }
 /*important points*/
@@ -80,15 +84,15 @@
 	text-align: center;
 	position: fixed;
 	right: 0;
-	background-color: rgb(255, 0, 221);
-	border: black 4px solid ;
+	background-color: lightgray;
+	 border: black 4px solid ; 
 	width: 50%;
 	height: 40%;
 	font-size: 18pt;
 }
 #pieChart{
 	justify-content: left;
-	background-color: red;
+	background-color: white;
 	padding: 3px;
 	position: fixed;
 	bottom: 0;
@@ -103,13 +107,14 @@
 	position: fixed;
 	bottom: 0;
 	right: 0;
-	background-color: indianred;
-	border: black 4px solid ;
+	background-color: white;
+	border: black 4px solid ; 
 	width: 40%;
 	height: 30%;
-	color: white;
+	color: black;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	text-align: right;
+	text-align: center;
+	font-size: 20px;
 }
 /*print button*/
 #printButton{

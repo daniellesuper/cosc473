@@ -102,13 +102,17 @@ header a:hover{
 .It-support-center{
 
 	margin-left: 60px;
+	margin-right: 60px;
+	border-left: 3px solid #9D2235;
+	border-right: 3px solid #9D2235;
+	border-bottom: 3px solid #9D2235;
 }
 
 .It-office-hours{
 	display: inline-block;
 	position: relative;
-	float: right;
-	bottom: 215px;
+	left: 600px;
+	bottom: 220px;
 	margin-right: 60px;
 }
 
@@ -123,4 +127,22 @@ footer{
     width:100%;
 }
 
+#helpdesk{
+	float:right;
+}
 
+.helpdeskInfo{
+	float:right;
+	margin-right: 200px;
+	display: inline-block;
+	bottom: 225px;
+	position: relative;
+}
+
+.otherinfo{
+	float:right;
+	margin-right: 180px;
+	display: inline-block;
+	bottom: 225px;
+	position: relative;
+}
