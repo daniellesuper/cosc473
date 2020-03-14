@@ -133,16 +133,30 @@ h1{
  
 }
 #symbols{
-  border: 3px solid red;
-  width: 40%;
+  width: 30%; 
   float:left;
 }
 #assignmentList{
   float:left;
-  border: 3px solid green;
 }
 .breakheader{
   color: black;
   width: 35%;
   margin:auto;
+}
+
+li {
+  margin: 4px;
+  list-style-type: none;
+}
+
+.keybox{
+    width: 200px;
+    height: 430px;
+    background-color: lightgrey;
+    border: solid 1px black;
+    position: relative;
+    margin: 15px;
+    overflow: visible;
+    margin-top: 312px;
 }
