@@ -1,12 +1,7 @@
 <?php
-// include library
 require("session_info.php");
 include ('library/tcpdf.php');
 error_reporting(0);
-
-$FKPROFID = $_SESSION["FKPROFID"];
-$courseID = $_GET['courseID'];
-
 
 $servername="localhost";
 $dbname="info-syllabus";
@@ -15,19 +10,21 @@ $password="";
 
 $conn= new mysqli($servername, $username, $password, $dbname);
 if($conn-> connect_error){
-die("Connection Failed". $conn->connect_error);
+die("Connection Failed".$conn->connect_error);
 }
 error_reporting(0);
 
-$sql1 = "SELECT  meetingDays FROM courseinfo WHERE PKID = $courseID";
+$FKPROFID = $_SESSION["FKPROFID"];
+$courseID = $_GET["courseID"];
+
+$sql1 = "SELECT  meetingDays FROM courseinfo WHERE PKID = $_GET[courseID]";
  //echo $sql1; exit;
-$sql2 = "SELECT week1_of, week2_of, week3_of, week4_of, week5_of, week6_of, week7_of, week8_of, week9_of, week10_of, week11_of, week12_of, week13_of, week14_of, week15_of, week1_desc, week2_desc, week3_desc, week4_desc, week5_desc, week6_desc, week7_desc, week8_desc, week9_desc, week10_desc, week11_desc, week12_desc, week13_desc, week14_desc, week15_desc, holiday, startdate, enddate FROM weeklyinfo WHERE fkcourseid= $courseID";
+$sql2 = "SELECT week1_of, week2_of, week3_of, week4_of, week5_of, week6_of, week7_of, week8_of, week9_of, week10_of, week11_of, week12_of, week13_of, week14_of, week15_of, week1_desc, week2_desc, week3_desc, week4_desc, week5_desc, week6_desc, week7_desc, week8_desc, week9_desc, week10_desc, week11_desc, week12_desc, week13_desc, week14_desc, week15_desc, holiday, startdate, enddate FROM weeklyinfo WHERE fkcourseid= $_GET[courseID]";
 
-echo $sql1;exit;
-
-
-$row=mysqli_num_rows($result);
-
+//echo $sql1;exit;
+$result1 = $conn->query($sql1);
+$result2 = $conn->query($sql2);
+ 
 //echo $row;exit;
 
 // make TCPDF object
@@ -40,7 +37,7 @@ $pdf->setTitle('Weekly Schedule');
 
 // add 1st page
 $pdf->AddPage();
-$pdf->Cell(190,50,$sql1, 1, 1, 'C');
+$pdf->Cell(190,50,$meetingDays, 1, 1, 'C');
 
 //pie chart code
 $pdf->Write(0, 'Grades');
@@ -72,7 +69,7 @@ $pdf->Cell(190,20,'Weekly Schedule', 1, 1, 'C');
 
 
 
-/*
+
 function fetch_data(){
 
 	$output = '';
@@ -90,11 +87,11 @@ function fetch_data(){
 
 	return $output;
 }
-*/
+
 //output
 
 
-$pdf->output('info-syllabus.pdf', 'I');
+$pdf->output('tcpdf.pdf', 'I');
 $conn->close();
 ?>
 <html>

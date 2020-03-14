@@ -84,61 +84,7 @@ $assign8 = $row['assign8'];
 $assign9 = $row['assign9'];
 $assign10 = $row['assign10'];
 
-
-/*
-$course_code =$_REQUEST['coursecode'];
-$course_name =$_REQUEST['coursename'];
-$book_name = $_REQUEST['bookname'];
-$book_author = $_REQUEST['bookauthor'];
-$topicname1 = $_REQUEST['topicname1'];
-$topicname2 = $_REQUEST['topicname2'];
-$topicname3 = $_REQUEST['topicname3'];
-$topicname4 = $_REQUEST['topicname4'];
-$topicname5 = $_REQUEST['topicname5'];
-$topicname6 = $_REQUEST['topicname6'];
-$topicname7 = $_REQUEST['topicname7'];
-$pointvalue1 = $_REQUEST['pointvalue1'];
-$pointvalue2 = $_REQUEST['pointvalue2'];
-$pointvalue3 = $_REQUEST['pointvalue3'];
-$pointvalue4 = $_REQUEST['pointvalue4'];
-$pointvalue5 = $_REQUEST['pointvalue5'];
-$pointvalue6 = $_REQUEST['pointvalue6'];
-$pointvalue7 = $_REQUEST['pointvalue7'];
-$important_points = $_REQUEST['important_points'];
-$meetingDays = $_REQUEST['meetingday'];
-$isbn = $_REQUEST['bookisbn'];
-
-$sql =" Update courseinfo
-       set
-
-       	course_code = '$coursecode',
-       	course_name = '$oursename',
-       	book_name = '$bookname',
-       	book_author = '$bookauthor',
-       	topicname1 = '$topicname1',
-       	topicname2 = '$topicname2',
-       	topicname3 = 'topicname3',
-       	topicname4 = 'topicname4',
-       	topicname5 = 'topicname5',
-       	topicname6 = 'topicname7',
-       	pointvalue1 = '$pointvalue1',
-       	pointvalue2 = '$pointvalue2',
-       	pointvalue3 = '$pointvalue3',
-       	pointvalue4 = '$pointvalue4',
-       	pointvalue5 = '$pointvalue5',
-       	pointvalue6 = '$pointvalue6',
-       	pointvalue7 = '$pointvalue7',
-       	important_points = '$important_points',
-       	meetingDays = '$meetinday',
-        isbn = '$bookisbn'
-
-        where FKprofID = $courseID ";
-
-        //echo $sql;exit;
-        $result = $conn->query($sql);
-        */
-
-}
+  }
 }
 //end of if
 
