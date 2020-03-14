@@ -38,7 +38,7 @@ if($_GET['error']==1){
 <form method = "post" action="logincheck.php">
  <div class="container"style="margin-top: 100px">
 	<div class="row justify-content-center">
-		<div class"col-md-6 col-offset-3" align="center">
+		<div class="col-md-6 col-offset-3" align="center">
 		 <br><br>
 		 <h1>User Login</h1>
 		 <form>
