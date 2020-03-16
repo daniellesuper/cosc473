@@ -46,6 +46,8 @@ $pdf->setTitle('Weekly Schedule');
 // add 1st page
 $pdf->AddPage();
 
+$pdf->writeHTML($html, true,false,true,false,'');
+
 $html = '<img src="images/weeklyschedule.png" alt="weeklyschedule" align="center">';
 $pdf->writeHTML($html, true,false,true,false,'');
 
@@ -165,11 +167,6 @@ $html = "Key:<br> $row[symbol1] $row[assign1]<br> $row[symbol2] $row[assign2] <b
 				$row[symbol5] $row[assign5]<br> $row[symbol6] $row[assign6]<br> $row[symbol7] $row[assign7]<br>
 					$row[symbol8] $row[assign8]<br> $row[symbol9] $row[assign9]<br> $row[symbol10] $row[assign10]<br>";
 $pdf->writeHTML($html, true,false,true,false,'');
-
-//$html = "Key: ";
-//$pdf->writeHTML($html, true,false,true,false,'');
-
-
 
 //pie chart code
 /*
