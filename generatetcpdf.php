@@ -43,6 +43,9 @@ $pdf->setPrintHeader(false);
 $pdf->setPrintFooter(false);
 $pdf->setTitle('Weekly Schedule');
 
+// linking the css to PDF but reads the css
+//$html = file_get_contents('/Applications/XAMPP/xamppfiles/htdocs/473/info-syllabus/cosc473/cosc473/weeklyschedule.css');
+
 // add 1st page
 $pdf->AddPage();
 

@@ -298,7 +298,7 @@ Description   &nbsp <input type="text" length="255" name="week2_desc" value="<?p
                          display_options();
                 ?>
             </select>
-            <?php echo "T"; ?><br>
+            <?php echo "M"; ?><br>
 
             <select name="symbol2_week2">
                 <?php
