@@ -49,7 +49,7 @@ $pdf->setTitle('Weekly Schedule');
 // add 1st page
 $pdf->AddPage();
 
-$pdf->writeHTML($html, true,false,true,false,'');
+//$pdf->writeHTML($html, true,false,true,false,'');
 
 $html = '<img src="images/weeklyschedule.png" alt="weeklyschedule" align="center">';
 $pdf->writeHTML($html, true,false,true,false,'');
@@ -59,6 +59,9 @@ $pdf->writeHTML($html, true,false,true,false,'');
 
 $html = "Class meeting days: $row[meetingDays]<br><br>";
 $pdf->writeHTML($html, true,false,true,false,'');
+
+
+
 
 // WEEK 1 INFO
 $html = "Week of: $bar[week1_of] <br> Description: $bar[week1_desc]";

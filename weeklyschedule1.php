@@ -1273,7 +1273,7 @@ $sql_assign ="SELECT assign1, assign2, assign3, assign4, assign5, assign6, assig
           <div id="symbols">
             
             <?php
-      
+          
                 foreach($row as $symbol){ 
                  
                     if ($symbol == "Star"){
@@ -1317,7 +1317,7 @@ $sql_assign ="SELECT assign1, assign2, assign3, assign4, assign5, assign6, assig
                       echo '<img src="images/Heart.png"  width="30px" height="20px"/>'."<br>";
                     } 
                 } 
-  
+
                ?>  
             </div><!-- symbols id div -->
               
