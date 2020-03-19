@@ -62,6 +62,14 @@ $pdf->writeHTML($html, true,false,true,false,'');
 
 
 
+$html = '<table class="first">
+	<tr>
+		<td width="30" align="center">YEAAAAAH</td>
+	</tr>
+</table>';
+$pdf->writeHTML($html, true,false,true,false,'');
+
+
 
 // WEEK 1 INFO
 $html = "Week of: $bar[week1_of] <br> Description: $bar[week1_desc]";
@@ -203,37 +211,19 @@ $pdf->AddPage();
 // add content
 $pdf->Cell(190,20,'Weekly Schedule', 1, 1, 'C');
 
-
-
-/*
-function fetch_data(){
-
-	$output = '';
-	$connect = mysqli_connect("localhost", "root", "", "info-syllabus");
-	$sql = "SELECT  meetingDays FROM courseinfo WHERE PKID = $_GET[courseID]";
-	$result = mysqli_fetch_array($connect, $sql);
-
-	while($row = mysqli_fetch_array($result)){
-		$output .= '<tr>
-						<td>' .$row["meetingDays"]. '</td>
-
-
-					</tr>';
-	}
-
-	return $output;
-}
-*/
-//output
-
-
 $pdf->output('tcpdf.pdf', 'I');
 $conn->close(); }// end of if else for row and bar
 ?>
 <html>
+	
 	<head>
 		<link href="weeklyschedule.css" type="text/css" rel="stylesheet" />
-		</head>
+	</head>
+	
+
+
 	<body>
+	
+
 	</body>
 </html>
