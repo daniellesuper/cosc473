@@ -54,127 +54,162 @@ $pdf->AddPage();
 $html = '<img src="images/weeklyschedule.png" alt="weeklyschedule" align="center">';
 $pdf->writeHTML($html, true,false,true,false,'');
 
-$html = "Break: $bar[holiday] | Date To: $bar[startdate] | Date End: $bar[enddate]<br>"; 
+
+$html = '<span style = "color: red"; align = "center"> Break: '. $bar[holiday]. ' | '. 'Date To: '. $bar[startdate]. ' | '. 'Date End: '. $bar[enddate].'</span><br>'; 
 $pdf->writeHTML($html, true,false,true,false,'');
 
-$html = "Class meeting days: $row[meetingDays]<br><br>";
+
+$html = '<span style = "color:red"; align = "center"><b> Class meeting days: ' .$row[meetingDays] .'</b></span><br><br>';
 $pdf->writeHTML($html, true,false,true,false,'');
 
+//
+//
+//
+
+$pdf->SetLineStyle(array('width' => 0.5, 'cap' => 'butt', 'join' => 'miter', 'solid' => 4, 'color' => array(0, 0, 0)));
+$pdf->SetFillColor(213,209,209);
+$text = 'Week of: '.$bar[week1_of] .'<br>'. 'Description: ' .$bar[week1_desc].'<br> symbol: '. $bar[symbol1_week1]. $bar[symbol2_week1]. $bar[symbol3_week1].'<br><br>';
+
+$pdf->Cell(0, 0, $text, 1, 1, 'L', 1, 0);
+//
+//
+//
 
 
-$html = '<table class="first">
-	<tr>
-		<td width="30" align="center">YEAAAAAH</td>
-	</tr>
-</table>';
-$pdf->writeHTML($html, true,false,true,false,'');
 
 
 
 // WEEK 1 INFO
-$html = "Week of: $bar[week1_of] <br> Description: $bar[week1_desc]";
+$html = 'Week of: '.$bar[week1_of] .'<br>'. 'Description: ' .$bar[week1_desc].'<br> symbol: '. $bar[symbol1_week1]. $bar[symbol2_week1]. $bar[symbol3_week1].'<br><br>';
 $pdf->writeHTML($html, true,false,true,false,'');
+// end of week 1 info 
 
-$html = "symbol: $bar[symbol1_week1] $bar[symbol2_week1] $bar[symbol3_week1]<br><br>";
-$pdf->writeHTML($html, true,false,true,false,'');
+
 
 // WEEK 2 INFO
-$html = "Week of: $bar[week2_of] <br> Description: $bar[week2_desc]";
+$html = 'Week of: '.$bar[week2_of]. '<br>'. 'Description: '.$bar[week2_desc];
 $pdf->writeHTML($html, true,false,true,false,'');
 
-$html = "symbol: $bar[symbol1_week2] $bar[symbol2_week2] $bar[symbol3_week2]<br><br>";
+$html = 'symbol: '.$bar[symbol1_week2]. $bar[symbol2_week2]. $bar[symbol3_week2].'<br><br>';
 $pdf->writeHTML($html, true,false,true,false,'');
+// end of week 2 info 
+
 
 //WEEK 3 INFO
-$html = "Week of: $bar[week3_of] <br> Description: $bar[week3_desc]";
+$html = 'Week of: '.$bar[week3_of].'<br>'. 'Description: '.$bar[week3_desc];
 $pdf->writeHTML($html, true,false,true,false,'');
 
-$html = "symbol: $bar[symbol1_week3] $bar[symbol2_week3] $bar[symbol3_week3]<br><br>";
+$html = 'symbol: '.$bar[symbol1_week3]. $bar[symbol2_week3]. $bar[symbol3_week3].'<br><br>';
 $pdf->writeHTML($html, true,false,true,false,'');
+// end of week 3 info
+
 
 // WEEK 4 INFO
-$html = "Week of: $bar[week4_of] <br> Description: $bar[week4_desc]";
+$html = 'Week of: '.$bar[week4_of]. '<br>'. 'Description: '.$bar[week4_desc];
 $pdf->writeHTML($html, true,false,true,false,'');
 
-$html = "symbol: $bar[symbol1_week4] $bar[symbol2_week4] $bar[symbol3_week4]<br><br>";
+$html = 'symbol: '.$bar[symbol1_week4] .$bar[symbol2_week4] .$bar[symbol3_week4].'<br><br>';
 $pdf->writeHTML($html, true,false,true,false,'');
+// end of week 4 info
+
 
 //WEEK 5 INFO
-$html = "Week of: $bar[week5_of] <br> Description: $bar[week5_desc]";
+$html = 'Week of: '.$bar[week5_of]. '<br>'. 'Description: '.$bar[week5_desc];
 $pdf->writeHTML($html, true,false,true,false,'');
 
-$html = "symbol: $bar[symbol1_week5] $bar[symbol2_week5] $bar[symbol3_week5]<br><br>";
+$html = 'symbol: '.$bar[symbol1_week5] .$bar[symbol2_week5]. $bar[symbol3_week5].'<br><br>';
 $pdf->writeHTML($html, true,false,true,false,'');
+// end of week 5 info
+
 
 //WEEK 6 INFO
-$html = "Week of: $bar[week6_of] <br> Description: $bar[week6_desc]";
+$html = 'Week of: '.$bar[week6_of] . '<br>' . 'Description: '.$bar[week6_desc];
 $pdf->writeHTML($html, true,false,true,false,'');
 
-$html = "symbol: $bar[symbol1_week6] $bar[symbol2_week6] $bar[symbol3_week6]<br><br>";
+$html = 'symbol: '.$bar[symbol1_week6] .$bar[symbol2_week6] .$bar[symbol3_week6].'<br><br>';
 $pdf->writeHTML($html, true,false,true,false,'');
+// end of week 6 info 
 
 //WEEK 7 INFO
-$html = "Week of: $bar[week7_of] <br> Description: $bar[week7_desc]";
+$html = 'Week of: '.$bar[week7_of]. '<br>'. 'Description: '.$bar[week7_desc];
 $pdf->writeHTML($html, true,false,true,false,'');
 
-$html = "symbol: $bar[symbol1_week7] $bar[symbol2_week7] $bar[symbol3_week7]<br><br>";
+$html = 'symbol: '.$bar[symbol1_week7] .$bar[symbol2_week7] .$bar[symbol3_week7].'<br><br>';
 $pdf->writeHTML($html, true,false,true,false,'');
+// end of week 7 info
+
 
 //WEEK 8 INFO
-$html = "Week of: $bar[week8_of] <br> Description: $bar[week8_desc]";
+$html = 'Week of: '.$bar[week8_of]. '<br> Description: '.$bar[week8_desc];
 $pdf->writeHTML($html, true,false,true,false,'');
 
-$html = "symbol: $bar[symbol1_week8] $bar[symbol2_week8] $bar[symbol3_week8]<br><br>";
+$html = 'symbol: '.$bar[symbol1_week8] .$bar[symbol2_week8]. $bar[symbol3_week8].'<br><br>';
 $pdf->writeHTML($html, true,false,true,false,'');
+// end of week 8 info
+
 
 //WEEK 9 INFO
-$html = "Week of: $bar[week9_of] <br> Description: $bar[week9_desc]";
+$html = 'Week of: '.$bar[week9_of]. '<br>'. 'Description: '.$bar[week9_desc];
 $pdf->writeHTML($html, true,false,true,false,'');
 
-$html = "symbol: $bar[symbol1_week9] $bar[symbol2_week9] $bar[symbol3_week9]<br><br>";
+$html = 'symbol: '.$bar[symbol1_week9] .$bar[symbol2_week9] .$bar[symbol3_week9].'<br><br>';
 $pdf->writeHTML($html, true,false,true,false,'');
+// end week 9 info
 
 //WEEK 10 INFO
-$html = "Week of: $bar[week10_of] <br> Description: $bar[week10_desc]";
+$html = 'Week of: '.$bar[week10_of] .'<br> Description: '.$bar[week10_desc];
 $pdf->writeHTML($html, true,false,true,false,'');
 
-$html = "symbol: $bar[symbol1_week10] $bar[symbol2_week10] $bar[symbol3_week10]<br><br>";
+$html = 'symbol: '.$bar[symbol1_week10].$bar[symbol2_week10]. $bar[symbol3_week10].'<br><br>';
 $pdf->writeHTML($html, true,false,true,false,'');
+// end of week 10 info
+
 
 //WEEK 11 INFO
-$html = "Week of: $bar[week11_of] <br> Description: $bar[week11_desc]";
+$html = 'Week of: '.$bar[week11_of] .'<br> Description: '.$bar[week11_desc];
 $pdf->writeHTML($html, true,false,true,false,'');
 
-$html = "symbol: $bar[symbol1_week11] $bar[symbol2_week11] $bar[symbol3_week11]<br><br>";
+$html = 'symbol: '.$bar[symbol1_week11] .$bar[symbol2_week11] .$bar[symbol3_week11].'<br><br>';
 $pdf->writeHTML($html, true,false,true,false,'');
+// end of week 11 info
+
 
 //WEEK 12 INF0
-$html = "Week of: $bar[week12_of] <br> Description: $bar[week12_desc]";
+$html = 'Week of: '.$bar[week12_of] .'<br> Description: '.$bar[week12_desc];
 $pdf->writeHTML($html, true,false,true,false,'');
 
-$html = "symbol: $bar[symbol1_week12] $bar[symbol2_week12] $bar[symbol3_week12]<br><br>";
+$html = 'symbol: '.$bar[symbol1_week12] .$bar[symbol2_week12] .$bar[symbol3_week12].'<br><br>';
 $pdf->writeHTML($html, true,false,true,false,'');
+// end of weeek 12 info
+
 
 //WEEK 13 INFO
-$html = "Week of: $bar[week13_of] <br> Description: $bar[week13_desc]";
+$html = 'Week of: '.$bar[week13_of] .'<br> Description: '.$bar[week13_desc];
 $pdf->writeHTML($html, true,false,true,false,'');
 
-$html = "symbol: $bar[symbol1_week13] $bar[symbol2_week13] $bar[symbol3_week13]<br><br>";
+$html = 'symbol: '.$bar[symbol1_week13] .$bar[symbol2_week13]. $bar[symbol3_week13].'<br><br>';
 $pdf->writeHTML($html, true,false,true,false,'');
+//end of week 13 info
+
 
 //WEEK 14 INFO
-$html = "Week of: $bar[week14_of] <br> Description: $bar[week14_desc]";
+$html = 'Week of: '.$bar[week14_of] .'<br> Description: '.$bar[week14_desc];
 $pdf->writeHTML($html, true,false,true,false,'');
 
-$html = "symbol: $bar[symbol1_week14] $bar[symbol2_week14] $bar[symbol3_week14]<br><br>";
+$html = 'symbol: '.$bar[symbol1_week14]. $bar[symbol2_week14] .$bar[symbol3_week14].'<br><br>';
 $pdf->writeHTML($html, true,false,true,false,'');
+// end of week 14 info
+
 
 // WEEK 15 INFO
-$html = "Week of: $bar[week15_of] <br> Description: $bar[week15_desc]";
+$html = 'Week of: '.$bar[week15_of]. '<br>'.' Description: '.$bar[week15_desc];
 $pdf->writeHTML($html, true,false,true,false,'');
 
-$html = "symbol: $bar[symbol1_week15] $bar[symbol2_week15] $bar[symbol3_week15]<br><br>";
+
+$html = 'symbol: '.$bar[symbol1_week15]. $bar[symbol2_week15]. $bar[symbol3_week15].'<br><br>';
 $pdf->writeHTML($html, true,false,true,false,'');
+// end of week 15 info
+
 
 // KEY INFO FOR SYMBOLS AND ASSIGNMENTS CORRESPONDING TO SYMBOL
 $html = "Key:<br> $row[symbol1] $row[assign1]<br> $row[symbol2] $row[assign2] <br> $row[symbol3] $row[assign3]<br> 
