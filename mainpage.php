@@ -95,15 +95,12 @@ $courseID = $_GET["courseID"];
 								<a href="update_weekly_infohtml.php?courseID=<?php echo $courseID ?>" ><button type="button" class="btn btn-primary btn-lg">Weekly Schedule</a></button>
 								-->
 
-								<a href="pdf.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Download</a></button>
-								<a href="weeklyschedule1.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Weekly</a></button>
-								<a href="generatetcpdf.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">PDF</a></button>
-
+								<a href="pdf.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">HTML 1st Page(Useless)</a></button>
 								
-								<a href="generatepdf2.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">JSPDF2</a></button>
+								<a href="weeklyschedule1.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg"> Update Weekly Info</a></button>
 
-								<a href="tcpdf2.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">tcPDF</a></button>
-								
+								<a href="generatetcpdf.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Download a PDF</a></button>
+
 								<a href="<?php echo $courseID ?>"><button type="button" onclick="delete()" class="deleteButton">X</a></button>
 							</div>
 						</li>

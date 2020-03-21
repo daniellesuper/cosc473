@@ -70,7 +70,7 @@ $pdf->writeHTML($html, true,false,true,false,'');
 
 $pdf->SetLineStyle(array('width' => 0.5, 'cap' => 'butt', 'join' => 'miter', 'solid' => 4, 'color' => array(213,209,209)));
 $pdf->SetFillColor(213,209,209);
-$text = 'Week of: '.$bar[week1_of] .'<br>'. 'Description: ' .$bar[week1_desc].'<br> symbol: '. $bar[symbol1_week1]. $bar[symbol2_week1]. $bar[symbol3_week1].'<br><br>';
+$text = 'Week of: '.$bar[week1_of] .'\n'. 'Description: ' .$bar[week1_desc].'<br> symbol: '. $bar[symbol1_week1]. $bar[symbol2_week1]. $bar[symbol3_week1].'<br><br>';
 
 $pdf->Cell(0, 0, $text, 1, 1, 'L', 1, 0);
 //
@@ -256,11 +256,6 @@ $conn->close(); }// end of if else for row and bar
 	<head>
 		<link href="weeklyschedule.css" type="text/css" rel="stylesheet" />
 	</head>
-	
-
-
 	<body>
-	
-
 	</body>
 </html>
