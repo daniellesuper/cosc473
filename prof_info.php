@@ -82,8 +82,6 @@ $friday =$row['friday'];
 
 }
 
-
-
 ?>
 
 
