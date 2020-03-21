@@ -1,4 +1,7 @@
-<?php
+<!--
+  This file is to take the pdf.php file that is rendered on the webbrowser and transfer it to a PDF document that will be downloaded from the web browser
+ -->
+ <?php
 
 require("session_info.php");
 include ('library/tcpdf.php');
