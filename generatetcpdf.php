@@ -14,7 +14,7 @@ die("Connection Failed".$conn->connect_error);
 }
 error_reporting(0);
 
-$FKPROFID = $_SESSION["FKPROFID"];
+$FKPROFID = $_SESSION["FKPROFID"]; 
 $courseID = $_GET["courseID"];
 
 $sql1 = "SELECT  meetingDays, symbol1, symbol2, symbol3, symbol4, symbol5, symbol6, symbol7, symbol8, symbol9, symbol10, assign1, assign2, assign3, assign4, assign5, assign6, assign7, assign8, assign9, assign10 FROM courseinfo WHERE PKID = $_GET[courseID]";
