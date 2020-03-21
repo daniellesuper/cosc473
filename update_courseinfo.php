@@ -89,7 +89,7 @@ $assign10 = $row['assign10'];
 //end of if
 
 ?>
-
+<html>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
 <!-- jQuery library -->
@@ -118,12 +118,14 @@ $assign10 = $row['assign10'];
 <hr />
 </header>
 
+<body>
 <h1 style="padding-left: 25px">Course Information</h1>
+
 
 <form method="post" action="update_course_info.php" style="padding-left: 25px;" enctype="multipart/form-data">
 
-Course Code&nbsp <input type="text" length="25" name="courseCode" value="<?php echo $courseCode?>" required > &nbsp; Example: COSC 473<br><br>
-Course Name&nbsp; <input type="text" length="50" name="courseName" value="<?php echo $courseName?>" required> &nbsp; 
+Course Code&nbsp <input type="text" length="25" name="courseCode" value="<?php echo $courseCode;?>" required > &nbsp; Example: COSC 473<br><br>
+Course Name&nbsp; <input type="text" length="50" name="courseName" value="<?php echo $courseName;?>" required> &nbsp; 
 Class Days &nbsp; <select name="meetingDays" selected ="<?php echo "$meetingDays"; ?>" required>
 				<option value="">--</option>
 			
@@ -254,7 +256,6 @@ Weight: &nbsp; <input type="text" length="25" name="weight7" value="0"> <br>
 Course symbol & Name: <br><br><!-- make dropdown -->
 
 
-
 <div id="symbol_Name">
 
 <?php
@@ -282,7 +283,7 @@ Symbol1:  <select name="symbol1" onchange="changeImage()">
       <?php display_symbols(); ?>
     </select>
 
-Name of Assigment: &nbsp; <input type="text" length="25" name="assign1"> <br>
+Name of Assigment: &nbsp; <input type="text" length="25" name="assign1" value="<?php echo $assign1;?>"> <br>
 </p>
 
 <p id="symbol2">
@@ -355,3 +356,5 @@ Name of Assigment: &nbsp; <input type="text" length="25" name="assign10"> <br>
 
 <?php echo $strQuery; exit; ?>
 </form>
+</body>
+</html>
