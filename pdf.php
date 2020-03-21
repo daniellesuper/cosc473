@@ -219,4 +219,5 @@ $conn->close();
 	</div>
 	<input id="printButton" type="button" value ="Print" onClick="print();">
 </body>
+</script>
 </html>
