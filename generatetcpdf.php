@@ -55,35 +55,201 @@ $html = '<img src="images/weeklyschedule.png" alt="weeklyschedule" align="center
 $pdf->writeHTML($html, true,false,true,false,'');
 
 
-$html = '<span style = "color: red"; align = "center"> Break: '
-					. $bar[holiday]. ' | '. 'Date To: '. $bar[startdate]. ' | '. 'Date End: '. $bar[enddate].'</span><br>'; 
+// $html = '<span style = "color: red"; align = "center"> Break: '
+//					. $bar[holiday]. ' | '. 'Date To: '. $bar[startdate]. ' | '. 'Date End: '. $bar[enddate].'</span><br>'; 
+
+$html = '<span style = "color: red"; align = "center">'.$bar[holiday].' Break: '. $bar[startdate]. ' to '. $bar[enddate].'</span>'; 
 $pdf->writeHTML($html, true,false,true,false,'');
 
 
-$html = '<span style = "color:red"; align = "center"><b> Class meeting days: ' .$row[meetingDays] .'</b></span><br><br>';
+$html = '<span style = "color:red"; align = "center"><b> Class Meeting Days: ' .$row[meetingDays] .'</b></span><br>';
 $pdf->writeHTML($html, true,false,true,false,'');
 
 
 //
 //
 //
-
+/*
 $pdf->SetLineStyle(array('width' => 0.5, 'cap' => 'butt', 'join' => 'miter', 'solid' => 4, 'color' => array(213,209,209)));
 $pdf->SetFillColor(213,209,209);
-$text = 'Week of: '.$bar[week1_of] .'\n'. 'Description: ' .$bar[week1_desc].'<br> symbol: '. $bar[symbol1_week1]. $bar[symbol2_week1]. $bar[symbol3_week1].'<br><br>';
 
-$pdf->Cell(0, 0, $text, 1, 1, 'L', 1, 0);
+// $text = 'Week of: '.$bar[week1_of] .'\n'. 'Description: ' .$bar[week1_desc].'<br> symbol: '. $bar[symbol1_week1]. $bar[symbol2_week1]. $bar[symbol3_week1].'<br><br>';
+$text = "Week of: ".$bar[week1_of] ."\n" . 'Description: ' .$bar[week1_desc]."\nsymbol: ". $bar[symbol1_week1]. $bar[symbol2_week1]. $bar[symbol3_week1]."\n\n";
+$pdf->MultiCell(45, 45, $text, 1, 'L', 1, 0, '', '', true);
+
+$text = "Week of: ".$bar[week2_of] ."\n" . 'Description: ' .$bar[week2_desc]."\nsymbol: ". $bar[symbol1_week2]. $bar[symbol2_week2]. $bar[symbol3_week2]."\n\n";
+$pdf->MultiCell(45, 45, $text, 1, 'L', 1, 0, '', '', true);
+
+$text = "Week of: ".$bar[week3_of] ."\n" . 'Description: ' .$bar[week3_desc]."\nsymbol: ". $bar[symbol1_week3]. $bar[symbol2_week3]. $bar[symbol3_week3]."\n\n";
+$pdf->MultiCell(45, 45, $text, 1, 'L', 1, 0, '', '', true);
+
+$text = "Week of: ".$bar[week3_of] ."\n" . 'Description: ' .$bar[week3_desc]."\nsymbol: ". $bar[symbol1_week3]. $bar[symbol2_week3]. $bar[symbol3_week3]."\n\n";
+$pdf->MultiCell(45, 45, $text, 1, 'L', 1, 0, '', '', true);
+
+// MultiCell($w, $h, $txt, $border=0, $align='J', $fill=0, $ln=1, $x='', $y='', $reseth=true, $stretch=0, $ishtml=false, $autopadding=true, $maxh=0)
 //
-//
-//
+$pdf->Ln(4);
+*/
 
 
+// enter an if else for 2 & 3 day a week classes. 
+// if 2 day - $subtable2day else - $subtable3day
+// i apologize about hard coding in week days, just needed to see spacing
+$subtable2day='
+<table  cellspacing="2" cellpadding="2">
+	<tr>
+		<td>T
+		</td>
+		<td>TH
+		</td>
+	</tr>
+</table>
+';
+$subtable3day='
+<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>M</b>
+		'.$bar[symbol1_week1].'  
+		</td>
+		<td><b>W</b>
+		'.$bar[symbol2_week1].'
+		</td>
+		<td><b>F</b>
+		'.$bar[symbol3_week1].'
+		</td>
+	</tr>
+</table>
+';
 
+// subtable is the days boxes holding the shape images, can be 2day or 3day aweek
+$subtable = $subtable3day;
 
+$html = '
+<style>
+table.first {
+	table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+	border: 3px solid purple;
+}
+td {
+	border: 1px solid black;
+	background-color: lightgrey;
+}
+</style>
+
+<table cellspacing="10" cellpadding="4" >
+	<tr>
+		<td>
+			<h1>1</h1><br>
+			<h4>Week Of '.$bar[week1_of].'</h4><br>
+			<p>'.$bar[week1_desc].'</p>
+			'.$subtable.'
+			
+		</td>
+		<td>
+			<h1>2</h1><br>
+			<h4>Week Of '.$bar[week2_of].'</h4><br>
+			<p>'.$bar[week2_desc].'</p>
+			'.$subtable.'
+		</td>
+		<td>
+			<h1>3</h1><br>
+			<h4>Week Of '.$bar[week3_of].'</h4><br>
+			<p>'.$bar[week3_desc].'</p>
+			'.$subtable.'
+		</td>
+		<td>
+			<h1>4</h1><br>
+			<h4>Week Of '.$bar[week4_of].'</h4><br>
+			<p>'.$bar[week4_desc].'</p>
+			'.$subtable.'
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h1>5</h1><br>
+			<h4>Week Of '.$bar[week5_of].'</h4><br>
+			<p>'.$bar[week5_desc].'</p>
+			'.$subtable.'
+		</td>
+		<td>
+			<h1>6</h1><br>
+			<h4>Week Of '.$bar[week6_of].'</h4><br>
+			<p>'.$bar[week6_desc].'</p>
+			'.$subtable.'
+		</td>
+		<td>
+			<h1>7</h1><br>
+			<h4>Week Of '.$bar[week7_of].'</h4><br>
+			<p>'.$bar[week7_desc].'</p>
+			'.$subtable.'
+		</td>
+		<td>
+			<h1>8</h1><br>
+			<h4>Week Of '.$bar[week8_of].'</h4><br>
+			<p>'.$bar[week8_desc].'</p>
+			'.$subtable.'
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h1>9</h1><br>
+			<h4>Week Of '.$bar[week9_of].'</h4><br>
+			<p>'.$bar[week9_desc].'</p>
+			'.$subtable.'
+		</td>
+		<td>
+			<h1>10</h1><br>
+			<h4>Week Of '.$bar[week10_of].'</h4><br>
+			<p>'.$bar[week10_desc].'</p>
+			'.$subtable.'
+		</td>
+		<td>
+			<h1>11</h1><br>
+			<h4>Week Of '.$bar[week11_of].'</h4><br>
+			<p>'.$bar[week11_desc].'</p>
+			'.$subtable.'
+		</td>
+		<td>
+			<h1>12</h1><br>
+			<h4>Week Of '.$bar[week12_of].'</h4><br>
+			<p>'.$bar[week12_desc].'</p>
+			'.$subtable.'
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h1>13</h1><br>
+			<h4>Week Of '.$bar[week13_of].'</h4><br>
+			<p>'.$bar[week13_desc].'</p>
+			'.$subtable.'
+		</td>
+		<td>
+			<h1>14</h1><br>
+			<h4>Week Of '.$bar[week14_of].'</h4><br>
+			<p>'.$bar[week14_desc].'</p>
+			'.$subtable.'
+		</td>
+		<td>
+			<h1>15</h1><br>
+			<h4>Week Of '.$bar[week15_of].'</h4><br>
+			<p>'.$bar[week15_desc].'</p>
+			'.$subtable.'
+		</td>
+		<td>
+			<h1>Key</h1><br>
+		</td>
+	</tr>
+</table>
+';
+$pdf->writeHTML($html, true, false, true, false, '');
+
+{/**
 
 // WEEK 1 INFO
-$html = 'Week of: '.$bar[week1_of] .'<br>'. 'Description: ' .$bar[week1_desc].'<br> symbol: '. $bar[symbol1_week1]. $bar[symbol2_week1]. $bar[symbol3_week1].'<br><br>';
-$pdf->writeHTML($html, true,false,true,false,'');
+$html = '<br><br><br>'.'Week of: '.$bar[week1_of] .'<br>'. 'Description: ' .$bar[week1_desc].'<br> symbol: '. $bar[symbol1_week1]. $bar[symbol2_week1]. $bar[symbol3_week1].'<br><br>';
+$pdf->Multicell($html, true,false,true,false,'');
 // end of week 1 info 
 
 
@@ -208,6 +374,7 @@ $html = 'Week of: '.$bar[week15_of]. '<br>'.' Description: '.$bar[week15_desc];
 $pdf->writeHTML($html, true,false,true,false,'');
 
 
+
 $html = 'symbol: '.$bar[symbol1_week15]. $bar[symbol2_week15]. $bar[symbol3_week15].'<br><br>';
 $pdf->writeHTML($html, true,false,true,false,'');
 // end of week 15 info
@@ -218,7 +385,7 @@ $html = "Key:<br> $row[symbol1] $row[assign1]<br> $row[symbol2] $row[assign2] <b
 				$row[symbol5] $row[assign5]<br> $row[symbol6] $row[assign6]<br> $row[symbol7] $row[assign7]<br>
 					$row[symbol8] $row[assign8]<br> $row[symbol9] $row[assign9]<br> $row[symbol10] $row[assign10]<br>";
 $pdf->writeHTML($html, true,false,true,false,'');
-
+ */}
 //pie chart code
 /*
 $pdf->Write(0, 'Grades');
@@ -243,10 +410,7 @@ $pdf->Text(60, 95, 'GREEN');
 $pdf->Text(120, 115, 'RED');
 
 */
-// add 2nd page
-$pdf->AddPage();
-// add content
-$pdf->Cell(190,20,'Weekly Schedule', 1, 1, 'C');
+
 
 $pdf->output('tcpdf.pdf', 'I');
 $conn->close(); }// end of if else for row and bar
