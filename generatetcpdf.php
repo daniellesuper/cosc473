@@ -55,18 +55,20 @@ $html = '<img src="images/weeklyschedule.png" alt="weeklyschedule" align="center
 $pdf->writeHTML($html, true,false,true,false,'');
 
 
-$html = '<span style = "color: red"; align = "center"> Break: '. $bar[holiday]. ' | '. 'Date To: '. $bar[startdate]. ' | '. 'Date End: '. $bar[enddate].'</span><br>'; 
+$html = '<span style = "color: red"; align = "center"> Break: '
+					. $bar[holiday]. ' | '. 'Date To: '. $bar[startdate]. ' | '. 'Date End: '. $bar[enddate].'</span><br>'; 
 $pdf->writeHTML($html, true,false,true,false,'');
 
 
 $html = '<span style = "color:red"; align = "center"><b> Class meeting days: ' .$row[meetingDays] .'</b></span><br><br>';
 $pdf->writeHTML($html, true,false,true,false,'');
 
+
 //
 //
 //
 
-$pdf->SetLineStyle(array('width' => 0.5, 'cap' => 'butt', 'join' => 'miter', 'solid' => 4, 'color' => array(0, 0, 0)));
+$pdf->SetLineStyle(array('width' => 0.5, 'cap' => 'butt', 'join' => 'miter', 'solid' => 4, 'color' => array(213,209,209)));
 $pdf->SetFillColor(213,209,209);
 $text = 'Week of: '.$bar[week1_of] .'<br>'. 'Description: ' .$bar[week1_desc].'<br> symbol: '. $bar[symbol1_week1]. $bar[symbol2_week1]. $bar[symbol3_week1].'<br><br>';
 
