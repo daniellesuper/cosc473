@@ -91,20 +91,29 @@ $pdf->MultiCell(45, 45, $text, 1, 'L', 1, 0, '', '', true);
 $pdf->Ln(4);
 */
 
-
 // enter an if else for 2 & 3 day a week classes. 
 // if 2 day - $subtable2day else - $subtable3day
 // i apologize about hard coding in week days, just needed to see spacing
+
+if($row[meetingDays] == "TTR"){
+
+
 $subtable2day='
 <table  cellspacing="2" cellpadding="2">
 	<tr>
 		<td>T
+		'.$bar[symbol1_week1].'
 		</td>
 		<td>TH
+		'.$bar[symbol2_week1].'
 		</td>
 	</tr>
 </table>
 ';
+} else {
+
+if($row[meetingDays] == "MWF"){
+
 $subtable3day='
 <table cellspacing="2" cellpadding="2">
 	<tr>
@@ -120,9 +129,11 @@ $subtable3day='
 	</tr>
 </table>
 ';
-
+}
+}
 // subtable is the days boxes holding the shape images, can be 2day or 3day aweek
-$subtable = $subtable3day;
+$subtable = $subtable3day; // used for MWF
+$subtable2 = $subtable2day; //used for TTR
 
 $html = '
 <style>
@@ -239,6 +250,16 @@ td {
 		</td>
 		<td>
 			<h1>Key</h1><br>
+			<p>'.$row[symbol1]." ".$row[assign1].'</p>
+			<p>'.$row[symbol2]." ".$row[assign2].'</p>
+			<p>'.$row[symbol3]." ".$row[assign3].'</p>
+			<p>'.$row[symbol4]." ".$row[assign4].'</p>
+			<p>'.$row[symbol5]." ".$row[assign5].'</p>
+			<p>'.$row[symbol6]." ".$row[assign6].'</p>
+			<p>'.$row[symbol7]." ".$row[assign7].'</p>
+			<p>'.$row[symbol8]." ".$row[assign8].'</p>
+			<p>'.$row[symbol9]." ".$row[assign9].'</p>
+			<p>'.$row[symbol10]." ".$row[assign10].'</p>
 		</td>
 	</tr>
 </table>
