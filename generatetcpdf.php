@@ -160,10 +160,10 @@ td {
 			<p>'.$bar[week1_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>T</b>
+		<td><b>T</b><br>
 		'.$bar[symbol1_week1].'  
 		</td>
-		<td><b>TR</b>
+		<td><b>TR</b><br>
 		'.$bar[symbol2_week1].'
 		</td>
 	</tr>
@@ -176,10 +176,10 @@ td {
 			<p>'.$bar[week2_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>T</b>
+		<td><b>T</b><br>
 		'.$bar[symbol1_week2].'  
 		</td>
-		<td><b>TR</b>
+		<td><b>TR</b><br>
 		'.$bar[symbol2_week2].'
 		</td>
 	</tr>
@@ -191,10 +191,10 @@ td {
 			<p>'.$bar[week3_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>T</b>
+		<td><b>T</b><br>
 		'.$bar[symbol1_week3].'  
 		</td>
-		<td><b>TR</b>
+		<td><b>TR</b><br>
 		'.$bar[symbol2_week3].'
 		</td>
 	</tr>
@@ -206,10 +206,10 @@ td {
 			<p>'.$bar[week4_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>T</b>
+		<td><b>T</b><br>
 		'.$bar[symbol1_week4].'  
 		</td>
-		<td><b>TR</b>
+		<td><b>TR</b><br>
 		'.$bar[symbol2_week4].'
 		</td>
 	</tr>
@@ -223,10 +223,10 @@ td {
 			<p>'.$bar[week5_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>T</b>
+		<td><b>T</b><br>
 		'.$bar[symbol1_week5].'  
 		</td>
-		<td><b>TR</b>
+		<td><b>TR</b><br>
 		'.$bar[symbol2_week5].'
 		</td>
 	</tr>
@@ -238,10 +238,10 @@ td {
 			<p>'.$bar[week6_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>T</b>
+		<td><b>T</b><br>
 		'.$bar[symbol1_week6].'  
 		</td>
-		<td><b>TR</b>
+		<td><b>TR</b><br>
 		'.$bar[symbol2_week6].'
 		</td>
 	</tr>
@@ -253,10 +253,10 @@ td {
 			<p>'.$bar[week7_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>T</b>
+		<td><b>T</b><br>
 		'.$bar[symbol1_week7].'  
 		</td>
-		<td><b>TR</b>
+		<td><b>TR</b><br>
 		'.$bar[symbol2_week7].'
 		</td>
 	</tr>
@@ -268,10 +268,10 @@ td {
 			<p>'.$bar[week8_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>T</b>
+		<td><b>T</b><br>
 		'.$bar[symbol1_week8].'  
 		</td>
-		<td><b>TR</b>
+		<td><b>TR</b><br>
 		'.$bar[symbol2_week8].'
 		</td>
 	</tr>
@@ -285,10 +285,10 @@ td {
 			<p>'.$bar[week9_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>T</b>
+		<td><b>T</b><br>
 		'.$bar[symbol1_week9].'  
 		</td>
-		<td><b>TR</b>
+		<td><b>TR</b><br>
 		'.$bar[symbol2_week9].'
 		</td>
 	</tr>
@@ -300,10 +300,10 @@ td {
 			<p>'.$bar[week10_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>T</b>
+		<td><b>T</b><br>
 		'.$bar[symbol1_week10].'  
 		</td>
-		<td><b>TR</b>
+		<td><b>TR</b><br>
 		'.$bar[symbol2_week10].'
 		</td>
 	</tr>
@@ -315,10 +315,10 @@ td {
 			<p>'.$bar[week11_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>T</b>
+		<td><b>T</b><br>
 		'.$bar[symbol1_week11].'  
 		</td>
-		<td><b>TR</b>
+		<td><b>TR</b><br>
 		'.$bar[symbol2_week11].'
 		</td>
 	</tr>
@@ -330,10 +330,10 @@ td {
 			<p>'.$bar[week12_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>T</b>
+		<td><b>T</b><br>
 		'.$bar[symbol1_week12].'  
 		</td>
-		<td><b>TR</b>
+		<td><b>TR</b><br>
 		'.$bar[symbol2_week12].'
 		</td>
 	</tr>
@@ -347,10 +347,10 @@ td {
 			<p>'.$bar[week13_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>T</b>
+		<td><b>T</b><br>
 		'.$bar[symbol1_week13].'  
 		</td>
-		<td><b>TR</b>
+		<td><b>TR</b><br>
 		'.$bar[symbol2_week13].'
 		</td>
 	</tr>
@@ -362,10 +362,10 @@ td {
 			<p>'.$bar[week14_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>T</b>
+		<td><b>T</b><br>
 		'.$bar[symbol1_week14].'  
 		</td>
-		<td><b>TR</b>
+		<td><b>TR</b><br>
 		'.$bar[symbol2_week14].'
 		</td>
 	</tr>
@@ -377,10 +377,10 @@ td {
 			<p>'.$bar[week15_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>T</b>
+		<td><b>T</b><br>
 		'.$bar[symbol1_week15].'  
 		</td>
-		<td><b>TR</b>
+		<td><b>TR</b><br>
 		'.$bar[symbol2_week15].'
 		</td>
 	</tr>
@@ -404,9 +404,9 @@ td {
 ';
 
 $pdf->writeHTML($html, true, false, true, false, '');
-// if bracket
-}
-else {
+
+}// if bracket/ end of TTR portion
+else { // start of MWF portion
 
 if($row[meetingDays] == "MWF"){
 
@@ -432,13 +432,13 @@ td {
 			<p>'.$bar[week1_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>M</b>
+		<td><b>M</b><br>
 		'.$bar[symbol1_week1].'  
 		</td>
-		<td><b>W</b>
+		<td><b>W</b><br>
 		'.$bar[symbol2_week1].'
 		</td>
-		<td><b>F</b>
+		<td><b>F</b><br>
 		'.$bar[symbol3_week1].'
 		</td>
 	</tr>
@@ -451,13 +451,13 @@ td {
 			<p>'.$bar[week2_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>M</b>
+		<td><b>M</b><br>
 		'.$bar[symbol1_week2].'  
 		</td>
-		<td><b>W</b>
+		<td><b>W</b><br>
 		'.$bar[symbol2_week2].'
 		</td>
-		<td><b>F</b>
+		<td><b>F</b><br>
 		'.$bar[symbol3_week2].'
 		</td>
 	</tr>
@@ -469,13 +469,13 @@ td {
 			<p>'.$bar[week3_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>M</b>
+		<td><b>M</b><br>
 		'.$bar[symbol1_week3].'  
 		</td>
-		<td><b>W</b>
+		<td><b>W</b><br>
 		'.$bar[symbol2_week3].'
 		</td>
-		<td><b>F</b>
+		<td><b>F</b><br>
 		'.$bar[symbol3_week3].'
 		</td>
 	</tr>
@@ -487,13 +487,13 @@ td {
 			<p>'.$bar[week4_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>M</b>
+		<td><b>M</b><br>
 		'.$bar[symbol1_week4].'  
 		</td>
-		<td><b>W</b>
+		<td><b>W</b><br>
 		'.$bar[symbol2_week4].'
 		</td>
-		<td><b>F</b>
+		<td><b>F</b><br>
 		'.$bar[symbol3_week4].'
 		</td>
 	</tr>
@@ -507,13 +507,13 @@ td {
 			<p>'.$bar[week5_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>M</b>
+		<td><b>M</b><br>
 		'.$bar[symbol1_week5].'  
 		</td>
-		<td><b>W</b>
+		<td><b>W</b><br>
 		'.$bar[symbol2_week5].'
 		</td>
-		<td><b>F</b>
+		<td><b>F</b><br>
 		'.$bar[symbol3_week5].'
 		</td>
 	</tr>
@@ -525,13 +525,13 @@ td {
 			<p>'.$bar[week6_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>M</b>
+		<td><b>M</b><br>
 		'.$bar[symbol1_week6].'  
 		</td>
-		<td><b>W</b>
+		<td><b>W</b><br>
 		'.$bar[symbol2_week6].'
 		</td>
-		<td><b>F</b>
+		<td><b>F</b><br>
 		'.$bar[symbol3_week6].'
 		</td>
 	</tr>
@@ -543,13 +543,13 @@ td {
 			<p>'.$bar[week7_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>M</b>
+		<td><b>M</b><br>
 		'.$bar[symbol1_week7].'  
 		</td>
-		<td><b>W</b>
+		<td><b>W</b><br>
 		'.$bar[symbol2_week7].'
 		</td>
-		<td><b>F</b>
+		<td><b>F</b><br>
 		'.$bar[symbol3_week7].'
 		</td>
 	</tr>
@@ -561,13 +561,13 @@ td {
 			<p>'.$bar[week8_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>M</b>
+		<td><b>M</b><br>
 		'.$bar[symbol1_week8].'  
 		</td>
-		<td><b>W</b>
+		<td><b>W</b><br>
 		'.$bar[symbol2_week8].'
 		</td>
-		<td><b>F</b>
+		<td><b>F</b><br>
 		'.$bar[symbol3_week8].'
 		</td>
 	</tr>
@@ -581,13 +581,13 @@ td {
 			<p>'.$bar[week9_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>M</b>
+		<td><b>M</b><br>
 		'.$bar[symbol1_week9].'  
 		</td>
-		<td><b>W</b>
+		<td><b>W</b><br>
 		'.$bar[symbol2_week9].'
 		</td>
-		<td><b>F</b>
+		<td><b>F</b><br>
 		'.$bar[symbol3_week9].'
 		</td>
 	</tr>
@@ -599,13 +599,13 @@ td {
 			<p>'.$bar[week10_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>M</b>
+		<td><b>M</b><br>
 		'.$bar[symbol1_week10].'  
 		</td>
-		<td><b>W</b>
+		<td><b>W</b><br>
 		'.$bar[symbol2_week10].'
 		</td>
-		<td><b>F</b>
+		<td><b>F</b><br>
 		'.$bar[symbol3_week10].'
 		</td>
 	</tr>
@@ -617,13 +617,13 @@ td {
 			<p>'.$bar[week11_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>M</b>
+		<td><b>M</b><br>
 		'.$bar[symbol1_week11].'  
 		</td>
-		<td><b>W</b>
+		<td><b>W</b><br>
 		'.$bar[symbol2_week11].'
 		</td>
-		<td><b>F</b>
+		<td><b>F</b><br>
 		'.$bar[symbol3_week11].'
 		</td>
 	</tr>
@@ -635,13 +635,13 @@ td {
 			<p>'.$bar[week12_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>M</b>
+		<td><b>M</b><br>
 		'.$bar[symbol1_week12].'  
 		</td>
-		<td><b>W</b>
+		<td><b>W</b><br>
 		'.$bar[symbol2_week12].'
 		</td>
-		<td><b>F</b>
+		<td><b>F</b><br>
 		'.$bar[symbol3_week12].'
 		</td>
 	</tr>
@@ -655,13 +655,13 @@ td {
 			<p>'.$bar[week13_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>M</b>
+		<td><b>M</b><br>
 		'.$bar[symbol1_week13].'  
 		</td>
-		<td><b>W</b>
+		<td><b>W</b><br>
 		'.$bar[symbol2_week13].'
 		</td>
-		<td><b>F</b>
+		<td><b>F</b><br>
 		'.$bar[symbol3_week13].'
 		</td>
 	</tr>
@@ -673,13 +673,13 @@ td {
 			<p>'.$bar[week14_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>M</b>
+		<td><b>M</b><br>
 		'.$bar[symbol1_week14].'  
 		</td>
-		<td><b>W</b>
+		<td><b>W</b><br>
 		'.$bar[symbol2_week14].'
 		</td>
-		<td><b>F</b>
+		<td><b>F</b><br>
 		'.$bar[symbol3_week14].'
 		</td>
 	</tr>
@@ -691,13 +691,13 @@ td {
 			<p>'.$bar[week15_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>M</b>
+		<td><b>M</b><br>
 		'.$bar[symbol1_week15].'  
 		</td>
-		<td><b>W</b>
+		<td><b>W</b><br>
 		'.$bar[symbol2_week15].'
 		</td>
-		<td><b>F</b>
+		<td><b>F</b><br>
 		'.$bar[symbol3_week15].'
 		</td>
 	</tr>
