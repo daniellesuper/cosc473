@@ -94,7 +94,7 @@ $pdf->Ln(4);
 // enter an if else for 2 & 3 day a week classes. 
 // if 2 day - $subtable2day else - $subtable3day
 // i apologize about hard coding in week days, just needed to see spacing
-
+/*
 if($row[meetingDays] == "TTR"){
 
 
@@ -129,11 +129,286 @@ $subtable3day='
 	</tr>
 </table>
 ';
+	}// if bracket
 }
-}
+*/
 // subtable is the days boxes holding the shape images, can be 2day or 3day aweek
-$subtable = $subtable3day; // used for MWF
-$subtable2 = $subtable2day; //used for TTR
+//$subtable = $subtable3day; // used for MWF
+//$subtable2 = $subtable2day; //used for TTR
+
+if ($row[meetingDays] == "TTR"){
+
+ $html = '
+<style>
+table.first {
+	table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+	border: 3px solid purple;
+}
+td {
+	border: 1px solid black;
+	background-color: lightgrey;
+}
+</style>
+
+<table cellspacing="10" cellpadding="4" >
+	<tr>
+		<td>
+			<h1>1</h1><br>
+			<h4>Week Of '.$bar[week1_of].'</h4><br>
+			<p>'.$bar[week1_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b>
+		'.$bar[symbol1_week1].'  
+		</td>
+		<td><b>TR</b>
+		'.$bar[symbol2_week1].'
+		</td>
+	</tr>
+</table>
+			
+		</td>
+		<td>
+			<h1>2</h1><br>
+			<h4>Week Of '.$bar[week2_of].'</h4><br>
+			<p>'.$bar[week2_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b>
+		'.$bar[symbol1_week2].'  
+		</td>
+		<td><b>TR</b>
+		'.$bar[symbol2_week2].'
+		</td>
+	</tr>
+</table>
+		</td>
+		<td>
+			<h1>3</h1><br>
+			<h4>Week Of '.$bar[week3_of].'</h4><br>
+			<p>'.$bar[week3_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b>
+		'.$bar[symbol1_week3].'  
+		</td>
+		<td><b>TR</b>
+		'.$bar[symbol2_week3].'
+		</td>
+	</tr>
+</table>
+		</td>
+		<td>
+			<h1>4</h1><br>
+			<h4>Week Of '.$bar[week4_of].'</h4><br>
+			<p>'.$bar[week4_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b>
+		'.$bar[symbol1_week4].'  
+		</td>
+		<td><b>TR</b>
+		'.$bar[symbol2_week4].'
+		</td>
+	</tr>
+</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h1>5</h1><br>
+			<h4>Week Of '.$bar[week5_of].'</h4><br>
+			<p>'.$bar[week5_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b>
+		'.$bar[symbol1_week5].'  
+		</td>
+		<td><b>TR</b>
+		'.$bar[symbol2_week5].'
+		</td>
+	</tr>
+</table>
+		</td>
+		<td>
+			<h1>6</h1><br>
+			<h4>Week Of '.$bar[week6_of].'</h4><br>
+			<p>'.$bar[week6_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b>
+		'.$bar[symbol1_week6].'  
+		</td>
+		<td><b>TR</b>
+		'.$bar[symbol2_week6].'
+		</td>
+	</tr>
+</table>
+		</td>
+		<td>
+			<h1>7</h1><br>
+			<h4>Week Of '.$bar[week7_of].'</h4><br>
+			<p>'.$bar[week7_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b>
+		'.$bar[symbol1_week7].'  
+		</td>
+		<td><b>TR</b>
+		'.$bar[symbol2_week7].'
+		</td>
+	</tr>
+</table>
+		</td>
+		<td>
+			<h1>8</h1><br>
+			<h4>Week Of '.$bar[week8_of].'</h4><br>
+			<p>'.$bar[week8_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b>
+		'.$bar[symbol1_week8].'  
+		</td>
+		<td><b>TR</b>
+		'.$bar[symbol2_week8].'
+		</td>
+	</tr>
+</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h1>9</h1><br>
+			<h4>Week Of '.$bar[week9_of].'</h4><br>
+			<p>'.$bar[week9_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b>
+		'.$bar[symbol1_week9].'  
+		</td>
+		<td><b>TR</b>
+		'.$bar[symbol2_week9].'
+		</td>
+	</tr>
+</table>
+		</td>
+		<td>
+			<h1>10</h1><br>
+			<h4>Week Of '.$bar[week10_of].'</h4><br>
+			<p>'.$bar[week10_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b>
+		'.$bar[symbol1_week10].'  
+		</td>
+		<td><b>TR</b>
+		'.$bar[symbol2_week10].'
+		</td>
+	</tr>
+</table>
+		</td>
+		<td>
+			<h1>11</h1><br>
+			<h4>Week Of '.$bar[week11_of].'</h4><br>
+			<p>'.$bar[week11_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b>
+		'.$bar[symbol1_week11].'  
+		</td>
+		<td><b>TR</b>
+		'.$bar[symbol2_week11].'
+		</td>
+	</tr>
+</table>
+		</td>
+		<td>
+			<h1>12</h1><br>
+			<h4>Week Of '.$bar[week12_of].'</h4><br>
+			<p>'.$bar[week12_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b>
+		'.$bar[symbol1_week12].'  
+		</td>
+		<td><b>TR</b>
+		'.$bar[symbol2_week12].'
+		</td>
+	</tr>
+</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h1>13</h1><br>
+			<h4>Week Of '.$bar[week13_of].'</h4><br>
+			<p>'.$bar[week13_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b>
+		'.$bar[symbol1_week13].'  
+		</td>
+		<td><b>TR</b>
+		'.$bar[symbol2_week13].'
+		</td>
+	</tr>
+</table>
+		</td>
+		<td>
+			<h1>14</h1><br>
+			<h4>Week Of '.$bar[week14_of].'</h4><br>
+			<p>'.$bar[week14_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b>
+		'.$bar[symbol1_week14].'  
+		</td>
+		<td><b>TR</b>
+		'.$bar[symbol2_week14].'
+		</td>
+	</tr>
+</table>
+		</td>
+		<td>
+			<h1>15</h1><br>
+			<h4>Week Of '.$bar[week15_of].'</h4><br>
+			<p>'.$bar[week15_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b>
+		'.$bar[symbol1_week15].'  
+		</td>
+		<td><b>TR</b>
+		'.$bar[symbol2_week15].'
+		</td>
+	</tr>
+</table>
+		</td>
+		<td>
+			<h1>Key</h1><br>
+			<p>'.$row[symbol1]." ".$row[assign1].'</p>
+			<p>'.$row[symbol2]." ".$row[assign2].'</p>
+			<p>'.$row[symbol3]." ".$row[assign3].'</p>
+			<p>'.$row[symbol4]." ".$row[assign4].'</p>
+			<p>'.$row[symbol5]." ".$row[assign5].'</p>
+			<p>'.$row[symbol6]." ".$row[assign6].'</p>
+			<p>'.$row[symbol7]." ".$row[assign7].'</p>
+			<p>'.$row[symbol8]." ".$row[assign8].'</p>
+			<p>'.$row[symbol9]." ".$row[assign9].'</p>
+			<p>'.$row[symbol10]." ".$row[assign10].'</p>
+		</td>
+	</tr>
+</table>
+';
+
+$pdf->writeHTML($html, true, false, true, false, '');
+// if bracket
+}
+else {
+
+if($row[meetingDays] == "MWF"){
 
 $html = '
 <style>
@@ -155,26 +430,74 @@ td {
 			<h1>1</h1><br>
 			<h4>Week Of '.$bar[week1_of].'</h4><br>
 			<p>'.$bar[week1_desc].'</p>
-			'.$subtable.'
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>M</b>
+		'.$bar[symbol1_week1].'  
+		</td>
+		<td><b>W</b>
+		'.$bar[symbol2_week1].'
+		</td>
+		<td><b>F</b>
+		'.$bar[symbol3_week1].'
+		</td>
+	</tr>
+</table>
 			
 		</td>
 		<td>
 			<h1>2</h1><br>
 			<h4>Week Of '.$bar[week2_of].'</h4><br>
 			<p>'.$bar[week2_desc].'</p>
-			'.$subtable.'
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>M</b>
+		'.$bar[symbol1_week2].'  
+		</td>
+		<td><b>W</b>
+		'.$bar[symbol2_week2].'
+		</td>
+		<td><b>F</b>
+		'.$bar[symbol3_week2].'
+		</td>
+	</tr>
+</table>
 		</td>
 		<td>
 			<h1>3</h1><br>
 			<h4>Week Of '.$bar[week3_of].'</h4><br>
 			<p>'.$bar[week3_desc].'</p>
-			'.$subtable.'
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>M</b>
+		'.$bar[symbol1_week3].'  
+		</td>
+		<td><b>W</b>
+		'.$bar[symbol2_week3].'
+		</td>
+		<td><b>F</b>
+		'.$bar[symbol3_week3].'
+		</td>
+	</tr>
+</table>
 		</td>
 		<td>
 			<h1>4</h1><br>
 			<h4>Week Of '.$bar[week4_of].'</h4><br>
 			<p>'.$bar[week4_desc].'</p>
-			'.$subtable.'
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>M</b>
+		'.$bar[symbol1_week4].'  
+		</td>
+		<td><b>W</b>
+		'.$bar[symbol2_week4].'
+		</td>
+		<td><b>F</b>
+		'.$bar[symbol3_week4].'
+		</td>
+	</tr>
+</table>
 		</td>
 	</tr>
 	<tr>
@@ -182,25 +505,73 @@ td {
 			<h1>5</h1><br>
 			<h4>Week Of '.$bar[week5_of].'</h4><br>
 			<p>'.$bar[week5_desc].'</p>
-			'.$subtable.'
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>M</b>
+		'.$bar[symbol1_week5].'  
+		</td>
+		<td><b>W</b>
+		'.$bar[symbol2_week5].'
+		</td>
+		<td><b>F</b>
+		'.$bar[symbol3_week5].'
+		</td>
+	</tr>
+</table>
 		</td>
 		<td>
 			<h1>6</h1><br>
 			<h4>Week Of '.$bar[week6_of].'</h4><br>
 			<p>'.$bar[week6_desc].'</p>
-			'.$subtable.'
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>M</b>
+		'.$bar[symbol1_week6].'  
+		</td>
+		<td><b>W</b>
+		'.$bar[symbol2_week6].'
+		</td>
+		<td><b>F</b>
+		'.$bar[symbol3_week6].'
+		</td>
+	</tr>
+</table>
 		</td>
 		<td>
 			<h1>7</h1><br>
 			<h4>Week Of '.$bar[week7_of].'</h4><br>
 			<p>'.$bar[week7_desc].'</p>
-			'.$subtable.'
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>M</b>
+		'.$bar[symbol1_week7].'  
+		</td>
+		<td><b>W</b>
+		'.$bar[symbol2_week7].'
+		</td>
+		<td><b>F</b>
+		'.$bar[symbol3_week7].'
+		</td>
+	</tr>
+</table>
 		</td>
 		<td>
 			<h1>8</h1><br>
 			<h4>Week Of '.$bar[week8_of].'</h4><br>
 			<p>'.$bar[week8_desc].'</p>
-			'.$subtable.'
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>M</b>
+		'.$bar[symbol1_week8].'  
+		</td>
+		<td><b>W</b>
+		'.$bar[symbol2_week8].'
+		</td>
+		<td><b>F</b>
+		'.$bar[symbol3_week8].'
+		</td>
+	</tr>
+</table>
 		</td>
 	</tr>
 	<tr>
@@ -208,25 +579,73 @@ td {
 			<h1>9</h1><br>
 			<h4>Week Of '.$bar[week9_of].'</h4><br>
 			<p>'.$bar[week9_desc].'</p>
-			'.$subtable.'
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>M</b>
+		'.$bar[symbol1_week9].'  
+		</td>
+		<td><b>W</b>
+		'.$bar[symbol2_week9].'
+		</td>
+		<td><b>F</b>
+		'.$bar[symbol3_week9].'
+		</td>
+	</tr>
+</table>
 		</td>
 		<td>
 			<h1>10</h1><br>
 			<h4>Week Of '.$bar[week10_of].'</h4><br>
 			<p>'.$bar[week10_desc].'</p>
-			'.$subtable.'
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>M</b>
+		'.$bar[symbol1_week10].'  
+		</td>
+		<td><b>W</b>
+		'.$bar[symbol2_week10].'
+		</td>
+		<td><b>F</b>
+		'.$bar[symbol3_week10].'
+		</td>
+	</tr>
+</table>
 		</td>
 		<td>
 			<h1>11</h1><br>
 			<h4>Week Of '.$bar[week11_of].'</h4><br>
 			<p>'.$bar[week11_desc].'</p>
-			'.$subtable.'
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>M</b>
+		'.$bar[symbol1_week11].'  
+		</td>
+		<td><b>W</b>
+		'.$bar[symbol2_week11].'
+		</td>
+		<td><b>F</b>
+		'.$bar[symbol3_week11].'
+		</td>
+	</tr>
+</table>
 		</td>
 		<td>
 			<h1>12</h1><br>
 			<h4>Week Of '.$bar[week12_of].'</h4><br>
 			<p>'.$bar[week12_desc].'</p>
-			'.$subtable.'
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>M</b>
+		'.$bar[symbol1_week12].'  
+		</td>
+		<td><b>W</b>
+		'.$bar[symbol2_week12].'
+		</td>
+		<td><b>F</b>
+		'.$bar[symbol3_week12].'
+		</td>
+	</tr>
+</table>
 		</td>
 	</tr>
 	<tr>
@@ -234,19 +653,55 @@ td {
 			<h1>13</h1><br>
 			<h4>Week Of '.$bar[week13_of].'</h4><br>
 			<p>'.$bar[week13_desc].'</p>
-			'.$subtable.'
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>M</b>
+		'.$bar[symbol1_week13].'  
+		</td>
+		<td><b>W</b>
+		'.$bar[symbol2_week13].'
+		</td>
+		<td><b>F</b>
+		'.$bar[symbol3_week13].'
+		</td>
+	</tr>
+</table>
 		</td>
 		<td>
 			<h1>14</h1><br>
 			<h4>Week Of '.$bar[week14_of].'</h4><br>
 			<p>'.$bar[week14_desc].'</p>
-			'.$subtable.'
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>M</b>
+		'.$bar[symbol1_week14].'  
+		</td>
+		<td><b>W</b>
+		'.$bar[symbol2_week14].'
+		</td>
+		<td><b>F</b>
+		'.$bar[symbol3_week14].'
+		</td>
+	</tr>
+</table>
 		</td>
 		<td>
 			<h1>15</h1><br>
 			<h4>Week Of '.$bar[week15_of].'</h4><br>
 			<p>'.$bar[week15_desc].'</p>
-			'.$subtable.'
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>M</b>
+		'.$bar[symbol1_week15].'  
+		</td>
+		<td><b>W</b>
+		'.$bar[symbol2_week15].'
+		</td>
+		<td><b>F</b>
+		'.$bar[symbol3_week15].'
+		</td>
+	</tr>
+</table>
 		</td>
 		<td>
 			<h1>Key</h1><br>
@@ -265,6 +720,8 @@ td {
 </table>
 ';
 $pdf->writeHTML($html, true, false, true, false, '');
+}
+}
 
 {/**
 
