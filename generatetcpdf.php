@@ -383,7 +383,7 @@ td {
 		<td><b>TR</b><br>
 		'.$bar[symbol2_week15].'
 		</td>
-	</tr>
+	</tr> 
 </table>
 		</td>
 		<td>
