@@ -478,6 +478,7 @@ td {
 			<h1>1</h1><br>
 			<h4>Week Of '.$bar[week1_of].'</h4><br>
 			<p>'.$bar[week1_desc].'</p>
+			
 			<table cellspacing="2" cellpadding="2">
 	<tr>
 		<td><b>M</b><br>
