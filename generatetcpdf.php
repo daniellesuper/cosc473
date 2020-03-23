@@ -61,11 +61,6 @@ $pdf->writeHTML($html, true,false,true,false,'');
 $html = '<span style = "color: red"; align = "center">'.$bar[holiday].' Break: '. $bar[startdate]. ' to '. $bar[enddate].'</span>'; 
 $pdf->writeHTML($html, true,false,true,false,'');
 
-
-$html = '<span style = "color:red"; align = "center"><b> Class Meeting Days: ' .$row[meetingDays] .'</b></span><br>';
-$pdf->writeHTML($html, true,false,true,false,'');
-
-
 //
 //
 //
@@ -388,16 +383,16 @@ td {
 		</td>
 		<td>
 			<h1>Key</h1><br>
-			<p>'.$row[symbol1]." ".$row[assign1].'</p>
-			<p>'.$row[symbol2]." ".$row[assign2].'</p>
-			<p>'.$row[symbol3]." ".$row[assign3].'</p>
-			<p>'.$row[symbol4]." ".$row[assign4].'</p>
-			<p>'.$row[symbol5]." ".$row[assign5].'</p>
-			<p>'.$row[symbol6]." ".$row[assign6].'</p>
-			<p>'.$row[symbol7]." ".$row[assign7].'</p>
-			<p>'.$row[symbol8]." ".$row[assign8].'</p>
-			<p>'.$row[symbol9]." ".$row[assign9].'</p>
-			<p>'.$row[symbol10]." ".$row[assign10].'</p>
+			<p>'.$row[symbol1]." = ".$row[assign1].'</p>
+			<p>'.$row[symbol2]." = ".$row[assign2].'</p>
+			<p>'.$row[symbol3]." = ".$row[assign3].'</p>
+			<p>'.$row[symbol4]." = ".$row[assign4].'</p>
+			<p>'.$row[symbol5]." = ".$row[assign5].'</p>
+			<p>'.$row[symbol6]." = ".$row[assign6].'</p>
+			<p>'.$row[symbol7]." = ".$row[assign7].'</p>
+			<p>'.$row[symbol8]." = ".$row[assign8].'</p>
+			<p>'.$row[symbol9]." = ".$row[assign9].'</p>
+			<p>'.$row[symbol10]." = ".$row[assign10].'</p>
 		</td>
 	</tr>
 </table>
@@ -409,7 +404,6 @@ $pdf->writeHTML($html, true, false, true, false, '');
 else { // start of MWF portion
 
 if($row[meetingDays] == "MWF"){
-
 $html = '
 <style>
 table.first {
@@ -702,7 +696,6 @@ td {
 		</td>
 	</tr>
 </table>
-		</td>
 		<td>
 			<h1>Key</h1><br>
 			<p>'.$row[symbol1]." ".$row[assign1].'</p>
