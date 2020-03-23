@@ -472,7 +472,7 @@ td {
 }
 </style>
 
-<table cellspacing="10" cellpadding="4" >
+<table cellspacing="10" cellpadding="4">
 	<tr>
 		<td>
 			<h1>1</h1><br>
