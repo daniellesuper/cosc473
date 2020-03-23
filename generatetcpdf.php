@@ -201,7 +201,7 @@ td {
 }
 </style>
 
-<table cellspacing="10" cellpadding="4" >
+<table cellspacing="10" cellpadding="4">
 	<tr>
 		<td>
 			<h1>1</h1><br>
@@ -472,13 +472,12 @@ td {
 }
 </style>
 
-<table cellspacing="10" cellpadding="4" >
+<table cellspacing="10" cellpadding="4">
 	<tr>
 		<td>
 			<h1>1</h1><br>
 			<h4>Week Of '.$bar[week1_of].'</h4><br>
 			<p>'.$bar[week1_desc].'</p>
-			
 			<table cellspacing="2" cellpadding="2">
 	<tr>
 		<td><b>M</b><br>
@@ -749,23 +748,25 @@ td {
 		<td><b>F</b><br>
 		'.$bar[symbol3_week15].'
 		</td>
-	</tr>
+	</tr> 
 </table>
+		</td>
 		<td>
 			<h1>Key</h1><br>
-			<p>'.$row[symbol1]." ".$row[assign1].'</p>
-			<p>'.$row[symbol2]." ".$row[assign2].'</p>
-			<p>'.$row[symbol3]." ".$row[assign3].'</p>
-			<p>'.$row[symbol4]." ".$row[assign4].'</p>
-			<p>'.$row[symbol5]." ".$row[assign5].'</p>
-			<p>'.$row[symbol6]." ".$row[assign6].'</p>
-			<p>'.$row[symbol7]." ".$row[assign7].'</p>
-			<p>'.$row[symbol8]." ".$row[assign8].'</p>
-			<p>'.$row[symbol9]." ".$row[assign9].'</p>
-			<p>'.$row[symbol10]." ".$row[assign10].'</p>
+			<p>'.$row[symbol1]." = ".$row[assign1].'</p>
+			<p>'.$row[symbol2]." = ".$row[assign2].'</p>
+			<p>'.$row[symbol3]." = ".$row[assign3].'</p>
+			<p>'.$row[symbol4]." = ".$row[assign4].'</p>
+			<p>'.$row[symbol5]." = ".$row[assign5].'</p>
+			<p>'.$row[symbol6]." = ".$row[assign6].'</p>
+			<p>'.$row[symbol7]." = ".$row[assign7].'</p>
+			<p>'.$row[symbol8]." = ".$row[assign8].'</p>
+			<p>'.$row[symbol9]." = ".$row[assign9].'</p>
+			<p>'.$row[symbol10]." = ".$row[assign10].'</p>
 		</td>
 	</tr>
 </table>
+
 ';
 $pdf->writeHTML($html, true, false, true, false, '');
 }
