@@ -1,6 +1,6 @@
 <?php
 require("session_info.php");
-include ('library/tcpdf.php');
+include('library/tcpdf.php');
 error_reporting(0);
 
 $servername="localhost";
@@ -34,6 +34,60 @@ if($result2->num_rows > 0){
     $bar = $result2->fetch_assoc();
   }
 //echo $row;exit;
+
+function showSymbols(){
+
+	global $row;
+	
+	foreach($row as $symbol){ 
+
+                   if ($symbol == "Star"){
+                     echo '<img src="images/star.jpeg"  width="30px" height="20px"/>'."<br>"."<br>";
+                   } 
+
+                   if ($symbol == "X"){
+                     echo '<img src="images/x.jpeg"  width="30px" height="10px"/>'."<br>"."<br>";
+
+                   }
+
+                   if ($symbol == "CheckMark"){
+                     echo '<img src="images/checkmark.jpeg"  width="30px" height="20px"/>'."<br>"."<br>";
+                   }
+
+                   if ($symbol == "Exclamationpoint"){
+                     echo '<img src="images/exclamation1.png"  width="40px" height="40px"/>'."<br>"."<br>";
+                   }
+
+                   if ($symbol == "Circle"){
+                     echo '<img src="images/circle.png"  width="30px" height="20px"/>'."<br>"."<br>";
+                   }
+
+                   if ($symbol == "Kite"){
+                     echo '<img src="images/Kite.png"  width="30px" height="20px"/>'."<br>"."<br>";
+                   }
+
+                   if ($symbol == "Square"){
+                     echo '<img src="images/Square.jpeg"  width="20px" height="20px"/>'."<br>"."<br>";
+                   }
+
+                   if ($symbol == "Rectangle"){
+                     echo '<img src="images/Rectangle.png"  width="40px" height="20px"/>'."<br>"."<br>";
+                   }
+
+                   if ($symbol == "Trefoil"){
+                     echo '<img src="images/Trefoil.png"  width="30px" height="20px"/>'."<br>"."<br>";
+                   }
+
+                   if ($symbol == "Heart"){
+                     echo '<img src="images/Heart.png"  width="30px" height="20px"/>'."<br>";
+                   } // last if bracket
+               } // foreach bracket
+		}// function bracket
+ 
+//showSymbols(); //throws error when its called "TCPDF ERROR: Some data has already been output, cant send PDF File"
+
+//ob_end_clean();
+
 
 // make TCPDF object
 $pdf = new TCPDF('P', "mm",'A4');
@@ -890,7 +944,7 @@ $pdf->Text(120, 115, 'RED');
 */
 
 
-$pdf->output('tcpdf.pdf', 'I');
+$pdf->output('weeklyschedule.pdf', 'I'); // PUT D INSTEAD OF I FOR DOWNLOADING AUTOMATICALLY PDF
 $conn->close(); }// end of if else for row and bar
 ?>
 <html>
