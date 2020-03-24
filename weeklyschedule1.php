@@ -175,9 +175,9 @@ Break:  &nbsp <select name="holiday_name">
        <option value="Spring">Spring</option>
        </select> &nbsp
 <br />
-Date To: &nbsp &nbsp<input type="date" name="startdate1" value ="<?php echo $startdate; ?>"> &nbsp;
+Date To: &nbsp &nbsp<input type="date" name="startdate1" value ="<?php echo $bar[startdate]; ?>"> &nbsp;
 <br />
-Date End: <input type="date" name="enddate" value="<?php echo $enddate; ?>"> <br><br>
+Date End: <input type="date" name="enddate" value="<?php echo $bar[enddate]; ?>"> <br><br>
 
 </div><!-- end of breakheader div -->
 
@@ -188,8 +188,8 @@ Date End: <input type="date" name="enddate" value="<?php echo $enddate; ?>"> <br
            if($row["meetingDays"] == "TTR"){
            ?>
 
-Week of &nbsp <input type="text" name="week1_of" value =""> &nbsp; <br>
-Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?php echo $subheading1; ?>" > 
+Week of &nbsp <input type="text" name="week1_of" value ="<?php echo $bar[week1_of]; ?>"> &nbsp; <br>
+Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?php echo $bar[week1_desc]; ?>" > 
            <select name="symbol1_week1">
                <?php
 
@@ -218,8 +218,8 @@ Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?p
            ?><br>
 
 
-Week of &nbsp <input type="text" name="week1_of" value =""> &nbsp; <br>
-Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?php echo $subheading1; ?>" > 
+Week of &nbsp <input type="text" name="week1_of" value ="<?php echo $bar[week1_of]; ?>"> &nbsp; <br>
+Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?php echo $bar[week1_desc]; ?>" > 
            <select name="symbol1_week1">
 
            <?php
@@ -262,8 +262,8 @@ Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?p
            if($row["meetingDays"] == "TTR"){
            ?>
 
-Week of &nbsp <input type="text" name="week2_of" value ="<?php echo $startdate; ?>"> &nbsp;<br>
-Description   &nbsp <input type="text" length="255" name="week2_desc" value="<?php echo $subheading2; ?>" > 
+Week of &nbsp <input type="text" name="week2_of" value ="<?php echo $bar[week2_of]; ?>"> &nbsp;<br>
+Description   &nbsp <input type="text" length="255" name="week2_desc" value="<?php echo $bar[week2_desc]; ?>" > 
         <select name="symbol1_week2">
                <?php
 
@@ -289,8 +289,8 @@ Description   &nbsp <input type="text" length="255" name="week2_desc" value="<?p
 
            ?><br>
 
-Week of &nbsp <input type="text" name="week2_of" value ="<?php echo $startdate; ?>"> &nbsp;<br>
-Description   &nbsp <input type="text" length="255" name="week2_desc" value="<?php echo $subheading2; ?>" > 
+Week of &nbsp <input type="text" name="week2_of" value ="<?php echo $bar[week2_of]; ?>"> &nbsp;<br>
+Description   &nbsp <input type="text" length="255" name="week2_desc" value="<?php echo $bar[week2_desc]; ?>" > 
         <select name="symbol1_week2">
                <?php
 
@@ -330,8 +330,8 @@ Description   &nbsp <input type="text" length="255" name="week2_desc" value="<?p
            if($row["meetingDays"] == "TTR"){
            ?>
 
-Week of &nbsp <input type="text" name="week3_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week3_desc" value="<?php echo $subheading3; ?>" > 
+Week of &nbsp <input type="text" name="week3_of" value ="<?php echo $bar[week3_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week3_desc" value="<?php echo $bar[week3_desc]; ?>" > 
 
            <select name="symbol1_week3">
 
@@ -362,8 +362,8 @@ Description   &nbsp <input type="text" length="255" name="week3_desc" value="<?p
 
 
 
-Week of &nbsp <input type="text" name="week3_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week3_desc" value="<?php echo $subheading3; ?>" > 
+Week of &nbsp <input type="text" name="week3_of" value ="<?php echo $bar[week3_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week3_desc" value="<?php echo $bar[week3_desc]; ?>" > 
 
            <select name="symbol1_week3">
 
@@ -407,8 +407,8 @@ Description   &nbsp <input type="text" length="255" name="week3_desc" value="<?p
            if($row["meetingDays"] == "TTR"){
            ?>
 
-Week of &nbsp <input type="text" name="week4_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week4_desc" value="<?php echo $subheading4; ?>" > 
+Week of &nbsp <input type="text" name="week4_of" value ="<?php echo $bar[week4_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week4_desc" value="<?php echo $bar[week4_desc]; ?>" > 
            <select name="symbol1_week4">
                            <?php
 
@@ -436,8 +436,8 @@ Description   &nbsp <input type="text" length="255" name="week4_desc" value="<?p
           ?><br>
 
 
-Week of &nbsp <input type="text" name="week4_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week4_desc" value="<?php echo $subheading4; ?>" > 
+Week of &nbsp <input type="text" name="week4_of" value ="<?php echo $bar[week1_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week4_desc" value="<?php echo $bar[week4_desc]; ?>" > 
            <select name="symbol1_week4">
            <?php
 
@@ -479,8 +479,8 @@ Description   &nbsp <input type="text" length="255" name="week4_desc" value="<?p
            if($row["meetingDays"] == "TTR"){
            ?>
 
-Week of &nbsp <input type="text" name="week5_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week5_desc" value="<?php echo $subheading5; ?>" > 
+Week of &nbsp <input type="text" name="week5_of" value ="<?php echo $bar[week5_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week5_desc" value="<?php echo $bar[week5_desc]; ?>" > 
            <select name="symbol1_week5">
            <?php
 
@@ -506,8 +506,8 @@ Description   &nbsp <input type="text" length="255" name="week5_desc" value="<?p
 
            ?><br>
 
-Week of &nbsp <input type="text" name="week5_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week5_desc" value="<?php echo $subheading5; ?>" > 
+Week of &nbsp <input type="text" name="week5_of" value ="<?php echo $bar[week5_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week5_desc" value="<?php echo $bar[week5_desc]; ?>" > 
            <select name="symbol1_week5">
            <?php
 
@@ -547,8 +547,8 @@ Description   &nbsp <input type="text" length="255" name="week5_desc" value="<?p
            if($row["meetingDays"] == "TTR"){
            ?>
 
-Week of &nbsp <input type="text" name="week6_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week6_desc" value="<?php echo $subheading6; ?>" > 
+Week of &nbsp <input type="text" name="week6_of" value ="<?php echo $bar[week6_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week6_desc" value="<?php echo $bar[week6_desc]; ?>" > 
            <select name="symbol1_week6">
            <?php
 
@@ -576,8 +576,8 @@ Description   &nbsp <input type="text" length="255" name="week6_desc" value="<?p
            ?><br>
 
 
-Week of &nbsp <input type="text" name="week6_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week6_desc" value="<?php echo $subheading6; ?>" > 
+Week of &nbsp <input type="text" name="week6_of" value ="<?php echo $bar[week6_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week6_desc" value="<?php echo $bar[week6_desc]; ?>" > 
            <select name="symbol1_week6">
            <?php
 
@@ -617,8 +617,8 @@ Description   &nbsp <input type="text" length="255" name="week6_desc" value="<?p
            if($row["meetingDays"] == "TTR"){
            ?>
 
-Week of &nbsp <input type="text" name="week7_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week7_desc" value="<?php echo $subheading7; ?>" > 
+Week of &nbsp <input type="text" name="week7_of" value ="<?php echo $bar[week7_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week7_desc" value="<?php echo $bar[week7_desc]; ?>" > 
            <select name="symbol1_week7">
            <?php
 
@@ -645,8 +645,8 @@ Description   &nbsp <input type="text" length="255" name="week7_desc" value="<?p
            ?><br>
 
 
-Week of &nbsp <input type="text" name="week7_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week7_desc" value="<?php echo $subheading7; ?>" > 
+Week of &nbsp <input type="text" name="week7_of" value ="<?php echo $bar[week7_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week7_desc" value="<?php echo $bar[week7_desc]; ?>" > 
            <select name="symbol1_week7">
            <?php
 
@@ -686,8 +686,8 @@ Description   &nbsp <input type="text" length="255" name="week7_desc" value="<?p
            if($row["meetingDays"] == "TTR"){
            ?>
 
-Week of &nbsp <input type="text" name="week8_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?php echo $subheading8; ?>" > 
+Week of &nbsp <input type="text" name="week8_of" value ="<?php echo $bar[week8_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?php echo $bar[week8_desc]; ?>" > 
            <select name="symbol1_week8">
           <?php
 
@@ -714,8 +714,8 @@ Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?p
            ?><br>
 
 
-Week of &nbsp <input type="text" name="week8_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?php echo $subheading8; ?>" > 
+Week of &nbsp <input type="text" name="week8_of" value ="<?php echo $bar[week8_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?php echo $bar[week8_desc]; ?>" > 
            <select name="symbol1_week8">
            <?php
 
@@ -758,8 +758,8 @@ Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?p
            if($row["meetingDays"] == "TTR"){
            ?>
 
-Week of &nbsp <input type="text" name="week9_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?php echo $subheading9; ?>" >
+Week of &nbsp <input type="text" name="week9_of" value ="<?php echo $bar[week9_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?php echo $bar[week9_desc]; ?>" >
            <select name="symbol1_week9">
            <?php
 
@@ -786,8 +786,8 @@ Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?p
            ?><br>
 
 
-Week of &nbsp <input type="text" name="week9_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?php echo $subheading9; ?>" > 
+Week of &nbsp <input type="text" name="week9_of" value ="<?php echo $bar[week9_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?php echo $bar[week9_desc]; ?>" > 
            <select name="symbol1_week9">
            <?php
 
@@ -828,8 +828,8 @@ Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?p
            if($row["meetingDays"] == "TTR"){
            ?>
 
-Week of &nbsp <input type="text" name="week10_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?php echo $subheading10; ?>" > 
+Week of &nbsp <input type="text" name="week10_of" value ="<?php echo $bar[week10_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?php echo $bar[week10_desc]; ?>" > 
            <select name="symbol1_week10">
            <?php
 
@@ -856,8 +856,8 @@ Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?
            ?><br>
 
 
-Week of &nbsp <input type="text" name="week10_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?php echo $subheading10; ?>" > 
+Week of &nbsp <input type="text" name="week10_of" value ="<?php echo $bar[week10_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?php echo $bar[week10_desc]; ?>" > 
            <select name="symbol1_week10">
            <?php
 
@@ -896,8 +896,8 @@ Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?
        <?php 
            if($row["meetingDays"] == "TTR"){
            ?>
-Week of &nbsp <input type="text" name="week11_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?php echo $subheading11; ?>" > 
+Week of &nbsp <input type="text" name="week11_of" value ="<?php echo $bar[week11_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?php echo $bar[week11_desc]; ?>" > 
            <select name="symbol1_week11">
            <?php
 
@@ -924,8 +924,8 @@ Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?
            ?><br>
 
 
-Week of &nbsp <input type="text" name="week11_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?php echo $subheading11; ?>" > 
+Week of &nbsp <input type="text" name="week11_of" value ="<?php echo $bar[week11_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?php echo $bar[week11_desc]; ?>" > 
            <select name="symbol1_week11">
            <?php
 
@@ -965,8 +965,8 @@ Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?
            if($row["meetingDays"] == "TTR"){
             ?>
 
-Week of &nbsp <input type="text" name="week12_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?php echo $subheading12; ?>" > 
+Week of &nbsp <input type="text" name="week12_of" value ="<?php echo $bar[week12_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?php echo $bar[week12_desc]; ?>" > 
            <select name="symbol1_week12">
            <?php
 
@@ -993,8 +993,8 @@ Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?
            ?><br>
 
 
-Week of &nbsp <input type="text" name="week12_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?php echo $subheading12; ?>" > 
+Week of &nbsp <input type="text" name="week12_of" value ="<?php echo $bar[week12_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?php echo $bar[week12_desc]; ?>" > 
            <select name="symbol1_week12">
            <?php
 
@@ -1036,8 +1036,8 @@ Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?
            if($row["meetingDays"] == "TTR"){
            ?>
 
-Week of &nbsp <input type="text" name="week13_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?php echo $subheading13; ?>" > 
+Week of &nbsp <input type="text" name="week13_of" value ="<?php echo $bar[week13_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?php echo $bar[week13_desc]; ?>" > 
            <select name="symbol1_week13">
            <?php
 
@@ -1064,8 +1064,8 @@ Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?
            ?><br>
 
 
-Week of &nbsp <input type="text" name="week13_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?php echo $subheading13; ?>" > 
+Week of &nbsp <input type="text" name="week13_of" value ="<?php echo $bar[week13_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?php echo $bar[week13_desc]; ?>" > 
            <select name="symbol1_week13">
            <?php
 
@@ -1106,8 +1106,8 @@ Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?
            if($row["meetingDays"] == "TTR"){
             ?> 
 
-Week of &nbsp <input type="text" name="week14_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?php echo $subheading14; ?>" > 
+Week of &nbsp <input type="text" name="week14_of" value ="<?php echo $bar[week14_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?php echo $bar[week14_desc]; ?>" > 
            <select name="symbol1_week14">
            <?php
 
@@ -1133,8 +1133,8 @@ Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?
 
            ?><br>
 
-Week of &nbsp <input type="text" name="week14_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?php echo $subheading14; ?>" > 
+Week of &nbsp <input type="text" name="week14_of" value ="<?php echo $bar[week14_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?php echo $bar[week14_desc]; ?>" > 
            <select name="symbol1_week14">
            <?php
 
@@ -1174,8 +1174,8 @@ Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?
            if($row["meetingDays"] == "TTR"){
             ?>
 
-Week of &nbsp <input type="text" name="week15_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?php echo $subheading15; ?>" > 
+Week of &nbsp <input type="text" name="week15_of" value ="<?php echo $bar[week15_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?php echo $bar[week15_desc]; ?>" > 
            <select name="symbol1_week15">
            <?php
 
@@ -1202,8 +1202,8 @@ Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?
            ?><br>
 
 
-Week of &nbsp <input type="text" name="week15_of" value ="<?php echo $startdate; ?>"> &nbsp; <br>
-Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?php echo $subheading15; ?>" > 
+Week of &nbsp <input type="text" name="week15_of" value ="<?php echo $bar[week15_of]; ?>"> &nbsp; <br>
+Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?php echo $bar[week15_desc]; ?>" > 
            <select name="symbol1_week15">
            <?php
 

@@ -86,8 +86,6 @@ function showSymbols(){
  
 //showSymbols(); //throws error when its called "TCPDF ERROR: Some data has already been output, cant send PDF File"
 
-//ob_end_clean();
-
 
 // make TCPDF object
 $pdf = new TCPDF('P', "mm",'A4');
@@ -116,74 +114,8 @@ $html = '<span style = "color: red"; align = "center">'.$bar[holiday].' Break: '
 $pdf->writeHTML($html, true,false,true,false,'');
 
 //
+// start of the if statememt for outputting correct # of boxes and info
 //
-//
-/*
-$pdf->SetLineStyle(array('width' => 0.5, 'cap' => 'butt', 'join' => 'miter', 'solid' => 4, 'color' => array(213,209,209)));
-$pdf->SetFillColor(213,209,209);
-
-// $text = 'Week of: '.$bar[week1_of] .'\n'. 'Description: ' .$bar[week1_desc].'<br> symbol: '. $bar[symbol1_week1]. $bar[symbol2_week1]. $bar[symbol3_week1].'<br><br>';
-$text = "Week of: ".$bar[week1_of] ."\n" . 'Description: ' .$bar[week1_desc]."\nsymbol: ". $bar[symbol1_week1]. $bar[symbol2_week1]. $bar[symbol3_week1]."\n\n";
-$pdf->MultiCell(45, 45, $text, 1, 'L', 1, 0, '', '', true);
-
-$text = "Week of: ".$bar[week2_of] ."\n" . 'Description: ' .$bar[week2_desc]."\nsymbol: ". $bar[symbol1_week2]. $bar[symbol2_week2]. $bar[symbol3_week2]."\n\n";
-$pdf->MultiCell(45, 45, $text, 1, 'L', 1, 0, '', '', true);
-
-$text = "Week of: ".$bar[week3_of] ."\n" . 'Description: ' .$bar[week3_desc]."\nsymbol: ". $bar[symbol1_week3]. $bar[symbol2_week3]. $bar[symbol3_week3]."\n\n";
-$pdf->MultiCell(45, 45, $text, 1, 'L', 1, 0, '', '', true);
-
-$text = "Week of: ".$bar[week3_of] ."\n" . 'Description: ' .$bar[week3_desc]."\nsymbol: ". $bar[symbol1_week3]. $bar[symbol2_week3]. $bar[symbol3_week3]."\n\n";
-$pdf->MultiCell(45, 45, $text, 1, 'L', 1, 0, '', '', true);
-
-// MultiCell($w, $h, $txt, $border=0, $align='J', $fill=0, $ln=1, $x='', $y='', $reseth=true, $stretch=0, $ishtml=false, $autopadding=true, $maxh=0)
-//
-$pdf->Ln(4);
-*/
-
-// enter an if else for 2 & 3 day a week classes. 
-// if 2 day - $subtable2day else - $subtable3day
-// i apologize about hard coding in week days, just needed to see spacing
-/*
-if($row[meetingDays] == "TTR"){
-
-
-$subtable2day='
-<table  cellspacing="2" cellpadding="2">
-	<tr>
-		<td>T
-		'.$bar[symbol1_week1].'
-		</td>
-		<td>TH
-		'.$bar[symbol2_week1].'
-		</td>
-	</tr>
-</table>
-';
-} else {
-
-if($row[meetingDays] == "MWF"){
-
-$subtable3day='
-<table cellspacing="2" cellpadding="2">
-	<tr>
-		<td><b>M</b>
-		'.$bar[symbol1_week1].'  
-		</td>
-		<td><b>W</b>
-		'.$bar[symbol2_week1].'
-		</td>
-		<td><b>F</b>
-		'.$bar[symbol3_week1].'
-		</td>
-	</tr>
-</table>
-';
-	}// if bracket
-}
-*/
-// subtable is the days boxes holding the shape images, can be 2day or 3day aweek
-//$subtable = $subtable3day; // used for MWF
-//$subtable2 = $subtable2day; //used for TTR
 
 if ($row[meetingDays] == "TTR"){
 
@@ -458,6 +390,7 @@ $pdf->writeHTML($html, true, false, true, false, '');
 else { // start of MWF portion
 
 if($row[meetingDays] == "MWF"){
+
 $html = '
 <style>
 table.first {
@@ -768,176 +701,12 @@ td {
 </table>
 
 ';
+
 $pdf->writeHTML($html, true, false, true, false, '');
+	}
 }
-}
 
-{/**
-
-// WEEK 1 INFO
-$html = '<br><br><br>'.'Week of: '.$bar[week1_of] .'<br>'. 'Description: ' .$bar[week1_desc].'<br> symbol: '. $bar[symbol1_week1]. $bar[symbol2_week1]. $bar[symbol3_week1].'<br><br>';
-$pdf->Multicell($html, true,false,true,false,'');
-// end of week 1 info 
-
-
-
-// WEEK 2 INFO
-$html = 'Week of: '.$bar[week2_of]. '<br>'. 'Description: '.$bar[week2_desc];
-$pdf->writeHTML($html, true,false,true,false,'');
-
-$html = 'symbol: '.$bar[symbol1_week2]. $bar[symbol2_week2]. $bar[symbol3_week2].'<br><br>';
-$pdf->writeHTML($html, true,false,true,false,'');
-// end of week 2 info 
-
-
-//WEEK 3 INFO
-$html = 'Week of: '.$bar[week3_of].'<br>'. 'Description: '.$bar[week3_desc];
-$pdf->writeHTML($html, true,false,true,false,'');
-
-$html = 'symbol: '.$bar[symbol1_week3]. $bar[symbol2_week3]. $bar[symbol3_week3].'<br><br>';
-$pdf->writeHTML($html, true,false,true,false,'');
-// end of week 3 info
-
-
-// WEEK 4 INFO
-$html = 'Week of: '.$bar[week4_of]. '<br>'. 'Description: '.$bar[week4_desc];
-$pdf->writeHTML($html, true,false,true,false,'');
-
-$html = 'symbol: '.$bar[symbol1_week4] .$bar[symbol2_week4] .$bar[symbol3_week4].'<br><br>';
-$pdf->writeHTML($html, true,false,true,false,'');
-// end of week 4 info
-
-
-//WEEK 5 INFO
-$html = 'Week of: '.$bar[week5_of]. '<br>'. 'Description: '.$bar[week5_desc];
-$pdf->writeHTML($html, true,false,true,false,'');
-
-$html = 'symbol: '.$bar[symbol1_week5] .$bar[symbol2_week5]. $bar[symbol3_week5].'<br><br>';
-$pdf->writeHTML($html, true,false,true,false,'');
-// end of week 5 info
-
-
-//WEEK 6 INFO
-$html = 'Week of: '.$bar[week6_of] . '<br>' . 'Description: '.$bar[week6_desc];
-$pdf->writeHTML($html, true,false,true,false,'');
-
-$html = 'symbol: '.$bar[symbol1_week6] .$bar[symbol2_week6] .$bar[symbol3_week6].'<br><br>';
-$pdf->writeHTML($html, true,false,true,false,'');
-// end of week 6 info 
-
-//WEEK 7 INFO
-$html = 'Week of: '.$bar[week7_of]. '<br>'. 'Description: '.$bar[week7_desc];
-$pdf->writeHTML($html, true,false,true,false,'');
-
-$html = 'symbol: '.$bar[symbol1_week7] .$bar[symbol2_week7] .$bar[symbol3_week7].'<br><br>';
-$pdf->writeHTML($html, true,false,true,false,'');
-// end of week 7 info
-
-
-//WEEK 8 INFO
-$html = 'Week of: '.$bar[week8_of]. '<br> Description: '.$bar[week8_desc];
-$pdf->writeHTML($html, true,false,true,false,'');
-
-$html = 'symbol: '.$bar[symbol1_week8] .$bar[symbol2_week8]. $bar[symbol3_week8].'<br><br>';
-$pdf->writeHTML($html, true,false,true,false,'');
-// end of week 8 info
-
-
-//WEEK 9 INFO
-$html = 'Week of: '.$bar[week9_of]. '<br>'. 'Description: '.$bar[week9_desc];
-$pdf->writeHTML($html, true,false,true,false,'');
-
-$html = 'symbol: '.$bar[symbol1_week9] .$bar[symbol2_week9] .$bar[symbol3_week9].'<br><br>';
-$pdf->writeHTML($html, true,false,true,false,'');
-// end week 9 info
-
-//WEEK 10 INFO
-$html = 'Week of: '.$bar[week10_of] .'<br> Description: '.$bar[week10_desc];
-$pdf->writeHTML($html, true,false,true,false,'');
-
-$html = 'symbol: '.$bar[symbol1_week10].$bar[symbol2_week10]. $bar[symbol3_week10].'<br><br>';
-$pdf->writeHTML($html, true,false,true,false,'');
-// end of week 10 info
-
-
-//WEEK 11 INFO
-$html = 'Week of: '.$bar[week11_of] .'<br> Description: '.$bar[week11_desc];
-$pdf->writeHTML($html, true,false,true,false,'');
-
-$html = 'symbol: '.$bar[symbol1_week11] .$bar[symbol2_week11] .$bar[symbol3_week11].'<br><br>';
-$pdf->writeHTML($html, true,false,true,false,'');
-// end of week 11 info
-
-
-//WEEK 12 INF0
-$html = 'Week of: '.$bar[week12_of] .'<br> Description: '.$bar[week12_desc];
-$pdf->writeHTML($html, true,false,true,false,'');
-
-$html = 'symbol: '.$bar[symbol1_week12] .$bar[symbol2_week12] .$bar[symbol3_week12].'<br><br>';
-$pdf->writeHTML($html, true,false,true,false,'');
-// end of weeek 12 info
-
-
-//WEEK 13 INFO
-$html = 'Week of: '.$bar[week13_of] .'<br> Description: '.$bar[week13_desc];
-$pdf->writeHTML($html, true,false,true,false,'');
-
-$html = 'symbol: '.$bar[symbol1_week13] .$bar[symbol2_week13]. $bar[symbol3_week13].'<br><br>';
-$pdf->writeHTML($html, true,false,true,false,'');
-//end of week 13 info
-
-
-//WEEK 14 INFO
-$html = 'Week of: '.$bar[week14_of] .'<br> Description: '.$bar[week14_desc];
-$pdf->writeHTML($html, true,false,true,false,'');
-
-$html = 'symbol: '.$bar[symbol1_week14]. $bar[symbol2_week14] .$bar[symbol3_week14].'<br><br>';
-$pdf->writeHTML($html, true,false,true,false,'');
-// end of week 14 info
-
-
-// WEEK 15 INFO
-$html = 'Week of: '.$bar[week15_of]. '<br>'.' Description: '.$bar[week15_desc];
-$pdf->writeHTML($html, true,false,true,false,'');
-
-
-
-$html = 'symbol: '.$bar[symbol1_week15]. $bar[symbol2_week15]. $bar[symbol3_week15].'<br><br>';
-$pdf->writeHTML($html, true,false,true,false,'');
-// end of week 15 info
-
-
-// KEY INFO FOR SYMBOLS AND ASSIGNMENTS CORRESPONDING TO SYMBOL
-$html = "Key:<br> $row[symbol1] $row[assign1]<br> $row[symbol2] $row[assign2] <br> $row[symbol3] $row[assign3]<br> 
-				$row[symbol5] $row[assign5]<br> $row[symbol6] $row[assign6]<br> $row[symbol7] $row[assign7]<br>
-					$row[symbol8] $row[assign8]<br> $row[symbol9] $row[assign9]<br> $row[symbol10] $row[assign10]<br>";
-$pdf->writeHTML($html, true,false,true,false,'');
- */}
-//pie chart code 
-/*
-$pdf->Write(0, 'Grades');
-
-$xc = 105;
-$yc = 100;
-$r = 50;
-
-$pdf->SetFillColor(0, 0, 255);
-$pdf->PieSector($xc, $yc, $r, 20, 120, 'FD', false, 0, 2);
-
-$pdf->SetFillColor(0, 255, 0);
-$pdf->PieSector($xc, $yc, $r, 120, 250, 'FD', false, 0, 2);
-
-$pdf->SetFillColor(255, 0, 0);
-$pdf->PieSector($xc, $yc, $r, 250, 20, 'FD', false, 0, 2);
-
-// write labels
-$pdf->SetTextColor(255,255,255);
-$pdf->Text(105, 65, 'BLUE');
-$pdf->Text(60, 95, 'GREEN');
-$pdf->Text(120, 115, 'RED');
-
-*/
-
+//ob_end_clean();
 
 $pdf->output('weeklyschedule.pdf', 'I'); // PUT D INSTEAD OF I FOR DOWNLOADING AUTOMATICALLY PDF
 $conn->close(); }// end of if else for row and bar
@@ -948,5 +717,6 @@ $conn->close(); }// end of if else for row and bar
 		<link href="weeklyschedule.css" type="text/css" rel="stylesheet" />
 	</head>
 	<body>
+
 	</body>
 </html>
