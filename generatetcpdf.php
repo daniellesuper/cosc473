@@ -7,7 +7,6 @@ $servername="localhost";
 $dbname="info-syllabus";
 $username="root";
 $password="";
-
 $conn= new mysqli($servername, $username, $password, $dbname);
 if($conn-> connect_error){
 die("Connection Failed".$conn->connect_error);
@@ -716,7 +715,7 @@ $conn->close(); }// end of if else for row and bar
 <html>
 	
 	<head>
-		<link href="weeklyschedule.css" type="text/css" rel="stylesheet" />
+		
 	</head>
 	<body>
 	</body>
