@@ -7,7 +7,6 @@ $servername="localhost";
 $dbname="info-syllabus";
 $username="root";
 $password="";
-
 $conn= new mysqli($servername, $username, $password, $dbname);
 if($conn-> connect_error){
 die("Connection Failed".$conn->connect_error);
@@ -84,7 +83,7 @@ function showSymbols(){
                    } // last if bracket
                } // foreach bracket
 		}// function bracket
- 
+
 //showSymbols(); //throws error when its called "TCPDF ERROR: Some data has already been output, cant send PDF File"
 
 
@@ -100,7 +99,7 @@ $pdf->setTitle('Weekly Schedule');
 //$html = file_get_contents('/Applications/XAMPP/xamppfiles/htdocs/473/info-syllabus/cosc473/cosc473/weeklyschedule.css');
 
 // add 1st page
-$pdf->AddPage();
+$pdf->AddPage(); 
 
 //$pdf->writeHTML($html, true,false,true,false,'');
 
@@ -712,12 +711,12 @@ $pdf->writeHTML($html, true, false, true, false, '');
 $pdf->output('weeklyschedule.pdf', 'I'); // PUT D INSTEAD OF I FOR DOWNLOADING AUTOMATICALLY PDF
 $conn->close(); }// end of if else for row and bar
 ?>
-
 <html>
 	
 	<head>
-		<link href="weeklyschedule.css" type="text/css" rel="stylesheet" />
+		
 	</head>
 	<body>
+
 	</body>
 </html>
