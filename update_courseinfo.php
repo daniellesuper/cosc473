@@ -285,7 +285,7 @@ Course symbol & Name: <br><br><!-- make dropdown -->
 
 function display_symbols(){
 
-  echo" <option value='0'> Select Symbol</option>
+  echo" <option value=' '> Select Symbol</option>
         <option value='Star'> Star </option>
         <option value='X'> X </option>
         <option value='CheckMark'> CheckMark </option>
