@@ -143,7 +143,9 @@ if($result1->num_rows > 0) {
    function display_options(){
 
                echo 
-               "<option value='Star'> Star </option>
+               "
+               <option value='0'>Select Symbol</option>
+               <option value='Star'> Star </option>
                <option value='X'> X </option>
                <option value='CheckMark'> CheckMark </option>
                <option value='Exclamationpoint'> Exclamation Point </option>

@@ -83,7 +83,7 @@ function showSymbols(){
                    } // last if bracket
                } // foreach bracket
 		}// function bracket
- 
+
 //showSymbols(); //throws error when its called "TCPDF ERROR: Some data has already been output, cant send PDF File"
 
 
