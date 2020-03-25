@@ -165,66 +165,14 @@ Class Days &nbsp; <select name="meetingDays" selected ="<?php echo $bar[meetingD
             }else{
 				echo " <OPTION VALUE=\"MWF\"  >MWF</option>";
 			}  
-				if($meetingDays=="MF")
-            {
-                echo " <OPTION VALUE=\"MF\"  selected>MF</option>";
-            }else{
-				echo " <OPTION VALUE=\"MF\"  >MF</option>";
-			}  
-				if($meetingDays=="WF")
-            {
-                echo " <OPTION VALUE=\"WF\"  selected>WF</option>";
-            }else{
-				echo " <OPTION VALUE=\"WF\"  >WF</option>";
-			}  
-				if($meetingDays=="MW")
-            {
-                echo " <OPTION VALUE=\"MW\"  selected>MW</option>";
-            }else{
-				echo " <OPTION VALUE=\"MW\"  >MW</option>";
-			}  
+				
 				if($meetingDays=="TTR")
 			{
 				echo " <OPTION VALUE=\"TTR\"  selected>TTR</option>";
 			}else{
 				echo " <OPTION VALUE=\"TTR\"  >TTR</option>";
 			}
-				if($meetingDays=="M")
-            {
-                echo " <OPTION VALUE=\"M\"  selected>M</option>";
-            }else{
-				echo " <OPTION VALUE=\"M\"  >M</option>";
-			}  
-				if($meetingDays=="T")
-            {
-                echo " <OPTION VALUE=\"T\"  selected>T</option>";
-            }else{
-				echo " <OPTION VALUE=\"T\"  >T</option>";
-			}  
-				if($meetingDays=="W")
-            {
-                echo " <OPTION VALUE=\"W\"  selected>W</option>";
-            }else{
-				echo " <OPTION VALUE=\"W\"  >W</option>";
-			}  
-				if($meetingDays=="R")
-            {
-                echo " <OPTION VALUE=\"R\"  selected>R</option>";
-            }else{
-				echo " <OPTION VALUE=\"R\"  >R</option>";
-			}  
-				if($meetingDays=="F")
-            {
-                echo " <OPTION VALUE=\"F\"  selected>F</option>";
-            }else{
-				echo " <OPTION VALUE=\"F\"  >F</option>";
-			}
-			if($meetingDays=="Other")
-            {
-                echo " <OPTION VALUE=\"Other\"  selected>Other</option>";
-            }else{
-				echo " <OPTION VALUE=\"Other\"  >Other</option>";
-			}
+				
 			  ?>
 			</SELECT>
 
@@ -276,16 +224,15 @@ Weight: &nbsp; <input type="text" length="25" name="weight7" value="<?php echo $
 </p><br>
 </div>
 
-Course symbol & Name: <br><br><!-- make dropdown -->
+Course symbol & Name:  <br><br><!-- make dropdown -->
 
 
-<div id="symbol_Name">
-
+<div id="symbol_Name">      
 <?php
 
-function display_symbols(){
+function display_symbols(){ 
 
-  echo" <option value=' '> Select Symbol</option>
+  echo" <option value=' ' > Select Symbol</option>
         <option value='Star'> Star </option>
         <option value='X'> X </option>
         <option value='CheckMark'> CheckMark </option>
@@ -297,9 +244,11 @@ function display_symbols(){
         <option value='Trefoil'> Trefoil </option>
         <option value='Heart'> Heart </option>
     ";
-}
+    
+}// function bracket for dispaly_symbols
 
 ?>
+
 
 <p id="symbol1">
 Symbol1:  <select name="symbol1" selected ="<?php echo $bar[symbol1]; ?>" required>
