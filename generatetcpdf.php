@@ -99,7 +99,7 @@ $pdf->setTitle('Weekly Schedule');
 //$html = file_get_contents('/Applications/XAMPP/xamppfiles/htdocs/473/info-syllabus/cosc473/cosc473/weeklyschedule.css');
 
 // add 1st page
-$pdf->AddPage();
+$pdf->AddPage(); 
 
 //$pdf->writeHTML($html, true,false,true,false,'');
 
@@ -711,12 +711,12 @@ $pdf->writeHTML($html, true, false, true, false, '');
 $pdf->output('weeklyschedule.pdf', 'I'); // PUT D INSTEAD OF I FOR DOWNLOADING AUTOMATICALLY PDF
 $conn->close(); }// end of if else for row and bar
 ?>
-
 <html>
 	
 	<head>
 		
 	</head>
 	<body>
+
 	</body>
 </html>
