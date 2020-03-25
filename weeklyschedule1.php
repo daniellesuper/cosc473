@@ -139,7 +139,8 @@ if($result1->num_rows > 0) {
 ?>
 
 <?php
-
+  
+  
    function display_options(){
 
                echo 
@@ -157,6 +158,8 @@ if($result1->num_rows > 0) {
                <option value='Heart'> Heart </option>"; 
 
    }
+
+   
 ?>
 
 
