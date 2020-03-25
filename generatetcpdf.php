@@ -14,6 +14,7 @@ die("Connection Failed".$conn->connect_error);
 }
 error_reporting(0);
 
+
 $FKPROFID = $_SESSION["FKPROFID"]; 
 $courseID = $_GET["courseID"];
 
@@ -133,7 +134,7 @@ td {
 }
 </style>
 
-<table cellspacing="10" cellpadding="4">
+<table cellspacing="10" cellpadding="4"> 
 	<tr>
 		<td>
 			<h1>1</h1><br>
@@ -711,12 +712,12 @@ $pdf->writeHTML($html, true, false, true, false, '');
 $pdf->output('weeklyschedule.pdf', 'I'); // PUT D INSTEAD OF I FOR DOWNLOADING AUTOMATICALLY PDF
 $conn->close(); }// end of if else for row and bar
 ?>
+
 <html>
 	
 	<head>
 		<link href="weeklyschedule.css" type="text/css" rel="stylesheet" />
 	</head>
 	<body>
-
 	</body>
 </html>

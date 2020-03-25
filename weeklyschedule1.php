@@ -119,7 +119,7 @@ if ($_GET['ok'] == 1) {
 
 $sql1 = "SELECT  meetingDays FROM courseinfo WHERE PKID = $_GET[courseID]";
 //echo $sql1; exit;
-$sql2 = "SELECT week1_of, week2_of, week3_of, week4_of, week5_of, week6_of, week7_of, week8_of, week9_of, week10_of, week11_of, week12_of, week13_of, week14_of, week15_of, week1_desc, week2_desc, week3_desc, week4_desc, week5_desc, week6_desc, week7_desc, week8_desc, week9_desc, week10_desc, week11_desc, week12_desc, week13_desc, week14_desc, week15_desc, holiday, startdate, enddate FROM weeklyinfo WHERE fkcourseid= $_GET[courseID]";
+$sql2 = "SELECT week1_of, week2_of, week3_of, week4_of, week5_of, week6_of, week7_of, week8_of, week9_of, week10_of, week11_of, week12_of, week13_of, week14_of, week15_of, week1_desc, week2_desc, week3_desc, week4_desc, week5_desc, week6_desc, week7_desc, week8_desc, week9_desc, week10_desc, week11_desc, week12_desc, week13_desc, week14_desc, week15_desc, holiday, startdate, enddate, symbol1_week1, symbol2_week1, symbol3_week1, symbol1_week2, symbol2_week2, symbol3_week2 FROM weeklyinfo WHERE fkcourseid= $_GET[courseID]";
 //  
 
 $result1 = $conn->query($sql1);
@@ -169,13 +169,13 @@ if($result1->num_rows > 0) {
 <form action="insert_weekly_info.php" form="get" style="padding-left: 25px;">
 
 <div class="breakheader">
-Break:  &nbsp <select name="holiday_name">
+Break:  &nbsp; <select name="holiday_name">
        <option value="">Select</option>
        <option value="Thanksgiving">Thanksgiving</option> 
        <option value="Spring">Spring</option>
        </select> &nbsp
 <br />
-Date To: &nbsp &nbsp<input type="date" name="startdate1" value ="<?php echo $bar[startdate]; ?>"> &nbsp;
+Date To: &nbsp; &nbsp;<input type="date" name="startdate1" value ="<?php echo $bar[startdate]; ?>"> &nbsp;
 <br />
 Date End: <input type="date" name="enddate" value="<?php echo $bar[enddate]; ?>"> <br><br>
 
@@ -190,7 +190,7 @@ Date End: <input type="date" name="enddate" value="<?php echo $bar[enddate]; ?>"
 
 Week of &nbsp <input type="text" name="week1_of" value ="<?php echo $bar[week1_of]; ?>"> &nbsp; <br>
 Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?php echo $bar[week1_desc]; ?>" > 
-           <select name="symbol1_week1">
+           <select name="symbol1_week1" value="<?php echo $bar[symbol1_week1]; ?>">
                <?php
 
                         display_options();
@@ -199,7 +199,7 @@ Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?p
            </select>
 
            <?php echo "T"; ?><br>
-           <select name="symbol2_week1">
+           <select name="symbol2_week1" value="<?php echo $bar[symbol2_week1]; ?>">
                <?php
 
                         display_options();
@@ -220,7 +220,7 @@ Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?p
 
 Week of &nbsp <input type="text" name="week1_of" value ="<?php echo $bar[week1_of]; ?>"> &nbsp; <br>
 Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?php echo $bar[week1_desc]; ?>" > 
-           <select name="symbol1_week1">
+           <select name="symbol1_week1" value="<?php echo $bar[symbol1_week1]; ?>">
 
            <?php
 
@@ -230,7 +230,7 @@ Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?p
            <?php echo "M"; ?><br>
 
 
-           <select name="symbol2_week1">
+           <select name="symbol2_week1" value="<?php echo $bar[symbol2_week1]; ?>">
                <?php
 
                         display_options();
@@ -239,7 +239,7 @@ Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?p
            <?php echo "W"; ?><br>
 
 
-           <select name="symbol3_week1">
+           <select name="symbol3_week1" value="<?php echo $bar[symbol3_week1]; ?>">
                <?php
 
                         display_options();
