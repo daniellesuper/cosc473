@@ -119,7 +119,6 @@ td {
 			<h4>Week Of '.$bar[week1_of].'</h4><br>
 			<p>'.$bar[week1_desc].'</p>
 			'.$subtable.'
-			
 		</td>
 		<td>
 			<h1>2</h1><br>
