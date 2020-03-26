@@ -65,7 +65,7 @@ function showSymbols(){
                    if ($symbol == "Heart"){
                      echo '<img src="images/Heart.png"  width="30px" height="20px"/>'."<br>";
                    } // last if bracket
-							 } // foreach bracket
+			 } // foreach bracket
 	}// function bracket
  
 //showSymbols(); //throws error when its called "TCPDF ERROR: Some data has already been output, cant send PDF File"

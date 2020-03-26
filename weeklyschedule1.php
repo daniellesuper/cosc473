@@ -139,9 +139,12 @@ if($result1->num_rows > 0) {
 ?>
 
 <?php
-  
-  
+   
+  $star = '<img src="images/star.jpeg"  width="30px" height="20px"/>';
+
    function display_options(){
+
+    global $star;
 
                echo 
                '
