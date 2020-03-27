@@ -98,28 +98,12 @@ $courseID = $_GET["courseID"];
 								
 								<a href="weeklyschedule1.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg"> Update Weekly Info</a></button>
 
-								<a href="generatetcpdf.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Download a PDF</a></button>
+								<a href="generateTCPDFfinal.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Download a PDF</a></button>
 
 								<a href="<?php echo $courseID ?>"><button type="button" onclick="delete()" class="deleteButton">X</a></button>
 							</div>
 						</li>
 					</ul>
-
-		  	<!--
-				<ul>
-					<li>
-						<span id="courseName"><?php echo $course; ?></span>
-						<div id="buttons">
-							<a href="update_courseinfo.php?courseID=<?php echo $courseID ?>" ><button type="button" class= "btn btn-primary btn-lg"> Update Course Info </a></button>
-							<a href="update_weekly_infohtml.php?courseID=<?php echo $courseID ?>" ><button type="button" class="btn btn-primary btn-lg">Weekly Schedule</a></button>
-							<a href="pieChart.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Preview</a></button>
-							<a href="pdf.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Download</a></button>
-							<a href="weeklyschedule.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">weekly</a></button>
-							<a href="<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Delete</a></button>
-						</div>
-					</li>
-				</ul>
-			-->
       </div>
           <?php 
      } ?>

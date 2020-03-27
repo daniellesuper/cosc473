@@ -105,7 +105,6 @@ if ($_GET['ok'] == 1) {
  <title>Weekly Schedule</title>
  <link href="weeklyschedule.css" type="text/css" rel="stylesheet" />
 
-
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -118,9 +117,9 @@ if ($_GET['ok'] == 1) {
 <?php
 
 $sql1 = "SELECT  meetingDays FROM courseinfo WHERE PKID = $_GET[courseID]";
-//echo $sql1; exit;
+
 $sql2 = "SELECT week1_of, week2_of, week3_of, week4_of, week5_of, week6_of, week7_of, week8_of, week9_of, week10_of, week11_of, week12_of, week13_of, week14_of, week15_of, week1_desc, week2_desc, week3_desc, week4_desc, week5_desc, week6_desc, week7_desc, week8_desc, week9_desc, week10_desc, week11_desc, week12_desc, week13_desc, week14_desc, week15_desc, holiday, startdate, enddate, symbol1_week1, symbol2_week1, symbol3_week1, symbol1_week2, symbol2_week2, symbol3_week2 FROM weeklyinfo WHERE fkcourseid= $_GET[courseID]";
-//  
+
 
 $result1 = $conn->query($sql1);
 $result2 = $conn->query($sql2);
@@ -156,12 +155,8 @@ if($result1->num_rows > 0) {
                <option value="Trefoil"> Trefoil </option>
                <option value="Heart"> Heart </option>
             '; 
-
    }
-
-   
 ?>
-
 
 <div class="boxes">
  <div id="topBox">

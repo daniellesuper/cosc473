@@ -1,8 +1,8 @@
 <?php
+// session info
 require("session_info.php");
 include('library/tcpdf.php');
 error_reporting(0);
-
 $servername="localhost";
 $dbname="info-syllabus";
 $username="root";
@@ -13,15 +13,21 @@ die("Connection Failed".$conn->connect_error);
 }
 error_reporting(0);
 
+// database queries
 $FKPROFID = $_SESSION["FKPROFID"]; 
 $courseID = $_GET["courseID"];
 $sql1 = "SELECT  meetingDays, symbol1, symbol2, symbol3, symbol4, symbol5, symbol6, symbol7, symbol8, symbol9, symbol10, assign1, assign2, assign3, assign4, assign5, assign6, assign7, assign8, assign9, assign10 FROM courseinfo WHERE PKID = $_GET[courseID]";
 
-$sql2 = "SELECT week1_of, week2_of, week3_of, week4_of, week5_of, week6_of, week7_of, week8_of, week9_of, week10_of, week11_of, week12_of, week13_of, week14_of, week15_of, week1_desc, week2_desc, week3_desc, week4_desc, week5_desc, week6_desc, week7_desc, week8_desc, week9_desc, week10_desc, week11_desc, week12_desc, week13_desc, week14_desc, week15_desc, holiday, startdate, enddate, symbol1_week1, symbol2_week1, symbol3_week1, symbol1_week2, symbol2_week2, symbol3_week2, symbol1_week3, symbol2_week3, symbol3_week3, symbol1_week4, symbol2_week4, symbol3_week4, symbol1_week5, symbol2_week5, symbol3_week5, symbol1_week6, symbol2_week6, symbol3_week6, symbol1_week7, symbol2_week7, symbol3_week7, symbol1_week8, symbol2_week8, symbol3_week8, symbol1_week9, symbol2_week9	, symbol3_week9, symbol1_week10, symbol2_week10, symbol3_week10, symbol1_week11, symbol2_week11, symbol3_week11, symbol1_week12, symbol2_week12, symbol3_week12, symbol1_week13, symbol2_week13, symbol3_week13, symbol1_week14, symbol2_week14, symbol3_week14, symbol1_week15, symbol2_week15, symbol3_week15	
+$sql2 = "SELECT week1_of, week2_of, week3_of, week4_of, week5_of, week6_of, week7_of, week8_of, week9_of, week10_of, week11_of, week12_of, week13_of, week14_of, week15_of, week1_desc, week2_desc, week3_desc, week4_desc, week5_desc, week6_desc, week7_desc, week8_desc, week9_desc, week10_desc, week11_desc, week12_desc, week13_desc, week14_desc, week15_desc, holiday, startdate, enddate, symbol1_week1, symbol2_week1, symbol3_week1, symbol1_week2, symbol2_week2, symbol3_week2, symbol1_week3, symbol2_week3, symbol3_week3, symbol1_week4, symbol2_week4, symbol3_week4, symbol1_week5, symbol2_week5, symbol3_week5, symbol1_week6, symbol2_week6, symbol3_week6, symbol1_week7, symbol2_week7, symbol3_week7, symbol1_week8, symbol2_week8, symbol3_week8, symbol1_week9, symbol2_week9 , symbol3_week9, symbol1_week10, symbol2_week10, symbol3_week10, symbol1_week11, symbol2_week11, symbol3_week11, symbol1_week12, symbol2_week12, symbol3_week12, symbol1_week13, symbol2_week13, symbol3_week13, symbol1_week14, symbol2_week14, symbol3_week14, symbol1_week15, symbol2_week15, symbol3_week15 
 FROM weeklyinfo WHERE fkcourseid= $_GET[courseID]";
 
-$result1 = $conn->query($sql1);
-$result2 = $conn->query($sql2);
+$sql3 = "SELECT title, fullname, officeaddress, email, officephone, monday, tuesday, wednesday, thursday, friday FROM profinfo WHERE PKID = $FKPROFID;";
+$sql4 = "SELECT coursecode, coursename FROM courseinfo WHERE PKID = $_GET[courseID]";
+
+$result1 = $conn->query($sql1); // meeting days and symbol assignments
+$result2 = $conn->query($sql2); // weekly info
+$result3 = $conn->query($sql3); // profinfo
+$result4 = $conn->query($sql4); // courseinfo
 
 if($result1->num_rows > 0) {
   //used for profinfo items
@@ -67,22 +73,52 @@ function showSymbols(){
                    } // last if bracket
 			 } // foreach bracket
 	}// function bracket
- 
-//showSymbols(); //throws error when its called "TCPDF ERROR: Some data has already been output, cant send PDF File"
 
+//
+// syllabus formatting start
+//
 
 // make TCPDF object
 $pdf = new TCPDF('P', "mm",'A4');
-
+$pdf->SetMargins(5, 5, 5);
 // remove default header and footer
 $pdf->setPrintHeader(false);
 $pdf->setPrintFooter(false);
-$pdf->setTitle('Weekly Schedule');
+$pdf->setTitle('Info Syllabus');
+// add page 1
+$pdf->AddPage();
 
-// linking the css to PDF but reads the css
-//$html = file_get_contents('/Applications/XAMPP/xamppfiles/htdocs/473/info-syllabus/cosc473/cosc473/weeklyschedule.css');
+// set some text for examples
+$txt = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 
-// add 1st page
+// MultiCell($w, $h, $txt, $border=0, $align='J', $fill=0, $ln=1, $x='', $y='', $reseth=true, $stretch=0, $ishtml=false, $autopadding=true, $maxh=0)
+
+// header box
+$header = $sql3["title"]." ";
+
+$pdf->SetFillColor(178, 178, 178);
+$pdf->MultiCell(200, 70, 'Header '."\n".$header, 0, 'C', 1, 1, '', '', true);
+
+// book info
+$pdf->SetFillColor(230, 230, 230);
+$pdf->MultiCell(100, 55, 'Book Info '."\n".$txt, 0, 'C', 1, 0, '', '', true);
+
+// imp points
+$pdf->MultiCell(100, 125, 'Important Points '."\n".$txt, 0, 'C', 0, 1, '' ,'', true);
+
+// pie chart
+$pdf->SetFillColor(178, 178, 178);
+$pdf->MultiCell(100, 145, 'Pie Chart'."\n".$pieChart, 0, 'C', 1, 0, '5', '130', true);
+
+//grade breakdown
+$pdf->SetFillColor(178, 178, 178);
+$pdf->MultiCell(100, 75, 'Grade Breakdown '."\n".$txt, 0, 'L', 1, 0, '105', '200', true);
+
+
+
+
+
+// add 2nd page
 $pdf->AddPage();
 //$pdf->writeHTML($html, true,false,true,false,'');
 $html = '<img src="images/weeklyschedule.png" alt="weeklyschedule" align="center">';
