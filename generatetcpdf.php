@@ -98,6 +98,59 @@ $pdf->writeHTML($html, true,false,true,false,'');
 // start of the if statememt for outputting correct # of boxes and info
 //
 
+$sql3 = "SELECT  symbol1_week1, symbol2_week1, symbol3_week1, symbol1_week2, symbol2_week2, symbol3_week2, symbol1_week3, symbol2_week3, symbol3_week3, symbol1_week4, symbol2_week4, symbol3_week4, symbol1_week5, symbol2_week5, symbol3_week5, symbol1_week6, symbol2_week6, symbol3_week6, symbol1_week7, symbol2_week7, symbol3_week7, symbol1_week8, symbol2_week8, symbol3_week8, symbol1_week9, symbol2_week9	, symbol3_week9, symbol1_week10, symbol2_week10, symbol3_week10, symbol1_week11, symbol2_week11, symbol3_week11, symbol1_week12, symbol2_week12, symbol3_week12, symbol1_week13, symbol2_week13, symbol3_week13, symbol1_week14, symbol2_week14, symbol3_week14, symbol1_week15, symbol2_week15, symbol3_week15	
+FROM weeklyinfo WHERE fkcourseid= $_GET[courseID]";
+
+$result3 = $conn->query($sql3);
+
+if($result3->num_rows > 0){
+    $num = $result3->fetch_assoc();
+  }
+
+
+
+/*
+if ($bar[symbol1_week1] == "Star"){
+
+$bar[symbol1_week1]= '<img src="images/star.jpeg"  width="30px" height="20px"/>';
+
+; }
+
+if ($bar[symbol1_week1] == "X"){
+
+$bar[symbol1_week1]= '<img src="images/x.jpeg"  width="30px" height="10px"/>';
+
+; }
+
+if ($bar[symbol1_week1] == "CheckMark"){
+
+$bar[symbol1_week1]= '<img src="images/checkmark.jpeg"  width="30px" height="20px"/>';
+
+; }
+
+if ($bar[symbol1_week1] == "Exclamationpoint"){
+
+$bar[symbol1_week1]= '<img src="images/exclamation1.png"  width="40px" height="40px"/>';
+
+; }
+
+if ($bar[symbol1_week1] == "Circle"){
+
+$bar[symbol1_week1]= '<img src="images/circle.png"  width="30px" height="20px"/>';
+
+; }
+
+// symbol2 //
+if ($bar[symbol2_week1] == "Star"){
+
+$bar[symbol2_week1]= '<img src="images/star.jpeg"  width="30px" height="20px"/>';
+
+; }
+*/
+
+include 'showSymbol.php';
+
+
 if ($row[meetingDays] == "TTR"){
 
  $html = '
@@ -123,7 +176,7 @@ td {
 			<table cellspacing="2" cellpadding="2">
 	<tr>
 		<td><b>T</b><br>
-		'.$bar[symbol1_week1].'  
+		'.$bar[symbol1_week1].' 
 		</td>
 		<td><b>TR</b><br>
 		'.$bar[symbol2_week1].'
@@ -370,7 +423,7 @@ $pdf->writeHTML($html, true, false, true, false, '');
 }// if bracket/ end of TTR portion
 else { // start of MWF portion
 
-if($row[meetingDays] == "MWF"){
+if($row[meetingDays] == "MWF" || "Online"){
 $html = '
 <style>
 table.first {
@@ -685,7 +738,6 @@ $pdf->writeHTML($html, true, false, true, false, '');
 	}
 }
 
-//ob_end_clean();
 
 $pdf->output('weeklyschedule.pdf', 'I'); // PUT D INSTEAD OF I FOR DOWNLOADING AUTOMATICALLY PDF
 $conn->close(); }// end of if else for row and bar
@@ -694,7 +746,7 @@ $conn->close(); }// end of if else for row and bar
 <html>
 	
 	<head>
-		<link href="weeklyschedule.css" type="text/css" rel="stylesheet" />
+		
 	</head>
 	<body>
 	</body>

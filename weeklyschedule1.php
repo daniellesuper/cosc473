@@ -140,7 +140,10 @@ if($result1->num_rows > 0) {
 
 <?php
    
-  $star = '<img src="images/star.jpeg"  width="30px" height="20px"/>';
+  //$star = '"<img src=images/star.jpeg  width=30px height=20px/>"';
+  
+  $star = '"&lt;images/Star.jpeg/&gt;"';
+
 
    function display_options(){
 
@@ -149,7 +152,7 @@ if($result1->num_rows > 0) {
                echo 
                '
                <option value="0">Select Symbol</option>
-               <option value="Star"> Star </option>
+               <option value='.$star.' > Star </option>
                <option value="X"> X </option>
                <option value="CheckMark"> CheckMark </option>
                <option value="Exclamationpoint"> Exclamation Point </option>
