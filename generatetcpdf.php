@@ -69,47 +69,6 @@ if($result3->num_rows > 0){
     $num = $result3->fetch_assoc();
   }
 
-
-
-/*
-if ($bar[symbol1_week1] == "Star"){
-
-$bar[symbol1_week1]= '<img src="images/star.jpeg"  width="30px" height="30px"/>';
-
-; }
-
-if ($bar[symbol1_week1] == "X"){
-
-$bar[symbol1_week1]= '<img src="images/x.jpeg"  width="30px" height="30px"/>';
-
-; }
-
-if ($bar[symbol1_week1] == "CheckMark"){
-
-$bar[symbol1_week1]= '<img src="images/checkmark.jpeg"  width="30px" height="20px"/>';
-
-; }
-
-if ($bar[symbol1_week1] == "Exclamationpoint"){
-
-$bar[symbol1_week1]= '<img src="images/exclamation1.png"  width="30px" height="30px"/>';
-
-; }
-
-if ($bar[symbol1_week1] == "Circle"){
-
-$bar[symbol1_week1]= '<img src="images/circle.png"  width="30px" height="30px"/>';
-
-; }
-
-// symbol2 //
-if ($bar[symbol2_week1] == "Star"){
-
-$bar[symbol2_week1]= '<img src="images/star.jpeg"  width="30px" height="30px"/>';
-
-; }
-*/
-
 include 'showSymbol.php';
 
 

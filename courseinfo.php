@@ -115,16 +115,12 @@ Class Days &nbsp <select name="meetingDays">
 				<option value="online"> online </option>
 				<option value="MWF"> MWF </option>
 				<option value="TTR"> TTR </option>
-				<option value="MF"> MF </option>
-				<option value="WF"> WF </option>
-				<option value="MW"> MW </option>
-				<option value="TR"> TR </option>
 				<option value="M"> M </option>
 				<option value="T"> T </option>
 				<option value="W"> W </option>
-				<option value="R"> R </option>
+				<option value="R"> TR </option>
 				<option value="F"> F </option>
-				<option value="other"> other </option>
+				<option value="other"> Everyday </option>
 				<!-- Code for other option when clicked text box appears -->
 			</select><br><br>
 Important Points: e.g. Pentaly for late work, Attendance policy<br><br>

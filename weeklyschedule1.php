@@ -144,7 +144,7 @@ if($result1->num_rows > 0) {
 
                echo 
                '
-               <option value="0">Select Symbol</option>
+               <option value=" ">Select Symbol</option>
                <option value="Star" > Star </option>
                <option value="X"> X </option>
                <option value="CheckMark"> CheckMark </option>
@@ -218,11 +218,12 @@ Description &nbsp; <input type="text" length="255" name="week1_desc" value="<?ph
            <?php echo "TR"; ?><br>
 
            <?php
+ 
+         } 
 
-         }
           else {
 
-           if($row["meetingDays"] == "MWF"){
+           if($row["meetingDays"] == "MWF" || "Online" || "other"){
 
            ?><br>
 
@@ -258,9 +259,12 @@ Description &nbsp;   <input type="text" length="255" name="week1_desc" value="<?
 
        <?php
              }
+  
           }
 
        ?>
+
+
      </div>
 
 
@@ -294,7 +298,7 @@ Description &nbsp; <input type="text" length="255" name="week2_desc" value="<?ph
          }
           else {
 
-           if($row["meetingDays"] == "MWF"){
+           if($row["meetingDays"] == "MWF" || "Online" || "other"){
 
            ?><br>
 
@@ -365,7 +369,7 @@ Description &nbsp; <input type="text" length="255" name="week3_desc" value="<?ph
          }
           else {
 
-           if($row["meetingDays"] == "MWF"){
+           if($row["meetingDays"] == "MWF" || "Online" || "other"){
 
            ?><br>
 
@@ -413,7 +417,7 @@ Description  &nbsp; <input type="text" length="255" name="week3_desc" value="<?p
        <div class="circle">4</div>
 
        <?php 
-           if($row["meetingDays"] == "TTR"){
+           if($row["meetingDays"] == "TTR" || "other"){
            ?>
 
 Week of &nbsp; <input type="text" name="week4_of" value ="<?php echo $bar[week4_of]; ?>"> &nbsp; <br>
@@ -440,7 +444,7 @@ Description  &nbsp; <input type="text" length="255" name="week4_desc" value="<?p
          }
           else {
 
-           if($row["meetingDays"] == "MWF"){
+           if($row["meetingDays"] == "MWF" || "Online" || "other"){
 
           ?><br>
 
@@ -511,7 +515,7 @@ Description  &nbsp; <input type="text" length="255" name="week5_desc" value="<?p
          }
           else {
 
-           if($row["meetingDays"] == "MWF"){
+           if($row["meetingDays"] == "MWF" || "Online" || "other"){
 
            ?><br>
 
@@ -580,7 +584,7 @@ Description  &nbsp; <input type="text" length="255" name="week6_desc" value="<?p
          }
           else {
 
-           if($row["meetingDays"] == "MWF"){
+           if($row["meetingDays"] == "MWF" || "Online" || "other"){
 
            ?><br>
 
@@ -649,7 +653,7 @@ Description &nbsp; <input type="text" length="255" name="week7_desc" value="<?ph
          }
           else {
 
-           if($row["meetingDays"] == "MWF"){
+           if($row["meetingDays"] == "MWF" || "Online" || "other"){
 
            ?><br>
 
@@ -718,7 +722,7 @@ Description  &nbsp; <input type="text" length="255" name="week8_desc" value="<?p
          }
           else {
 
-           if($row["meetingDays"] == "MWF"){
+           if($row["meetingDays"] == "MWF" || "Online" || "other"){
 
            ?><br>
 
@@ -764,7 +768,7 @@ Description  &nbsp; <input type="text" length="255" name="week8_desc" value="<?p
 
        <?php 
 
-           if($row["meetingDays"] == "TTR"){
+           if($row["meetingDays"] == "TTR" || "Online" || "other"){
            ?>
 
 Week of &nbsp; <input type="text" name="week9_of" value ="<?php echo $bar[week9_of]; ?>"> &nbsp; <br>
@@ -790,7 +794,7 @@ Description   &nbsp; <input type="text" length="255" name="week9_desc" value="<?
          }
           else {
 
-           if($row["meetingDays"] == "MWF"){
+           if($row["meetingDays"] == "MWF" || "Online" || "other"){
 
            ?><br>
 
@@ -860,7 +864,7 @@ Description   &nbsp; <input type="text" length="255" name="week10_desc" value="<
          }
           else {
 
-           if($row["meetingDays"] == "MWF"){
+           if($row["meetingDays"] == "MWF" || "Online" || "other"){
 
            ?><br>
 
@@ -928,7 +932,7 @@ Description   &nbsp; <input type="text" length="255" name="week11_desc" value="<
          }
           else {
 
-           if($row["meetingDays"] == "MWF"){
+           if($row["meetingDays"] == "MWF" || "Online" || "other"){
 
            ?><br>
 
@@ -997,7 +1001,7 @@ Description   &nbsp; <input type="text" length="255" name="week12_desc" value="<
          }
           else {
 
-           if($row["meetingDays"] == "MWF"){
+           if($row["meetingDays"] == "MWF" || "Online" || "other"){
 
            ?><br>
 
@@ -1068,7 +1072,7 @@ Description   &nbsp; <input type="text" length="255" name="week13_desc" value="<
          }
           else {
 
-           if($row["meetingDays"] == "MWF"){
+           if($row["meetingDays"] == "MWF" || "Online" || "other"){
 
            ?><br>
 
@@ -1138,7 +1142,7 @@ Description   &nbsp; <input type="text" length="255" name="week14_desc" value="<
          }
           else {
 
-           if($row["meetingDays"] == "MWF"){
+           if($row["meetingDays"] == "MWF" || "Online" || "other"){
 
            ?><br>
 
@@ -1206,7 +1210,7 @@ Description   &nbsp; <input type="text" length="255" name="week15_desc" value="<
          }
           else {
 
-           if($row["meetingDays"] == "MWF"){
+           if($row["meetingDays"] == "MWF" || "Online" || "other"){
 
            ?><br>
 
@@ -1351,7 +1355,7 @@ if($result->num_rows > 0) {
 </div> <!-- boxes div -->
 
 <?php   
-} // end if course info
+}// end if course info
 else { 
  echo "no results meeting days";
 }

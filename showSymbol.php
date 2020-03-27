@@ -90,7 +90,7 @@ $bar[symbol2_week1]= '<img src="images/circle.png"  width="30px" height="30px"/>
 
 if ($bar[symbol2_week1] == "Kite"){
 
-$bar[symbol1_week1]= '<img src="images/Kite.png"  width="30px" height="30px"/>';
+$bar[symbol2_week1]= '<img src="images/Kite.png"  width="30px" height="30px"/>';
 
 ; }
 
