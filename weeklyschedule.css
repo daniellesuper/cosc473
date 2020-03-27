@@ -76,7 +76,7 @@ h1{
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 190px;
+  height: 230px;
   padding: 5px;
 }
 #printButton{
@@ -86,7 +86,7 @@ h1{
 }
 .box{
     width: 200px;
-    height: 130px;
+    height: 230px;
     background-color: lightgrey;
     border: solid 1px black;
     position: relative;
@@ -129,9 +129,6 @@ h1{
   right: 0;
 }
 
-.symbolassignment{
- 
-}
 #symbols{
   width: 30%; 
   float:left;
