@@ -36,22 +36,22 @@ function showSymbols(){
 	global $row;
 	foreach($row as $symbol){ 
                    if ($symbol == "Star"){
-                     echo '<img src="images/star.jpeg"  width="30px" height="20px"/>'."<br>"."<br>";
+                     echo '<img src="images/star.jpeg"  width="30px" height="30px"/>'."<br>"."<br>";
                    } 
                    if ($symbol == "X"){
-                     echo '<img src="images/x.jpeg"  width="30px" height="10px"/>'."<br>"."<br>";
+                     echo '<img src="images/x.jpeg"  width="30px" height="30px"/>'."<br>"."<br>";
                    }
                    if ($symbol == "CheckMark"){
                      echo '<img src="images/checkmark.jpeg"  width="30px" height="20px"/>'."<br>"."<br>";
                    }
                    if ($symbol == "Exclamationpoint"){
-                     echo '<img src="images/exclamation1.png"  width="40px" height="40px"/>'."<br>"."<br>";
+                     echo '<img src="images/exclamation1.png"  width="30px" height="30px"/>'."<br>"."<br>";
                    }
                    if ($symbol == "Circle"){
-                     echo '<img src="images/circle.png"  width="30px" height="20px"/>'."<br>"."<br>";
+                     echo '<img src="images/circle.png"  width="30px" height="30px"/>'."<br>"."<br>";
                    }
                    if ($symbol == "Kite"){
-                     echo '<img src="images/Kite.png"  width="30px" height="20px"/>'."<br>"."<br>";
+                     echo '<img src="images/Kite.png"  width="30px" height="30px"/>'."<br>"."<br>";
                    }
                    if ($symbol == "Square"){
                      echo '<img src="images/Square.jpeg"  width="20px" height="20px"/>'."<br>"."<br>";
@@ -60,10 +60,10 @@ function showSymbols(){
                      echo '<img src="images/Rectangle.png"  width="40px" height="20px"/>'."<br>"."<br>";
                    }
                    if ($symbol == "Trefoil"){
-                     echo '<img src="images/Trefoil.png"  width="30px" height="20px"/>'."<br>"."<br>";
+                     echo '<img src="images/Trefoil.png"  width="30px" height="30px"/>'."<br>"."<br>";
                    }
                    if ($symbol == "Heart"){
-                     echo '<img src="images/Heart.png"  width="30px" height="20px"/>'."<br>";
+                     echo '<img src="images/Heart.png"  width="30px" height="30px"/>'."<br>";
                    } // last if bracket
 			 } // foreach bracket
 	}// function bracket
@@ -112,13 +112,13 @@ if($result3->num_rows > 0){
 /*
 if ($bar[symbol1_week1] == "Star"){
 
-$bar[symbol1_week1]= '<img src="images/star.jpeg"  width="30px" height="20px"/>';
+$bar[symbol1_week1]= '<img src="images/star.jpeg"  width="30px" height="30px"/>';
 
 ; }
 
 if ($bar[symbol1_week1] == "X"){
 
-$bar[symbol1_week1]= '<img src="images/x.jpeg"  width="30px" height="10px"/>';
+$bar[symbol1_week1]= '<img src="images/x.jpeg"  width="30px" height="30px"/>';
 
 ; }
 
@@ -130,20 +130,20 @@ $bar[symbol1_week1]= '<img src="images/checkmark.jpeg"  width="30px" height="20p
 
 if ($bar[symbol1_week1] == "Exclamationpoint"){
 
-$bar[symbol1_week1]= '<img src="images/exclamation1.png"  width="40px" height="40px"/>';
+$bar[symbol1_week1]= '<img src="images/exclamation1.png"  width="30px" height="30px"/>';
 
 ; }
 
 if ($bar[symbol1_week1] == "Circle"){
 
-$bar[symbol1_week1]= '<img src="images/circle.png"  width="30px" height="20px"/>';
+$bar[symbol1_week1]= '<img src="images/circle.png"  width="30px" height="30px"/>';
 
 ; }
 
 // symbol2 //
 if ($bar[symbol2_week1] == "Star"){
 
-$bar[symbol2_week1]= '<img src="images/star.jpeg"  width="30px" height="20px"/>';
+$bar[symbol2_week1]= '<img src="images/star.jpeg"  width="30px" height="30px"/>';
 
 ; }
 */
