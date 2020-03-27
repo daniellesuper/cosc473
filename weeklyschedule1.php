@@ -174,7 +174,7 @@ if($result1->num_rows > 0) {
 <form action="insert_weekly_info.php" form="get" style="padding-left: 25px;">
 
 <div class="breakheader">
-Break:  &nbsp; <select name="holiday_name">
+Break:  &nbsp; <select name="holiday_name" value="<?php echo $bar[holiday]; ?>">
        <option value="">Select</option>
        <option value="Thanksgiving">Thanksgiving</option> 
        <option value="Spring">Spring</option>
