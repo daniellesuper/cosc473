@@ -16,8 +16,8 @@ die("Username and Password Invaid!". $conn->connect_error);
 }  
 
 $sql =" SELECT     
-topicname1, topicname2, topicname3, topicname4, topicname5, topicname6, topicname7, 
-pointvalue1, pointvalue2, pointvalue3, pointvalue4, pointvalue5, pointvalue6, pointvalue7,
+topicname1, topicname2, topicname3, topicname4, topicname5, topicname6, topicname7, topicname8, topicname9, topicname10
+pointvalue1, pointvalue2, pointvalue3, pointvalue4, pointvalue5, pointvalue6, pointvalue7, pointvalue8, pointvalue9, pointvalue10,
 bookname, bookisbn, bookauthor, bookpicture, bookpicture, img_mime, important_points FROM courseinfo where PKID = $courseID   ";
 
 $result = $conn->query($sql);
@@ -42,6 +42,9 @@ $topicname4 = $row['topicname4'];
 $topicname5 = $row['topicname5'];
 $topicname6 = $row['topicname6'];
 $topicname7 = $row['topicname7'];
+$topicname8 = $row['topicname8'];
+$topicname9 = $row['topicname9'];
+$topicname10 = $row['topicname10'];
 $pointvalue1 = $row['pointvalue1'];
 $pointvalue2 = $row['pointvalue2'];
 $pointvalue3 = $row['pointvalue3'];
@@ -49,6 +52,9 @@ $pointvalue4 = $row['pointvalue4'];
 $pointvalue5 = $row['pointvalue5'];
 $pointvalue6 = $row['pointvalue6'];
 $pointvalue7 = $row['pointvalue7'];
+$pointvalue8 = $row['pointvalue8'];
+$pointvalue9 = $row['pointvalue9'];
+$pointvalue10 = $row['pointvalue10'];
 $important_points = $row['important_points'];
 $meetingDays = $row['meetingDays'];
 
@@ -121,7 +127,7 @@ Class Days &nbsp <select name="meetingDays">
 				<option value="other"> other </option>
 				<!-- Code for other option when clicked text box appears -->
 			</select><br><br>
-Important Points:<br><br>
+Important Points: e.g. Pentaly for late work, Attendance policy<br><br>
 <textarea name="importantpoints" style="width: 25%;">
 </textarea><br>
 <script>CKEDITOR.replace('importantpoints'); CKEDITOR.config.width = '50%';</script>
@@ -164,6 +170,18 @@ Weight: &nbsp; <input type="text" length="25" name="weight6" value="0"> <br>
 <p id="grade7">
 Name: <input type="text" length="25" name="gradeName7"> &nbsp; 
 Weight: &nbsp; <input type="text" length="25" name="weight7" value="0"> <br>
+</p>
+<p id="grade8">
+Name: <input type="text" length="25" name="gradeName8"> &nbsp; 
+Weight: &nbsp; <input type="text" length="25" name="weight8" value="0"> <br>
+</p>
+<p id="grade9">
+Name: <input type="text" length="25" name="gradeName9"> &nbsp; 
+Weight: &nbsp; <input type="text" length="25" name="weight9" value="0"> <br>
+</p>
+<p id="grade10">
+Name: <input type="text" length="25" name="gradeName10"> &nbsp; 
+Weight: &nbsp; <input type="text" length="25" name="weight10" value="0"> <br>
 </p>
 
 Course symbol & Name: <br><br><!-- make dropdown -->

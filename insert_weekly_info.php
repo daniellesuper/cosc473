@@ -13,11 +13,14 @@ die("Connection Failed". $conn->connect_error);
 $FKPROFID = $_SESSION['FKPROFID'];
 
 $courseID = htmlentities($_REQUEST['courseID'],ENT_QUOTES);
-$holiday_name=htmlentities($_REQUEST['holiday_name'],ENT_QUOTES);
+$holiday_name = htmlentities($_REQUEST['holiday_name'],ENT_QUOTES);
 
-$enddate=htmlentities($_REQUEST['enddate'],ENT_QUOTES);
-$startdate1=htmlentities($_REQUEST['startdate1'],ENT_QUOTES); 
+$enddate = htmlentities($_REQUEST['enddate'],ENT_QUOTES);
+$startdate1 = htmlentities($_REQUEST['startdate1'],ENT_QUOTES); 
 
+$custombreakname = htmlentities($_REQUEST['custombreakname'],ENT_QUOTES);
+$customstartdate = htmlentities($_REQUEST['customstartdate'],ENT_QUOTES);
+$customenddate = htmlentities($_REQUEST['customenddate'],ENT_QUOTES);
 
 
 $weekofheading1 = htmlentities($_REQUEST['weekofheading1'],ENT_QUOTES);
@@ -147,7 +150,7 @@ $symbol_field5 = htmlentities($_REQUEST['symbol_field5'],ENT_QUOTES);
 
   $sql= "INSERT INTO weeklyinfo
                       (
-                       fkcourseid,fkprofid,holiday, startdate, enddate,";
+                       fkcourseid,fkprofid,holiday, startdate, enddate, custombreakname, customstartdate, customenddate,";
 
   $sql_week1="week1_desc, week1_of, symbol1_week1, symbol2_week1, symbol3_week1,";
 
@@ -183,7 +186,8 @@ $symbol_field5 = htmlentities($_REQUEST['symbol_field5'],ENT_QUOTES);
 
  	$sql_values = "values
                      (
-                      $courseID, $FKPROFID , '$holiday_name', '$startdate1', '$enddate',
+                      $courseID, $FKPROFID , '$holiday_name', '$startdate1', '$enddate', '$custombreakname', '$customstartdate',
+                      '$customenddate',
                       '$week1_desc', '$week1_of', '$symbol1_week1', '$symbol2_week1', '$symbol3_week1',
                       '$week2_desc', '$week2_of', '$symbol1_week2', '$symbol2_week2', '$symbol3_week2',
                       '$week3_desc', '$week3_of', '$symbol1_week3', '$symbol2_week3', '$symbol3_week3',

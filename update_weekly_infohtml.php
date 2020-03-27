@@ -18,7 +18,7 @@ die("Username and Password Invaid!". $conn->connect_error);
 error_reporting(0);
 
 $sql =" Select     
-     holiday, month, startdate, enddate, weekofheading1, weekofheading2, weekofheading3, weekofheading4, weekofheading5, weekofheading6, weekofheading7, weekofheading8, weekofheading9, weekofheading10, weekofheading11, weekofheading12, weekofheading13, weekofheading14, weekofheading15, 
+     holiday, month, startdate, enddate, custombreakname, customstartdate, customenddate, weekofheading1, weekofheading2, weekofheading3, weekofheading4, weekofheading5, weekofheading6, weekofheading7, weekofheading8, weekofheading9, weekofheading10, weekofheading11, weekofheading12, weekofheading13, weekofheading14, weekofheading15, 
 	 subheading1, subheading2, subheading3, subheading4, subheading5, subheading6, subheading7, subheading8, subheading9, subheading10, subheading11, subheading12, subheading13, subheading14, subheading15, 
 	 week1assessment, week2assessment, week3assessment, week4assessment, week5assessment, week6assessment, week7assessment, week8assessment, week9assessment, week10assessment, week11assessment, week12assessment, week13assessment, week14assessment, week15assessment, fkprofid, fkcourseid 
 	 FROM weeklyinfo where fkcourseid= $courseID ";
@@ -40,6 +40,9 @@ $row=$result->fetch_array();
 $holiday =$row['holiday_name'];
 $startdate =$row['startdate'];
 $enddate =$row['enddate'];
+$custombreakname = $row['custombreakname'];
+$customstartdate = $row['customstartdate'];
+$customenddate = $row['customenddate'];
 $weekofheading1 = $row['weekofheading1'];
 $weekofheading2 = $row['weekofheading2'];
 $weekofheading3 = $row['weekofheading3'];
@@ -138,6 +141,10 @@ Break:	&nbsp <select name="holiday_name">
 		
 Date To: &nbsp <input type="date" name="startdate1" value ="<?php echo $startdate; ?>"> &nbsp;
 Date End: &nbsp <input type="date" name="enddate" value="<?php echo $enddate; ?>"> <br><br>
+
+Custom break: <input type="text" name="custombreakname" value ="<?php echo $bar[custombreakname]; ?>"> &nbsp;
+Date To: &nbsp; &nbsp;<input type="date" name="customstartdate" value ="<?php echo $bar[customstartdate]; ?>"> &nbsp;
+Date End: <input type="date" name="customenddate" value="<?php echo $bar[customenddate]; ?>"> <br><br>
 
 Week of &nbsp <input type="text" name="week1_of" value =""> &nbsp; <br><br>
 Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?php echo $subheading1; ?>" > &nbsp;

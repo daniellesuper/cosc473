@@ -24,8 +24,8 @@ $FKPROFID = $_SESSION['PKID'];
 
 $sql = "SELECT      
 coursecode, coursename, bookname, bookIsbn, bookAuthor, bookpicture, 
-topicname1, topicname2, topicname3, topicname4, topicname5, topicname6, topicname7,  
-pointvalue1, pointvalue2, pointvalue3, pointvalue4, pointvalue5, pointvalue6, pointvalue7,
+topicname1, topicname2, topicname3, topicname4, topicname5, topicname6, topicname7, topicname8, topicname9, topicname10,  
+pointvalue1, pointvalue2, pointvalue3, pointvalue4, pointvalue5, pointvalue6, pointvalue7, pointvalue8, pointvalue9, pointvalue10,
 importantpoints, meetingDays, img_mime, symbol1, symbol2, symbol3, symbol4, symbol5, symbol6, symbol7, symbol8, symbol9, symbol10, assign1, assign2, assign3, assign4, assign5, assign6, assign7, assign8, assign9, assign10 FROM courseinfo where PKID = $_GET[courseID]";
 
 //echo $sql; exit;
@@ -53,6 +53,9 @@ $topicname4 = $row['topicname4'];
 $topicname5 = $row['topicname5'];
 $topicname6 = $row['topicname6'];
 $topicname7 = $row['topicname7'];
+$topicname8 = $row['topicname8'];
+$topicname9 = $row['topicname9'];
+$topicname10 = $row['topicname10'];
 $pointvalue1 = $row['pointvalue1'];
 $pointvalue2 = $row['pointvalue2'];
 $pointvalue3 = $row['pointvalue3'];
@@ -60,6 +63,9 @@ $pointvalue4 = $row['pointvalue4'];
 $pointvalue5 = $row['pointvalue5'];
 $pointvalue6 = $row['pointvalue6'];
 $pointvalue7 = $row['pointvalue7'];
+$pointvalue8 = $row['pointvalue8'];
+$pointvalue9 = $row['pointvalue9'];
+$pointvalue10 = $row['pointvalue10'];
 $importantpoints = $row['importantpoints'];
 $meetingDays = $row['meetingDays'];
 $bookisbn = $row['bookisbn'];
@@ -125,8 +131,8 @@ $assign10 = $row['assign10'];
 
 $sql = "SELECT      
 coursecode, coursename, bookname, bookIsbn, bookAuthor, bookpicture, 
-topicname1, topicname2, topicname3, topicname4, topicname5, topicname6, topicname7,  
-pointvalue1, pointvalue2, pointvalue3, pointvalue4, pointvalue5, pointvalue6, pointvalue7,
+topicname1, topicname2, topicname3, topicname4, topicname5, topicname6, topicname7, topicname8, topicname9, topicname10,  
+pointvalue1, pointvalue2, pointvalue3, pointvalue4, pointvalue5, pointvalue6, pointvalue7, pointvalue8, pointvalue9, pointvalue10,
 importantpoints, meetingDays, img_mime, symbol1, symbol2, symbol3, symbol4, symbol5, symbol6, symbol7, symbol8, symbol9, symbol10, assign1, assign2, assign3, assign4, assign5, assign6, assign7, assign8, assign9, assign10 FROM courseinfo where PKID = $_GET[courseID]";
 
 
@@ -221,6 +227,18 @@ Weight: &nbsp; <input type="text" length="25" name="weight6" value="<?php echo $
 <p id="grade7">
 Name: <input type="text" length="25" name="gradeName7" value="<?php echo $bar[topicname7]; ?>"> &nbsp; 
 Weight: &nbsp; <input type="text" length="25" name="weight7" value="<?php echo $bar[pointvalue7]; ?>"> <br>
+</p><br>
+<p id="grade8">
+Name: <input type="text" length="25" name="gradeName8" value="<?php echo $bar[topicname8]; ?>"> &nbsp; 
+Weight: &nbsp; <input type="text" length="25" name="weight8" value="<?php echo $bar[pointvalue8]; ?>"> <br>
+</p><br>
+<p id="grade9">
+Name: <input type="text" length="25" name="gradeName9" value="<?php echo $bar[topicname9]; ?>"> &nbsp; 
+Weight: &nbsp; <input type="text" length="25" name="weight9" value="<?php echo $bar[pointvalue9]; ?>"> <br>
+</p><br>
+<p id="grade10">
+Name: <input type="text" length="25" name="gradeName10" value="<?php echo $bar[topicname10]; ?>"> &nbsp; 
+Weight: &nbsp; <input type="text" length="25" name="weight10" value="<?php echo $bar[pointvalue10]; ?>"> <br>
 </p><br>
 </div>
 
