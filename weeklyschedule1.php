@@ -254,10 +254,8 @@ Description &nbsp;   <input type="text" length="255" name="week1_desc" value="<?
 
        <?php
              }
-            
+  
            }
-        
-
        ?>
 
 
@@ -413,7 +411,7 @@ Description  &nbsp; <input type="text" length="255" name="week3_desc" value="<?p
        <div class="circle">4</div>
 
        <?php 
-           if($row["meetingDays"] == "TTR" || "other"){
+           if($row["meetingDays"] == "TTR"){
            ?>
 
 Week of &nbsp; <input type="text" name="week4_of" value ="<?php echo $bar[week4_of]; ?>"> &nbsp; <br>
@@ -764,7 +762,7 @@ Description  &nbsp; <input type="text" length="255" name="week8_desc" value="<?p
 
        <?php 
 
-           if($row["meetingDays"] == "TTR" || "Online" || "other"){
+           if($row["meetingDays"] == "TTR"){
            ?>
 
 Week of &nbsp; <input type="text" name="week9_of" value ="<?php echo $bar[week9_of]; ?>"> &nbsp; <br>
@@ -1356,6 +1354,7 @@ if($result->num_rows > 0) {
 else { 
  echo "no results meeting days";
 } 
+
 $conn->close();
 //echo "---------------------------------<hr>"; exit;
 ?> 
