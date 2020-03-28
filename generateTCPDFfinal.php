@@ -51,42 +51,6 @@ if($result5->num_rows > 0){
     $bar5 = $result5->fetch_assoc();
   } 
 
-function showSymbols(){
-	global $row;
-	foreach($row as $symbol){ 
-                   if ($symbol == "Star"){
-                     echo '<img src="images/star.jpeg"  width="30px" height="30px"/>'."<br>"."<br>";
-                   } 
-                   if ($symbol == "X"){
-                     echo '<img src="images/x.jpeg"  width="30px" height="30px"/>'."<br>"."<br>";
-                   }
-                   if ($symbol == "CheckMark"){
-                     echo '<img src="images/checkmark.jpeg"  width="30px" height="20px"/>'."<br>"."<br>";
-                   }
-                   if ($symbol == "Exclamationpoint"){
-                     echo '<img src="images/exclamation1.png"  width="30px" height="30px"/>'."<br>"."<br>";
-                   }
-                   if ($symbol == "Circle"){
-                     echo '<img src="images/circle.png"  width="30px" height="30px"/>'."<br>"."<br>";
-                   }
-                   if ($symbol == "Kite"){
-                     echo '<img src="images/Kite.png"  width="30px" height="30px"/>'."<br>"."<br>";
-                   }
-                   if ($symbol == "Square"){
-                     echo '<img src="images/Square.jpeg"  width="20px" height="20px"/>'."<br>"."<br>";
-                   }
-                   if ($symbol == "Rectangle"){
-                     echo '<img src="images/Rectangle.png"  width="40px" height="20px"/>'."<br>"."<br>";
-                   }
-                   if ($symbol == "Trefoil"){
-                     echo '<img src="images/Trefoil.png"  width="30px" height="30px"/>'."<br>"."<br>";
-                   }
-                   if ($symbol == "Heart"){
-                     echo '<img src="images/Heart.png"  width="30px" height="30px"/>'."<br>";
-                   } // last if bracket
-			 } // foreach bracket
-	}// function bracket
-
 //
 // syllabus formatting start
 //
@@ -109,6 +73,9 @@ $txt = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 // header box
 $header = $bar3["title"]." ".$bar3["fullname"]." ";
 $course = $bar4["coursecode"]."\n".$bar4["coursename"];
+
+//$pdf->SetXY(100, 205);
+//$pdf->Image('images/house.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 $officehours = "Mon: ".$bar3["monday"]."\n"."Tues: ".$bar3["tuesday"]."\n"."Wed: ".$bar3["wednesday"]."\n"."Thurs: ".$bar3["thursday"]."\n"."Fri: ".$bar3["friday"];
 
 $officeinfo = "Faculty office"."\n".$bar3["officeaddress"]."\n"."Contact Email"."\n".$bar3["email"]."\n"."Office Phone"."\n".$bar3["officephone"];
@@ -148,13 +115,64 @@ $pdf->PieSector($topicname1,$topicname2,$topicname3,$topicname4,$topicname5,$top
 $pdf->SetFillColor(50,50,255);
 $pdf->PieSector($topicname1,$topicname2,$topicname3,$topicname4,$topicname5,$topicname6,$topicname7,$topicname8,$topicname9,$topicname10, 250, 20, 'FD', false, 0, 2);
 
+// HOUSE IMAGE AT TOP RIGHT OF PAGE 1
+$pdf->SetXY(170, 10);
+$pdf->Image('images/house.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+//ENVELOPE IMAGE TO THE LEFT OF THE HOUSE IMAGE TOP RIGHT OF PAGE ON
+$pdf->SetXY(140, 10);
+$pdf->Image('images/email-logo.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+
 
 //grade breakdown
+
+// THIS IS THE BLUE SQUARE FOR ASSIGNMENT 2
+$pdf->SetXY(120, 205);
+$pdf->Image('images/rectangle1.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+// THIS IS THE REDISH BROWN IMAGEE FOR ASSIGNMENT 3
+$pdf->SetXY(120, 210);
+$pdf->Image('images/rectangle2.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+//THIS IS THE GREEN IMAGE FOR ASSIGNMENT 4
+$pdf->SetXY(120, 215);
+$pdf->Image('images/rectangle3.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+//THIS IS THE LIGHT GREEN IMAGE FOR ASSIGNMENT 5
+$pdf->SetXY(120, 220);
+$pdf->Image('images/rectangle4.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+//THIS IS THE PURPLE IMAGE FOR ASSIGNMENT 6
+$pdf->SetXY(120, 225);
+$pdf->Image('images/rectangle5.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+$pdf->SetXY(120, 230);
+$pdf->Image('images/rectangle6.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+//THIS IS THE GREEN IMAGE FOR ASSIGNMENT 7
+$pdf->SetXY(120, 235);
+$pdf->Image('images/rectangle7.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+// TAN IMAGE FOR ASSIGNMENT 8
+$pdf->SetXY(120, 240);
+$pdf->Image('images/rectangle8.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+//BLACK IMAGE FOR ASSIGNMENT 9
+$pdf->SetXY(120, 245);
+$pdf->Image('images/rectangle9.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+// PINK IMAGE FOR ASSIGNMENT 10
+$pdf->SetXY(120, 250);
+$pdf->Image('images/rectangle10.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
 $topicname = $row["topicname1"]."\n".$row["topicname2"]."\n".$row["topicname3"]."\n".$row["topicname4"]."\n".$row["topicname5"]."\n".
 				$row["topicname6"]."\n".$row["topicname7"]."\n".$row["topicname8"]."\n".$row["topicname9"]."\n".
 				$row["topicname1"];
 $pdf->SetFillColor(178, 178, 178);
 $pdf->MultiCell(100, 75, 'Grade Breakdown '."\n".$topicname, 0, 'L', 1, 0, '105', '200', true);
+
+// END OF GRADE BREAKDOWN
 
 //
 ///
