@@ -216,7 +216,7 @@ Description &nbsp; <input type="text" length="255" name="week1_desc" value="<?ph
  
          } 
 
-          else {
+          else { 
 
            if($row["meetingDays"] == "MWF" || "Online" || "other"){
 
@@ -254,8 +254,9 @@ Description &nbsp;   <input type="text" length="255" name="week1_desc" value="<?
 
        <?php
              }
-  
-          }
+            
+           }
+        
 
        ?>
 
@@ -1351,9 +1352,10 @@ if($result->num_rows > 0) {
 
 <?php   
 }// end if course info
+
 else { 
  echo "no results meeting days";
-}
+} 
 $conn->close();
 //echo "---------------------------------<hr>"; exit;
 ?> 
