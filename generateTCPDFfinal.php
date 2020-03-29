@@ -76,17 +76,27 @@ $course = $bar4["coursecode"]."\n".$bar4["coursename"];
 
 //$pdf->SetXY(100, 205);
 //$pdf->Image('images/house.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
-$officehours = "Mon: ".$bar3["monday"]."\n"."Tues: ".$bar3["tuesday"]."\n"."Wed: ".$bar3["wednesday"]."\n"."Thurs: ".$bar3["thursday"]."\n"."Fri: ".$bar3["friday"];
+$officehours = "Office Hours: "."\n"."Mon: ".$bar3["monday"]."\n"."Tues: ".$bar3["tuesday"]."\n"."Wed: ".$bar3["wednesday"]."\n"."Thurs: ".$bar3["thursday"]."\n"."Fri: ".$bar3["friday"];
 
 $officeinfo = "Faculty office"."\n".$bar3["officeaddress"]."\n"."Contact Email"."\n".$bar3["email"]."\n"."Office Phone"."\n".$bar3["officephone"];
 
 $pdf->SetFillColor(178, 178, 178);
-$pdf->MultiCell(200, 70, 'Header '."\n".$header."\n".$course."\n".$officeinfo."\n".$officehours, 0, 'C', 1, 1, '', '', true);
+$pdf->MultiCell(200, 70, 'Header '."\n".$header."\n".$course, 0, 'C', 1, 1, '', '', true);
+// X was 200,70
+
+// WHITE BOX FOR THE OFFICE INFO WITH DATA INCLUDED
+$pdf->SetFillColor(255, 255, 255);
+$pdf->MultiCell(35, 30,$officeinfo, 0, 'C', 1, 2, 125, 17, true,0, false, true, 40, 'B');
+
+
+// WHITE BOX FOR THE OFFICE HOURS WITH DATA
+$pdf->SetFillColor(255, 255, 255);
+$pdf->MultiCell(35, 30,$officehours, 0, 'C', 1, 2, 165, 17, true,0, false, true, 40, 'B');
 
 // book info
 $bookinfo = $bar5["bookname"]."\n".$bar5["bookAuthor"]."\n".$bar5["bookisbn"];
 $pdf->SetFillColor(230, 230, 230);
-$pdf->MultiCell(100, 55, 'Book Info '."\n".$bookinfo, 0, 'C', 1, 0, '', '', true);
+$pdf->MultiCell(100, 55, 'Book Info '."\n".$bookinfo, 0, 'C', 1, 0, 5, 85, true);
 
 // THIS IS THE BANNER 
 $pdf->SetXY(105, 84);
@@ -124,11 +134,11 @@ $pdf->SetFillColor(50,50,255);
 $pdf->PieSector($topicname1,$topicname2,$topicname3,$topicname4,$topicname5,$topicname6,$topicname7,$topicname8,$topicname9,$topicname10, 250, 20, 'FD', false, 0, 2);
 
 // HOUSE IMAGE AT TOP RIGHT OF PAGE 1
-$pdf->SetXY(170, 10);
+$pdf->SetXY(177, 10);
 $pdf->Image('images/house.png', '', '', 10, 10, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 //ENVELOPE IMAGE TO THE LEFT OF THE HOUSE IMAGE TOP RIGHT OF PAGE ON
-$pdf->SetXY(140, 10);
+$pdf->SetXY(137, 10);
 $pdf->Image('images/email-logo.png', '', '', 10, 10, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 // THIS IS THE BANNER FOR GRADES
