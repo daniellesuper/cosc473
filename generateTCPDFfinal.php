@@ -88,9 +88,17 @@ $bookinfo = $bar5["bookname"]."\n".$bar5["bookAuthor"]."\n".$bar5["bookisbn"];
 $pdf->SetFillColor(230, 230, 230);
 $pdf->MultiCell(100, 55, 'Book Info '."\n".$bookinfo, 0, 'C', 1, 0, '', '', true);
 
+// THIS IS THE BANNER 
+$pdf->SetXY(105, 84);
+$pdf->Image('images/importantpoints.png', '', '', 100, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+//THIS IS THE WORDS ON TOP OF THE BANNER
+$pdf->SetXY(140, 85);
+$pdf->Image('images/importantwords.png', '', '', 33, 13, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
 // imp points
 $importantpoints = $bar5["importantpoints"];
-$pdf->MultiCell(100, 125, 'Important Points '."\n".$importantpoints, 0, 'C', 0, 1, '' ,'', true);
+$pdf->MultiCell(15, 110, $importantpoints, 0, 'C', 0, 1, '' ,'', true);
 
 // pie chart
 
@@ -117,12 +125,23 @@ $pdf->PieSector($topicname1,$topicname2,$topicname3,$topicname4,$topicname5,$top
 
 // HOUSE IMAGE AT TOP RIGHT OF PAGE 1
 $pdf->SetXY(170, 10);
-$pdf->Image('images/house.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->Image('images/house.png', '', '', 10, 10, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 //ENVELOPE IMAGE TO THE LEFT OF THE HOUSE IMAGE TOP RIGHT OF PAGE ON
 $pdf->SetXY(140, 10);
-$pdf->Image('images/email-logo.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->Image('images/email-logo.png', '', '', 10, 10, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
+// THIS IS THE BANNER FOR GRADES
+$pdf->SetXY(10, 130);
+$pdf->Image('images/grades.png', '', '', 90, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+// THIS IS THE SCHREENSHOT OF "GRADE" PUT ON TOP OF THE BANNER IMAGE
+$pdf->SetXY(40, 130);
+$pdf->Image('images/grade1.png', '', '', 30, 10, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+//IMPORTANT POINTS IMAGE 
+//$pdf->SetXY(105, 84);
+//$pdf->Image('images/importantpoints.png', '', '', 100, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 
 //grade breakdown
