@@ -96,19 +96,28 @@ $pdf->MultiCell(35, 30,$officehours, 0, 'C', 1, 2, 165, 17, true,0, false, true,
 // book info
 $bookinfo = $bar5["bookname"]."\n".$bar5["bookAuthor"]."\n".$bar5["bookisbn"];
 $pdf->SetFillColor(230, 230, 230);
-$pdf->MultiCell(100, 55, 'Book Info '."\n".$bookinfo, 0, 'C', 1, 0, 5, 85, true);
+$pdf->MultiCell(100, 55, 'Book Info '."\n".$bookinfo, 0, 'C', 1, 0, 5, 77, true,0, false, true, 40, 'B');
 
-// THIS IS THE BANNER 
-$pdf->SetXY(105, 84);
+// THIS IS THE WORDING IN THE IMPORTANT POINT SECTION
+$pdf->SetXY(105, 77);
 $pdf->Image('images/importantpoints.png', '', '', 100, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
+
+// THIS THE PENCIL IMAGE IN THE BOOK INFO SECTION
+$pdf->SetXY(77, 80);
+$pdf->Image('images/pencil.png', '', '', 20, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+// THIS IS THE BOOK IMAGE IN THE BOOK SECTION
+$pdf->SetXY(7, 105);
+$pdf->Image('images/book.png', '', '', 20, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
 //THIS IS THE WORDS ON TOP OF THE BANNER
-$pdf->SetXY(140, 85);
+$pdf->SetXY(140, 78);
 $pdf->Image('images/importantwords.png', '', '', 33, 13, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 // imp points
 $importantpoints = $bar5["importantpoints"];
-$pdf->MultiCell(15, 110, $importantpoints, 0, 'C', 0, 1, '' ,'', true);
+$pdf->MultiCell(15, 110, $importantpoints, 0, 'C', 0, 1, 130 ,100, true);
 
 // pie chart
 
