@@ -81,7 +81,7 @@ $officehours = "Office Hours: "."\n"."Mon: ".$bar3["monday"]."\n"."Tues: ".$bar3
 $officeinfo = "Faculty office"."\n".$bar3["officeaddress"]."\n"."Contact Email"."\n".$bar3["email"]."\n"."Office Phone"."\n".$bar3["officephone"];
 
 $pdf->SetFillColor(178, 178, 178);
-$pdf->MultiCell(200, 70, $text, 0, 'C', 1, 1, '', '', true);
+$pdf->MultiCell(200, 60, $text, 0, 'C', 1, 1, '', '', true);
 
 // course info in the bottom banner
 //$pdf->SetFillColor(178, 0, 178);
@@ -99,11 +99,17 @@ $pdf->MultiCell(35, 30,$officehours, 0, 'C', 1, 2, 165, 17, true,0, false, true,
 // book info
 $bookinfo = $bar5["bookname"]."\n".$bar5["bookAuthor"]."\n".$bar5["bookisbn"];
 $pdf->SetFillColor(230, 230, 230);
-$pdf->MultiCell(100, 55, 'Book Info '."\n".$bookinfo, 0, 'C', 1, 0, 5, 77, true,0, false, true, 40, 'B');
+$pdf->MultiCell(100, 61, 'Book Info '."\n".$bookinfo, 0, 'C', 1, 0, 5, 67, true,0, false, true, 40, 'B');
 
+//
 // THIS IS THE LEFT PART OF BANNER IN TOP LEFT OF PDF
 $pdf->SetXY(5, 10);
 $pdf->Image('images/bannerleft.png', '', '', 70, 15, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+// THIS IS THE TEXT ON THE TOP BANNER FOR PROF INFO
+$pdf->SetFont('helvetica','C',12);
+$pdf->MultiCell(55, 10,$titlename, 0, 'C', 0, 2, 15, 13, true,0, false, true, 40, 'C');
+//
 
 // THIS IS THE MIDDLE PART OF THE BANNER
 $pdf->SetXY(25, 23);
@@ -121,25 +127,24 @@ $pdf->MultiCell(55, 10,$course, 0, 'C', 0, 2, 30, 37, true,0, false, true, 40, '
 
 
 // THIS IS THE WORDING IN THE IMPORTANT POINT SECTION
-$pdf->SetXY(105, 77);
+$pdf->SetXY(105, 67);
 $pdf->Image('images/importantpoints.png', '', '', 100, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
+//THIS IS THE WORDS ON TOP OF THE BANNER
+$pdf->SetXY(140, 68);
+$pdf->Image('images/importantwords.png', '', '', 33, 13, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 // THIS THE PENCIL IMAGE IN THE BOOK INFO SECTION
-$pdf->SetXY(77, 80);
+$pdf->SetXY(77, 77);
 $pdf->Image('images/pencil.png', '', '', 20, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 // THIS IS THE BOOK IMAGE IN THE BOOK SECTION
 $pdf->SetXY(7, 105);
 $pdf->Image('images/book.png', '', '', 20, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
-//THIS IS THE WORDS ON TOP OF THE BANNER
-$pdf->SetXY(140, 78);
-$pdf->Image('images/importantwords.png', '', '', 33, 13, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
-
 // imp points
 $importantpoints = $bar5["importantpoints"];
-$pdf->MultiCell(15, 110, $importantpoints, 0, 'C', 0, 1, 130 ,100, true);
+$pdf->MultiCell(90, 111, $importantpoints, 0, 'C', 0, 1, 110 ,85, true);
 
 // pie chart
 
@@ -169,7 +174,7 @@ $pdf->SetXY(177, 10);
 $pdf->Image('images/house.png', '', '', 10, 10, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 //ENVELOPE IMAGE TO THE LEFT OF THE HOUSE IMAGE TOP RIGHT OF PAGE ON
-$pdf->SetXY(137, 10);
+$pdf->SetXY(137, 11);
 $pdf->Image('images/email-logo.png', '', '', 10, 10, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 // THIS IS THE BANNER FOR GRADES
@@ -189,48 +194,48 @@ $pdf->Image('images/grade1.png', '', '', 30, 10, '', '', 'T', false, 300, '', fa
 
 // THIS IS THE BLUE SQUARE FOR ASSIGNMENT 2
 $pdf->SetXY(120, 205);
-$pdf->Image('images/rectangle1.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->Image('images/rectangle1.png', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 // THIS IS THE REDISH BROWN IMAGEE FOR ASSIGNMENT 3
 $pdf->SetXY(120, 210);
-$pdf->Image('images/rectangle2.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->Image('images/rectangle2.png', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 //THIS IS THE GREEN IMAGE FOR ASSIGNMENT 4
 $pdf->SetXY(120, 215);
-$pdf->Image('images/rectangle3.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->Image('images/rectangle3.png', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 //THIS IS THE LIGHT GREEN IMAGE FOR ASSIGNMENT 5
 $pdf->SetXY(120, 220);
-$pdf->Image('images/rectangle4.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->Image('images/rectangle4.png', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 //THIS IS THE PURPLE IMAGE FOR ASSIGNMENT 6
 $pdf->SetXY(120, 225);
-$pdf->Image('images/rectangle5.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->Image('images/rectangle5.png', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 $pdf->SetXY(120, 230);
-$pdf->Image('images/rectangle6.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->Image('images/rectangle6.png', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 //THIS IS THE GREEN IMAGE FOR ASSIGNMENT 7
 $pdf->SetXY(120, 235);
-$pdf->Image('images/rectangle7.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->Image('images/rectangle7.png', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 // TAN IMAGE FOR ASSIGNMENT 8
 $pdf->SetXY(120, 240);
-$pdf->Image('images/rectangle8.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->Image('images/rectangle8.png', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 //BLACK IMAGE FOR ASSIGNMENT 9
 $pdf->SetXY(120, 245);
-$pdf->Image('images/rectangle9.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->Image('images/rectangle9.png', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 // PINK IMAGE FOR ASSIGNMENT 10
 $pdf->SetXY(120, 250);
-$pdf->Image('images/rectangle10.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->Image('images/rectangle10.png', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 $topicname = $row["topicname1"]."\n".$row["topicname2"]."\n".$row["topicname3"]."\n".$row["topicname4"]."\n".$row["topicname5"]."\n".
 				$row["topicname6"]."\n".$row["topicname7"]."\n".$row["topicname8"]."\n".$row["topicname9"]."\n".
-				$row["topicname1"];
+				$row["topicname10"];
 $pdf->SetFillColor(178, 178, 178);
-$pdf->MultiCell(100, 75, 'Grade Breakdown '."\n".$topicname, 0, 'L', 1, 0, '105', '200', true);
+$pdf->MultiCell(100, 75, 'Grade Breakdown '."\n".$topicname, 0, 'C', 1, 0, 105, 200, true);
 
 // END OF GRADE BREAKDOWN
 
@@ -525,16 +530,16 @@ td {
 		</td>
 		<td>
 			<h1>Key</h1><br>
-			<p>'.$row[symbol1]." = ".$row[assign1].'</p>
-			<p>'.$row[symbol2]." = ".$row[assign2].'</p>
-			<p>'.$row[symbol3]." = ".$row[assign3].'</p>
-			<p>'.$row[symbol4]." = ".$row[assign4].'</p>
-			<p>'.$row[symbol5]." = ".$row[assign5].'</p>
-			<p>'.$row[symbol6]." = ".$row[assign6].'</p>
-			<p>'.$row[symbol7]." = ".$row[assign7].'</p>
-			<p>'.$row[symbol8]." = ".$row[assign8].'</p>
-			<p>'.$row[symbol9]." = ".$row[assign9].'</p>
-			<p>'.$row[symbol10]." = ".$row[assign10].'</p>
+			<p>'.$row[symbol1]." ".$row[assign1].'</p>
+			<p>'.$row[symbol2]." ".$row[assign2].'</p>
+			<p>'.$row[symbol3]." ".$row[assign3].'</p>
+			<p>'.$row[symbol4]." ".$row[assign4].'</p>
+			<p>'.$row[symbol5]." ".$row[assign5].'</p>
+			<p>'.$row[symbol6]." ".$row[assign6].'</p>
+			<p>'.$row[symbol7]." ".$row[assign7].'</p>
+			<p>'.$row[symbol8]." ".$row[assign8].'</p>
+			<p>'.$row[symbol9]." ".$row[assign9].'</p>
+			<p>'.$row[symbol10]." ".$row[assign10].'</p>
 		</td>
 	</tr>
 </table>
@@ -840,16 +845,16 @@ td {
 		</td>
 		<td>
 			<h1>Key</h1><br>
-			<p>'.$row[symbol1]." = ".$row[assign1].'</p>
-			<p>'.$row[symbol2]." = ".$row[assign2].'</p>
-			<p>'.$row[symbol3]." = ".$row[assign3].'</p>
-			<p>'.$row[symbol4]." = ".$row[assign4].'</p>
-			<p>'.$row[symbol5]." = ".$row[assign5].'</p>
-			<p>'.$row[symbol6]." = ".$row[assign6].'</p>
-			<p>'.$row[symbol7]." = ".$row[assign7].'</p>
-			<p>'.$row[symbol8]." = ".$row[assign8].'</p>
-			<p>'.$row[symbol9]." = ".$row[assign9].'</p>
-			<p>'.$row[symbol10]." = ".$row[assign10].'</p>
+			<p>'.$row[symbol1]."  ".$row[assign1].'</p>
+			<p>'.$row[symbol2]."  ".$row[assign2].'</p>
+			<p>'.$row[symbol3]."  ".$row[assign3].'</p>
+			<p>'.$row[symbol4]."  ".$row[assign4].'</p>
+			<p>'.$row[symbol5]."  ".$row[assign5].'</p>
+			<p>'.$row[symbol6]."  ".$row[assign6].'</p>
+			<p>'.$row[symbol7]."  ".$row[assign7].'</p>
+			<p>'.$row[symbol8]."  ".$row[assign8].'</p>
+			<p>'.$row[symbol9]."  ".$row[assign9].'</p>
+			<p>'.$row[symbol10]."  ".$row[assign10].'</p>
 		</td>
 	</tr>
 </table>
