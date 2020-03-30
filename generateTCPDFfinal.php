@@ -121,7 +121,7 @@ $pdf->SetXY(25, 35);
 $pdf->Image('images/bannerright.png', '', '', 70, 15, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 // TEXT IN THE BOTTOM BANNER FOR COURSE INFO
-$pdf->MultiCell(55, 10,$course, 0, 'L', 0, 2, 30, 37, true,0, false, true, 40, 'C');
+$pdf->MultiCell(75, 10,$course, 0, 'L', 0, 2, 30, 37, true,0, false, true, 40, 'C');
 //
 //
 
@@ -143,8 +143,17 @@ $pdf->SetXY(7, 105);
 $pdf->Image('images/book.png', '', '', 20, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 // imp points
+
 $importantpoints = $bar5["importantpoints"];
+$importantpoints = html_entity_decode($importantpoints);
 $pdf->MultiCell(90, 111, $importantpoints, 0, 'C', 0, 1, 110 ,85, true);
+
+/*
+		$imp_points = $row["importantpoints"];
+
+		$imp_points = html_entity_decode($imp_points);
+		echo"$imp_points";
+*/
 
 // pie chart
 
