@@ -121,7 +121,7 @@ $pdf->SetXY(25, 35);
 $pdf->Image('images/bannerright.png', '', '', 70, 15, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 // TEXT IN THE BOTTOM BANNER FOR COURSE INFO
-$pdf->MultiCell(55, 10,$course, 0, 'C', 0, 2, 30, 37, true,0, false, true, 40, 'C');
+$pdf->MultiCell(55, 10,$course, 0, 'L', 0, 2, 30, 37, true,0, false, true, 40, 'C');
 //
 //
 
