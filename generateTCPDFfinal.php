@@ -69,6 +69,7 @@ $pdf->AddPage();
 $txt = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 
 // MultiCell($w, $h, $txt, $border=0, $align='J', $fill=0, $ln=1, $x='', $y='', $reseth=true, $stretch=0, $ishtml=false, $autopadding=true, $maxh=0)
+
 $text = '';
 // header box
 $titlename = $bar3["title"]." ".$bar3["fullname"]." ";
@@ -189,7 +190,6 @@ $pdf->Image('images/grade1.png', '', '', 30, 10, '', '', 'T', false, 300, '', fa
 //$pdf->SetXY(105, 84);
 //$pdf->Image('images/importantpoints.png', '', '', 100, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
-
 //grade breakdown
 
 // THIS IS THE BLUE SQUARE FOR ASSIGNMENT 2
@@ -239,17 +239,8 @@ $pdf->MultiCell(100, 75, 'Grade Breakdown '."\n".$topicname, 0, 'C', 1, 0, 105, 
 
 // END OF GRADE BREAKDOWN
 
-//
-///
-//
-//
-//
-//
-
 // END OF PAGE 1 OF PDF
-//
-//
-//
+
 // add 2nd page
 $pdf->AddPage();
 //$pdf->writeHTML($html, true,false,true,false,'');
@@ -845,16 +836,16 @@ td {
 		</td>
 		<td>
 			<h1>Key</h1><br>
-			<p>'.$row[symbol1]."  ".$row[assign1].'</p>
-			<p>'.$row[symbol2]."  ".$row[assign2].'</p>
-			<p>'.$row[symbol3]."  ".$row[assign3].'</p>
-			<p>'.$row[symbol4]."  ".$row[assign4].'</p>
-			<p>'.$row[symbol5]."  ".$row[assign5].'</p>
-			<p>'.$row[symbol6]."  ".$row[assign6].'</p>
-			<p>'.$row[symbol7]."  ".$row[assign7].'</p>
-			<p>'.$row[symbol8]."  ".$row[assign8].'</p>
-			<p>'.$row[symbol9]."  ".$row[assign9].'</p>
-			<p>'.$row[symbol10]."  ".$row[assign10].'</p>
+			<p>'.$row[symbol1]."".$row[assign1].'</p>
+			<p>'.$row[symbol2]."".$row[assign2].'</p>
+			<p>'.$row[symbol3]."".$row[assign3].'</p>
+			<p>'.$row[symbol4]."".$row[assign4].'</p>
+			<p>'.$row[symbol5]."".$row[assign5].'</p>
+			<p>'.$row[symbol6]."".$row[assign6].'</p>
+			<p>'.$row[symbol7]."".$row[assign7].'</p>
+			<p>'.$row[symbol8]."".$row[assign8].'</p>
+			<p>'.$row[symbol9]."".$row[assign9].'</p>
+			<p>'.$row[symbol10]."".$row[assign10].'</p>
 		</td>
 	</tr>
 </table>

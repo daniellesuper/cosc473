@@ -50,18 +50,9 @@ $courseID = $_GET["courseID"];
 		<a href="courseinfo.php"><button type="button" class="btn btn-primary btn-lg">New Course Info</a></button>
 	</div>
 	<h2 id="existingSyllabi"><u>Existing Syllabi</u></h2>
+
 	<?php
 
-	/*$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "info-syllabus";
-	
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-	} 
-	*/
     function get_course_list($conn, $profID)
     {
         $sql = "SELECT * FROM courseinfo WHERE FKprofID = $profID";
@@ -88,11 +79,8 @@ $courseID = $_GET["courseID"];
 						<li>
 							<span id="courseName"><?php echo $course; ?></span>
 							<div id="buttons">
+
 								<a href="update_courseinfo.php?courseID=<?php echo $courseID ?>" ><button type="button" class= "btn btn-primary btn-lg"> Update Course Info </a></button>
-								
-								<!--
-								<a href="update_weekly_infohtml.php?courseID=<?php echo $courseID ?>" ><button type="button" class="btn btn-primary btn-lg">Weekly Schedule</a></button>
-								-->
 
 								<a href="pdf.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">HTML 1st Page(Useless)</a></button>
 								
@@ -100,12 +88,13 @@ $courseID = $_GET["courseID"];
 
 								<a href="generateTCPDFfinal.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Download a PDF</a></button>
 
-								<a href="<?php echo $courseID ?>"><button type="button" onclick="delete()" class="deleteButton">X</a></button>
+								<a href="deleteclass.php?courseID=<?php echo $courseID ?>"><button type="button" onclick="deleteClass()" class="deleteButton">X</a></button>
+
 							</div>
 						</li>
 					</ul>
-      </div>
-          <?php 
+       </div>
+    	<?php 
      } ?>
 	
 
