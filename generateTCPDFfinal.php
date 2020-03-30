@@ -69,9 +69,9 @@ $pdf->AddPage();
 $txt = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 
 // MultiCell($w, $h, $txt, $border=0, $align='J', $fill=0, $ln=1, $x='', $y='', $reseth=true, $stretch=0, $ishtml=false, $autopadding=true, $maxh=0)
-
+$text = '';
 // header box
-$header = $bar3["title"]." ".$bar3["fullname"]." ";
+$titlename = $bar3["title"]." ".$bar3["fullname"]." ";
 $course = $bar4["coursecode"]."\n".$bar4["coursename"];
 
 //$pdf->SetXY(100, 205);
@@ -81,8 +81,11 @@ $officehours = "Office Hours: "."\n"."Mon: ".$bar3["monday"]."\n"."Tues: ".$bar3
 $officeinfo = "Faculty office"."\n".$bar3["officeaddress"]."\n"."Contact Email"."\n".$bar3["email"]."\n"."Office Phone"."\n".$bar3["officephone"];
 
 $pdf->SetFillColor(178, 178, 178);
-$pdf->MultiCell(200, 70, 'Header '."\n".$header."\n".$course, 0, 'C', 1, 1, '', '', true);
-// X was 200,70
+$pdf->MultiCell(200, 70, $text, 0, 'C', 1, 1, '', '', true);
+
+// course info in the bottom banner
+//$pdf->SetFillColor(178, 0, 178);
+//$pdf->MultiCell(35, 30,$course, 1, 'C', 0, 2, 35, 37, false,0, false, true, 40, 'C');
 
 // WHITE BOX FOR THE OFFICE INFO WITH DATA INCLUDED
 $pdf->SetFillColor(255, 255, 255);
@@ -97,6 +100,25 @@ $pdf->MultiCell(35, 30,$officehours, 0, 'C', 1, 2, 165, 17, true,0, false, true,
 $bookinfo = $bar5["bookname"]."\n".$bar5["bookAuthor"]."\n".$bar5["bookisbn"];
 $pdf->SetFillColor(230, 230, 230);
 $pdf->MultiCell(100, 55, 'Book Info '."\n".$bookinfo, 0, 'C', 1, 0, 5, 77, true,0, false, true, 40, 'B');
+
+// THIS IS THE LEFT PART OF BANNER IN TOP LEFT OF PDF
+$pdf->SetXY(5, 10);
+$pdf->Image('images/bannerleft.png', '', '', 70, 15, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+// THIS IS THE MIDDLE PART OF THE BANNER
+$pdf->SetXY(25, 23);
+$pdf->Image('images/bannermiddle.png', '', '', 50, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+//
+// THIS THE RIGHT SIDE OF THE BANNER IN TOP LEFT OF PDF // BOTTOM WITH RIBBON ON RIGHT SIDE
+$pdf->SetXY(25, 35);
+$pdf->Image('images/bannerright.png', '', '', 70, 15, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+// TEXT IN THE BOTTOM BANNER FOR COURSE INFO
+$pdf->MultiCell(55, 10,$course, 0, 'C', 0, 2, 30, 37, true,0, false, true, 40, 'C');
+//
+//
+
 
 // THIS IS THE WORDING IN THE IMPORTANT POINT SECTION
 $pdf->SetXY(105, 77);
