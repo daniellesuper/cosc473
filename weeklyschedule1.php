@@ -18,11 +18,7 @@ die("Connection Failed". $conn->connect_error);
 }
 error_reporting(0);
 
-$sql =" Select     
-    holiday, month, startdate, enddate, weekofheading1, weekofheading2, weekofheading3, weekofheading4, weekofheading5, weekofheading6, weekofheading7, weekofheading8, weekofheading9, weekofheading10, weekofheading11, weekofheading12, weekofheading13, weekofheading14, weekofheading15, 
-    subheading1, subheading2, subheading3, subheading4, subheading5, subheading6, subheading7, subheading8, subheading9, subheading10, subheading11, subheading12, subheading13, subheading14, subheading15, 
-    week1assessment, week2assessment, week3assessment, week4assessment, week5assessment, week6assessment, week7assessment, week8assessment, week9assessment, week10assessment, week11assessment, week12assessment, week13assessment, week14assessment, week15assessment, fkprofid, fkcourseid 
-    FROM weeklyinfo where fkcourseid= $courseID ";
+$sql ="SELECT holiday, startdate, enddate, custombreakname, customstartdate, customenddate, week1_desc, week2_desc, week3_desc, week4_desc, week5_desc, week6_desc, week7_desc, week8_desc, week9_desc, week10_desc, week11_desc, week12_desc, week13_desc, week14_desc, week15_desc, week1_of, week2_of, week3_of, week4_of, week5_of, week6_of, week7_of, week8_of, week9_of, week10_of, week11_of, week12_of, week13_of, week14_of, week15_of, symbol1_week1, symbol2_week1, symbol3_week1, symbol1_week2, symbol2_week2, symbol3_week2, symbol1_week3, symbol2_week3, symbol3_week3, symbol1_week4, symbol2_week4, symbol3_week4, symbol1_week5, symbol2_week5, symbol3_week5, symbol1_week6, symbol2_week6, symbol3_week6, symbol1_week7, symbol2_week7, symbol3_week7,symbol1_week8, symbol2_week8, symbol3_week8, symbol1_week9, symbol2_week9, symbol3_week9, symbol1_week10, symbol2_week10, symbol3_week10, symbol1_week11, symbol2_week11, symbol3_week11, symbol1_week12, symbol2_week12, symbol3_week12, symbol1_week13, symbol2_week13, symbol3_week13, symbol1_week14, symbol2_week14, symbol3_week14, symbol1_week15, symbol2_week15, symbol3_week15 FROM weeklyinfo WHERE fkcourseid= $_GET[courseID]";
 
 //echo $sql; exit;
 
@@ -37,55 +33,87 @@ if($row>0){ // login successful
 
 $row=$result->fetch_array();
 
-
-$holiday =$row['holiday_name'];
-$startdate =$row['startdate'];
-$enddate =$row['enddate'];
-$weekofheading1 = $row['weekofheading1'];
-$weekofheading2 = $row['weekofheading2'];
-$weekofheading3 = $row['weekofheading3'];
-$weekofheading4 = $row['weekofheading4'];
-$weekofheading5 = $row['weekofheading5'];
-$weekofheading6 = $row['weekofheading6'];
-$weekofheading7 = $row['weekofheading7'];
-$weekofheading8 = $row['weekofheading8'];
-$weekofheading9 = $row['weekofheading9'];
-$weekofheading10 = $row['weekofheading10'];
-$weekofheading11 = $row['weekofheading11'];
-$weekofheading12 = $row['weekofheading12'];
-$weekofheading13 = $row['weekofheading13'];
-$weekofheading14 = $row['weekofheading14'];
-$weekofheading15 = $row['weekofheading15'];
-$subheading1 = $row['subheading1'];
-$subheading2 = $row['subheading2'];
-$subheading3 = $row['subheading3'];
-$subheading4 = $row['subheading4'];
-$subheading5 = $row['subheading5'];
-$subheading6 = $row['subheading6'];
-$subheading7 = $row['subheading7'];
-$subheading8 = $row['subheading8'];
-$subheading9 = $row['subheading9'];
-$subheading10 = $row['subheading10'];
-$subheading11 = $row['subheading11'];
-$subheading12 = $row['subheading12'];
-$subheading13 = $row['subheading13'];
-$subheading14 = $row['subheading14'];
-$subheading15 = $row['subheading15'];
-$week1assessment = $row['week1assessment'];
-$week2assessment = $row['week2assessment'];
-$week3assessment = $row['week3assessment'];
-$week4assessment = $row['week4assessment'];
-$week5assessment = $row['week5assessment'];
-$week6assessment = $row['week6assessment'];
-$week7assessment = $row['week7assessment'];
-$week8assessment = $row['week8assessment'];
-$week9assessment = $row['week9assessment'];
-$week10assessment = $row['week10assessment'];
-$week11assessment = $row['week11assessment'];
-$week12assessment = $row['week12assessment'];
-$week13assessment = $row['week13assessment'];
-$week14assessment = $row['week14assessment'];
-$week15assessment = $row['week15assessment'];
+$holiday = $bar['holiday'];
+$startdate = $bar['startdate'];
+$enddate = $bar['enddate'];
+$custombreakname = $bar['custombreakname'];
+$customstartdate = $bar['customstartdate'];
+$customenddate = $bar['customenddate'];
+$week1_desc = $bar['week1_desc'];
+$week2_desc = $bar['week2_desc'];
+$week3_desc = $bar['week3_desc'];
+$week4_desc = $bar['week4_desc'];
+$week5_desc = $bar['week5_desc'];
+$week6_desc = $bar['week6_desc'];
+$week7_desc = $bar['week7_desc'];
+$week8_desc = $bar['week8_desc'];
+$week9_desc = $bar['week9_desc'];
+$week10_desc = $bar['week10_desc'];
+$week11_desc = $bar['week11_desc'];
+$week12_desc = $bar['week12_desc'];
+$week13_desc = $bar['week13_desc'];
+$week14_desc = $bar['week14_desc'];
+$week15_desc = $bar['week15_desc'];
+$week1_of = $bar['week1_of'];
+$week2_of = $bar['week2_of'];
+$week3_of = $bar['week3_of'];
+$week4_of = $bar['week4_of'];
+$week5_of = $bar['week5_of'];
+$week6_of = $bar['week6_of'];
+$week7_of = $bar['week7_of'];
+$week8_of = $bar['week8_of'];
+$week9_of = $bar['week9_of'];
+$week10_of = $bar['week10_of'];
+$week11_of = $bar['week11_of'];
+$week12_of = $bar['week12_of'];
+$week13_of = $bar['week13_of'];
+$week14_of = $bar['week14_of'];
+$week15_of = $bar['week15_of'];
+$symbol1_week1 = $bar['symbol1_week1'];
+$symbol2_week1 = $bar['symbol2_week1'];
+$symbol3_week1 = $bar['symbol3_week1'];
+$symbol1_week2 = $bar['symbol1_week2'];
+$symbol2_week2 = $bar['symbol2_week2'];
+$symbol3_week2 = $bar['symbol3_week2'];
+$symbol1_week3 = $bar['symbol1_week3'];
+$symbol2_week3 = $bar['symbol2_week3'];
+$symbol3_week3 = $bar['symbol3_week3'];
+$symbol1_week4 = $bar['symbol1_week4'];
+$symbol2_week4 = $bar['symbol2_week4'];
+$symbol3_week4 = $bar['symbol3_week4'];
+$symbol1_week5 = $bar['symbol1_week5'];
+$symbol2_week5 = $bar['symbol2_week5'];
+$symbol3_week5 = $bar['symbol3_week5'];
+$symbol1_week6 = $bar['symbol1_week6'];
+$symbol2_week6 = $bar['symbol2_week6'];
+$symbol3_week6 = $bar['symbol3_week6'];
+$symbol1_week7 = $bar['symbol1_week7'];
+$symbol2_week7 = $bar['symbol2_week7'];
+$symbol3_week7 = $bar['symbol3_week7'];
+$symbol1_week8 = $bar['symbol1_week8'];
+$symbol2_week8 = $bar['symbol2_week8'];
+$symbol3_week8 = $bar['symbol3_week8'];
+$symbol1_week9 = $bar['symbol1_week9'];
+$symbol2_week9 = $bar['symbol2_week9'];
+$symbol3_week9 = $bar['symbol3_week9'];
+$symbol1_week10 = $bar['symbol1_week10'];
+$symbol2_week10 = $bar['symbol2_week10'];
+$symbol3_week10 = $bar['symbol3_week10'];
+$symbol1_week11 = $bar['symbol1_week11'];
+$symbol2_week11 = $bar['symbol2_week11'];
+$symbol3_week11 = $bar['symbol3_week11'];
+$symbol1_week12 = $bar['symbol1_week12'];
+$symbol2_week12 = $bar['symbol2_week12'];
+$symbol3_week12 = $bar['symbol3_week12'];
+$symbol1_week13 = $bar['symbol1_week13'];
+$symbol2_week13 = $bar['symbol2_week13'];
+$symbol3_week13 = $bar['symbol3_week13'];
+$symbol1_week14 = $bar['symbol1_week14'];
+$symbol2_week14 = $bar['symbol2_week14'];
+$symbol3_week14 = $bar['symbol3_week14'];
+$symbol1_week15 = $bar['symbol1_week15'];
+$symbol2_week15 = $bar['symbol2_week15'];
+$symbol3_week15 = $bar['symbol3_week15'];
 
 //echo $title; exit;
 
@@ -118,7 +146,7 @@ if ($_GET['ok'] == 1) {
 
 $sql1 = "SELECT  meetingDays FROM courseinfo WHERE PKID = $_GET[courseID]";
 
-$sql2 = "SELECT week1_of, week2_of, week3_of, week4_of, week5_of, week6_of, week7_of, week8_of, week9_of, week10_of, week11_of, week12_of, week13_of, week14_of, week15_of, week1_desc, week2_desc, week3_desc, week4_desc, week5_desc, week6_desc, week7_desc, week8_desc, week9_desc, week10_desc, week11_desc, week12_desc, week13_desc, week14_desc, week15_desc, holiday, startdate, enddate, custombreakname, customstartdate, customenddate, symbol1_week1, symbol2_week1, symbol3_week1, symbol1_week2, symbol2_week2, symbol3_week2 FROM weeklyinfo WHERE fkcourseid= $_GET[courseID]";
+$sql2 = "SELECT week1_of, week2_of, week3_of, week4_of, week5_of, week6_of, week7_of, week8_of, week9_of, week10_of, week11_of, week12_of, week13_of, week14_of, week15_of, week1_desc, week2_desc, week3_desc, week4_desc, week5_desc, week6_desc, week7_desc, week8_desc, week9_desc, week10_desc, week11_desc, week12_desc, week13_desc, week14_desc, week15_desc, holiday, startdate, enddate, custombreakname, customstartdate, customenddate, symbol1_week1, symbol2_week1, symbol3_week1, symbol1_week2, symbol2_week2, symbol3_week2, symbol1_week3, symbol2_week3, symbol3_week3, symbol1_week4, symbol2_week4, symbol3_week4, symbol1_week5, symbol2_week5, symbol3_week5, symbol1_week6, symbol2_week6, symbol3_week6, symbol1_week7, symbol2_week7, symbol3_week7,symbol1_week8, symbol2_week8, symbol3_week8, symbol1_week9, symbol2_week9, symbol3_week9, symbol1_week10, symbol2_week10, symbol3_week10, symbol1_week11, symbol2_week11, symbol3_week11, symbol1_week12, symbol2_week12, symbol3_week12, symbol1_week13, symbol2_week13, symbol3_week13, symbol1_week14, symbol2_week14, symbol3_week14, symbol1_week15, symbol2_week15, symbol3_week15 FROM weeklyinfo WHERE fkcourseid= $_GET[courseID]";
 
 
 $result1 = $conn->query($sql1);
@@ -1372,7 +1400,7 @@ $conn->close();
 
 </script>
 
-
+<?php //echo $conn->query($strQuery);?>
 </form>
 </body>
 

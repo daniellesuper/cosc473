@@ -1,348 +1,308 @@
 <?php
-  
- 
+//new file
 require("session_info.php");
 error_reporting(0);
 
 $courseID = $_GET['courseID'];
-	
+
 $servername="localhost";
 $dbname="info-syllabus";
 $username="root";
 $password="";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn= new mysqli($servername, $username, $password, $dbname);
 if($conn-> connect_error){
-die("Username and Password Invaid!". $conn->connect_error);
+die("Connection Failed". $conn->connect_error);
 }
-error_reporting(0);
 
-$sql =" Select     
-     holiday, month, startdate, enddate, custombreakname, customstartdate, customenddate, weekofheading1, weekofheading2, weekofheading3, weekofheading4, weekofheading5, weekofheading6, weekofheading7, weekofheading8, weekofheading9, weekofheading10, weekofheading11, weekofheading12, weekofheading13, weekofheading14, weekofheading15, 
-	 subheading1, subheading2, subheading3, subheading4, subheading5, subheading6, subheading7, subheading8, subheading9, subheading10, subheading11, subheading12, subheading13, subheading14, subheading15, 
-	 week1assessment, week2assessment, week3assessment, week4assessment, week5assessment, week6assessment, week7assessment, week8assessment, week9assessment, week10assessment, week11assessment, week12assessment, week13assessment, week14assessment, week15assessment, fkprofid, fkcourseid 
-	 FROM weeklyinfo where fkcourseid= $courseID ";
-	 
-//echo $sql; exit;
+
+$holiday = htmlentities($_REQUEST['holiday'], ENT_QUOTES);
+$startdate = htmlentities($_REQUEST['startdate'], ENT_QUOTES);
+$enddate = htmlentities($_REQUEST['enddate'], ENT_QUOTES);
+$custombreakname = htmlentities($_REQUEST['custombreakname'], ENT_QUOTES);
+$customstartdate = htmlentities($_REQUEST['customstartdate'], ENT_QUOTES);
+$customenddate = htmlentities($_REQUEST['customenddate'], ENT_QUOTES);
+$week1_desc = htmlentities($_REQUEST['week1_desc'], ENT_QUOTES);
+
+$week2_desc = htmlentities($_REQUEST['week2_desc'], ENT_QUOTES);
+$week3_desc = htmlentities($_REQUEST['week3_desc'], ENT_QUOTES);
+$week4_desc = htmlentities($_REQUEST['week4_desc'], ENT_QUOTES);
+$week5_desc = htmlentities($_REQUEST['week5_desc'], ENT_QUOTES);
+$week6_desc = htmlentities($_REQUEST['week6_desc'], ENT_QUOTES);
+$week7_desc = htmlentities($_REQUEST['week7_desc'], ENT_QUOTES);
+$week8_desc = htmlentities($_REQUEST['week8_desc'], ENT_QUOTES);
+$week9_desc = htmlentities($_REQUEST['week9_desc'], ENT_QUOTES);
+$week10_desc = htmlentities($_REQUEST['week10_desc'], ENT_QUOTES);
+$week11_desc = htmlentities($_REQUEST['week11_desc'], ENT_QUOTES);
+$week12_desc = htmlentities($_REQUEST['week13_desc'], ENT_QUOTES);
+$week13_desc = htmlentities($_REQUEST['week1_desc'], ENT_QUOTES);
+$week14_desc = htmlentities($_REQUEST['week14_desc'], ENT_QUOTES);
+$week15_desc = htmlentities($_REQUEST['week15_desc'], ENT_QUOTES);
+
+$week1_of = htmlentities($_REQUEST['week1_of'], ENT_QUOTES);
+$week2_of = htmlentities($_REQUEST['week2_of'], ENT_QUOTES);
+$week3_of = htmlentities($_REQUEST['week3_of'], ENT_QUOTES);
+$week4_of = htmlentities($_REQUEST['week4_of'], ENT_QUOTES);
+$week5_of = htmlentities($_REQUEST['week5_of'], ENT_QUOTES);
+$week6_of = htmlentities($_REQUEST['week6_of'], ENT_QUOTES);
+$week7_of = htmlentities($_REQUEST['week7_of'], ENT_QUOTES);
+$week8_of = htmlentities($_REQUEST['week8_of'], ENT_QUOTES);
+$week9_of = htmlentities($_REQUEST['week9_of'], ENT_QUOTES);
+$week10_of = htmlentities($_REQUEST['week10_of'], ENT_QUOTES);
+$week11_of = htmlentities($_REQUEST['week11_of'], ENT_QUOTES);
+$week12_of = htmlentities($_REQUEST['week12_of'], ENT_QUOTES);
+$week13_of = htmlentities($_REQUEST['week13_of'], ENT_QUOTES);
+$week14_of = htmlentities($_REQUEST['week14_of'], ENT_QUOTES);
+$week15_of = htmlentities($_REQUEST['week15_of'], ENT_QUOTES);
+
+$symbol1_week1 = htmlentities($_REQUEST['symbol1_week1'], ENT_QUOTES);
+$symbol2_week1 = htmlentities($_REQUEST['symbol2_week1'], ENT_QUOTES);
+$symbol3_week1 = htmlentities($_REQUEST['symbol3_week1'], ENT_QUOTES);
+
+$symbol1_week2 = htmlentities($_REQUEST['symbol1_week2'], ENT_QUOTES);
+$symbol2_week2 = htmlentities($_REQUEST['symbol2_week2'], ENT_QUOTES);
+$symbol3_week2 = htmlentities($_REQUEST['symbol2_week2'], ENT_QUOTES);
+
+$symbol1_week3 = htmlentities($_REQUEST['symbol1_week3'], ENT_QUOTES);
+$symbol2_week3 = htmlentities($_REQUEST['symbol2_week3'], ENT_QUOTES);
+$symbol3_week3 = htmlentities($_REQUEST['symbol3_week3'], ENT_QUOTES);
+
+$symbol1_week4 = htmlentities($_REQUEST['symbol1_week4'], ENT_QUOTES);
+$symbol2_week4 = htmlentities($_REQUEST['symbol2_week4'], ENT_QUOTES);
+$symbol3_week4 = htmlentities($_REQUEST['symbol3_week4'], ENT_QUOTES);
+
+$symbol1_week5 = htmlentities($_REQUEST['symbol1_week5'], ENT_QUOTES);
+$symbol2_week5 = htmlentities($_REQUEST['symbol2_week5'], ENT_QUOTES);
+$symbol3_week5 = htmlentities($_REQUEST['symbol3_week5'], ENT_QUOTES);
+
+$symbol1_week6 = htmlentities($_REQUEST['symbol1_week6'], ENT_QUOTES);
+$symbol2_week6 = htmlentities($_REQUEST['symbol2_week6'], ENT_QUOTES);
+$symbol3_week6 = htmlentities($_REQUEST['symbol3_week6'], ENT_QUOTES);
+
+$symbol1_week7 = htmlentities($_REQUEST['symbol1_week7'], ENT_QUOTES);
+$symbol2_week7 = htmlentities($_REQUEST['symbol2_week7'], ENT_QUOTES);
+$symbol3_week7 = htmlentities($_REQUEST['symbol3_week7'], ENT_QUOTES);
+
+$symbol1_week8 = htmlentities($_REQUEST['symbol1_week8'], ENT_QUOTES);
+$symbol2_week8 = htmlentities($_REQUEST['symbol2_week8'], ENT_QUOTES);
+$symbol3_week8 = htmlentities($_REQUEST['symbol3_week8'], ENT_QUOTES);
+
+$symbol1_week9 = htmlentities($_REQUEST['symbol1_week9'], ENT_QUOTES);
+$symbol2_week9 = htmlentities($_REQUEST['symbol2_week9'], ENT_QUOTES);
+$symbol3_week9 = htmlentities($_REQUEST['symbol3_week9'], ENT_QUOTES);
+
+$symbol1_week10 = htmlentities($_REQUEST['symbol1_week10'], ENT_QUOTES);
+$symbol2_week10 = htmlentities($_REQUEST['symbol2_week10'], ENT_QUOTES);
+$symbol3_week10 = htmlentities($_REQUEST['symbol3_week10'], ENT_QUOTES);
+
+$symbol1_week11 = htmlentities($_REQUEST['symbol1_week11'], ENT_QUOTES);
+$symbol2_week11 = htmlentities($_REQUEST['symbol2_week11'], ENT_QUOTES);
+$symbol3_week11 = htmlentities($_REQUEST['symbol3_week11'], ENT_QUOTES);
+
+$symbol1_week12 = htmlentities($_REQUEST['symbol1_week12'], ENT_QUOTES);
+$symbol2_week12 = htmlentities($_REQUEST['symbol2_week12'], ENT_QUOTES);
+$symbol3_week12 = htmlentities($_REQUEST['symbol3_week12'], ENT_QUOTES);
+
+$$symbol1_week13 = htmlentities($_REQUEST['symbol1_week13'], ENT_QUOTES);
+$symbol2_week13 = htmlentities($_REQUEST['symbol2_week13'], ENT_QUOTES);
+$symbol3_week13 = htmlentities($_REQUEST['symbol3_week13'], ENT_QUOTES);
+
+$symbol1_week14 = htmlentities($_REQUEST['symbol1_week14'], ENT_QUOTES);
+$symbol2_week14 = htmlentities($_REQUEST['symbol2_week14'], ENT_QUOTES);
+$symbol3_week14 = htmlentities($_REQUEST['symbol3_week14'], ENT_QUOTES);
+
+$symbol1_week15 = htmlentities($_REQUEST['symbol1_week15'], ENT_QUOTES);
+$symbol2_week15 = htmlentities($_REQUEST['symbol2_week15'], ENT_QUOTES);
+$symbol3_week15 = htmlentities($_REQUEST['symbol3_week15'], ENT_QUOTES);
+
+
+
+$sql =" update weeklyinfo
+       set
+	    holiday = '$holiday', 
+		startdate = '$startdate',
+		enddate = '$enddate',
+		custombreakname = '$custombreakname',
+		customstartdate = '$customstartdate',
+		customenddate = '$customenddate',
+		week1_desc = '$week1_desc',
+		week2_desc = '$week2_desc',
+		week3_desc = '$week3_desc',
+		week4_desc = '$week4_desc',
+		week5_desc = '$week5_desc',
+		week6_desc = '$week6_desc',
+		week7_desc = '$week7_desc',
+		week8_desc = '$week8_desc',
+		week9_desc = '$week9_desc',
+		week10_desc = '$week10_desc',
+		week11_desc = '$week11_desc',
+		week12_desc = '$week12_desc',
+		week13_desc = '$week13_desc',
+		week14_desc = '$week14_desc',
+		week15_desc = '$week15_desc',
+		week1_of = '$week1_of',
+		week2_of = '$week2_of',
+		week3_of = '$week3_of',
+		week4_of = '$week4_of',
+		week5_of = '$week5_of',
+		week6_of = '$week6_of',
+		week7_of = '$week7_of',
+		week8_of = '$week8_of',
+		week9_of = '$week9_of',
+		week10_of = '$week10_of',
+		week11_of = '$week11_of',
+		week12_of = '$week12_of',
+		week13_of = '$week13_of',
+		week14_of = '$week14_of',
+		week15_of = '$week15_of',
+		symbol1_week1 = '$symbol1_week1',
+		symbol2_week1 = '$symbol2_week1',
+		symbol3_week1 = '$symbol3_week1',
+		symbol1_week2 = '$symbol1_week2',
+		symbol2_week2 = '$symbol2_week2',
+		symbol3_week2 = '$symbol3_week2',
+		symbol1_week3 = '$symbol1_week3',
+		symbol2_week3 = '$symbol2_week3',
+		symbol3_week3 = '$symbol3_week3',
+		symbol1_week4 = '$symbol1_week4',
+		symbol2_week4 = '$symbol2_week4',
+		symbol3_week4 = '$symbol3_week4',
+		symbol1_week5 = '$symbol1_week5',
+		symbol2_week5 = '$symbol2_week5',
+		symbol3_week5 = '$symbol3_week5',
+		symbol1_week6 = '$symbol1_week6',
+		symbol2_week6 = '$symbol2_week6',
+		symbol3_week6 = '$symbol3_week6',
+		symbol1_week7 = '$symbol1_week7',
+		symbol2_week7 = '$symbol2_week7',
+		symbol3_week7 = '$symbol3_week7',
+		symbol1_week8 = '$symbol1_week8',
+		symbol2_week8 = '$symbol2_week8',
+		symbol3_week8 = '$symbol3_week8',
+		symbol1_week9 = '$symbol1_week9',
+		symbol2_week9 = '$symbol2_week9',
+		symbol3_week9 = '$symbol3_week9',
+		symbol1_week10 = '$symbol1_week10',
+		symbol2_week10 = '$symbol2_week10',
+		symbol3_week10 = '$symbol3_week10',
+		symbol1_week11 = '$symbol1_week11',
+		symbol2_week11 = '$symbol2_week11',
+		symbol3_week11 = '$symbol3_week11',
+		symbol1_week12 = '$symbol1_week12',
+		symbol2_week12 = '$symbol2_week12',
+		symbol3_week12 = '$symbol3_week12',
+		symbol1_week13 = '$symbol1_week13',
+		symbol2_week13 = '$symbol2_week13',
+		symbol3_week13 = '$symbol3_week13',
+		symbol1_week14 = '$symbol1_week14',
+		symbol2_week14 = '$symbol2_week14',
+		symbol3_week14 = '$symbol3_week14',
+		symbol1_week15 = '$symbol1_week15',
+		symbol2_week15 = '$symbol2_week15',
+		symbol3_week15 = '$symbol3_week15'
+
+					where fkcourseid = $_GET[courseID]";
+
+		//echo $sql;exit;
 
 $result = $conn->query($sql);
 
+	$row=mysqli_num_rows($result);
 
-  $row=mysqli_num_rows($result);
-  
-  //echo $row; exit;
+	if($row > 0){
+		@header("Location: mainpage.php");
+     exit; 
+   }else{
+		 $FKPROFID = $_SESSION['PKID'];
+         $strQuery="update weeklyinfo 
+		            set holiday = '$holiday', 
+		startdate = '$startdate',
+		enddate = '$enddate',
+		custombreakname = '$custombreakname',
+		customstartdate = '$customstartdate',
+		customenddate = '$customenddate',
+		week1_desc = '$week1_desc',
+		week2_desc = '$week2_desc',
+		week3_desc = '$week3_desc',
+		week4_desc = '$week4_desc',
+		week5_desc = '$week5_desc',
+		week6_desc = '$week6_desc',
+		week7_desc = '$week7_desc',
+		week8_desc = '$week8_desc',
+		week9_desc = '$week9_desc',
+		week10_desc = '$week10_desc',
+		week11_desc = '$week11_desc',
+		week12_desc = '$week12_desc',
+		week13_desc = '$week13_desc',
+		week14_desc = '$week14_desc',
+		week15_desc = '$week15_desc',
+		week1_of = '$week1_of',
+		week2_of = '$week2_of',
+		week3_of = '$week3_of',
+		week4_of = '$week4_of',
+		week5_of = '$week5_of',
+		week6_of = '$week6_of',
+		week7_of = '$week7_of',
+		week8_of = '$week8_of',
+		week9_of = '$week9_of',
+		week10_of = '$week10_of',
+		week11_of = '$week11_of',
+		week12_of = '$week12_of',
+		week13_of = '$week13_of',
+		week14_of = '$week14_of',
+		week15_of = '$week15_of',
+		symbol1_week1 = '$symbol1_week1',
+		symbol2_week1 = '$symbol2_week1',
+		symbol3_week1 = '$symbol3_week1',
+		symbol1_week2 = '$symbol1_week2',
+		symbol2_week2 = '$symbol2_week2',
+		symbol3_week2 = '$symbol3_week2',
+		symbol1_week3 = '$symbol1_week3',
+		symbol2_week3 = '$symbol2_week3',
+		symbol3_week3 = '$symbol3_week3',
+		symbol1_week4 = '$symbol1_week4',
+		symbol2_week4 = '$symbol2_week4',
+		symbol3_week4 = '$symbol3_week4',
+		symbol1_week5 = '$symbol1_week5',
+		symbol2_week5 = '$symbol2_week5',
+		symbol3_week5 = '$symbol3_week5',
+		symbol1_week6 = '$symbol1_week6',
+		symbol2_week6 = '$symbol2_week6',
+		symbol3_week6 = '$symbol3_week6',
+		symbol1_week7 = '$symbol1_week7',
+		symbol2_week7 = '$symbol2_week7',
+		symbol3_week7 = '$symbol3_week7',
+		symbol1_week8 = '$symbol1_week8',
+		symbol2_week8 = '$symbol2_week8',
+		symbol3_week8 = '$symbol3_week8',
+		symbol1_week9 = '$symbol1_week9',
+		symbol2_week9 = '$symbol2_week9',
+		symbol3_week9 = '$symbol3_week9',
+		symbol1_week10 = '$symbol1_week10',
+		symbol2_week10 = '$symbol2_week10',
+		symbol3_week10 = '$symbol3_week10',
+		symbol1_week11 = '$symbol1_week11',
+		symbol2_week11 = '$symbol2_week11',
+		symbol3_week11 = '$symbol3_week11',
+		symbol1_week12 = '$symbol1_week12',
+		symbol2_week12 = '$symbol2_week12',
+		symbol3_week12 = '$symbol3_week12',
+		symbol1_week13 = '$symbol1_week13',
+		symbol2_week13 = '$symbol2_week13',
+		symbol3_week13 = '$symbol3_week13',
+		symbol1_week14 = '$symbol1_week14',
+		symbol2_week14 = '$symbol2_week14',
+		symbol3_week14 = '$symbol3_week14',
+		symbol1_week15 = '$symbol1_week15',
+		symbol2_week15 = '$symbol2_week15',
+		symbol3_week15 = '$symbol3_week15'
 
-if($row>0){ // login successful
+					where fkcourseid = $_GET[courseID]";
+					// PKID
 
-$row=$result->fetch_array();
-
-
-$holiday =$row['holiday_name'];
-$startdate =$row['startdate'];
-$enddate =$row['enddate'];
-$custombreakname = $row['custombreakname'];
-$customstartdate = $row['customstartdate'];
-$customenddate = $row['customenddate'];
-$weekofheading1 = $row['weekofheading1'];
-$weekofheading2 = $row['weekofheading2'];
-$weekofheading3 = $row['weekofheading3'];
-$weekofheading4 = $row['weekofheading4'];
-$weekofheading5 = $row['weekofheading5'];
-$weekofheading6 = $row['weekofheading6'];
-$weekofheading7 = $row['weekofheading7'];
-$weekofheading8 = $row['weekofheading8'];
-$weekofheading9 = $row['weekofheading9'];
-$weekofheading10 = $row['weekofheading10'];
-$weekofheading11 = $row['weekofheading11'];
-$weekofheading12 = $row['weekofheading12'];
-$weekofheading13 = $row['weekofheading13'];
-$weekofheading14 = $row['weekofheading14'];
-$weekofheading15 = $row['weekofheading15'];
-$subheading1 = $row['subheading1'];
-$subheading2 = $row['subheading2'];
-$subheading3 = $row['subheading3'];
-$subheading4 = $row['subheading4'];
-$subheading5 = $row['subheading5'];
-$subheading6 = $row['subheading6'];
-$subheading7 = $row['subheading7'];
-$subheading8 = $row['subheading8'];
-$subheading9 = $row['subheading9'];
-$subheading10 = $row['subheading10'];
-$subheading11 = $row['subheading11'];
-$subheading12 = $row['subheading12'];
-$subheading13 = $row['subheading13'];
-$subheading14 = $row['subheading14'];
-$subheading15 = $row['subheading15'];
-$week1assessment = $row['week1assessment'];
-$week2assessment = $row['week2assessment'];
-$week3assessment = $row['week3assessment'];
-$week4assessment = $row['week4assessment'];
-$week5assessment = $row['week5assessment'];
-$week6assessment = $row['week6assessment'];
-$week7assessment = $row['week7assessment'];
-$week8assessment = $row['week8assessment'];
-$week9assessment = $row['week9assessment'];
-$week10assessment = $row['week10assessment'];
-$week11assessment = $row['week11assessment'];
-$week12assessment = $row['week12assessment'];
-$week13assessment = $row['week13assessment'];
-$week14assessment = $row['week14assessment'];
-$week15assessment = $row['week15assessment'];
-
-//echo $title; exit;
-
-}	 
-
-if ($_GET['ok'] == 1) {
-	echo "Weekly Info has been updated";
-}
-
+		//echo $strQuery;exit;
+		$conn->query($strQuery);
+		 header("Location: mainpage.php");
+		 exit;
+	}
 ?>
-
-<html>
-<head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
- <link href="weeklyschedule.css" type="text/css" rel="stylesheet" />
-
-<header>
-	<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="index.html">InfoSyllabus&copy;</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="mainpage.php">Welcome, Professor</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-    </ul>
-  </div>
-</nav>
-<hr />
-</header>
-</head>
-<body>
-<h1 style="padding-left: 25px;">Weekly Calendar</h1>
-
-<form action="insert_weekly_info.php" form="get" style="padding-left: 25px;">
-
-Break:	&nbsp <select name="holiday_name">
-		<option value="">Select</option>
-		<option value="Thanksgiving">Thanksgiving</option> 
-		<option value="Spring">Spring</option>
-		</select> &nbsp
-		
-Date To: &nbsp <input type="date" name="startdate1" value ="<?php echo $startdate; ?>"> &nbsp;
-Date End: &nbsp <input type="date" name="enddate" value="<?php echo $enddate; ?>"> <br><br>
-
-Custom break: <input type="text" name="custombreakname" value ="<?php echo $bar[custombreakname]; ?>"> &nbsp;
-Date To: &nbsp; &nbsp;<input type="date" name="customstartdate" value ="<?php echo $bar[customstartdate]; ?>"> &nbsp;
-Date End: <input type="date" name="customenddate" value="<?php echo $bar[customenddate]; ?>"> <br><br>
-
-Week of &nbsp <input type="text" name="week1_of" value =""> &nbsp; <br><br>
-Description &nbsp   <input type="text" length="255" name="week1_desc" value="<?php echo $subheading1; ?>" > &nbsp;
-Assesment Due &nbsp <input type="text" length="255" name="week1assessment" value="<?php echo $week1assessment; ?>" > &nbsp;
-Image &nbsp <select name="symbol1">
-			<option value="star">Star</option>
-			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Circle</option>
-			<option value="X">X</option>
-			<option value="Check Mark">Check Mark</option> 
-			</select>
-<br><br> 
-			
-Week of &nbsp <input type="text" name="week2_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week2_desc" value="<?php echo $subheading2; ?>" > &nbsp;
-Assesment Due &nbsp <input type="text" length="255" name="week2assessment" value="<?php echo $week2assessment; ?>" > &nbsp;
-Image &nbsp <select name="symbol2">
-			<option value="star">Star</option>
-			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Circle</option>
-			<option value="X">X</option>
-			<option value="Check Mark">Check Mark</option> 
-			</select>
-		
-<br><br>
-		
-Week of &nbsp <input type="text" name="week3_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week3_desc" value="<?php echo $subheading3; ?>" > &nbsp;
-Assesment Due &nbsp <input type="text" length="255" name="week3assessment" value="<?php echo $week3assessment; ?>" > &nbsp;
-Image &nbsp <select name="symbol3">
-			<option value="star">Star</option>
-			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Circle</option>
-			<option value="X">X</option>
-			<option value="Check Mark">Check Mark</option> 
-			</select>
-
-<br><br>
-
-Week of &nbsp <input type="text" name="week4_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week4_desc" value="<?php echo $subheading4; ?>" > &nbsp;
-Assesment Due &nbsp <input type="text" length="255" name="week4assessment" value="<?php echo $week4assessment; ?>" > &nbsp;
-Image &nbsp <select name="symbol4">
-			<option value="star">Star</option>
-			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Circle</option>
-			<option value="X">X</option>
-			<option value="Check Mark">Check Mark</option> 
-			</select>
-		
-<br><br>
-
-Week of &nbsp <input type="text" name="week5_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week5_desc" value="<?php echo $subheading5; ?>" > &nbsp;
-Assesment Due &nbsp <input type="text" length="255" name="week5assessment" value="<?php echo $week5assessment; ?>" > &nbsp;
-Image &nbsp <select name="symbol5">
-			<option value="star">Star</option>
-			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Circle</option>
-			<option value="X">X</option>
-			<option value="Check Mark">Check Mark</option> 
-			</select>
-		
-<br><br>
-
-Week of &nbsp <input type="text" name="week6_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week6_desc" value="<?php echo $subheading6; ?>" > &nbsp;
-Assesment Due &nbsp <input type="text" length="255" name="week6assessment" value="<?php echo $week6assessment; ?>" > &nbsp;
-Image &nbsp <select name="symbol6">
-			<option value="star">Star</option>
-			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Circle</option>
-			<option value="X">X</option>
-			<option value="Check Mark">Check Mark</option> 
-			</select>
-		
-<br><br>
-
-Week of &nbsp <input type="text" name="week7_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week7_desc" value="<?php echo $subheading7; ?>" > &nbsp;
-Assesment Due &nbsp <input type="text" length="255" name="week7assessment" value="<?php echo $week7assessment; ?>" > &nbsp;
-Image &nbsp <select name="symbol7">
-			<option value="star">Star</option>
-			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Circle</option>
-			<option value="X">X</option>
-			<option value="Check Mark">Check Mark</option> 
-			</select>
-		
-<br><br>
-
-Week of &nbsp <input type="text" name="week8_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week8_desc" value="<?php echo $subheading8; ?>" > &nbsp;
-Assesment Due &nbsp <input type="text" length="255" name="week8assessment" value="<?php echo $week8assessment; ?>" > &nbsp;
-Image &nbsp <select name="symbol8">
-			<option value="star">Star</option>
-			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Circle</option>
-			<option value="X">X</option>
-			<option value="Check Mark">Check Mark</option> 
-			</select>
-		
-<br><br>
-
-Week of &nbsp <input type="text" name="week9_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week9_desc" value="<?php echo $subheading9; ?>" > &nbsp;
-Assesment Due &nbsp <input type="text" length="255" name="week9assessment" value="<?php echo $week9assessment; ?>" > &nbsp;
-Image &nbsp <select name="symbol9">
-			<option value="star">Star</option>
-			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Circle</option>
-			<option value="X">X</option>
-			<option value="Check Mark">Check Mark</option> 
-			</select>
-		
-<br><br>
-
-Week of &nbsp <input type="text" name="week10_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week10_desc" value="<?php echo $subheading10; ?>" > &nbsp;
-Assesment Due &nbsp <input type="text" length="255" name="week10assessment" value="<?php echo $week10assessment; ?>" > &nbsp;
-Image &nbsp <select name="symbol10">
-			<option value="star">Star</option>
-			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Circle</option>
-			<option value="X">X</option>
-			<option value="Check Mark">Check Mark</option> 
-			</select>
-		
-<br><br>
-
-Week of &nbsp <input type="text" name="week11_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week11_desc" value="<?php echo $subheading11; ?>" > &nbsp;
-Assesment Due &nbsp <input type="text" length="255" name="week11assessment" value="<?php echo $week11assessment; ?>" > &nbsp;
-Image &nbsp <select name="symboll1">
-			<option value="star">Star</option>
-			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Circle</option>
-			<option value="X">X</option>
-			<option value="Check Mark">Check Mark</option> 
-			</select>
-		
-<br><br>
-
-Week of &nbsp <input type="text" name="week12_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week12_desc" value="<?php echo $subheading12; ?>" > &nbsp;
-Assesment Due &nbsp <input type="text" length="255" name="week12assessment" value="<?php echo $week12assessment; ?>" > &nbsp;
-Image &nbsp <select name="symbol12">
-			<option value="star">Star</option>
-			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Circle</option>
-			<option value="X">X</option>
-			<option value="Check Mark">Check Mark</option> 
-			</select>
-		
-<br><br>
-
-Week of &nbsp <input type="text" name="week13_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week13_desc" value="<?php echo $subheading13; ?>" > &nbsp;
-Assesment Due &nbsp <input type="text" length="255" name="week13assessment" value="<?php echo $week13assessment; ?>" > &nbsp;
-Image &nbsp <select name="symbol13">
-			<option value="star">Star</option>
-			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Circle</option>
-			<option value="X">X</option>
-			<option value="Check Mark">Check Mark</option> 
-			</select>
-		
-<br><br>
-
-Week of &nbsp <input type="text" name="week14_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week14_desc" value="<?php echo $subheading14; ?>" > &nbsp;
-Assesment Due &nbsp <input type="text" length="255" name="week14assessment" value="<?php echo $week14assessment; ?>" > &nbsp;
-Image &nbsp <select name="symbol14">
-			<option value="star">Star</option>
-			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Circle</option>
-			<option value="X">X</option>
-			<option value="Check Mark">Check Mark</option> 
-			</select>
-		
-<br><br>
-
-Week of &nbsp <input type="text" name="week15_of" value ="<?php echo $startdate; ?>"> &nbsp; <br><br>
-Description   &nbsp <input type="text" length="255" name="week15_desc" value="<?php echo $subheading15; ?>" > &nbsp;
-Assesment Due &nbsp <input type="text" length="255" name="week15assessment" value="<?php echo $week15assessment; ?>" > &nbsp;
-Image &nbsp <select name="symbol15">
-			<option value="star">Star</option>
-			<option value="Exclamation Point">Exclamation Point</option>
-			<option value="Circle">Circle</option>
-			<option value="X">X</option>
-			<option value="Check Mark">Check Mark</option> 
-			</select>
-		
-<br><br>
-
-<input type="hidden" name = "courseID" value="<?php echo $courseID ?>">
-<button type="submit" class="btn btn-primary">Update Weekly Calendar</button>
-
-</form>
-</body>
-</html>
