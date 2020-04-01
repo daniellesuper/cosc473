@@ -6,7 +6,6 @@ error_reporting(0);
 $FKPROFID = $_SESSION["FKPROFID"];
 $courseID = $_GET['courseID'];
 
-
 $servername="localhost";
 $dbname="info-syllabus";
 $username="root";
@@ -20,17 +19,11 @@ error_reporting(0);
 
 $sql ="SELECT holiday, startdate, enddate, custombreakname, customstartdate, customenddate, week1_desc, week2_desc, week3_desc, week4_desc, week5_desc, week6_desc, week7_desc, week8_desc, week9_desc, week10_desc, week11_desc, week12_desc, week13_desc, week14_desc, week15_desc, week1_of, week2_of, week3_of, week4_of, week5_of, week6_of, week7_of, week8_of, week9_of, week10_of, week11_of, week12_of, week13_of, week14_of, week15_of, symbol1_week1, symbol2_week1, symbol3_week1, symbol1_week2, symbol2_week2, symbol3_week2, symbol1_week3, symbol2_week3, symbol3_week3, symbol1_week4, symbol2_week4, symbol3_week4, symbol1_week5, symbol2_week5, symbol3_week5, symbol1_week6, symbol2_week6, symbol3_week6, symbol1_week7, symbol2_week7, symbol3_week7,symbol1_week8, symbol2_week8, symbol3_week8, symbol1_week9, symbol2_week9, symbol3_week9, symbol1_week10, symbol2_week10, symbol3_week10, symbol1_week11, symbol2_week11, symbol3_week11, symbol1_week12, symbol2_week12, symbol3_week12, symbol1_week13, symbol2_week13, symbol3_week13, symbol1_week14, symbol2_week14, symbol3_week14, symbol1_week15, symbol2_week15, symbol3_week15 FROM weeklyinfo WHERE fkcourseid= $_GET[courseID]";
 
-//echo $sql; exit;
-
 $result = $conn->query($sql);
 
-
- $row=mysqli_num_rows($result);
-
- //echo $row; exit;
+$row=mysqli_num_rows($result);
 
 if($row>0){ // login successful
-
 $row=$result->fetch_array();
 
 $holiday = $bar['holiday'];
@@ -114,17 +107,11 @@ $symbol3_week14 = $bar['symbol3_week14'];
 $symbol1_week15 = $bar['symbol1_week15'];
 $symbol2_week15 = $bar['symbol2_week15'];
 $symbol3_week15 = $bar['symbol3_week15'];
-
-//echo $title; exit;
-
 }    
-
 if ($_GET['ok'] == 1) {
    echo "Weekly Info has been updated";
 }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -138,16 +125,12 @@ if ($_GET['ok'] == 1) {
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
 </head>
 <body>
-
 <?php
-
 $sql1 = "SELECT  meetingDays FROM courseinfo WHERE PKID = $_GET[courseID]";
 
 $sql2 = "SELECT week1_of, week2_of, week3_of, week4_of, week5_of, week6_of, week7_of, week8_of, week9_of, week10_of, week11_of, week12_of, week13_of, week14_of, week15_of, week1_desc, week2_desc, week3_desc, week4_desc, week5_desc, week6_desc, week7_desc, week8_desc, week9_desc, week10_desc, week11_desc, week12_desc, week13_desc, week14_desc, week15_desc, holiday, startdate, enddate, custombreakname, customstartdate, customenddate, symbol1_week1, symbol2_week1, symbol3_week1, symbol1_week2, symbol2_week2, symbol3_week2, symbol1_week3, symbol2_week3, symbol3_week3, symbol1_week4, symbol2_week4, symbol3_week4, symbol1_week5, symbol2_week5, symbol3_week5, symbol1_week6, symbol2_week6, symbol3_week6, symbol1_week7, symbol2_week7, symbol3_week7,symbol1_week8, symbol2_week8, symbol3_week8, symbol1_week9, symbol2_week9, symbol3_week9, symbol1_week10, symbol2_week10, symbol3_week10, symbol1_week11, symbol2_week11, symbol3_week11, symbol1_week12, symbol2_week12, symbol3_week12, symbol1_week13, symbol2_week13, symbol3_week13, symbol1_week14, symbol2_week14, symbol3_week14, symbol1_week15, symbol2_week15, symbol3_week15 FROM weeklyinfo WHERE fkcourseid= $_GET[courseID]";
-
 
 $result1 = $conn->query($sql1);
 $result2 = $conn->query($sql2);
@@ -157,18 +140,12 @@ if($result1->num_rows > 0) {
  // output data of each row
  $row = $result1->fetch_assoc(); 
 
-
-
  if($result2->num_rows > 0){
    $bar = $result2->fetch_assoc();
  }
-//echo $sql2;exit;
 ?>
-
 <?php
-   
    function display_options(){
-
                echo 
                '
                <option value=" ">Select Symbol</option>
@@ -185,7 +162,6 @@ if($result1->num_rows > 0) {
             '; 
    }
 ?>
-
 <div class="boxes">
  <div id="topBox">
    <div id="ribbon">
@@ -193,39 +169,42 @@ if($result1->num_rows > 0) {
    </div>
  </div>  
 
-
 <form action="insert_weekly_info.php" form="get" style="padding-left: 25px;">
 
 <div class="breakheader">
-Break:  &nbsp; <select name="holiday_name" value="<?php echo $bar[holiday]; ?>">
-       <option value="">Select</option>
-       <option value="Thanksgiving">Thanksgiving</option> 
-       <option value="Spring">Spring</option>
-       </select> &nbsp
-<br />
-Date To: &nbsp; &nbsp;<input type="date" name="startdate1" value ="<?php echo $bar[startdate]; ?>"> &nbsp;
-<br />
-Date End: <input type="date" name="enddate" value="<?php echo $bar[enddate]; ?>"> <br><br>
+<div id="breakLeft">
+  Break:  &nbsp; <select name="holiday_name" value="<?php echo $bar[holiday]; ?>">
+        <option value="">Select</option>
+        <option value="Thanksgiving">Thanksgiving</option> 
+        <option value="Spring">Spring</option>
+        </select> &nbsp
+  <br />
+  Date To: &nbsp; &nbsp;<input type="date" name="startdate1" value ="<?php echo $bar[startdate]; ?>"> &nbsp;
+  <br />
+  Date End: <input type="date" name="enddate" value="<?php echo $bar[enddate]; ?>"> <br>
+</div>
 
-Custom break: <input type="text" name="custombreakname" value ="<?php echo $bar[custombreakname]; ?>"> &nbsp;
-Date To: &nbsp; &nbsp;<input type="date" name="customstartdate" value ="<?php echo $bar[customstartdate]; ?>"> &nbsp;
-Date End: <input type="date" name="customenddate" value="<?php echo $bar[customenddate]; ?>"> <br><br>
+<div id="breakRight">
+  Custom break: <input type="text" name="custombreakname" value ="<?php echo $bar[custombreakname]; ?>"> &nbsp; 
+  <br />
+  Date To: &nbsp; &nbsp;<input type="date" name="customstartdate" value ="<?php echo $bar[customstartdate]; ?>"> &nbsp;
+    <br />
+  Date End: <input type="date" name="customenddate" value="<?php echo $bar[customenddate]; ?>"> <br>
+</div>
 
 </div><!-- end of breakheader div -->
-
+<br /><br /><br /><br />
  <div class="row">
      <div class="box">
        <div class="circle">1</div>
        <?php 
            if($row["meetingDays"] == "TTR"){
            ?>
-
-Week of &nbsp; <input type="text" name="week1_of" value ="<?php echo $bar[week1_of]; ?>"> &nbsp; <br>
-Description &nbsp; <input type="text" length="255" name="week1_desc" value="<?php echo $bar[week1_desc]; ?>" > 
+            Week of &nbsp; <input type="text" name="week1_of" value ="<?php echo $bar[week1_of]; ?>"> &nbsp; <br>
+            Description &nbsp; <input type="text" length="255" name="week1_desc" value="<?php echo $bar[week1_desc]; ?>" > 
            <select name="symbol1_week1" value="<?php echo $bar[symbol1_week1]; ?>">
                <?php
-
-                        display_options();
+                  display_options();
                ?>
 
            </select>
@@ -1301,79 +1280,57 @@ if($result->num_rows > 0) {
 
 
 ?>
-     key:
-     <div class="keybox">
+    <div class="keybox">
+      <h3 id="keyHeader">Key:</h3>
        <div class="symbolassignment">
          <div id="symbols">
-
            <?php
-
                foreach($row as $symbol){ 
-
                    if ($symbol == "Star"){
                      echo '<img src="images/star.jpeg"  width="30px" height="30px"/>'."<br>"."<br>";
                    } 
-
                    if ($symbol == "X"){
                      echo '<img src="images/x.jpeg"  width="30px" height="30px"/>'."<br>"."<br>";
-
                    }
-
                    if ($symbol == "CheckMark"){
                      echo '<img src="images/checkmark.jpeg"  width="30px" height="20px"/>'."<br>"."<br>";
                    }
-
                    if ($symbol == "Exclamationpoint"){
                      echo '<img src="images/exclamation1.png"  width="30px" height="30px"/>'."<br>"."<br>";
                    }
-
                    if ($symbol == "Circle"){
                      echo '<img src="images/circle.png"  width="30px" height="30px"/>'."<br>"."<br>";
                    }
-
                    if ($symbol == "Kite"){
                      echo '<img src="images/Kite.png"  width="30px" height="30px"/>'."<br>"."<br>";
                    }
-
                    if ($symbol == "Square"){
                      echo '<img src="images/Square.jpeg"  width="20px" height="20px"/>'."<br>"."<br>";
                    }
-
                    if ($symbol == "Rectangle"){
                      echo '<img src="images/Rectangle.png"  width="40px" height="20px"/>'."<br>"."<br>";
                    }
-
                    if ($symbol == "Trefoil"){
                      echo '<img src="images/Trefoil.png"  width="30px" height="30px"/>'."<br>"."<br>";
                    }
-
                    if ($symbol == "Heart"){
                      echo '<img src="images/Heart.png"  width="30px" height="30px"/>'."<br>";
                    } 
                } 
-
               ?>  
            </div><!-- symbols id div -->
-
-
            <div id="assignmentList">
-
              <?php 
               //echo '<ul>';
-
                foreach($col as $assignment){
                  echo '<li>'.$assignment.'</li>'."<br>";
-
                }
-
               // echo '</ul>';
-
              ?>
            </div> <!-- end of assignmentList div --> 
          </div><!-- symbol assignment class div -->
-
      </div>
- </div>
+  </div>
 </div> <!-- boxes div -->
 
 <?php   

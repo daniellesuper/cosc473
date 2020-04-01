@@ -256,9 +256,6 @@ $pdf->AddPage();
 $html = '<img src="images/weeklyschedule.png" alt="weeklyschedule" align="center">';
 $pdf->writeHTML($html, true,false,true,false,'');
 
-// $html = '<span style = "color: red"; align = "center"> Break: '
-//					. $bar[holiday]. ' | '. 'Date To: '. $bar[startdate]. ' | '. 'Date End: '. $bar[enddate].'</span><br>'; 
-
 $html = '<span style = "color: red"; align = "center">'.$bar[holiday].' Break: '. $bar[startdate]. ' to '. $bar[enddate].'</span>'; 
 $pdf->writeHTML($html, true,false,true,false,'');
 
