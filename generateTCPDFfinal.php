@@ -149,12 +149,6 @@ $importantpoints = $bar5["importantpoints"];
 $importantpoints = html_entity_decode($importantpoints);
 $pdf->MultiCell(90, 111, $importantpoints, 0, 'C', 0, 1, 110 ,85, true);
 
-/*
-		$imp_points = $row["importantpoints"];
-
-		$imp_points = html_entity_decode($imp_points);
-		echo"$imp_points";
-*/
 
 // pie chart
 
