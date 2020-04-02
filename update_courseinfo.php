@@ -179,40 +179,13 @@ Class Days &nbsp; <select name="meetingDays" selected ="<?php echo $bar[meetingD
 				echo " <OPTION VALUE=\"TTR\"  >TTR</option>";
 			}
 
-      if($meetingDays=="M")
+      if($meetingDays=="OAW")
       {
-        echo " <OPTION VALUE=\"\"  selected></option>";
+        echo " <OPTION VALUE=\"OAW\"  selected>OAW</option>";
       }else{
-        echo " <OPTION VALUE=\"M\"  >M</option>";
+        echo " <OPTION VALUE=\"OAW\"  >OAW</option>";
       }
 
-      if($meetingDays=="T")
-      {
-        echo " <OPTION VALUE=\"T\"  selected>T</option>";
-      }else{
-        echo " <OPTION VALUE=\"TTR\"  >T</option>";
-      }
-
-      if($meetingDays=="W")
-      {
-        echo " <OPTION VALUE=\"W\"  selected>W</option>";
-      }else{
-        echo " <OPTION VALUE=\"W\"  >W</option>";
-      }
-
-      if($meetingDays=="TR")
-      {
-        echo " <OPTION VALUE=\"TR\"  selected>TR</option>";
-      }else{
-        echo " <OPTION VALUE=\"TR\"  >TR</option>";
-      }
-
-      if($meetingDays=="F")
-      {
-        echo " <OPTION VALUE=\"F\"  selected>F</option>";
-      }else{
-        echo " <OPTION VALUE=\"F\"  >F</option>";
-      }
 
       if($meetingDays=="Everyday")
       {

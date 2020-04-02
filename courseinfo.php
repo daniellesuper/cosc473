@@ -115,11 +115,7 @@ Class Days &nbsp <select name="meetingDays">
 				<option value="online"> online </option>
 				<option value="MWF"> MWF </option>
 				<option value="TTR"> TTR </option>
-				<option value="M"> M </option>
-				<option value="T"> T </option>
-				<option value="W"> W </option>
-				<option value="R"> TR </option>
-				<option value="F"> F </option>
+				<option value="OAW"> OAW </option>
 				<option value="other"> Everyday </option>
 				<!-- Code for other option when clicked text box appears -->
 			</select><br><br>

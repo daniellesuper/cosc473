@@ -301,7 +301,7 @@ $pdf->writeHTML($html, true,false,true,false,'');
 // start of the if statememt for outputting correct # of boxes and info
 //
 
-$sql3 = "SELECT  symbol1_week1, symbol2_week1, symbol3_week1, symbol1_week2, symbol2_week2, symbol3_week2, symbol1_week3, symbol2_week3, symbol3_week3, symbol1_week4, symbol2_week4, symbol3_week4, symbol1_week5, symbol2_week5, symbol3_week5, symbol1_week6, symbol2_week6, symbol3_week6, symbol1_week7, symbol2_week7, symbol3_week7, symbol1_week8, symbol2_week8, symbol3_week8, symbol1_week9, symbol2_week9	, symbol3_week9, symbol1_week10, symbol2_week10, symbol3_week10, symbol1_week11, symbol2_week11, symbol3_week11, symbol1_week12, symbol2_week12, symbol3_week12, symbol1_week13, symbol2_week13, symbol3_week13, symbol1_week14, symbol2_week14, symbol3_week14, symbol1_week15, symbol2_week15, symbol3_week15	
+$sql3 = "SELECT  symbol1_week1, symbol2_week1, symbol3_week1, symbol1_week2, symbol2_week2, symbol3_week2, symbol1_week3, symbol2_week3, symbol3_week3, symbol1_week4, symbol2_week4, symbol3_week4, symbol1_week5, symbol2_week5, symbol3_week5, symbol1_week6, symbol2_week6, symbol3_week6, symbol1_week7, symbol2_week7, symbol3_week7, symbol1_week8, symbol2_week8, symbol3_week8, symbol1_week9, symbol2_week9	, symbol3_week9, symbol1_week10, symbol2_week10, symbol3_week10, symbol1_week11, symbol2_week11, symbol3_week11, symbol1_week12, symbol2_week12, symbol3_week12, symbol1_week13, symbol2_week13, symbol3_week13, symbol1_week14, symbol2_week14, symbol3_week14, symbol1_week15, symbol2_week15, symbol3_week15
 FROM weeklyinfo WHERE fkcourseid= $_GET[courseID]";
 
 $result3 = $conn->query($sql3);
@@ -583,9 +583,248 @@ td {
 $pdf->writeHTML($html, true, false, true, false, '');
 
 }// if bracket/ end of TTR portion
-else { // start of MWF portion
+elseif ($row[meetingDays] == "OAW") { // start of MWF portion
 
-if($row[meetingDays] == "MWF" || "Online"){
+$html = '
+<style>
+table.first {
+	table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+	border: 3px solid purple;
+}
+td {
+	border: 1px solid black;
+	background-color: lightgrey;
+}
+</style>
+
+<table cellspacing="10" cellpadding="4"> 
+	<tr>
+		<td>
+			<h1>1</h1><br>
+			<h4>Week Of '.$bar[week1_of].'</h4><br>
+			<p>'.$bar[week1_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>'.$row[meetingDays].'</b><br>
+		'.$bar[symbol1_week1].' 
+		</td>
+		
+	</tr>
+</table>
+			
+		</td>
+		<td>
+			<h1>2</h1><br>
+			<h4>Week Of '.$bar[week2_of].'</h4><br>
+			<p>'.$bar[week2_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b><br>
+		'.$bar[symbol1_week2].'  
+		</td>
+		
+	</tr>
+</table>
+		</td>
+		<td>
+			<h1>3</h1><br>
+			<h4>Week Of '.$bar[week3_of].'</h4><br>
+			<p>'.$bar[week3_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b><br>
+		'.$bar[symbol1_week3].'  
+		</td>
+		
+	</tr>
+</table>
+		</td>
+		<td>
+			<h1>4</h1><br>
+			<h4>Week Of '.$bar[week4_of].'</h4><br>
+			<p>'.$bar[week4_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b><br>
+		'.$bar[symbol1_week4].'  
+		</td>
+		
+	</tr>
+</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h1>5</h1><br>
+			<h4>Week Of '.$bar[week5_of].'</h4><br>
+			<p>'.$bar[week5_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b><br>
+		'.$bar[symbol1_week5].'  
+		</td>
+		
+	</tr>
+</table>
+		</td>
+		<td>
+			<h1>6</h1><br>
+			<h4>Week Of '.$bar[week6_of].'</h4><br>
+			<p>'.$bar[week6_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b><br>
+		'.$bar[symbol1_week6].'  
+		</td>
+		
+	</tr>
+</table>
+		</td>
+		<td>
+			<h1>7</h1><br>
+			<h4>Week Of '.$bar[week7_of].'</h4><br>
+			<p>'.$bar[week7_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b><br>
+		'.$bar[symbol1_week7].'  
+		</td>
+		
+	</tr>
+</table>
+		</td>
+		<td>
+			<h1>8</h1><br>
+			<h4>Week Of '.$bar[week8_of].'</h4><br>
+			<p>'.$bar[week8_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b><br>
+		'.$bar[symbol1_week8].'  
+		</td>
+		
+	</tr>
+</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h1>9</h1><br>
+			<h4>Week Of '.$bar[week9_of].'</h4><br>
+			<p>'.$bar[week9_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b><br>
+		'.$bar[symbol1_week9].'  
+		</td>
+		
+	</tr>
+</table>
+		</td>
+		<td>
+			<h1>10</h1><br>
+			<h4>Week Of '.$bar[week10_of].'</h4><br>
+			<p>'.$bar[week10_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b><br>
+		'.$bar[symbol1_week10].'  
+		</td>
+		
+	</tr>
+</table>
+		</td>
+		<td>
+			<h1>11</h1><br>
+			<h4>Week Of '.$bar[week11_of].'</h4><br>
+			<p>'.$bar[week11_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b><br>
+		'.$bar[symbol1_week11].'  
+		</td>
+		
+	</tr>
+</table>
+		</td>
+		<td>
+			<h1>12</h1><br>
+			<h4>Week Of '.$bar[week12_of].'</h4><br>
+			<p>'.$bar[week12_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b><br>
+		'.$bar[symbol1_week12].'  
+		</td>
+		
+	</tr>
+</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h1>13</h1><br>
+			<h4>Week Of '.$bar[week13_of].'</h4><br>
+			<p>'.$bar[week13_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b><br>
+		'.$bar[symbol1_week13].'  
+		</td>
+		
+	</tr>
+</table>
+		</td>
+		<td>
+			<h1>14</h1><br>
+			<h4>Week Of '.$bar[week14_of].'</h4><br>
+			<p>'.$bar[week14_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b><br>
+		'.$bar[symbol1_week14].'  
+		</td>
+		
+	</tr>
+</table>
+		</td>
+		<td>
+			<h1>15</h1><br>
+			<h4>Week Of '.$bar[week15_of].'</h4><br>
+			<p>'.$bar[week15_desc].'</p>
+			<table cellspacing="2" cellpadding="2">
+	<tr>
+		<td><b>T</b><br>
+		'.$bar[symbol1_week15].'  
+		</td>
+		
+	</tr> 
+</table>
+		</td>
+		<td>
+			<h1>Key</h1><br>
+			<p>'.$row[symbol1]." ".$row[assign1].'</p>
+			<p>'.$row[symbol2]." ".$row[assign2].'</p>
+			<p>'.$row[symbol3]." ".$row[assign3].'</p>
+			<p>'.$row[symbol4]." ".$row[assign4].'</p>
+			<p>'.$row[symbol5]." ".$row[assign5].'</p>
+			<p>'.$row[symbol6]." ".$row[assign6].'</p>
+			<p>'.$row[symbol7]." ".$row[assign7].'</p>
+			<p>'.$row[symbol8]." ".$row[assign8].'</p>
+			<p>'.$row[symbol9]." ".$row[assign9].'</p>
+			<p>'.$row[symbol10]." ".$row[assign10].'</p>
+		</td>
+	</tr>
+</table>
+';
+
+
+$pdf->writeHTML($html, true, false, true, false, '');
+}
+else {
+
 $html = '
 <style>
 table.first {
@@ -896,13 +1135,20 @@ td {
 
 ';
 
+
 $pdf->writeHTML($html, true, false, true, false, '');
-	}
+
+//}// if bracket/ end of TTR portion
+
+
+
+	}// else bracket
 }
+//}
 
 
 $pdf->output('weeklyschedule.pdf', 'I'); // PUT D INSTEAD OF I FOR DOWNLOADING AUTOMATICALLY PDF
-$conn->close(); }// end of if else for row and bar
+$conn->close(); //}// end of if else for row and bar
 ?>
 <html>
 	<head>	
