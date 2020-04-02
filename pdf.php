@@ -187,6 +187,9 @@ if($result->num_rows > 0) {
 			
 		</div><!--end breakdown-->
 	<!--if else for professor info -->
+
+
+	
 		<?php 	
 	} // end if course info
 else { 
@@ -195,6 +198,7 @@ else {
 $conn->close();
 //echo "---------------------------------<hr>"; exit;
 ?> 
+
 
 <?php 	/* used for topicname */
 	} // end if course info

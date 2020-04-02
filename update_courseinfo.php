@@ -154,8 +154,10 @@ if($result->num_rows > 0) {
 <form method="get" action="update_course_info.php" style="padding-left: 25px;" enctype="multipart/form-data">
 
 Course Code &nbsp; <input type="text" length="25" name="courseCode" value="<?php echo $bar[coursecode]; ?>" required > &nbsp; Example: COSC 473<br><br>
-Course Name &nbsp; <input type="text" length="50" name="courseName" value="<?php echo $bar[coursename];?>" required> &nbsp; 
-Class Days &nbsp; <select name="meetingDays" selected ="<?php echo $bar[meetingDays]; ?>" required>
+Course Name &nbsp; <input type="text" length="50" name="courseName" value="<?php echo $bar[coursename];?>" required> 
+Class Days &nbsp; <select name="meetingDays" selected ="<?php echo $bar[meetingDays]; ?>" required>  &nbsp; 
+
+
 				<option value="">--</option>
 			
 			<?php
@@ -231,11 +233,11 @@ Class Days &nbsp; <select name="meetingDays" selected ="<?php echo $bar[meetingD
       }
 				
 			  ?>
-			</SELECT>
+			</SELECT> *OAW: Once a week classes
 
 				<!-- Code for other option when clicked text box appears -->
 			</select><br><br>
-Important Points:<br><br>
+Important Points: Brief statement on class expectations/ Attendance policy/ important dates/ etc..<br><br>
 <textarea name="importantpoints" style="width: 25%;"> <?php echo "$importantpoints"; ?>
 </textarea><br>
 <script>CKEDITOR.replace('importantpoints'); CKEDITOR.config.width = '50%';</script>
@@ -244,11 +246,11 @@ Important Points:<br><br>
 	
 Book Name: &nbsp; <input type="text" length="90" name="bookName" value="<?php echo $bar[bookname]; ?>" >&nbsp; 
 ISBN:&nbsp; <input type="text" length="90" name="bookisbn" value="<?php echo $bar[bookIsbn]; ?>"> &nbsp;
-Author: &nbsp; <input type="text" length="90" name="bookAuthor" value="<?php echo $bar[bookAuthor]; ?>"> <br><br>
+Book Author: &nbsp; <input type="text" length="90" name="bookAuthor" value="<?php echo $bar[bookAuthor]; ?>"> <br><br>
 
-Book Image: <input type="file" name="bookImage" /><br><br>
 
-Grade Breakdown: <br><br>
+
+Grade Breakdown: Name of the assignment goes to left column, Percentage of assignment goes to right column <br><br>
 
 <div id="gradeWeight"> 
 <p id="grade1">
@@ -293,7 +295,7 @@ Weight: &nbsp; <input type="text" length="25" name="weight10" value="<?php echo 
 </p><br>
 </div>
 
-Course symbol & Name:  <br><br><!-- make dropdown -->
+Course symbol & Name: Choose a listed symbol to denote which assignment it will represent <br><br><!-- make dropdown -->
 
 
 <div id="symbol_Name">      

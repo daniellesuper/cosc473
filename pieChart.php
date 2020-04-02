@@ -100,6 +100,12 @@ if($topicname2 !="" || $topicname2!=null || !empty($topicname2))
 	 $dataPoints [9] =  array("label"=>$topicname10, "y"=>$pointvalue10);
  }
 
+
+// screenshot
+
+ 
+
+
  //$itemName1= "Assignment 1"; // get it from courseinfo table
  //$itemVal1= 10; // get it from courseinfo table
  //echo $topicname1; exit;
