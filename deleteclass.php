@@ -23,5 +23,7 @@ if ($conn->query($sql) === TRUE) {
     echo "Error deleting record: " . $conn->error;
 }
 
+@header('Location: mainpage.php?');
+
 $conn->close();
 ?>

@@ -14,7 +14,7 @@ $courseID = $_GET['courseID'];
 	
 $sql =" Select     
 topicname1, topicname2, topicname3, topicname4, topicname5, topicname6, topicname7, 
-pointvalue1, pointvalue2, pointvalue3, pointvalue4, pointvalue5, pointvalue6, pointvalue7 FROM courseinfo where PKID = $courseID  ";
+pointvalue1, pointvalue2, pointvalue3, pointvalue4, pointvalue5, pointvalue6, pointvalue7, pointvalue8, pointvalue9, pointvalue10 FROM courseinfo where PKID = $courseID  ";
 
 //echo $sql; exit;
 $result = $conn->query($sql);
@@ -43,6 +43,9 @@ $pointvalue4 =$row[pointvalue4];
 $pointvalue5 =$row[pointvalue5];
 $pointvalue6 =$row[pointvalue6];
 $pointvalue7 =$row[pointvalue7];
+$pointvalue8 =$row[pointvalue8];
+$pointvalue9 =$row[pointvalue9];
+$pointvalue10 =$row[pointvalue10];
 }
 
 $dataPoints = array();
@@ -80,6 +83,21 @@ if($topicname2 !="" || $topicname2!=null || !empty($topicname2))
  if($topicname7 !="" || $topicname7!=null || !empty($topicname7))
  {
 	 $dataPoints [6] =  array("label"=>$topicname7, "y"=>$pointvalue7);
+ }
+
+ if($topicname8 !="" || $topicname8!=null || !empty($topicname8))
+ {
+	 $dataPoints [7] =  array("label"=>$topicname8, "y"=>$pointvalue8);
+ }
+
+ if($topicname9 !="" || $topicname9!=null || !empty($topicname9))
+ {
+	 $dataPoints [8] =  array("label"=>$topicname9, "y"=>$pointvalue9);
+ }
+
+ if($topicname10 !="" || $topicname10!=null || !empty($topicname10))
+ {
+	 $dataPoints [9] =  array("label"=>$topicname10, "y"=>$pointvalue10);
  }
 
  //$itemName1= "Assignment 1"; // get it from courseinfo table

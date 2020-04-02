@@ -189,10 +189,52 @@ $pdf->Image('images/grades.png', '', '', 90, 20, '', '', 'T', false, 300, '', fa
 $pdf->SetXY(40, 130);
 $pdf->Image('images/grade1.png', '', '', 30, 10, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
-//IMPORTANT POINTS IMAGE 
-//$pdf->SetXY(105, 84);
-//$pdf->Image('images/importantpoints.png', '', '', 100, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
+//
+// Start of the pie chart
+//
+$assign1 = $row["assign1"];
+$assign2 = $row["assign2"];
+$assign3 = $row["assign3"];
+
+$pointvalue1 = $row["pointvalue1"];
+//$pdf->MultiCell(20, 10, $pointvalue1, 0, 'C', 0, 2, 15, 160, true,0, false, true, 40, 'C');
+
+$pointvalue2 = $row["pointvalue2"];
+//$pdf->MultiCell(20, 10, $pointvalue2 , 0, 'C', 0, 2, 22, 160, true,0, false, true, 40, 'C');
+
+$pointvalue3 = $row["pointvalue3"];
+//$pdf->MultiCell(20, 10, $pointvalue3 , 0, 'C', 0, 2, 26, 166, true,0, false, true, 40, 'C');
+
+$pointvalue4 = $row["pointvalue4"];
+//$pdf->MultiCell(20, 10, $pointvalue4 , 0, 'C', 0, 2, 26, 166, true,0, false, true, 40, 'C');
+
+$pointvalue5 = $row["pointvalue5"];
+//$pdf->MultiCell(20, 10, $pointvalue5 , 0, 'C', 0, 2, 26, 166, true,0, false, true, 40, 'C');
+
+$pdf->SetFillColor(0,0,255);
+$pdf->PieSector($pointvalue1,$pointvalue2,$pointvalue3, $pointvalue4,  20, 120, 'FD', false, 0, 2);
+
+$pdf->SetFillColor(0,255,0);
+$pdf->PieSector($pointvalue1,$pointvalue2,$pointvalue3, $pointvalue4, 120, 250, 'FD', false, 0, 2);
+
+$pdf->SetFillColor(200,44,35);
+$pdf->PieSector($pointvalue1,$pointvalue2,$pointvalue3, $pointvalue4, 250, 20, 'FD', false, 0, 2);
+
+//$pdf->SetFillColor(100,100,100);
+//$pdf->PieSector($pointvalue1,$pointvalue2,$pointvalue3, $pointvalue4, $pointvalue5,30, 40, 'FD', false, 0, 2);
+
+/*
+// Labels for pie chart
+$pdf->SetTextColor(255,255,255);
+$pdf->Text(105, 65, $assign1);
+$pdf->Text(60, 95, $assign2);
+$pdf->Text(120, 115, $assign3);
+*/
+
+
+//
+//
 //grade breakdown
 
 // THIS IS THE BLUE SQUARE FOR ASSIGNMENT 2
