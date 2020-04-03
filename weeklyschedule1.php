@@ -237,6 +237,76 @@ if($result1->num_rows > 0) {
          <?php
        }
 
+       elseif ($row["meetingDays"] == "M"){
+          ?>
+              Week of &nbsp; <input type="text" name="week1_of" value ="<?php echo $bar[week1_of]; ?>"> &nbsp; <br>
+            Description &nbsp; <input type="text" length="255" name="week1_desc" value="<?php echo $bar[week1_desc]; ?>" > 
+           <select name="symbol1_week1" value="<?php echo $bar[symbol1_week1]; ?>">
+               <?php
+                  display_options();
+               ?>
+
+           </select>
+         
+         <?php
+       }
+
+       elseif ($row["meetingDays"] == "T"){
+          ?>
+              Week of &nbsp; <input type="text" name="week1_of" value ="<?php echo $bar[week1_of]; ?>"> &nbsp; <br>
+            Description &nbsp; <input type="text" length="255" name="week1_desc" value="<?php echo $bar[week1_desc]; ?>" > 
+           <select name="symbol1_week1" value="<?php echo $bar[symbol1_week1]; ?>">
+               <?php
+                  display_options();
+               ?>
+
+           </select>
+         
+         <?php
+       }
+
+       elseif ($row["meetingDays"] == "W"){
+          ?>
+              Week of &nbsp; <input type="text" name="week1_of" value ="<?php echo $bar[week1_of]; ?>"> &nbsp; <br>
+            Description &nbsp; <input type="text" length="255" name="week1_desc" value="<?php echo $bar[week1_desc]; ?>" > 
+           <select name="symbol1_week1" value="<?php echo $bar[symbol1_week1]; ?>">
+               <?php
+                  display_options();
+               ?>
+
+           </select>
+         
+         <?php
+       }
+
+       elseif ($row["meetingDays"] == "TR"){
+          ?>
+              Week of &nbsp; <input type="text" name="week1_of" value ="<?php echo $bar[week1_of]; ?>"> &nbsp; <br>
+            Description &nbsp; <input type="text" length="255" name="week1_desc" value="<?php echo $bar[week1_desc]; ?>" > 
+           <select name="symbol1_week1" value="<?php echo $bar[symbol1_week1]; ?>">
+               <?php
+                  display_options();
+               ?>
+
+           </select>
+         
+         <?php
+       }
+
+       elseif ($row["meetingDays"] == "F"){
+          ?>
+              Week of &nbsp; <input type="text" name="week1_of" value ="<?php echo $bar[week1_of]; ?>"> &nbsp; <br>
+            Description &nbsp; <input type="text" length="255" name="week1_desc" value="<?php echo $bar[week1_desc]; ?>" > 
+           <select name="symbol1_week1" value="<?php echo $bar[symbol1_week1]; ?>">
+               <?php
+                  display_options();
+               ?>
+
+           </select>
+         
+         <?php
+       }
+
         elseif($row["meetingDays"] == "MWF"){
           ?>
 Week of &nbsp; <input type="text" name="week1_of" value ="<?php echo $bar[week1_of]; ?>"> &nbsp; <br>
@@ -345,6 +415,76 @@ Description &nbsp;   <input type="text" length="255" name="week1_desc" value="<?
          } 
 
          elseif ($row["meetingDays"] == "OAW"){
+          ?>
+              Week of &nbsp; <input type="text" name="week2_of" value ="<?php echo $bar[week2_of]; ?>"> &nbsp; <br>
+            Description &nbsp; <input type="text" length="255" name="week2_desc" value="<?php echo $bar[week2_desc]; ?>" > 
+           <select name="symbol1_week2" value="<?php echo $bar[symbol1_week2]; ?>">
+               <?php
+                  display_options();
+               ?>
+
+           </select>
+         
+         <?php
+       }
+
+       elseif ($row["meetingDays"] == "M"){
+          ?>
+              Week of &nbsp; <input type="text" name="week2_of" value ="<?php echo $bar[week2_of]; ?>"> &nbsp; <br>
+            Description &nbsp; <input type="text" length="255" name="week2_desc" value="<?php echo $bar[week2_desc]; ?>" > 
+           <select name="symbol1_week2" value="<?php echo $bar[symbol1_week2]; ?>">
+               <?php
+                  display_options();
+               ?>
+
+           </select>
+         
+         <?php
+       }
+
+       elseif ($row["meetingDays"] == "T"){
+          ?>
+              Week of &nbsp; <input type="text" name="week2_of" value ="<?php echo $bar[week2_of]; ?>"> &nbsp; <br>
+            Description &nbsp; <input type="text" length="255" name="week2_desc" value="<?php echo $bar[week2_desc]; ?>" > 
+           <select name="symbol1_week2" value="<?php echo $bar[symbol1_week2]; ?>">
+               <?php
+                  display_options();
+               ?>
+
+           </select>
+         
+         <?php
+       }
+
+       elseif ($row["meetingDays"] == "W"){
+          ?>
+              Week of &nbsp; <input type="text" name="week2_of" value ="<?php echo $bar[week2_of]; ?>"> &nbsp; <br>
+            Description &nbsp; <input type="text" length="255" name="week2_desc" value="<?php echo $bar[week2_desc]; ?>" > 
+           <select name="symbol1_week2" value="<?php echo $bar[symbol1_week2]; ?>">
+               <?php
+                  display_options();
+               ?>
+
+           </select>
+         
+         <?php
+       }
+
+       elseif ($row["meetingDays"] == "TR"){
+          ?>
+              Week of &nbsp; <input type="text" name="week2_of" value ="<?php echo $bar[week2_of]; ?>"> &nbsp; <br>
+            Description &nbsp; <input type="text" length="255" name="week2_desc" value="<?php echo $bar[week2_desc]; ?>" > 
+           <select name="symbol1_week2" value="<?php echo $bar[symbol1_week2]; ?>">
+               <?php
+                  display_options();
+               ?>
+
+           </select>
+         
+         <?php
+       }
+
+       elseif ($row["meetingDays"] == "F"){
           ?>
               Week of &nbsp; <input type="text" name="week2_of" value ="<?php echo $bar[week2_of]; ?>"> &nbsp; <br>
             Description &nbsp; <input type="text" length="255" name="week2_desc" value="<?php echo $bar[week2_desc]; ?>" > 
@@ -484,6 +624,86 @@ Description &nbsp; <input type="text" length="255" name="week3_desc" value="<?ph
            <?php
        }
 
+       elseif ($row["meetingDays"] == "M"){
+          ?>
+Week of &nbsp; <input type="text" name="week3_of" value ="<?php echo $bar[week3_of]; ?>"> &nbsp; <br>
+Description &nbsp; <input type="text" length="255" name="week3_desc" value="<?php echo $bar[week3_desc]; ?>" > 
+
+           <select name="symbol1_week3">
+
+               <?php
+
+                        display_options();
+               ?>
+           </select>
+
+           <?php
+       }
+
+       elseif ($row["meetingDays"] == "T"){
+          ?>
+Week of &nbsp; <input type="text" name="week3_of" value ="<?php echo $bar[week3_of]; ?>"> &nbsp; <br>
+Description &nbsp; <input type="text" length="255" name="week3_desc" value="<?php echo $bar[week3_desc]; ?>" > 
+
+           <select name="symbol1_week3">
+
+               <?php
+
+                        display_options();
+               ?>
+           </select>
+
+           <?php
+       }
+
+       elseif ($row["meetingDays"] == "W"){
+          ?>
+Week of &nbsp; <input type="text" name="week3_of" value ="<?php echo $bar[week3_of]; ?>"> &nbsp; <br>
+Description &nbsp; <input type="text" length="255" name="week3_desc" value="<?php echo $bar[week3_desc]; ?>" > 
+
+           <select name="symbol1_week3">
+
+               <?php
+
+                        display_options();
+               ?>
+           </select>
+
+           <?php
+       }
+
+       elseif ($row["meetingDays"] == "TR"){
+          ?>
+Week of &nbsp; <input type="text" name="week3_of" value ="<?php echo $bar[week3_of]; ?>"> &nbsp; <br>
+Description &nbsp; <input type="text" length="255" name="week3_desc" value="<?php echo $bar[week3_desc]; ?>" > 
+
+           <select name="symbol1_week3">
+
+               <?php
+
+                        display_options();
+               ?>
+           </select>
+
+           <?php
+       }
+
+       elseif ($row["meetingDays"] == "F"){
+          ?>
+Week of &nbsp; <input type="text" name="week3_of" value ="<?php echo $bar[week3_of]; ?>"> &nbsp; <br>
+Description &nbsp; <input type="text" length="255" name="week3_desc" value="<?php echo $bar[week3_desc]; ?>" > 
+
+           <select name="symbol1_week3">
+
+               <?php
+
+                        display_options();
+               ?>
+           </select>
+
+           <?php
+       }
+
        elseif($row["meetingDays"] == "MWF"){
           ?>
 Week of &nbsp; <input type="text" name="week3_of" value ="<?php echo $bar[week3_of]; ?>"> &nbsp; <br>
@@ -592,6 +812,71 @@ Description  &nbsp; <input type="text" length="255" name="week4_desc" value="<?p
          } 
 
          elseif ($row["meetingDays"] == "OAW"){
+          ?>
+Week of &nbsp; <input type="text" name="week4_of" value ="<?php echo $bar[week4_of]; ?>"> &nbsp; <br>
+Description  &nbsp; <input type="text" length="255" name="week4_desc" value="<?php echo $bar[week4_desc]; ?>" > 
+           <select name="symbol1_week4">
+                           <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "M"){
+          ?>
+Week of &nbsp; <input type="text" name="week4_of" value ="<?php echo $bar[week4_of]; ?>"> &nbsp; <br>
+Description  &nbsp; <input type="text" length="255" name="week4_desc" value="<?php echo $bar[week4_desc]; ?>" > 
+           <select name="symbol1_week4">
+                           <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "T"){
+          ?>
+Week of &nbsp; <input type="text" name="week4_of" value ="<?php echo $bar[week4_of]; ?>"> &nbsp; <br>
+Description  &nbsp; <input type="text" length="255" name="week4_desc" value="<?php echo $bar[week4_desc]; ?>" > 
+           <select name="symbol1_week4">
+                           <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "W"){
+          ?>
+Week of &nbsp; <input type="text" name="week4_of" value ="<?php echo $bar[week4_of]; ?>"> &nbsp; <br>
+Description  &nbsp; <input type="text" length="255" name="week4_desc" value="<?php echo $bar[week4_desc]; ?>" > 
+           <select name="symbol1_week4">
+                           <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "TR"){
+          ?>
+Week of &nbsp; <input type="text" name="week4_of" value ="<?php echo $bar[week4_of]; ?>"> &nbsp; <br>
+Description  &nbsp; <input type="text" length="255" name="week4_desc" value="<?php echo $bar[week4_desc]; ?>" > 
+           <select name="symbol1_week4">
+                           <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "F"){
           ?>
 Week of &nbsp; <input type="text" name="week4_of" value ="<?php echo $bar[week4_of]; ?>"> &nbsp; <br>
 Description  &nbsp; <input type="text" length="255" name="week4_desc" value="<?php echo $bar[week4_desc]; ?>" > 
@@ -723,6 +1008,81 @@ Description  &nbsp; <input type="text" length="255" name="week5_desc" value="<?p
 <?php
        }
 
+       elseif ($row["meetingDays"] == "M"){
+          ?>
+
+          Week of &nbsp; <input type="text" name="week5_of" value ="<?php echo $bar[week5_of]; ?>"> &nbsp; <br>
+Description  &nbsp; <input type="text" length="255" name="week5_desc" value="<?php echo $bar[week5_desc]; ?>" > 
+           <select name="symbol1_week5">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "T"){
+          ?>
+
+          Week of &nbsp; <input type="text" name="week5_of" value ="<?php echo $bar[week5_of]; ?>"> &nbsp; <br>
+Description  &nbsp; <input type="text" length="255" name="week5_desc" value="<?php echo $bar[week5_desc]; ?>" > 
+           <select name="symbol1_week5">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "W"){
+          ?>
+
+          Week of &nbsp; <input type="text" name="week5_of" value ="<?php echo $bar[week5_of]; ?>"> &nbsp; <br>
+Description  &nbsp; <input type="text" length="255" name="week5_desc" value="<?php echo $bar[week5_desc]; ?>" > 
+           <select name="symbol1_week5">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "TR"){
+          ?>
+
+          Week of &nbsp; <input type="text" name="week5_of" value ="<?php echo $bar[week5_of]; ?>"> &nbsp; <br>
+Description  &nbsp; <input type="text" length="255" name="week5_desc" value="<?php echo $bar[week5_desc]; ?>" > 
+           <select name="symbol1_week5">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "F"){
+          ?>
+
+          Week of &nbsp; <input type="text" name="week5_of" value ="<?php echo $bar[week5_of]; ?>"> &nbsp; <br>
+Description  &nbsp; <input type="text" length="255" name="week5_desc" value="<?php echo $bar[week5_desc]; ?>" > 
+           <select name="symbol1_week5">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+<?php
+       }
+
        elseif($row["meetingDays"] == "MWF"){
           ?>
 Week of &nbsp; <input type="text" name="week5_of" value ="<?php echo $bar[week5_of]; ?>"> &nbsp; <br>
@@ -826,6 +1186,76 @@ Description  &nbsp; <input type="text" length="255" name="week6_desc" value="<?p
          } 
 
          elseif ($row["meetingDays"] == "OAW"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week6_of" value ="<?php echo $bar[week6_of]; ?>"> &nbsp; <br>
+Description  &nbsp; <input type="text" length="255" name="week6_desc" value="<?php echo $bar[week6_desc]; ?>" > 
+           <select name="symbol1_week6">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "M"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week6_of" value ="<?php echo $bar[week6_of]; ?>"> &nbsp; <br>
+Description  &nbsp; <input type="text" length="255" name="week6_desc" value="<?php echo $bar[week6_desc]; ?>" > 
+           <select name="symbol1_week6">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "T"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week6_of" value ="<?php echo $bar[week6_of]; ?>"> &nbsp; <br>
+Description  &nbsp; <input type="text" length="255" name="week6_desc" value="<?php echo $bar[week6_desc]; ?>" > 
+           <select name="symbol1_week6">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "W"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week6_of" value ="<?php echo $bar[week6_of]; ?>"> &nbsp; <br>
+Description  &nbsp; <input type="text" length="255" name="week6_desc" value="<?php echo $bar[week6_desc]; ?>" > 
+           <select name="symbol1_week6">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "TR"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week6_of" value ="<?php echo $bar[week6_of]; ?>"> &nbsp; <br>
+Description  &nbsp; <input type="text" length="255" name="week6_desc" value="<?php echo $bar[week6_desc]; ?>" > 
+           <select name="symbol1_week6">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "F"){
           ?>
 
 Week of &nbsp; <input type="text" name="week6_of" value ="<?php echo $bar[week6_of]; ?>"> &nbsp; <br>
@@ -954,6 +1384,81 @@ Description &nbsp; <input type="text" length="255" name="week7_desc" value="<?ph
 <?php
        }
 
+       elseif ($row["meetingDays"] == "M"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week7_of" value ="<?php echo $bar[week7_of]; ?>"> &nbsp; <br>
+Description &nbsp; <input type="text" length="255" name="week7_desc" value="<?php echo $bar[week7_desc]; ?>" > 
+           <select name="symbol1_week7">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "T"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week7_of" value ="<?php echo $bar[week7_of]; ?>"> &nbsp; <br>
+Description &nbsp; <input type="text" length="255" name="week7_desc" value="<?php echo $bar[week7_desc]; ?>" > 
+           <select name="symbol1_week7">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "W"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week7_of" value ="<?php echo $bar[week7_of]; ?>"> &nbsp; <br>
+Description &nbsp; <input type="text" length="255" name="week7_desc" value="<?php echo $bar[week7_desc]; ?>" > 
+           <select name="symbol1_week7">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "TR"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week7_of" value ="<?php echo $bar[week7_of]; ?>"> &nbsp; <br>
+Description &nbsp; <input type="text" length="255" name="week7_desc" value="<?php echo $bar[week7_desc]; ?>" > 
+           <select name="symbol1_week7">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "F"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week7_of" value ="<?php echo $bar[week7_of]; ?>"> &nbsp; <br>
+Description &nbsp; <input type="text" length="255" name="week7_desc" value="<?php echo $bar[week7_desc]; ?>" > 
+           <select name="symbol1_week7">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+<?php
+       }
+
        elseif($row["meetingDays"] == "MWF"){
           ?>
 Week of &nbsp; <input type="text" name="week7_of" value ="<?php echo $bar[week7_of]; ?>"> &nbsp; <br>
@@ -1054,6 +1559,76 @@ Description  &nbsp; <input type="text" length="255" name="week8_desc" value="<?p
          } 
 
          elseif ($row["meetingDays"] == "OAW"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week8_of" value ="<?php echo $bar[week8_of]; ?>"> &nbsp; <br>
+Description  &nbsp; <input type="text" length="255" name="week8_desc" value="<?php echo $bar[week8_desc]; ?>" > 
+           <select name="symbol1_week8">
+          <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "M"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week8_of" value ="<?php echo $bar[week8_of]; ?>"> &nbsp; <br>
+Description  &nbsp; <input type="text" length="255" name="week8_desc" value="<?php echo $bar[week8_desc]; ?>" > 
+           <select name="symbol1_week8">
+          <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "T"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week8_of" value ="<?php echo $bar[week8_of]; ?>"> &nbsp; <br>
+Description  &nbsp; <input type="text" length="255" name="week8_desc" value="<?php echo $bar[week8_desc]; ?>" > 
+           <select name="symbol1_week8">
+          <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "W"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week8_of" value ="<?php echo $bar[week8_of]; ?>"> &nbsp; <br>
+Description  &nbsp; <input type="text" length="255" name="week8_desc" value="<?php echo $bar[week8_desc]; ?>" > 
+           <select name="symbol1_week8">
+          <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "TR"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week8_of" value ="<?php echo $bar[week8_of]; ?>"> &nbsp; <br>
+Description  &nbsp; <input type="text" length="255" name="week8_desc" value="<?php echo $bar[week8_desc]; ?>" > 
+           <select name="symbol1_week8">
+          <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "F"){
           ?>
 
 Week of &nbsp; <input type="text" name="week8_of" value ="<?php echo $bar[week8_of]; ?>"> &nbsp; <br>
@@ -1185,6 +1760,76 @@ Description   &nbsp; <input type="text" length="255" name="week9_desc" value="<?
 <?php
        }
 
+       elseif ($row["meetingDays"] == "M"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week9_of" value ="<?php echo $bar[week9_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week9_desc" value="<?php echo $bar[week9_desc]; ?>" >
+           <select name="symbol1_week9">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "T"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week9_of" value ="<?php echo $bar[week9_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week9_desc" value="<?php echo $bar[week9_desc]; ?>" >
+           <select name="symbol1_week9">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "W"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week9_of" value ="<?php echo $bar[week9_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week9_desc" value="<?php echo $bar[week9_desc]; ?>" >
+           <select name="symbol1_week9">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "TR"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week9_of" value ="<?php echo $bar[week9_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week9_desc" value="<?php echo $bar[week9_desc]; ?>" >
+           <select name="symbol1_week9">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "F"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week9_of" value ="<?php echo $bar[week9_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week9_desc" value="<?php echo $bar[week9_desc]; ?>" >
+           <select name="symbol1_week9">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
         elseif($row["meetingDays"] == "MWF"){
           ?>
 
@@ -1287,6 +1932,76 @@ Description   &nbsp; <input type="text" length="255" name="week10_desc" value="<
          } 
 
          elseif ($row["meetingDays"] == "OAW"){
+          ?>
+Week of &nbsp; <input type="text" name="week10_of" value ="<?php echo $bar[week10_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week10_desc" value="<?php echo $bar[week10_desc]; ?>" > 
+           <select name="symbol1_week10">
+           <?php
+
+                        display_options();
+               ?>
+           </select>  
+
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "M"){
+          ?>
+Week of &nbsp; <input type="text" name="week10_of" value ="<?php echo $bar[week10_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week10_desc" value="<?php echo $bar[week10_desc]; ?>" > 
+           <select name="symbol1_week10">
+           <?php
+
+                        display_options();
+               ?>
+           </select>  
+
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "T"){
+          ?>
+Week of &nbsp; <input type="text" name="week10_of" value ="<?php echo $bar[week10_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week10_desc" value="<?php echo $bar[week10_desc]; ?>" > 
+           <select name="symbol1_week10">
+           <?php
+
+                        display_options();
+               ?>
+           </select>  
+
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "W"){
+          ?>
+Week of &nbsp; <input type="text" name="week10_of" value ="<?php echo $bar[week10_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week10_desc" value="<?php echo $bar[week10_desc]; ?>" > 
+           <select name="symbol1_week10">
+           <?php
+
+                        display_options();
+               ?>
+           </select>  
+
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "TR"){
+          ?>
+Week of &nbsp; <input type="text" name="week10_of" value ="<?php echo $bar[week10_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week10_desc" value="<?php echo $bar[week10_desc]; ?>" > 
+           <select name="symbol1_week10">
+           <?php
+
+                        display_options();
+               ?>
+           </select>  
+
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "F"){
           ?>
 Week of &nbsp; <input type="text" name="week10_of" value ="<?php echo $bar[week10_of]; ?>"> &nbsp; <br>
 Description   &nbsp; <input type="text" length="255" name="week10_desc" value="<?php echo $bar[week10_desc]; ?>" > 
@@ -1415,6 +2130,76 @@ Description   &nbsp; <input type="text" length="255" name="week11_desc" value="<
 <?php
        }
 
+       elseif ($row["meetingDays"] == "M"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week11_of" value ="<?php echo $bar[week11_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week11_desc" value="<?php echo $bar[week11_desc]; ?>" > 
+           <select name="symbol1_week11">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "T"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week11_of" value ="<?php echo $bar[week11_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week11_desc" value="<?php echo $bar[week11_desc]; ?>" > 
+           <select name="symbol1_week11">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "W"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week11_of" value ="<?php echo $bar[week11_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week11_desc" value="<?php echo $bar[week11_desc]; ?>" > 
+           <select name="symbol1_week11">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "TR"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week11_of" value ="<?php echo $bar[week11_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week11_desc" value="<?php echo $bar[week11_desc]; ?>" > 
+           <select name="symbol1_week11">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "F"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week11_of" value ="<?php echo $bar[week11_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week11_desc" value="<?php echo $bar[week11_desc]; ?>" > 
+           <select name="symbol1_week11">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+<?php
+       }
+
        elseif($row["meetingDays"] == "MWF"){
           ?>
 
@@ -1518,6 +2303,81 @@ Description   &nbsp; <input type="text" length="255" name="week12_desc" value="<
          } 
 
          elseif ($row["meetingDays"] == "OAW"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week12_of" value ="<?php echo $bar[week12_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week12_desc" value="<?php echo $bar[week12_desc]; ?>" > 
+           <select name="symbol1_week12">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "M"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week12_of" value ="<?php echo $bar[week12_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week12_desc" value="<?php echo $bar[week12_desc]; ?>" > 
+           <select name="symbol1_week12">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "T"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week12_of" value ="<?php echo $bar[week12_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week12_desc" value="<?php echo $bar[week12_desc]; ?>" > 
+           <select name="symbol1_week12">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "W"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week12_of" value ="<?php echo $bar[week12_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week12_desc" value="<?php echo $bar[week12_desc]; ?>" > 
+           <select name="symbol1_week12">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "TR"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week12_of" value ="<?php echo $bar[week12_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week12_desc" value="<?php echo $bar[week12_desc]; ?>" > 
+           <select name="symbol1_week12">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+<?php
+       }
+
+       elseif ($row["meetingDays"] == "F"){
           ?>
 
 Week of &nbsp; <input type="text" name="week12_of" value ="<?php echo $bar[week12_of]; ?>"> &nbsp; <br>
@@ -1651,6 +2511,81 @@ Description   &nbsp; <input type="text" length="255" name="week13_desc" value="<
           <?php
        }
 
+       elseif ($row["meetingDays"] == "M"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week13_of" value ="<?php echo $bar[week13_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week13_desc" value="<?php echo $bar[week13_desc]; ?>" > 
+           <select name="symbol1_week13">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+          <?php
+       }
+
+       elseif ($row["meetingDays"] == "T"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week13_of" value ="<?php echo $bar[week13_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week13_desc" value="<?php echo $bar[week13_desc]; ?>" > 
+           <select name="symbol1_week13">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+          <?php
+       }
+
+       elseif ($row["meetingDays"] == "W"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week13_of" value ="<?php echo $bar[week13_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week13_desc" value="<?php echo $bar[week13_desc]; ?>" > 
+           <select name="symbol1_week13">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+          <?php
+       }
+
+       elseif ($row["meetingDays"] == "TR"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week13_of" value ="<?php echo $bar[week13_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week13_desc" value="<?php echo $bar[week13_desc]; ?>" > 
+           <select name="symbol1_week13">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+          <?php
+       }
+
+       elseif ($row["meetingDays"] == "F"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week13_of" value ="<?php echo $bar[week13_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week13_desc" value="<?php echo $bar[week13_desc]; ?>" > 
+           <select name="symbol1_week13">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+          <?php
+       }
+
        elseif($row["meetingDays"] == "MWF"){
           ?>
 Week of &nbsp; <input type="text" name="week13_of" value ="<?php echo $bar[week13_of]; ?>"> &nbsp; <br>
@@ -1769,6 +2704,86 @@ Description   &nbsp; <input type="text" length="255" name="week14_desc" value="<
  <?php
        }
 
+       elseif ($row["meetingDays"] == "M"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week14_of" value ="<?php echo $bar[week14_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week14_desc" value="<?php echo $bar[week14_desc]; ?>" > 
+           <select name="symbol1_week14">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+           <?php echo "T"; ?><br>
+ 
+ <?php
+       }
+
+       elseif ($row["meetingDays"] == "T"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week14_of" value ="<?php echo $bar[week14_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week14_desc" value="<?php echo $bar[week14_desc]; ?>" > 
+           <select name="symbol1_week14">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+           <?php echo "T"; ?><br>
+ 
+ <?php
+       }
+
+       elseif ($row["meetingDays"] == "W"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week14_of" value ="<?php echo $bar[week14_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week14_desc" value="<?php echo $bar[week14_desc]; ?>" > 
+           <select name="symbol1_week14">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+           <?php echo "T"; ?><br>
+ 
+ <?php
+       }
+
+       elseif ($row["meetingDays"] == "TR"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week14_of" value ="<?php echo $bar[week14_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week14_desc" value="<?php echo $bar[week14_desc]; ?>" > 
+           <select name="symbol1_week14">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+           <?php echo "T"; ?><br>
+ 
+ <?php
+       }
+
+       elseif ($row["meetingDays"] == "F"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week14_of" value ="<?php echo $bar[week14_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week14_desc" value="<?php echo $bar[week14_desc]; ?>" > 
+           <select name="symbol1_week14">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+           <?php echo "T"; ?><br>
+ 
+ <?php
+       }
+
        elseif($row["meetingDays"] == "MWF"){
           ?>
 
@@ -1872,6 +2887,81 @@ Description   &nbsp; <input type="text" length="255" name="week15_desc" value="<
          } 
 
          elseif ($row["meetingDays"] == "OAW"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week15_of" value ="<?php echo $bar[week15_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week15_desc" value="<?php echo $bar[week15_desc]; ?>" > 
+           <select name="symbol1_week15">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+ <?php
+       }
+
+       elseif ($row["meetingDays"] == "M"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week15_of" value ="<?php echo $bar[week15_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week15_desc" value="<?php echo $bar[week15_desc]; ?>" > 
+           <select name="symbol1_week15">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+ <?php
+       }
+
+        elseif ($row["meetingDays"] == "T"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week15_of" value ="<?php echo $bar[week15_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week15_desc" value="<?php echo $bar[week15_desc]; ?>" > 
+           <select name="symbol1_week15">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+ <?php
+       }
+
+        elseif ($row["meetingDays"] == "W"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week15_of" value ="<?php echo $bar[week15_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week15_desc" value="<?php echo $bar[week15_desc]; ?>" > 
+           <select name="symbol1_week15">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+ <?php
+       }
+
+        elseif ($row["meetingDays"] == "TR"){
+          ?>
+
+Week of &nbsp; <input type="text" name="week15_of" value ="<?php echo $bar[week15_of]; ?>"> &nbsp; <br>
+Description   &nbsp; <input type="text" length="255" name="week15_desc" value="<?php echo $bar[week15_desc]; ?>" > 
+           <select name="symbol1_week15">
+           <?php
+
+                        display_options();
+               ?>
+           </select>
+
+ <?php
+       }
+
+        elseif ($row["meetingDays"] == "F"){
           ?>
 
 Week of &nbsp; <input type="text" name="week15_of" value ="<?php echo $bar[week15_of]; ?>"> &nbsp; <br>
