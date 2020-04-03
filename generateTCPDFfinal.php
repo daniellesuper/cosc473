@@ -1424,7 +1424,7 @@ td {
 			<p>'.$bar[week8_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>T</b><br>
+		<td><b>TR</b><br>
 		'.$bar[symbol1_week8].'  
 		</td>
 		
@@ -1465,7 +1465,7 @@ td {
 			<p>'.$bar[week11_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>T</b><br>
+		<td><b>TR</b><br>
 		'.$bar[symbol1_week11].'  
 		</td>
 		
