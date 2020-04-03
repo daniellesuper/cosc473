@@ -223,7 +223,7 @@ if($result1->num_rows > 0) {
  
          } 
 
-         elseif ($row["meetingDays"] == "M"){
+         elseif ($row["meetingDays"] == "OAW"){
           ?>
               Week of &nbsp; <input type="text" name="week1_of" value ="<?php echo $bar[week1_of]; ?>"> &nbsp; <br>
             Description &nbsp; <input type="text" length="255" name="week1_desc" value="<?php echo $bar[week1_desc]; ?>" > 
@@ -344,7 +344,7 @@ Description &nbsp;   <input type="text" length="255" name="week1_desc" value="<?
  
          } 
 
-         elseif ($row["meetingDays"] == "M"){
+         elseif ($row["meetingDays"] == "OAW"){
           ?>
               Week of &nbsp; <input type="text" name="week2_of" value ="<?php echo $bar[week2_of]; ?>"> &nbsp; <br>
             Description &nbsp; <input type="text" length="255" name="week2_desc" value="<?php echo $bar[week2_desc]; ?>" > 
@@ -468,7 +468,7 @@ Description &nbsp; <input type="text" length="255" name="week3_desc" value="<?ph
 <?php
          } 
 
-         elseif ($row["meetingDays"] == "M"){
+         elseif ($row["meetingDays"] == "OAW"){
           ?>
 Week of &nbsp; <input type="text" name="week3_of" value ="<?php echo $bar[week3_of]; ?>"> &nbsp; <br>
 Description &nbsp; <input type="text" length="255" name="week3_desc" value="<?php echo $bar[week3_desc]; ?>" > 
@@ -591,7 +591,7 @@ Description  &nbsp; <input type="text" length="255" name="week4_desc" value="<?p
 <?php
          } 
 
-         elseif ($row["meetingDays"] == "M"){
+         elseif ($row["meetingDays"] == "OAW"){
           ?>
 Week of &nbsp; <input type="text" name="week4_of" value ="<?php echo $bar[week4_of]; ?>"> &nbsp; <br>
 Description  &nbsp; <input type="text" length="255" name="week4_desc" value="<?php echo $bar[week4_desc]; ?>" > 
@@ -708,7 +708,7 @@ Description  &nbsp; <input type="text" length="255" name="week5_desc" value="<?p
            <?php
          } 
 
-         elseif ($row["meetingDays"] == "M"){
+         elseif ($row["meetingDays"] == "OAW"){
           ?>
 
           Week of &nbsp; <input type="text" name="week5_of" value ="<?php echo $bar[week5_of]; ?>"> &nbsp; <br>
@@ -825,7 +825,7 @@ Description  &nbsp; <input type="text" length="255" name="week6_desc" value="<?p
 <?php
          } 
 
-         elseif ($row["meetingDays"] == "M"){
+         elseif ($row["meetingDays"] == "OAW"){
           ?>
 
 Week of &nbsp; <input type="text" name="week6_of" value ="<?php echo $bar[week6_of]; ?>"> &nbsp; <br>
@@ -939,7 +939,7 @@ Description &nbsp; <input type="text" length="255" name="week7_desc" value="<?ph
 <?php
          } 
 
-         elseif ($row["meetingDays"] == "M"){
+         elseif ($row["meetingDays"] == "OAW"){
           ?>
 
 Week of &nbsp; <input type="text" name="week7_of" value ="<?php echo $bar[week7_of]; ?>"> &nbsp; <br>
@@ -1053,7 +1053,7 @@ Description  &nbsp; <input type="text" length="255" name="week8_desc" value="<?p
 <?php
          } 
 
-         elseif ($row["meetingDays"] == "M"){
+         elseif ($row["meetingDays"] == "OAW"){
           ?>
 
 Week of &nbsp; <input type="text" name="week8_of" value ="<?php echo $bar[week8_of]; ?>"> &nbsp; <br>
@@ -1171,7 +1171,7 @@ Description   &nbsp; <input type="text" length="255" name="week9_desc" value="<?
 <?php
          } 
 
-         elseif ($row["meetingDays"] == "M"){
+         elseif ($row["meetingDays"] == "OAW"){
           ?>
 
 Week of &nbsp; <input type="text" name="week9_of" value ="<?php echo $bar[week9_of]; ?>"> &nbsp; <br>
@@ -1286,7 +1286,7 @@ Description   &nbsp; <input type="text" length="255" name="week10_desc" value="<
 <?php
          } 
 
-         elseif ($row["meetingDays"] == "M"){
+         elseif ($row["meetingDays"] == "OAW"){
           ?>
 Week of &nbsp; <input type="text" name="week10_of" value ="<?php echo $bar[week10_of]; ?>"> &nbsp; <br>
 Description   &nbsp; <input type="text" length="255" name="week10_desc" value="<?php echo $bar[week10_desc]; ?>" > 
@@ -1401,7 +1401,7 @@ Description   &nbsp; <input type="text" length="255" name="week11_desc" value="<
 <?php
          } 
 
-         elseif ($row["meetingDays"] == "M"){
+         elseif ($row["meetingDays"] == "OAW"){
           ?>
 
 Week of &nbsp; <input type="text" name="week11_of" value ="<?php echo $bar[week11_of]; ?>"> &nbsp; <br>
@@ -1517,7 +1517,7 @@ Description   &nbsp; <input type="text" length="255" name="week12_desc" value="<
 <?php
          } 
 
-         elseif ($row["meetingDays"] == "M"){
+         elseif ($row["meetingDays"] == "OAW"){
           ?>
 
 Week of &nbsp; <input type="text" name="week12_of" value ="<?php echo $bar[week12_of]; ?>"> &nbsp; <br>
@@ -1636,7 +1636,7 @@ Description   &nbsp; <input type="text" length="255" name="week13_desc" value="<
 <?php
          } 
 
-         elseif ($row["meetingDays"] == "M"){
+         elseif ($row["meetingDays"] == "OAW"){
           ?>
 
 Week of &nbsp; <input type="text" name="week13_of" value ="<?php echo $bar[week13_of]; ?>"> &nbsp; <br>
@@ -1753,7 +1753,7 @@ Description   &nbsp; <input type="text" length="255" name="week14_desc" value="<
 <?php
          } 
 
-         elseif ($row["meetingDays"] == "M"){
+         elseif ($row["meetingDays"] == "OAW"){
           ?>
 
 Week of &nbsp; <input type="text" name="week14_of" value ="<?php echo $bar[week14_of]; ?>"> &nbsp; <br>
@@ -1871,7 +1871,7 @@ Description   &nbsp; <input type="text" length="255" name="week15_desc" value="<
 <?php
          } 
 
-         elseif ($row["meetingDays"] == "M"){
+         elseif ($row["meetingDays"] == "OAW"){
           ?>
 
 Week of &nbsp; <input type="text" name="week15_of" value ="<?php echo $bar[week15_of]; ?>"> &nbsp; <br>

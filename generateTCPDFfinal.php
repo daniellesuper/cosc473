@@ -583,7 +583,7 @@ td {
 $pdf->writeHTML($html, true, false, true, false, '');
 
 }// if bracket/ end of TTR portion
-elseif ($row[meetingDays] == "M") { // start of MWF portion
+elseif ($row[meetingDays] == "OAW") { // start of MWF portion
 
 $html = '
 <style>
