@@ -188,7 +188,6 @@ Class Days &nbsp; <select name="meetingDays" selected ="<?php echo $bar[meetingD
         echo " <OPTION VALUE=\"OAW\"  >OAW</option>";
       }
 
-/*
       if($meetingDays=="M")
       {
         echo " <OPTION VALUE=\"M\"  selected>M</option>";
@@ -223,7 +222,6 @@ Class Days &nbsp; <select name="meetingDays" selected ="<?php echo $bar[meetingD
       }else{
         echo " <OPTION VALUE=\"F\"  >F</option>";
       }
-*/
 
       if($meetingDays=="Everyday")
       {
