@@ -285,7 +285,7 @@ Description &nbsp;   <input type="text" length="255" name="week1_desc" value="<?
                         display_options();
                ?>
            </select>
-           <?php echo "M"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol2_week1" value="<?php echo $bar[symbol2_week1]; ?>">
@@ -294,7 +294,7 @@ Description &nbsp;   <input type="text" length="255" name="week1_desc" value="<?
                         display_options();
                ?>  
            </select>
-           <?php echo "W"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol3_week1" value="<?php echo $bar[symbol3_week1]; ?>">
@@ -303,7 +303,7 @@ Description &nbsp;   <input type="text" length="255" name="week1_desc" value="<?
                         display_options();
                ?>
            </select>
-           <?php echo "F" ?><br>
+           <?php echo "" ?><br>
            
 
        <?php
@@ -408,7 +408,7 @@ Description &nbsp;   <input type="text" length="255" name="week2_desc" value="<?
                         display_options();
                ?>
            </select>
-           <?php echo "M"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol2_week2" value="<?php echo $bar[symbol2_week2]; ?>">
@@ -417,7 +417,7 @@ Description &nbsp;   <input type="text" length="255" name="week2_desc" value="<?
                         display_options();
                ?>  
            </select>
-           <?php echo "W"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol3_week2" value="<?php echo $bar[symbol3_week2]; ?>">
@@ -426,7 +426,7 @@ Description &nbsp;   <input type="text" length="255" name="week2_desc" value="<?
                         display_options();
                ?>
            </select>
-           <?php echo "F" ?><br>
+           <?php echo "" ?><br>
            
 
        <?php
@@ -535,7 +535,7 @@ Description  &nbsp; <input type="text" length="255" name="week3_desc" value="<?p
                         display_options();
                ?> 
            </select>
-           <?php echo "M"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol2_week3">
@@ -545,7 +545,7 @@ Description  &nbsp; <input type="text" length="255" name="week3_desc" value="<?p
                         display_options();
                ?>
            </select>
-           <?php echo "W"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol3_week3">
@@ -555,7 +555,7 @@ Description  &nbsp; <input type="text" length="255" name="week3_desc" value="<?p
                         display_options();
                ?>
            </select>
-           <?php echo "F" ?><br>
+           <?php echo "" ?><br>
 
        <?php
              }
@@ -652,7 +652,7 @@ Description  &nbsp; <input type="text" length="255" name="week4_desc" value="<?p
                         display_options();
                ?>
            </select>
-           <?php echo "M"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol2_week4">
@@ -661,7 +661,7 @@ Description  &nbsp; <input type="text" length="255" name="week4_desc" value="<?p
                         display_options();
                ?>
            </select>
-           <?php echo "W"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol3_week4">
@@ -670,7 +670,7 @@ Description  &nbsp; <input type="text" length="255" name="week4_desc" value="<?p
                         display_options();
                ?>
            </select>
-           <?php echo "F" ?><br>
+           <?php echo "" ?><br>
 
        <?php
              
@@ -769,7 +769,7 @@ Description  &nbsp; <input type="text" length="255" name="week5_desc" value="<?p
                         display_options();
                ?>
            </select>
-           <?php echo "M"; ?><br>
+           <?php echo ""; ?><br>
 
 
           <select name="symbol2_week5">
@@ -778,7 +778,7 @@ Description  &nbsp; <input type="text" length="255" name="week5_desc" value="<?p
                         display_options();
                ?>
            </select>
-           <?php echo "W"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol3_week5">
@@ -787,7 +787,7 @@ Description  &nbsp; <input type="text" length="255" name="week5_desc" value="<?p
                         display_options();
                ?>
            </select>
-           <?php echo "F" ?><br>
+           <?php echo "" ?><br>
 
        <?php
              }
@@ -885,7 +885,7 @@ Description  &nbsp; <input type="text" length="255" name="week6_desc" value="<?p
                         display_options();
                ?>  
            </select>
-           <?php echo "M"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol2_week6">
@@ -894,7 +894,7 @@ Description  &nbsp; <input type="text" length="255" name="week6_desc" value="<?p
                         display_options();
                ?>
            </select>
-           <?php echo "W"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol3_week6">
@@ -903,7 +903,7 @@ Description  &nbsp; <input type="text" length="255" name="week6_desc" value="<?p
                         display_options();
                ?>
            </select>
-           <?php echo "F" ?><br>
+           <?php echo "" ?><br>
 
        <?php
              
@@ -999,7 +999,7 @@ Description  &nbsp; <input type="text" length="255" name="week7_desc" value="<?p
                         display_options();
                ?>
            </select>
-           <?php echo "M"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol2_week7">
@@ -1008,7 +1008,7 @@ Description  &nbsp; <input type="text" length="255" name="week7_desc" value="<?p
                         display_options();
                ?>
            </select>
-           <?php echo "W"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol3_week7">
@@ -1017,7 +1017,7 @@ Description  &nbsp; <input type="text" length="255" name="week7_desc" value="<?p
                         display_options();
                ?>
            </select>
-           <?php echo "F" ?><br>
+           <?php echo "" ?><br>
 
        <?php
              }
@@ -1114,7 +1114,7 @@ Description  &nbsp; <input type="text" length="255" name="week8_desc" value="<?p
                         display_options();
                ?>
            </select>
-           <?php echo "M"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol2_week8">
@@ -1123,7 +1123,7 @@ Description  &nbsp; <input type="text" length="255" name="week8_desc" value="<?p
                         display_options();
                ?>
            </select>
-           <?php echo "W"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol3_week8">
@@ -1132,7 +1132,7 @@ Description  &nbsp; <input type="text" length="255" name="week8_desc" value="<?p
                         display_options();
                ?>
            </select>
-           <?php echo "F" ?><br>
+           <?php echo "" ?><br>
 
        <?php
              
@@ -1232,7 +1232,7 @@ Description   &nbsp; <input type="text" length="255" name="week9_desc" value="<?
                         display_options();
                ?>
            </select>
-           <?php echo "M"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol2_week9">
@@ -1241,7 +1241,7 @@ Description   &nbsp; <input type="text" length="255" name="week9_desc" value="<?
                         display_options();
                ?>
            </select>
-           <?php echo "W"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol3_week9">
@@ -1250,7 +1250,7 @@ Description   &nbsp; <input type="text" length="255" name="week9_desc" value="<?
                         display_options();
                ?>
            </select>
-           <?php echo "F" ?><br>
+           <?php echo "" ?><br>
 
        <?php
              
@@ -1348,7 +1348,7 @@ Description   &nbsp; <input type="text" length="255" name="week10_desc" value="<
                         display_options();
                ?>
            </select>
-           <?php echo "M"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol2_week10">
@@ -1357,7 +1357,7 @@ Description   &nbsp; <input type="text" length="255" name="week10_desc" value="<
                         display_options();
                ?>
            </select>
-           <?php echo "W"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol3_week10">
@@ -1366,7 +1366,7 @@ Description   &nbsp; <input type="text" length="255" name="week10_desc" value="<
                         display_options();
                ?>
            </select>
-           <?php echo "F" ?><br>
+           <?php echo "" ?><br>
 
        <?php
              
@@ -1463,7 +1463,7 @@ Description   &nbsp; <input type="text" length="255" name="week11_desc" value="<
                         display_options();
                ?>
            </select>
-           <?php echo "M"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol2_week11">
@@ -1472,7 +1472,7 @@ Description   &nbsp; <input type="text" length="255" name="week11_desc" value="<
                         display_options();
                ?>
            </select>
-           <?php echo "W"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol3_week11">
@@ -1481,7 +1481,7 @@ Description   &nbsp; <input type="text" length="255" name="week11_desc" value="<
                         display_options();
                ?>
            </select>
-           <?php echo "F" ?><br>
+           <?php echo "" ?><br>
 
        <?php
              
@@ -1580,7 +1580,7 @@ Description   &nbsp; <input type="text" length="255" name="week12_desc" value="<
                         display_options();
                ?>
            </select>
-           <?php echo "M"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol2_week12">
@@ -1589,7 +1589,7 @@ Description   &nbsp; <input type="text" length="255" name="week12_desc" value="<
                         display_options();
                ?>
            </select>
-           <?php echo "W"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol3_week12">
@@ -1598,7 +1598,7 @@ Description   &nbsp; <input type="text" length="255" name="week12_desc" value="<
                         display_options();
                ?>
            </select>
-           <?php echo "F" ?><br>
+           <?php echo "" ?><br>
 
        <?php
              
@@ -1699,7 +1699,7 @@ Description   &nbsp; <input type="text" length="255" name="week13_desc" value="<
                         display_options();
                ?>
            </select>
-           <?php echo "M"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol2_week13">
@@ -1708,7 +1708,7 @@ Description   &nbsp; <input type="text" length="255" name="week13_desc" value="<
                         display_options();
                ?>
            </select>
-           <?php echo "W"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol3_week13">
@@ -1717,7 +1717,7 @@ Description   &nbsp; <input type="text" length="255" name="week13_desc" value="<
                         display_options();
                ?>
            </select>
-           <?php echo "F" ?><br>
+           <?php echo "" ?><br>
 
        <?php
              
@@ -1817,7 +1817,7 @@ Description   &nbsp; <input type="text" length="255" name="week14_desc" value="<
                         display_options();
                ?>
            </select>
-           <?php echo "M"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol2_week14">
@@ -1826,7 +1826,7 @@ Description   &nbsp; <input type="text" length="255" name="week14_desc" value="<
                         display_options();
                ?>
            </select>
-           <?php echo "W"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol3_week14">
@@ -1835,7 +1835,7 @@ Description   &nbsp; <input type="text" length="255" name="week14_desc" value="<
                         display_options();
                ?>
            </select>
-           <?php echo "F" ?><br>
+           <?php echo "" ?><br>
 
        <?php
              
@@ -1933,7 +1933,7 @@ Description   &nbsp; <input type="text" length="255" name="week15_desc" value="<
                         display_options();
                ?>  
            </select>
-           <?php echo "M"; ?><br>
+           <?php echo ""; ?><br>
 
 
            <select name="symbol2_week15">
@@ -1942,7 +1942,7 @@ Description   &nbsp; <input type="text" length="255" name="week15_desc" value="<
                         display_options();
                ?>
            </select>
-           <?php echo "W"; ?><br>
+           <?php echo ""; ?><br>
 
 
 
@@ -1952,7 +1952,7 @@ Description   &nbsp; <input type="text" length="255" name="week15_desc" value="<
                         display_options();
                ?>
            </select>
-           <?php echo "F" ?><br>
+           <?php echo "" ?><br>
 
        <?php
              
