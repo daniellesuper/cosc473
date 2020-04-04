@@ -196,6 +196,8 @@ $pdf->Image('images/grade1.png', '', '', 30, 10, '', '', 'T', false, 300, '', fa
 $assign1 = $row["assign1"];
 $assign2 = $row["assign2"];
 $assign3 = $row["assign3"];
+$assign4 = $row["assign4"];
+$assign5 = $row["assign5"];
 
 $pointvalue1 = $row["pointvalue1"];
 //$pdf->MultiCell(20, 10, $pointvalue1, 0, 'C', 0, 2, 15, 160, true,0, false, true, 40, 'C');
@@ -212,23 +214,51 @@ $pointvalue4 = $row["pointvalue4"];
 $pointvalue5 = $row["pointvalue5"];
 //$pdf->MultiCell(20, 10, $pointvalue5 , 0, 'C', 0, 2, 26, 166, true,0, false, true, 40, 'C');
 
+$pointvalue6 = $row["pointvalue6"];
+//
+$pointvalue7 = $roq["pointvalue7"];
+
+
+$xc = 50;
+$yc = 200;
+$r = 30;
+
+//blue
+$pdf->SetFillColor(0, 0, 255);
+$pdf->PieSector($xc, $yc, $r,$pointvalue1, $pointvalue2, 'FD', false, 0, 2);
+
+//green
+$pdf->SetFillColor(0, 255, 0);
+$pdf->PieSector($xc, $yc, $r,$pointvalue2, $pointvalue3, 'FD', false, 0, 2);
+
+//red
+$pdf->SetFillColor(255, 0, 0);
+$pdf->PieSector($xc, $yc, $r, $pointvalue3, $pointvalue4, 'FD', false, 0, 2);
+
+$pdf->SetFillColor(250, 200, 200);
+$pdf->PieSector($xc, $yc, $r, $pointvalue4, $pointvalue5, 'FD', false, 0, 2);
+
+$pdf->SetFillColor(100, 100, 100);
+$pdf->PieSector($xc, $yc, $r,$pointvalue5, $pointvalue1, 'FD', false, 0, 2);
+
+//$pdf->SetFillColor(300, 200, 100);
+//$pdf->PieSector($xc, $yc, $r,$pointvalue6, $pointvalue7,  'FD', false, 0, 2);
+
+
+//$pdf->SetFillColor(100,124,135);
+//$pdf->PieSector($pointvalue1,$pointvalue2,$pointvalue3, 550, 60, 'FD', false, 0, 2);
 /*
-$pdf->SetFillColor(0,0,255);
-$pdf->PieSector($pointvalue1,$pointvalue2,$pointvalue3, $pointvalue4,  20, 120, 'FD', false, 0, 2);
-
-$pdf->SetFillColor(0,255,0);
-$pdf->PieSector($pointvalue1,$pointvalue2,$pointvalue3, $pointvalue4, 120, 250, 'FD', false, 0, 2);
-
-$pdf->SetFillColor(200,44,35);
-$pdf->PieSector($pointvalue1,$pointvalue2,$pointvalue3, $pointvalue4, 250, 20, 'FD', false, 0, 2);
+$pdf->SetFillColor(200,24,235);
+$pdf->PieSector($pointvalue1,$pointvalue2,$pointvalue3, $pointvalue4,$pointvalue5, 150, 80, 'FD', false, 0, 2);
 */
 
 //$pdf->SetFillColor(100,100,100);
 //$pdf->PieSector($pointvalue1,$pointvalue2,$pointvalue3, $pointvalue4, $pointvalue5,30, 40, 'FD', false, 0, 2);
 
-/*
+
 // Labels for pie chart
-$pdf->SetTextColor(255,255,255);
+/*
+$pdf->SetTextColor(255,155,235);
 $pdf->Text(105, 65, $assign1);
 $pdf->Text(60, 95, $assign2);
 $pdf->Text(120, 115, $assign3);
