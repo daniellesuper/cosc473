@@ -198,20 +198,23 @@ $xc = 50; // start of x axis
 $yc = 200; // start of y axis
 $r = 30; // radius length of circle
 
-$pdf->SetFillColor(0, 0, 255);
+$pdf->SetFillColor(100, 100, 255);
 $pdf->PieSector($xc, $yc, $r, 0, $pointvalue1 * 3.6, 'FD', false, 0, 2);
 
 $pdf->SetFillColor(0, 255, 0);
-$pdf->PieSector($xc, $yc, $r, ($pointvalue1+ $pointvalue1 + $pointvalue2) * 3.6, 'FD', false, 0, 2);
+$pdf->PieSector($xc, $yc, $r, $pointvalue1 * 3.6, ($pointvalue1 + $pointvalue2) * 3.6, 'FD', false, 0, 2);
 
 $pdf->SetFillColor(255, 0, 0);
 $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3) * 3.6, 'FD', false, 0, 2);
 
-$pdf->SetFillColor(100, 100, 100);
+$pdf->SetFillColor(200, 100, 300);
 $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3) *3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4) * 3.6, 'FD', false, 0, 2);
 
-$pdf->SetFillColor(200, 200, 200);
+$pdf->SetFillColor(100, 200, 200);
 $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5)* 3.6, 'FD', false, 0, 2);
+
+$pdf->SetFillColor(20, 20, 20);
+$pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5+$pointvalue6)* 3.6, 'FD', false, 0, 2);
 
 
 
