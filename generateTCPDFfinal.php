@@ -198,65 +198,23 @@ $xc = 50; // start of x axis
 $yc = 200; // start of y axis
 $r = 30; // radius length of circle
 
-//include 'piechart.php';
-$filename = 'pieChart.php';
-$filename = preg_replace('"\.php$"', '.jpg', $filename);
-
-imagejpeg($filename, "/Applications/XAMPP/xamppfiles/htdocs/473/info-syllabus/cosc473/cosc473/images");
-
-$pdf->SetXY(120, 205);
-$pdf->Image('images/pieChart.jpg', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
-
-
-/*
-//blue
 $pdf->SetFillColor(0, 0, 255);
-$pdf->PieSector($xc, $yc, $r,$pointvalue1, $pointvalue2, 'FD', false, 0, 2);
+$pdf->PieSector($xc, $yc, $r, 0, $pointvalue1 * 3.6, 'FD', false, 0, 2);
 
-//green
 $pdf->SetFillColor(0, 255, 0);
-$pdf->PieSector($xc, $yc, $r,$pointvalue2, $pointvalue3, 'FD', false, 0, 2);
+$pdf->PieSector($xc, $yc, $r, ($pointvalue1+ $pointvalue1 + $pointvalue2) * 3.6, 'FD', false, 0, 2);
 
-
-//red
 $pdf->SetFillColor(255, 0, 0);
-$pdf->PieSector($xc, $yc, $r, $pointvalue3, $pointvalue4, 'FD', false, 0, 2);
+$pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3) * 3.6, 'FD', false, 0, 2);
 
-*/
+$pdf->SetFillColor(100, 100, 100);
+$pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3) *3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4) * 3.6, 'FD', false, 0, 2);
 
-
-//$pdf->SetFillColor(250, 200, 200);
-//$pdf->PieSector($xc, $yc, $r, $pointvalue4, $pointvalue5, 'FD', false, 0, 2);
-
-//$pdf->SetFillColor(100, 100, 100);
-//$pdf->PieSector($xc, $yc, $r,$pointvalue5, $pointvalue6, 'FD', false, 0, 2);
-
-//$pdf->SetFillColor(150, 150, 150);
-//$pdf->PieSector($xc, $yc, $r,$pointvalue6, $pointvalue7, 'FD', false, 0, 2);
+$pdf->SetFillColor(200, 200, 200);
+$pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5)* 3.6, 'FD', false, 0, 2);
 
 
-//$pdf->SetFillColor(300, 200, 100);
-//$pdf->PieSector($xc, $yc, $r,$pointvalue6, $pointvalue7,  'FD', false, 0, 2);
 
-
-//$pdf->SetFillColor(100,124,135);
-//$pdf->PieSector($pointvalue1,$pointvalue2,$pointvalue3, 550, 60, 'FD', false, 0, 2);
-/*
-$pdf->SetFillColor(200,24,235);
-$pdf->PieSector($pointvalue1,$pointvalue2,$pointvalue3, $pointvalue4,$pointvalue5, 150, 80, 'FD', false, 0, 2);
-*/
-
-//$pdf->SetFillColor(100,100,100);
-//$pdf->PieSector($pointvalue1,$pointvalue2,$pointvalue3, $pointvalue4, $pointvalue5,30, 40, 'FD', false, 0, 2);
-
-
-// Labels for pie chart
-/*
-$pdf->SetTextColor(255,155,235);
-$pdf->Text(105, 65, $assign1);
-$pdf->Text(60, 95, $assign2);
-$pdf->Text(120, 115, $assign3);
-*/
 
 
 //
