@@ -147,21 +147,8 @@ $pdf->Image('images/book.png', '', '', 20, 20, '', '', 'T', false, 300, '', fals
 
 $importantpoints = $bar5["importantpoints"];
 $importantpoints = html_entity_decode($importantpoints);
-$pdf->MultiCell(90, 111, $importantpoints, 0, 'C', 0, 1, 110 ,85, true);
-
-
-// pie chart
-
-$pointvalue1 = $row["pointvalue1"];
-$pointvalue2 = $row["pointvalue2"];
-$pointvalue3 = $row["pointvalue3"];
-$pointvalue4 = $row["pointvalue4"];
-$pointvalue5 = $row["pointvalue5"];
-$pointvalue6 = $row["pointvalue6"];
-$pointvalue7 = $row["pointvalue7"];
-$pointvalue8 = $row["pointvalue8"];
-$pointvalue9 = $row["pointvalue9"];
-$pointvalue10 = $row["pointvalue10"];
+//$pdf->MultiCell(90, 111, $importantpoints, 0, 'C', 0, 1, 110 ,85, true);
+$pdf->writeHTML($importantpoints, true,false,true,false,'R');
 
 
 $pdf->SetFillColor(178, 178, 178);
@@ -187,6 +174,19 @@ $pdf->Image('images/grade1.png', '', '', 30, 10, '', '', 'T', false, 300, '', fa
 //
 // Start of the pie chart
 //
+// pie chart
+
+$pointvalue1 = $row["pointvalue1"];
+$pointvalue2 = $row["pointvalue2"];
+$pointvalue3 = $row["pointvalue3"];
+$pointvalue4 = $row["pointvalue4"];
+$pointvalue5 = $row["pointvalue5"];
+$pointvalue6 = $row["pointvalue6"];
+$pointvalue7 = $row["pointvalue7"];
+$pointvalue8 = $row["pointvalue8"];
+$pointvalue9 = $row["pointvalue9"];
+$pointvalue10 = $row["pointvalue10"];
+
 $assign1 = $row["assign1"];
 $assign2 = $row["assign2"];
 $assign3 = $row["assign3"];
@@ -194,10 +194,21 @@ $assign4 = $row["assign4"];
 $assign5 = $row["assign5"];
 
 
-$xc = 50;
-$yc = 200;
-$r = 30;
+$xc = 50; // start of x axis
+$yc = 200; // start of y axis
+$r = 30; // radius length of circle
 
+//include 'piechart.php';
+$filename = 'pieChart.php';
+$filename = preg_replace('"\.php$"', '.jpg', $filename);
+
+imagejpeg($filename, "/Applications/XAMPP/xamppfiles/htdocs/473/info-syllabus/cosc473/cosc473/images");
+
+$pdf->SetXY(120, 205);
+$pdf->Image('images/pieChart.jpg', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+
+/*
 //blue
 $pdf->SetFillColor(0, 0, 255);
 $pdf->PieSector($xc, $yc, $r,$pointvalue1, $pointvalue2, 'FD', false, 0, 2);
@@ -206,15 +217,19 @@ $pdf->PieSector($xc, $yc, $r,$pointvalue1, $pointvalue2, 'FD', false, 0, 2);
 $pdf->SetFillColor(0, 255, 0);
 $pdf->PieSector($xc, $yc, $r,$pointvalue2, $pointvalue3, 'FD', false, 0, 2);
 
+
 //red
 $pdf->SetFillColor(255, 0, 0);
 $pdf->PieSector($xc, $yc, $r, $pointvalue3, $pointvalue4, 'FD', false, 0, 2);
 
-$pdf->SetFillColor(250, 200, 200);
-$pdf->PieSector($xc, $yc, $r, $pointvalue4, $pointvalue5, 'FD', false, 0, 2);
+*/
 
-$pdf->SetFillColor(100, 100, 100);
-$pdf->PieSector($xc, $yc, $r,$pointvalue5, $pointvalue6, 'FD', false, 0, 2);
+
+//$pdf->SetFillColor(250, 200, 200);
+//$pdf->PieSector($xc, $yc, $r, $pointvalue4, $pointvalue5, 'FD', false, 0, 2);
+
+//$pdf->SetFillColor(100, 100, 100);
+//$pdf->PieSector($xc, $yc, $r,$pointvalue5, $pointvalue6, 'FD', false, 0, 2);
 
 //$pdf->SetFillColor(150, 150, 150);
 //$pdf->PieSector($xc, $yc, $r,$pointvalue6, $pointvalue7, 'FD', false, 0, 2);
