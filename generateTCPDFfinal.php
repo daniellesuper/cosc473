@@ -216,6 +216,9 @@ $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $poi
 $pdf->SetFillColor(20, 20, 20);
 $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5+$pointvalue6)* 3.6, 'FD', false, 0, 2);
 
+$pdf->SetFillColor(95, 95, 95);
+$pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5 + $pointvalue6) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5+$pointvalue6 + $pointvalue7)* 3.6, 'FD', false, 0, 2);
+
 
 
 
