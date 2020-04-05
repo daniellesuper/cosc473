@@ -187,12 +187,6 @@ $pointvalue8 = $row["pointvalue8"];
 $pointvalue9 = $row["pointvalue9"];
 $pointvalue10 = $row["pointvalue10"];
 
-$assign1 = $row["assign1"];
-$assign2 = $row["assign2"];
-$assign3 = $row["assign3"];
-$assign4 = $row["assign4"];
-$assign5 = $row["assign5"];
-
 
 $xc = 50; // start of x axis
 $yc = 200; // start of y axis
@@ -218,6 +212,16 @@ $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $poi
 
 $pdf->SetFillColor(95, 95, 95);
 $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5 + $pointvalue6) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5+$pointvalue6 + $pointvalue7)* 3.6, 'FD', false, 0, 2);
+
+$pdf->SetFillColor(150, 150, 150);
+$pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5 + $pointvalue6 + $pointvalue7) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5+$pointvalue6 + $pointvalue7 + $pointvalue8)* 3.6, 'FD', false, 0, 2);
+
+$pdf->SetFillColor(199, 199, 199);
+$pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5 + $pointvalue6 + $pointvalue7 + $pointvalue8) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5+$pointvalue6 + $pointvalue7 + $pointvalue8 + $pointvalue9)* 3.6, 'FD', false, 0, 2);
+
+$pdf->SetFillColor(220, 220, 220);
+$pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5 + $pointvalue6 + $pointvalue7 + $pointvalue8 + $pointvalue9) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5+$pointvalue6 + $pointvalue7 + $pointvalue8 + $pointvalue9 + $pointvalue10)* 3.6, 'FD', false, 0, 2);
+
 
 
 
