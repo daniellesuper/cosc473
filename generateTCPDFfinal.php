@@ -167,12 +167,6 @@ $pointvalue10 = $row["pointvalue10"];
 $pdf->SetFillColor(178, 178, 178);
 $pdf->MultiCell(100, 145, 'Pie Chart'."\n", 0, 'C', 1, 0, '5', '130', true);
 
-$pdf->SetFillColor(0,0,255);
-$pdf->PieSector($topicname1,$topicname2,$topicname3,$topicname4,$topicname5,$topicname6,$topicname7,$topicname8,$topicname9,$topicname10, 250, 20, 'FD', false, 0, 2);
-
-$pdf->SetFillColor(50,50,255);
-$pdf->PieSector($topicname1,$topicname2,$topicname3,$topicname4,$topicname5,$topicname6,$topicname7,$topicname8,$topicname9,$topicname10, 250, 20, 'FD', false, 0, 2);
-
 // HOUSE IMAGE AT TOP RIGHT OF PAGE 1
 $pdf->SetXY(177, 10);
 $pdf->Image('images/house.png', '', '', 10, 10, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
@@ -199,25 +193,6 @@ $assign3 = $row["assign3"];
 $assign4 = $row["assign4"];
 $assign5 = $row["assign5"];
 
-$pointvalue1 = $row["pointvalue1"];
-//$pdf->MultiCell(20, 10, $pointvalue1, 0, 'C', 0, 2, 15, 160, true,0, false, true, 40, 'C');
-
-$pointvalue2 = $row["pointvalue2"];
-//$pdf->MultiCell(20, 10, $pointvalue2 , 0, 'C', 0, 2, 22, 160, true,0, false, true, 40, 'C');
-
-$pointvalue3 = $row["pointvalue3"];
-//$pdf->MultiCell(20, 10, $pointvalue3 , 0, 'C', 0, 2, 26, 166, true,0, false, true, 40, 'C');
-
-$pointvalue4 = $row["pointvalue4"];
-//$pdf->MultiCell(20, 10, $pointvalue4 , 0, 'C', 0, 2, 26, 166, true,0, false, true, 40, 'C');
-
-$pointvalue5 = $row["pointvalue5"];
-//$pdf->MultiCell(20, 10, $pointvalue5 , 0, 'C', 0, 2, 26, 166, true,0, false, true, 40, 'C');
-
-$pointvalue6 = $row["pointvalue6"];
-//
-$pointvalue7 = $roq["pointvalue7"];
-
 
 $xc = 50;
 $yc = 200;
@@ -239,7 +214,11 @@ $pdf->SetFillColor(250, 200, 200);
 $pdf->PieSector($xc, $yc, $r, $pointvalue4, $pointvalue5, 'FD', false, 0, 2);
 
 $pdf->SetFillColor(100, 100, 100);
-$pdf->PieSector($xc, $yc, $r,$pointvalue5, $pointvalue1, 'FD', false, 0, 2);
+$pdf->PieSector($xc, $yc, $r,$pointvalue5, $pointvalue6, 'FD', false, 0, 2);
+
+//$pdf->SetFillColor(150, 150, 150);
+//$pdf->PieSector($xc, $yc, $r,$pointvalue6, $pointvalue7, 'FD', false, 0, 2);
+
 
 //$pdf->SetFillColor(300, 200, 100);
 //$pdf->PieSector($xc, $yc, $r,$pointvalue6, $pointvalue7,  'FD', false, 0, 2);
