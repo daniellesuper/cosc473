@@ -137,7 +137,7 @@ Grade Breakdown: Name of the assignment goes to left column, Percentage of assig
 <div id="gradeWeight">
 <p id="grade1">
 Name: <input type="text" length="25" name="gradeName1"> &nbsp; 
-Weight: &nbsp; <input type="text" length="25" name="weight1" value="0"> <br>
+Weight: &nbsp; <input type="text" length="25" name="weight1" value="0" > <br>
 </p>
 <p id="grade2">
 Name: <input type="text" length="25" name="gradeName2"> &nbsp; 

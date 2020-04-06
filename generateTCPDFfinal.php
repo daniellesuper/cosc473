@@ -173,8 +173,6 @@ $pdf->Image('images/grade1.png', '', '', 30, 10, '', '', 'T', false, 300, '', fa
 
 //
 // Start of the pie chart
-//
-// pie chart
 
 $pointvalue1 = $row["pointvalue1"];
 $pointvalue2 = $row["pointvalue2"];
@@ -187,10 +185,12 @@ $pointvalue8 = $row["pointvalue8"];
 $pointvalue9 = $row["pointvalue9"];
 $pointvalue10 = $row["pointvalue10"];
 
+$assign1 = $row["assign1"];
 
-$xc = 50; // start of x axis
+
+$xc = 55; // start of x axis
 $yc = 200; // start of y axis
-$r = 30; // radius length of circle
+$r = 40; // radius length of circle
 
 $pdf->SetFillColor(100, 100, 255);
 $pdf->PieSector($xc, $yc, $r, 0, $pointvalue1 * 3.6, 'FD', false, 0, 2);
@@ -221,10 +221,6 @@ $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $poi
 
 $pdf->SetFillColor(220, 220, 220);
 $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5 + $pointvalue6 + $pointvalue7 + $pointvalue8 + $pointvalue9) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5+$pointvalue6 + $pointvalue7 + $pointvalue8 + $pointvalue9 + $pointvalue10)* 3.6, 'FD', false, 0, 2);
-
-
-
-
 
 
 //
@@ -270,9 +266,9 @@ $pdf->Image('images/rectangle9.png', '', '', 15, 6, '', '', 'T', false, 300, '',
 $pdf->SetXY(120, 250);
 $pdf->Image('images/rectangle10.png', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
-$topicname = $row["topicname1"]."\n".$row["topicname2"]."\n".$row["topicname3"]."\n".$row["topicname4"]."\n".$row["topicname5"]."\n".
-				$row["topicname6"]."\n".$row["topicname7"]."\n".$row["topicname8"]."\n".$row["topicname9"]."\n".
-				$row["topicname10"];
+$topicname = $row["topicname1"]. " ".$row["pointvalue1"]."\n".$row["topicname2"]." ".$row["pointvalue2"]."\n".$row["topicname3"]." ".$row["pointvalue3"]."\n".$row["topicname4"]." ".$row["pointvalue4"]."\n".$row["topicname5"]." ".$row["pointvalue5"]."\n".
+				$row["topicname6"]." ".$row["pointvalue6"]."\n".$row["topicname7"]." ".$row["pointvalue7"]."\n".$row["topicname8"]." ".$row["pointvalue8"]."\n".$row["topicname9"]." ".$row["pointvalue9"]."\n".
+				$row["topicname10"]." ".$row["pointvalue10"];
 $pdf->SetFillColor(178, 178, 178);
 $pdf->MultiCell(100, 75, 'Grade Breakdown '."\n".$topicname, 0, 'C', 1, 0, 105, 200, true);
 
