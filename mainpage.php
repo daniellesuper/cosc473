@@ -79,25 +79,36 @@ $courseID = $_GET["courseID"];
 						<li>
 							<span id="courseName"><?php echo $course; ?></span>
 							<div id="buttons">
-
-								<a href="update_courseinfo.php?courseID=<?php echo $courseID ?>" ><button type="button" class= "btn btn-primary btn-lg"> Update Course Info </a></button>
-
-								<a href="pdf.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">HTML 1st Page(Useless)</a></button>
-								
-								
-								<a href="weeklyschedule1.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg"> Create Weekly Info</a></button>
-							
-
-								
-								<a href="update_weekly_info.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg"> Update Weekly Info</a></button>
-								
-
-								
-								<a href="generateTCPDFfinal.php?courseID=<?php echo $courseID ?>"><button type="button" class="btn btn-primary btn-lg">Download a PDF</a></button>
-						
-
-								<a href="deleteclass.php?courseID=<?php echo $courseID ?>"><button type="button" onclick="deleteClass()" class="deleteButton">X</a></button>
-
+								<button type="button" class= "btn btn-primary btn-lg">
+									<a href="update_courseinfo.php?courseID=<?php echo $courseID ?>" >
+										Update Course Info 
+									</a>
+								</button>
+								<button type="button" class="btn btn-primary btn-lg">
+									<a href="pdf.php?courseID=<?php echo $courseID ?>">
+										HTML 1st Page(Useless)
+									</a>
+								</button>
+								<button type="button" class="btn btn-primary btn-lg">
+									<a href="weeklyschedule1.php?courseID=<?php echo $courseID ?>"> 
+										Create Weekly Info
+									</a>
+								</button>
+								<button type="button" class="btn btn-primary btn-lg">
+									<a href="update_weekly_info.php?courseID=<?php echo $courseID ?>"> 
+										Update Weekly Info
+									</a>
+								</button>
+								<button type="button" class="btn btn-primary btn-lg">
+									<a href="generateTCPDFfinal.php?courseID=<?php echo $courseID ?>">
+										Download a PDF
+									</a>
+								</button>
+								<button type="button" onclick="deleteClass()" class="deleteButton">
+									<a href="deleteclass.php?courseID=<?php echo $courseID ?>">
+										X
+									</a>
+								</button>
 							</div>
 						</li>
 					</ul>

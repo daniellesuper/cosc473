@@ -74,9 +74,9 @@ hr {
 	margin-left: 20px;
 	display: flex;
 	flex-direction: row;
-	height: 100px;
+	min-height: 200px;
 	width: 100%;
-	overflow: hidden;
+	overflow: scroll;
 }
 
 .syllabusList a {
@@ -110,18 +110,18 @@ hr {
 .syllabusList li {
 	list-style-type: none;
 	padding-bottom: 15px;
-	width: 100vw;
+	width: 90vw;
+	
 }
 #buttons {
 	float: right;
 	margin-right: 9rem;
+	height: 100px;
 }
 .deleteButton {
 	border-radius: 50%;
 }
-.deleteButton:hover {
-	color: red;
-}
+
 footer {
 	font-family: "Lora", serif;
 	position: static;

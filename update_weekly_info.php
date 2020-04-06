@@ -185,9 +185,9 @@ Break:  &nbsp; <select name="holiday" value="<?php echo $bar[holiday]; ?>">
        <option value="Thanksgiving">Thanksgiving</option> 
        <option value="Spring">Spring</option>
        </select> &nbsp
-<br />
+
 Date To: &nbsp; &nbsp;<input type="date" name="startdate" value ="<?php echo $bar[startdate]; ?>"> &nbsp;
-<br />
+
 Date End: <input type="date" name="enddate" value="<?php echo $bar[enddate]; ?>"> <br><br>
 
 Custom break: <input type="text" name="custombreakname" value ="<?php echo $bar[custombreakname]; ?>"> &nbsp;
