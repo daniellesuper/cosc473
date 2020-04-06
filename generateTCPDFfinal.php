@@ -65,15 +65,13 @@ $pdf->setTitle('Info Syllabus');
 // add page 1
 $pdf->AddPage();
 
-// set some text for examples
-$txt = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
-
 // MultiCell($w, $h, $txt, $border=0, $align='J', $fill=0, $ln=1, $x='', $y='', $reseth=true, $stretch=0, $ishtml=false, $autopadding=true, $maxh=0)
 
 $text = '';
 // header box
 $titlename = $bar3["title"]." ".$bar3["fullname"]." ";
-$course = $bar4["coursecode"]."\n".$bar4["coursename"];
+$coursenameDecode = $bar4["coursename"];
+$course = $bar4["coursecode"]."\n".html_entity_decode($coursenameDecode);
 
 //$pdf->SetXY(100, 205);
 //$pdf->Image('images/house.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
@@ -122,10 +120,8 @@ $pdf->SetXY(25, 35);
 $pdf->Image('images/bannerright.png', '', '', 70, 15, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 // TEXT IN THE BOTTOM BANNER FOR COURSE INFO
+$course= str_replace( "&#039;", "'", $course );
 $pdf->MultiCell(75, 10,$course, 0, 'L', 0, 2, 30, 37, true,0, false, true, 40, 'C');
-//
-//
-
 
 // THIS IS THE WORDING IN THE IMPORTANT POINT SECTION
 $pdf->SetXY(105, 67);
@@ -147,8 +143,22 @@ $pdf->Image('images/book.png', '', '', 20, 20, '', '', 'T', false, 300, '', fals
 
 $importantpoints = $bar5["importantpoints"];
 $importantpoints = html_entity_decode($importantpoints);
-//$pdf->MultiCell(90, 111, $importantpoints, 0, 'C', 0, 1, 110 ,85, true);
-$pdf->writeHTML($importantpoints, true,false,true,false,'R');
+$html = '<span align = "right">'.$importantpoints.'</span>';
+$pdf->writeHTML($html, true,false,true,false,'');
+
+
+// pie chart
+
+$pointvalue1 = $row["pointvalue1"];
+$pointvalue2 = $row["pointvalue2"];
+$pointvalue3 = $row["pointvalue3"];
+$pointvalue4 = $row["pointvalue4"];
+$pointvalue5 = $row["pointvalue5"];
+$pointvalue6 = $row["pointvalue6"];
+$pointvalue7 = $row["pointvalue7"];
+$pointvalue8 = $row["pointvalue8"];
+$pointvalue9 = $row["pointvalue9"];
+$pointvalue10 = $row["pointvalue10"];
 
 
 $pdf->SetFillColor(178, 178, 178);
