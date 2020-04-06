@@ -35,6 +35,12 @@ $topicname6=htmlentities($_REQUEST['gradeName6'],ENT_QUOTES);
 $pointvalue6=htmlentities($_REQUEST['weight6'],ENT_QUOTES);
 $topicname7=htmlentities($_REQUEST['gradeName7'],ENT_QUOTES);
 $pointvalue7=htmlentities($_REQUEST['weight7'],ENT_QUOTES);
+$topicname8=htmlentities($_REQUEST['gradeName8'],ENT_QUOTES);
+$pointvalue8=htmlentities($_REQUEST['weight8'],ENT_QUOTES);
+$topicname9=htmlentities($_REQUEST['gradeName9'],ENT_QUOTES);
+$pointvalue9=htmlentities($_REQUEST['weight9'],ENT_QUOTES);
+$topicname10=htmlentities($_REQUEST['gradeName10'],ENT_QUOTES);
+$pointvalue10=htmlentities($_REQUEST['weight10'],ENT_QUOTES);
 $symbol1 = htmlentities($_REQUEST['symbol1'],ENT_QUOTES);
 $symbol2 = htmlentities($_REQUEST['symbol2'],ENT_QUOTES);
 $symbol3 = htmlentities($_REQUEST['symbol3'],ENT_QUOTES);
@@ -71,6 +77,9 @@ $sql =" Update courseinfo
        	topicname5 = '$topicname5',
        	topicname6 = '$topicname6',
        	topicname7 = '$topicname7',
+        topicname8 = '$topicname8',
+        topicname9 = '$topicname9',
+        topicname10 = '$topicname10',
        	pointvalue1 = '$pointvalue1',
        	pointvalue2 = '$pointvalue2',
        	pointvalue3 = '$pointvalue3',
@@ -78,6 +87,9 @@ $sql =" Update courseinfo
        	pointvalue5 = '$pointvalue5',
        	pointvalue6 = '$pointvalue6',
        	pointvalue7 = '$pointvalue7',
+        pointvalue8 = '$pointvalue8',
+        pointvalue9 = '$pointvalue9',
+        pointvalue10 = '$pointvalue10',
        	importantpoints = '$importantpoints',
        	meetingDays = '$meetingDays',
         symbol1 = '$symbol1',
@@ -137,9 +149,14 @@ if ($fp) {
                   bookisbn = '$bookisbn',
                   topicname1 = '$topicname1',topicname2 = '$topicname2',
 		            	topicname3 = '$topicname3', topicname4 = '$topicname4', topicname5 = '$topicname5',
-		            	topicname6 = '$topicname6', topicname7 = '$topicname7', pointvalue1 = '$pointvalue1',
+		            	topicname6 = '$topicname6', topicname7 = '$topicname7', topicname8 = '$topicname8',
+                  topicname9 = '$topicname9',
+                  topicname10 = '$topicname10', pointvalue1 = '$pointvalue1',
 		            	pointvalue2 = '$pointvalue2', pointvalue3 = '$pointvalue3', pointvalue4 = '$pointvalue4',
                   pointvalue5 = '$pointvalue5', pointvalue6 = '$pointvalue6', pointvalue7 = '$pointvalue7',
+                  pointvalue8 = '$pointvalue8',
+                  pointvalue9 = '$pointvalue9',
+                  pointvalue10 = '$pointvalue10',
                   importantpoints = '$importantpoints', meetingDays = '$meetingDays', 
                   symbol1 = '$symbol1', symbol2 = '$symbol2', symbol3 = '$symbol3', symbol4 = '$symbol4',
                   symbol5 = '$symbol5', symbol6 = '$symbol6', symbol7 = '$symbol7', symbol8 = '$symbol8',
