@@ -15,9 +15,9 @@ $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
 $mail->Host = "smtp.gmail.com";
 $mail->Port = 465; // or 587
 $mail->IsHTML(true);
-$mail->Username = "infosyllabi@gmail.com";
-$mail->Password = "Universities2019";
-$mail->SetFrom("infosyllabi@gmail.com");
+$mail->Username = "infosyllabusteam@gmail.com";
+$mail->Password = "Infosyllabus473";
+$mail->SetFrom("infosyllabusteam@gmail.com");
 $mail->Subject = "Test";
 $mail->Body = "Dear Professor $full_name,<br><br> thank you for registering with us, here is your username and password!<br><br>
 
@@ -33,7 +33,7 @@ USA<br>
 ";
 
 
-$mail->AddAddress("infosyllabi@gmail.com"); // prof / reciever's email address
+$mail->AddAddress("infosyllabusteam@gmail.com"); // prof / reciever's email address
 
 //$mail->AddAddress($profEmail); // prof / reciever's email address
 
@@ -41,7 +41,7 @@ $mail->AddAddress("infosyllabi@gmail.com"); // prof / reciever's email address
  if(!$mail->Send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
  } 
-	
+
 header("location:main.php");
  
 
