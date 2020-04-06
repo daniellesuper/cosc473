@@ -38,11 +38,13 @@ $mail->AddAddress("infosyllabusteam@gmail.com"); // prof / reciever's email addr
 //$mail->AddAddress($profEmail); // prof / reciever's email address
 
 
+
  if(!$mail->Send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
+    exit;
  } 
 
-header("location:main.php");
+@header('Location: mainpage.php?');
  
 
 ?>
