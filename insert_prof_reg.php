@@ -63,6 +63,7 @@ $address=htmlentities($_REQUEST['address'],ENT_QUOTES);
 		 
 		 $_SESSION["FKPROFID"] = $last_id;
 
+		 require_once('testgmail1.php');
  		//echo $last_id; exit;
 
 		 header("Location:mainpage.php");

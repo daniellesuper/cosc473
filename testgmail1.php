@@ -1,5 +1,3 @@
-// this is testgmail1.php
-
 <?php
 
 //error_reporting(0);
@@ -21,7 +19,19 @@ $mail->Username = "infosyllabi@gmail.com";
 $mail->Password = "Universities2019";
 $mail->SetFrom("infosyllabi@gmail.com");
 $mail->Subject = "Test";
-$mail->Body = "hello hghggghghhgghghgh";
+$mail->Body = "Dear Professor $full_name,<br><br> thank you for registering with us, here is your username and password!<br><br>
+
+Username = $user_name
+<br>
+Password = $user_pw
+<br>
+Info-syllabi team,<br>
+
+USA<br>
+
+
+";
+
 
 $mail->AddAddress("infosyllabi@gmail.com"); // prof / reciever's email address
 
@@ -30,12 +40,9 @@ $mail->AddAddress("infosyllabi@gmail.com"); // prof / reciever's email address
 
  if(!$mail->Send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
- } else {
-	 
-	  
-   echo "Message has been sent";
+ } 
 	
-//header("location:main.php");
- }
+header("location:main.php");
+ 
 
 ?>
