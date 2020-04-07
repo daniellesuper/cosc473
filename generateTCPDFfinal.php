@@ -214,7 +214,7 @@ $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2) * 3.6, ($pointvalue1
 $pdf->SetFillColor(255, 255, 255);
 $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3) *3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4) * 3.6, 'FD', false, 0, 2);
 
-$pdf->SetFillColor(102, 0, 224);
+$pdf->SetFillColor(102, 0, 102);
 $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5)* 3.6, 'FD', false, 0, 2);
 
 $pdf->SetFillColor(0, 255, 255);
@@ -231,6 +231,7 @@ $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $poi
 
 $pdf->SetFillColor(255, 102, 255);
 $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5 + $pointvalue6 + $pointvalue7 + $pointvalue8 + $pointvalue9) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5+$pointvalue6 + $pointvalue7 + $pointvalue8 + $pointvalue9 + $pointvalue10)* 3.6, 'FD', false, 0, 2);
+
 
 //grade breakdown
 //PRINT IMAGE IF THERES AN ASSIGNMENT
