@@ -1,4 +1,4 @@
-3<?php
+<?php
 
 //error_reporting(0);
 
@@ -35,18 +35,18 @@ $mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
 $mail->SMTPAuth = true; // authentication enabled
 $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
 $mail->Host = "smtp.gmail.com";
-$mail->Port = 465; // or 587
+$mail->Port = 587; // or 587
 $mail->IsHTML(true);
-$mail->Username = "infosyllabi@gmail.com";
-$mail->Password = "Universities2019";
-$mail->SetFrom("infosyllabi@gmail.com");
+$mail->Username = "infosyllabusteam@gmail.com";
+$mail->Password = "Infosyllabus473";
+$mail->SetFrom("infosyllabusteam@gmail.com");
 
 $mail->Subject = "Forgot Password";
 $mail->Body = "Hi $email your Password is {$row['password']}";
 //$mail->Subject = "Test";
 //$mail->Body = "hello hghggghghhgghghgh";
 
-$mail->AddAddress("infosyllabi@gmail.com"); // prof / reciever's email address
+$mail->AddAddress("infosyllabusteam@gmail.com"); // prof / reciever's email address
 
 //$mail->AddAddress($profEmail); // prof / reciever's email address
 

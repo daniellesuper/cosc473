@@ -143,6 +143,6 @@
 </form>
 </body>
 <footer>
-    <p>PSH Web Design, Don't Copy This &copy; 2020</p>
+    <p>PSH Gladiator Design, &copy; 2020</p>
   </footer>
 </html>

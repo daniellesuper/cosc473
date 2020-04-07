@@ -2,8 +2,6 @@
 error_reporting(0);
 require("session_info.php");
 
-
-
 $servername="localhost";
 $dbname="info-syllabus";
 $username="root";
@@ -73,10 +71,10 @@ else {
 }
 
 }
-//require_once('testgmail1.php');	
-		 
-//		 	 header("Location: register.php?error=1"); this page reroutes to main/home page once registered
-//		 exit;
+require_once('testgmail1.php');	
+		 header("Location: mainpage.php?error=1");
+		 	  //this page reroutes to main/home page once registered
+		 //exit;
 
 } // end if		 
 

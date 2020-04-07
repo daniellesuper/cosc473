@@ -202,82 +202,159 @@ $xc = 55; // start of x axis
 $yc = 200; // start of y axis
 $r = 40; // radius length of circle
 
-$pdf->SetFillColor(100, 100, 255);
+$pdf->SetFillColor(51, 153, 255);
 $pdf->PieSector($xc, $yc, $r, 0, $pointvalue1 * 3.6, 'FD', false, 0, 2);
 
-$pdf->SetFillColor(0, 255, 0);
+$pdf->SetFillColor(153, 0, 0);
 $pdf->PieSector($xc, $yc, $r, $pointvalue1 * 3.6, ($pointvalue1 + $pointvalue2) * 3.6, 'FD', false, 0, 2);
 
-$pdf->SetFillColor(255, 0, 0);
+$pdf->SetFillColor(0, 255, 0);
 $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3) * 3.6, 'FD', false, 0, 2);
 
-$pdf->SetFillColor(200, 100, 300);
+$pdf->SetFillColor(255, 255, 255);
 $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3) *3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4) * 3.6, 'FD', false, 0, 2);
 
-$pdf->SetFillColor(100, 200, 200);
+$pdf->SetFillColor(102, 0, 224);
 $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5)* 3.6, 'FD', false, 0, 2);
 
-$pdf->SetFillColor(20, 20, 20);
+$pdf->SetFillColor(0, 255, 255);
 $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5+$pointvalue6)* 3.6, 'FD', false, 0, 2);
 
-$pdf->SetFillColor(95, 95, 95);
+$pdf->SetFillColor(255, 153, 51);
 $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5 + $pointvalue6) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5+$pointvalue6 + $pointvalue7)* 3.6, 'FD', false, 0, 2);
 
-$pdf->SetFillColor(150, 150, 150);
+$pdf->SetFillColor(139, 69, 19);
 $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5 + $pointvalue6 + $pointvalue7) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5+$pointvalue6 + $pointvalue7 + $pointvalue8)* 3.6, 'FD', false, 0, 2);
 
-$pdf->SetFillColor(199, 199, 199);
+$pdf->SetFillColor(0, 0, 0);
 $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5 + $pointvalue6 + $pointvalue7 + $pointvalue8) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5+$pointvalue6 + $pointvalue7 + $pointvalue8 + $pointvalue9)* 3.6, 'FD', false, 0, 2);
 
-$pdf->SetFillColor(220, 220, 220);
+$pdf->SetFillColor(255, 102, 255);
 $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5 + $pointvalue6 + $pointvalue7 + $pointvalue8 + $pointvalue9) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5+$pointvalue6 + $pointvalue7 + $pointvalue8 + $pointvalue9 + $pointvalue10)* 3.6, 'FD', false, 0, 2);
 
 //grade breakdown
-
-// THIS IS THE BLUE SQUARE FOR ASSIGNMENT 2
-$pdf->SetXY(120, 205);
-$pdf->Image('images/rectangle1.png', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
-
-// THIS IS THE REDISH BROWN IMAGEE FOR ASSIGNMENT 3
+//PRINT IMAGE IF THERES AN ASSIGNMENT
+if($row[pointvalue1] != "0"){
+	$image = 'images/rectangle1.png';
+} else {
+	$image = "";
+}
 $pdf->SetXY(120, 210);
-$pdf->Image('images/rectangle2.png', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->Image($image, '', '', 10, 4, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
-//THIS IS THE GREEN IMAGE FOR ASSIGNMENT 4
-$pdf->SetXY(120, 215);
-$pdf->Image('images/rectangle3.png', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
-//THIS IS THE LIGHT GREEN IMAGE FOR ASSIGNMENT 5
-$pdf->SetXY(120, 220);
-$pdf->Image('images/rectangle4.png', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+if($row[pointvalue2] != "0"){
+	$image = 'images/rectangle2.png';
+} else {
+	$image = "";
+}
+$pdf->SetXY(120, 216);
+$pdf->Image($image, '', '', 10, 4, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
-//THIS IS THE PURPLE IMAGE FOR ASSIGNMENT 6
-$pdf->SetXY(120, 225);
-$pdf->Image('images/rectangle5.png', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
-$pdf->SetXY(120, 230);
-$pdf->Image('images/rectangle6.png', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+if($row[pointvalue3] != "0"){
+	$image = 'images/rectangle3.png';
+} else {
+	$image = "";
+}
+$pdf->SetXY(120, 221);
+$pdf->Image($image, '', '', 10, 4, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
-//THIS IS THE GREEN IMAGE FOR ASSIGNMENT 7
-$pdf->SetXY(120, 235);
-$pdf->Image('images/rectangle7.png', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+if($row[pointvalue4] != "0"){
+	$image = 'images/rectangle4.png';
+} else {
+	$image = "";
+}
+$pdf->SetXY(120, 226);
+$pdf->Image($image, '', '', 10, 4, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
-// TAN IMAGE FOR ASSIGNMENT 8
-$pdf->SetXY(120, 240);
-$pdf->Image('images/rectangle8.png', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+if($row[pointvalue5] != "0"){
+	$image = 'images/rectangle5.png';
+} else {
+	$image = "";
+}
+$pdf->SetXY(120, 232);
+$pdf->Image($image, '', '', 10, 4, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
-//BLACK IMAGE FOR ASSIGNMENT 9
-$pdf->SetXY(120, 245);
-$pdf->Image('images/rectangle9.png', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+if($row[pointvalue6] != "0"){
+	$image = 'images/rectangle6.png';
+}
+else {
+	$image = "";
+}
+$pdf->SetXY(120, 238);
+$pdf->Image($image, '', '', 10, 4, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
-// PINK IMAGE FOR ASSIGNMENT 10
-$pdf->SetXY(120, 250);
-$pdf->Image('images/rectangle10.png', '', '', 15, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+if($row[pointvalue7] != "0"){
+	$image = 'images/rectangle7.png';
+} else {
+	$image = "";
+}
+$pdf->SetXY(120, 243);
+$pdf->Image($image, '', '', 10, 4, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+if($row[pointvalue8] != "0"){
+	$image = 'images/rectangle8.png';
+} else {
+	$image = "";
+}
+$pdf->SetXY(120, 251);
+$pdf->Image($image, '', '', 10, 4, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+if($row[pointvalue9] != "0"){
+	$image = 'images/rectangle9.png';
+} else {
+	$image = "";
+}
+$pdf->SetXY(120, 258);
+$pdf->Image($image, '', '', 10, 4, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+if($row[pointvalue10] != "0"){
+	$image = 'images/rectangle10.png';
+} else {
+	$image = "";
+}
+$pdf->SetXY(120, 265);
+$pdf->Image($image, '', '', 10, 4, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+// PRINTS ASSIGNMENT IF THERE IS ONE IF NOT PRINTS NOTHING
+if ($row[pointvalue1] == "0"){
+$row[pointvalue1] = '';;}
+
+if ($row[pointvalue2] == "0"){
+$row[pointvalue2] = '';;}
+
+if ($row[pointvalue3] == "0"){
+$row[pointvalue3] = '';;}
+
+if ($row[pointvalue4] == "0"){
+$row[pointvalue4] = '';;}
+
+if ($row[pointvalue5] == "0"){
+$row[pointvalue5] = '';;}
+
+if ($row[pointvalue6] == "0"){
+$row[pointvalue6] = '';;}
+
+if ($row[pointvalue7] == "0"){
+$row[pointvalue7] = '';;}
+
+if ($row[pointvalue8] == "0"){
+$row[pointvalue8] = '';;}
+
+if ($row[pointvalue9] == "0"){
+$row[pointvalue9] = '';;}
+
+if ($row[pointvalue10] == "0"){
+$row[pointvalue10] = '';;}
+
+
 
 $topicname = $row["topicname1"]. " ".$row["pointvalue1"]."\n".$row["topicname2"]." ".$row["pointvalue2"]."\n".$row["topicname3"]." ".$row["pointvalue3"]."\n".$row["topicname4"]." ".$row["pointvalue4"]."\n".$row["topicname5"]." ".$row["pointvalue5"]."\n".
 				$row["topicname6"]." ".$row["pointvalue6"]."\n".$row["topicname7"]." ".$row["pointvalue7"]."\n".$row["topicname8"]." ".$row["pointvalue8"]."\n".$row["topicname9"]." ".$row["pointvalue9"]."\n".
 				$row["topicname10"]." ".$row["pointvalue10"];
 $pdf->SetFillColor(178, 178, 178);
-$pdf->MultiCell(100, 75, 'Grade Breakdown '."\n".$topicname, 0, 'C', 1, 0, 105, 200, true);
+$pdf->MultiCell(100, 75, 'Grade Breakdown '."\n"."\n".$topicname, 0, 'C', 1, 0, 105, 200, true);
 
 // END OF GRADE BREAKDOWN
 

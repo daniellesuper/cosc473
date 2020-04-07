@@ -12,7 +12,7 @@ $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
 $mail->SMTPAuth = true; // authentication enabled
 $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
 $mail->Host = "smtp.gmail.com";
-$mail->Port = 465; // or 587 or 465
+$mail->Port = 587; // or 587 or 465(windows)
 $mail->IsHTML(true);
 $mail->Username = "infosyllabusteam@gmail.com";
 $mail->Password = "Infosyllabus473";
@@ -34,7 +34,7 @@ USA<br>
 
 $mail->AddAddress("infosyllabusteam@gmail.com"); // prof / reciever's email address
 
-$mail->Send();
+//$mail->Send();
 //$mail->AddAddress($profEmail); // prof / reciever's email address
 
 
@@ -44,7 +44,12 @@ $mail->Send();
     
  } 
 
-@header('Location: mainpage.php?');
+ else {
+
+ 	echo "message has been sent";
+ }
+
+//@header('Location: mainpage.php?');
  
 
 ?>
