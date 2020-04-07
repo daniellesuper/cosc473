@@ -119,7 +119,7 @@ Class Days &nbsp <select name="meetingDays">
 				<option value="other"> Everyday </option>
 				<!-- Code for other option when clicked text box appears -->
 			</select> *OAW: Once a week classes <br><br>
-Important Points: Brief statement on class expectations/ Attendance policy/ important dates/ etc..<br><br>
+Important Points: Very brief statement on class expectations/ Attendance policy/ important dates/ etc..<br><br>
 <textarea name="importantpoints" style="width: 25%;">
 </textarea><br>
 <script>CKEDITOR.replace('importantpoints'); CKEDITOR.config.width = '50%';</script>
@@ -132,7 +132,7 @@ Author: &nbsp <input type="text" length="90" name="bookAuthor"> <br><br>
 
 Book Image: <input type="file" name="bookImage" /><br><br>
 
-Grade Breakdown: Name of the assignment goes to left column, Percentage of assignment goes to right column <br><br>
+Grade Breakdown: Left Column -- Assignment Name. Right Column -- total sum of the "Weight" should = 100 <br><br>
 
 <div id="gradeWeight">
 <p id="grade1">

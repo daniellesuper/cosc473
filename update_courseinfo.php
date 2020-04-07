@@ -248,7 +248,7 @@ Book Author: &nbsp; <input type="text" length="90" name="bookAuthor" value="<?ph
 
 
 
-Grade Breakdown: Name of the assignment goes to left column, Percentage of assignment goes to right column <br><br>
+Grade Breakdown: Left Column -- Assignment Name. Right Column -- total sum of the "Weight" should = 100  <br><br>
 
 <div id="gradeWeight"> 
 <p id="grade1">
