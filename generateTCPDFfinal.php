@@ -239,8 +239,8 @@ if($row[pointvalue1] != "0"){
 } else {
 	$image = "";
 }
-$pdf->SetXY(120, 210);
-$pdf->Image($image, '', '', 10, 4, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->SetXY(115, 208);
+$pdf->Image($image, '', '', 15, 5, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 
 if($row[pointvalue2] != "0"){
@@ -248,8 +248,8 @@ if($row[pointvalue2] != "0"){
 } else {
 	$image = "";
 }
-$pdf->SetXY(120, 216);
-$pdf->Image($image, '', '', 10, 4, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->SetXY(115, 215);
+$pdf->Image($image, '', '', 15, 5, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 
 if($row[pointvalue3] != "0"){
@@ -257,24 +257,24 @@ if($row[pointvalue3] != "0"){
 } else {
 	$image = "";
 }
-$pdf->SetXY(120, 221);
-$pdf->Image($image, '', '', 10, 4, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->SetXY(115, 222);
+$pdf->Image($image, '', '', 15, 5, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 if($row[pointvalue4] != "0"){
 	$image = 'images/rectangle4.png';
 } else {
 	$image = "";
 }
-$pdf->SetXY(120, 226);
-$pdf->Image($image, '', '', 10, 4, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->SetXY(115, 229);
+$pdf->Image($image, '', '', 15, 5, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 if($row[pointvalue5] != "0"){
 	$image = 'images/rectangle5.png';
 } else {
 	$image = "";
 }
-$pdf->SetXY(120, 232);
-$pdf->Image($image, '', '', 10, 4, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->SetXY(115, 236);
+$pdf->Image($image, '', '', 15, 5, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 if($row[pointvalue6] != "0"){
 	$image = 'images/rectangle6.png';
@@ -282,40 +282,40 @@ if($row[pointvalue6] != "0"){
 else {
 	$image = "";
 }
-$pdf->SetXY(120, 238);
-$pdf->Image($image, '', '', 10, 4, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->SetXY(115, 243);
+$pdf->Image($image, '', '', 15, 5, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 if($row[pointvalue7] != "0"){
 	$image = 'images/rectangle7.png';
 } else {
 	$image = "";
 }
-$pdf->SetXY(120, 243);
-$pdf->Image($image, '', '', 10, 4, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->SetXY(115, 250);
+$pdf->Image($image, '', '', 15, 5, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 if($row[pointvalue8] != "0"){
 	$image = 'images/rectangle8.png';
 } else {
 	$image = "";
 }
-$pdf->SetXY(120, 251);
-$pdf->Image($image, '', '', 10, 4, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->SetXY(115, 257);
+$pdf->Image($image, '', '', 15, 5, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 if($row[pointvalue9] != "0"){
 	$image = 'images/rectangle9.png';
 } else {
 	$image = "";
 }
-$pdf->SetXY(120, 258);
-$pdf->Image($image, '', '', 10, 4, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->SetXY(115, 264);
+$pdf->Image($image, '', '', 15, 5, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 if($row[pointvalue10] != "0"){
 	$image = 'images/rectangle10.png';
 } else {
 	$image = "";
 }
-$pdf->SetXY(120, 265);
-$pdf->Image($image, '', '', 10, 4, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->SetXY(115, 271);
+$pdf->Image($image, '', '', 15, 5, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 // PRINTS ASSIGNMENT IF THERE IS ONE IF NOT PRINTS NOTHING
 if ($row[pointvalue1] == "0"){
@@ -348,13 +348,38 @@ $row[pointvalue9] = '';;}
 if ($row[pointvalue10] == "0"){
 $row[pointvalue10] = '';;}
 
-
-
-$topicname = $row["topicname1"]. " ".$row["pointvalue1"]."\n".$row["topicname2"]." ".$row["pointvalue2"]."\n".$row["topicname3"]." ".$row["pointvalue3"]."\n".$row["topicname4"]." ".$row["pointvalue4"]."\n".$row["topicname5"]." ".$row["pointvalue5"]."\n".
-				$row["topicname6"]." ".$row["pointvalue6"]."\n".$row["topicname7"]." ".$row["pointvalue7"]."\n".$row["topicname8"]." ".$row["pointvalue8"]."\n".$row["topicname9"]." ".$row["pointvalue9"]."\n".
-				$row["topicname10"]." ".$row["pointvalue10"];
 $pdf->SetFillColor(178, 178, 178);
-$pdf->MultiCell(100, 75, 'Grade Breakdown '."\n"."\n".$topicname, 0, 'C', 1, 0, 105, 200, true);
+$pdf->MultiCell(100, 10, 'Grade Breakdown ', 0, 'C', 1, 0, 105, 200, true);
+
+$topicname = $row["topicname1"]. " ".$row["pointvalue1"]."\n";
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 207, true);
+
+$topicname = $row["topicname2"]." ".$row["pointvalue2"]."\n";
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 214, true);
+
+$topicname = $row["topicname3"]." ".$row["pointvalue3"]."\n";
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 221, true);
+
+$topicname = $row["topicname4"]." ".$row["pointvalue4"]."\n";
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 228, true);
+
+$topicname = $row["topicname5"]." ".$row["pointvalue5"]."\n";
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 235, true);
+
+$topicname = $row["topicname6"]." ".$row["pointvalue6"]."\n";
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 242, true);
+
+$topicname = $row["topicname7"]." ".$row["pointvalue7"]."\n";
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 249, true);
+
+$topicname = $row["topicname8"]." ".$row["pointvalue8"]."\n";
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 256, true);
+
+$topicname = $row["topicname9"]." ".$row["pointvalue9"]."\n";
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 263, true);
+
+$topicname = $row["topicname10"]." ".$row["pointvalue10"];
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 270, true);
 
 // END OF GRADE BREAKDOWN
 
