@@ -25,14 +25,14 @@ $mail->Username = "infosyllabusteam@gmail.com";
 
 $mail->Password = "Infosyllabusteam473";
 
-$mail->Subject = "Test";
+$mail->Subject = "Info-Syllabus Credentials";
 
 $mail->setFrom("infosyllabusteam@gmail.com");
 
 $mail->isHTML(true);
 
 
-$mail->Body = "Dear Professor $full_name,<br><br> thank you for registering with us, here is your username and password!<br><br>
+$mail->Body = "Dear $title $full_name,<br><br> thank you for registering with us, here is your username and password!<br><br>
 
 Username = $user_name
 <br>
