@@ -45,7 +45,7 @@ USA<br>
 
 ";
 
-$mail->addAddress("infosyllabusteam@gmail.com");
+$mail->addAddress("$email");
 
 
 

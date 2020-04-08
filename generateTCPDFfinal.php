@@ -2527,7 +2527,7 @@ $pdf->writeHTML($html, true, false, true, false, '');
 //}
 
 
-$pdf->output('weeklyschedule.pdf', 'I'); // PUT D INSTEAD OF I FOR DOWNLOADING AUTOMATICALLY PDF
+$pdf->output('weeklyschedule.pdf', 'D'); // PUT D INSTEAD OF I FOR DOWNLOADING AUTOMATICALLY PDF
 $conn->close(); //}// end of if else for row and bar
 ?>
 <html>
