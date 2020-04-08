@@ -76,7 +76,7 @@ hr {
 	flex-direction: row;
 	min-height: 200px;
 	width: 100%;
-	overflow: scroll;
+	/*overflow: scroll;*/
 }
 
 .syllabusList a {
