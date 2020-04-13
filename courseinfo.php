@@ -57,21 +57,10 @@ $pointvalue9 = $row['pointvalue9'];
 $pointvalue10 = $row['pointvalue10'];
 $important_points = $row['important_points'];
 $meetingDays = $row['meetingDays'];
-
-	
 	}
 }
 //end of if
-
 ?>
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script src="https://cdn.ckeditor.com/4.11.2/standard/ckeditor.js"></script>
 <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
 
@@ -81,8 +70,8 @@ $meetingDays = $row['meetingDays'];
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> 
-	</head>
-	<body>
+</head>
+<body>
 	<header>
 	<nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -98,9 +87,7 @@ $meetingDays = $row['meetingDays'];
     </ul>
   </div>
 </nav>
-	
-	<hr />
-
+<hr />
 	</header>
 
 

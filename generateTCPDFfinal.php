@@ -80,7 +80,7 @@ $officehours = "Office Hours: "."\n"."Mon: ".$bar3["monday"]."\n"."Tues: ".$bar3
 $officeinfo = "Faculty office"."\n".$bar3["officeaddress"]."\n"."Contact Email"."\n".$bar3["email"]."\n"."Office Phone"."\n".$bar3["officephone"];
 
 $pdf->SetFillColor(178, 178, 178);
-$pdf->MultiCell(200, 60, $text, 0, 'C', 1, 1, '', '', true);
+$pdf->MultiCell(200, 62, $text, 0, 'C', 1, 1, '', '', true);
 
 // course info in the bottom banner
 //$pdf->SetFillColor(178, 0, 178);
@@ -123,13 +123,9 @@ $pdf->Image('images/bannerright.png', '', '', 70, 15, '', '', 'T', false, 300, '
 $course= str_replace( "&#039;", "'", $course );
 $pdf->MultiCell(75, 10,$course, 0, 'L', 0, 2, 30, 37, true,0, false, true, 40, 'C');
 
-// THIS IS THE WORDING IN THE IMPORTANT POINT SECTION
-$pdf->SetXY(105, 67);
-$pdf->Image('images/importantpoints.png', '', '', 100, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
-
-//THIS IS THE WORDS ON TOP OF THE BANNER
-$pdf->SetXY(140, 68);
-$pdf->Image('images/importantwords.png', '', '', 33, 13, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+// THIS IS THE IMPORTANT POINT SECTION
+$pdf->SetXY(106, 68);
+$pdf->Image('images/imppointsbanner.png', '', '', 100, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 // THIS THE PENCIL IMAGE IN THE BOOK INFO SECTION
 $pdf->SetXY(77, 77);
@@ -140,7 +136,6 @@ $pdf->SetXY(7, 105);
 $pdf->Image('images/book.png', '', '', 20, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 // imp points
-
 $importantpoints = $bar5["importantpoints"];
 $importantpoints = html_entity_decode($importantpoints);
 $html = '<span align = "right">'.$importantpoints.'</span>';
@@ -231,7 +226,6 @@ $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $poi
 
 $pdf->SetFillColor(255, 102, 255);
 $pdf->PieSector($xc, $yc, $r, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5 + $pointvalue6 + $pointvalue7 + $pointvalue8 + $pointvalue9) * 3.6, ($pointvalue1 + $pointvalue2 + $pointvalue3 + $pointvalue4 + $pointvalue5+$pointvalue6 + $pointvalue7 + $pointvalue8 + $pointvalue9 + $pointvalue10)* 3.6, 'FD', false, 0, 2);
-
 
 //grade breakdown
 //PRINT IMAGE IF THERES AN ASSIGNMENT
@@ -382,7 +376,6 @@ $pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 263, true);
 $topicname = $row["topicname10"]." ".$row["pointvalue10"];
 $pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 270, true);
 
-// END OF GRADE BREAKDOWN
 
 // END OF PAGE 1 OF PDF
 
@@ -391,24 +384,18 @@ $pdf->AddPage();
 //$pdf->writeHTML($html, true,false,true,false,'');
 $html = '<img src="images/weeklyschedule.png" alt="weeklyschedule" align="center">';
 $pdf->writeHTML($html, true,false,true,false,'');
-
 $html = '<span style = "color: red"; align = "center">'.$bar[holiday].' Break: '. $bar[startdate]. ' to '. $bar[enddate].'</span>'; 
 $pdf->writeHTML($html, true,false,true,false,'');
-
 //
 // start of the if statememt for outputting correct # of boxes and info
 //
-
 $sql3 = "SELECT  symbol1_week1, symbol2_week1, symbol3_week1, symbol1_week2, symbol2_week2, symbol3_week2, symbol1_week3, symbol2_week3, symbol3_week3, symbol1_week4, symbol2_week4, symbol3_week4, symbol1_week5, symbol2_week5, symbol3_week5, symbol1_week6, symbol2_week6, symbol3_week6, symbol1_week7, symbol2_week7, symbol3_week7, symbol1_week8, symbol2_week8, symbol3_week8, symbol1_week9, symbol2_week9	, symbol3_week9, symbol1_week10, symbol2_week10, symbol3_week10, symbol1_week11, symbol2_week11, symbol3_week11, symbol1_week12, symbol2_week12, symbol3_week12, symbol1_week13, symbol2_week13, symbol3_week13, symbol1_week14, symbol2_week14, symbol3_week14, symbol1_week15, symbol2_week15, symbol3_week15
 FROM weeklyinfo WHERE fkcourseid= $_GET[courseID]";
 
 $result3 = $conn->query($sql3);
-
 if($result3->num_rows > 0){
     $num = $result3->fetch_assoc();
   }
-
-
 include 'showSymbol.php';
 
 if ($row[meetingDays] == "TTR"){
@@ -917,13 +904,9 @@ td {
 	</tr>
 </table>
 ';
-
-
 $pdf->writeHTML($html, true, false, true, false, '');
 }
-
 elseif ($row[meetingDays] == "T") { // start of MWF portion
-
 $html = '
 <style>
 table.first {
@@ -1125,7 +1108,6 @@ td {
 		<td><b>T</b><br>
 		'.$bar[symbol1_week14].'  
 		</td>
-		
 	</tr>
 </table>
 		</td>
@@ -1158,13 +1140,9 @@ td {
 	</tr>
 </table>
 ';
-
-
 $pdf->writeHTML($html, true, false, true, false, '');
 }
-
 elseif ($row[meetingDays] == "W") { // start of MWF portion
-
 $html = '
 <style>
 table.first {
@@ -1399,13 +1377,9 @@ td {
 	</tr>
 </table>
 ';
-
-
 $pdf->writeHTML($html, true, false, true, false, '');
 }
-
 elseif ($row[meetingDays] == "TR") { // start of MWF portion
-
 $html = '
 <style>
 table.first {
@@ -1640,13 +1614,9 @@ td {
 	</tr>
 </table>
 ';
-
-
 $pdf->writeHTML($html, true, false, true, false, '');
 }
-
 elseif ($row[meetingDays] == "F") { // start of MWF portion
-
 $html = '
 <style>
 table.first {
@@ -1881,13 +1851,9 @@ td {
 	</tr>
 </table>
 ';
-
-
 $pdf->writeHTML($html, true, false, true, false, '');
 }
-
 elseif ($row[meetingDays] == "MWF") {
-	
 	$html = '
 <style>
 table.first {
@@ -2195,16 +2161,10 @@ td {
 		</td>
 	</tr>
 </table>
-
 ';
-
-
 $pdf->writeHTML($html, true, false, true, false, '');
 }
-
-
 else {
-
 $html = '
 <style>
 table.first {
@@ -2512,22 +2472,11 @@ td {
 		</td>
 	</tr>
 </table>
-
 ';
-
-
 $pdf->writeHTML($html, true, false, true, false, '');
-
-//}// if bracket/ end of TTR portion
-
-
-
-	}// else bracket
+}// else bracket
 }
-//}
-
-
-$pdf->output('weeklyschedule.pdf', 'D'); // PUT D INSTEAD OF I FOR DOWNLOADING AUTOMATICALLY PDF
+$pdf->output('weeklyschedule.pdf', 'I'); // PUT D INSTEAD OF I FOR DOWNLOADING AUTOMATICALLY PDF
 $conn->close(); //}// end of if else for row and bar
 ?>
 <html>

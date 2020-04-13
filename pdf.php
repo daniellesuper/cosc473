@@ -130,17 +130,16 @@ if($result->num_rows > 0) {
 </div><!--end bookInfo-->
 
 <div class="importantpoints">
-	<div id="ribbon2">Important Points</div>
+	<div id="ribbon2">Important Pointssssss</div>
 	<div id="pointsContainer">
 		<?php
 		$imp_points = $row["importantpoints"];
-
 		$imp_points = html_entity_decode($imp_points);
 		echo"$imp_points";
 		?>
 	</div> <!--end pointsContainer-->
 </div> <!-- end of div for importantpoints -->
-	   
+
 <?php
 	$sql = "SELECT topicname1,topicname2,topicname3,topicname4,topicname5,topicname6,topicname7 FROM courseinfo WHERE PKID = $_GET[courseID]"; 
 
