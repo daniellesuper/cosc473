@@ -102,7 +102,10 @@ $assign10 = $row['assign10'];
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> 
+  <script src="https://cdn.ckeditor.com/4.11.2/standard/ckeditor.js"></script>
+  <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
+
 </head>
 
 
@@ -278,15 +281,15 @@ Weight: &nbsp; <input type="text" length="25" name="weight6" value="<?php echo $
 <p id="grade7">
 Name: <input type="text" length="25" name="gradeName7" value="<?php echo $bar[topicname7]; ?>"> &nbsp; 
 Weight: &nbsp; <input type="text" length="25" name="weight7" value="<?php echo $bar[pointvalue7]; ?>"> <br>
-</p><br>
+</p>
 <p id="grade8">
 Name: <input type="text" length="25" name="gradeName8" value="<?php echo $bar[topicname8]; ?>"> &nbsp; 
 Weight: &nbsp; <input type="text" length="25" name="weight8" value="<?php echo $bar[pointvalue8]; ?>"> <br>
-</p><br>
+</p>
 <p id="grade9">
 Name: <input type="text" length="25" name="gradeName9" value="<?php echo $bar[topicname9]; ?>"> &nbsp; 
 Weight: &nbsp; <input type="text" length="25" name="weight9" value="<?php echo $bar[pointvalue9]; ?>"> <br>
-</p><br>
+</p>
 <p id="grade10">
 Name: <input type="text" length="25" name="gradeName10" value="<?php echo $bar[topicname10]; ?>"> &nbsp; 
 Weight: &nbsp; <input type="text" length="25" name="weight10" value="<?php echo $bar[pointvalue10]; ?>"> <br>

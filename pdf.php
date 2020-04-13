@@ -130,7 +130,7 @@ if($result->num_rows > 0) {
 </div><!--end bookInfo-->
 
 <div class="importantpoints">
-	<div id="ribbon2">Important Pointssssss</div>
+	<div id="ribbon2">Important Points</div>
 	<div id="pointsContainer">
 		<?php
 		$imp_points = $row["importantpoints"];

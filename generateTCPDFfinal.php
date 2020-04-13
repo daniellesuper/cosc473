@@ -169,16 +169,9 @@ $pdf->Image('images/email-logo.png', '', '', 10, 10, '', '', 'T', false, 300, ''
 
 // THIS IS THE BANNER FOR GRADES
 $pdf->SetXY(10, 130);
-$pdf->Image('images/grades.png', '', '', 90, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+$pdf->Image('images/gradesbanner.png', '', '', 90, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
-// THIS IS THE SCHREENSHOT OF "GRADE" PUT ON TOP OF THE BANNER IMAGE
-$pdf->SetXY(40, 130);
-$pdf->Image('images/grade1.png', '', '', 30, 10, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
-
-
-//
 // Start of the pie chart
-
 $pointvalue1 = $row["pointvalue1"];
 $pointvalue2 = $row["pointvalue2"];
 $pointvalue3 = $row["pointvalue3"];
@@ -191,7 +184,6 @@ $pointvalue9 = $row["pointvalue9"];
 $pointvalue10 = $row["pointvalue10"];
 
 $assign1 = $row["assign1"];
-
 
 $xc = 55; // start of x axis
 $yc = 200; // start of y axis
@@ -399,7 +391,6 @@ if($result3->num_rows > 0){
 include 'showSymbol.php';
 
 if ($row[meetingDays] == "TTR"){
-
  $html = '
 <style>
 table.first {
@@ -668,7 +659,7 @@ td {
 $pdf->writeHTML($html, true, false, true, false, '');
 
 }// if bracket/ end of TTR portion
-elseif ($row[meetingDays] == "M") { // start of MWF portion
+elseif ($row[meetingDays] == "M") { 
 
 $html = '
 <style>
