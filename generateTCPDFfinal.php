@@ -831,7 +831,7 @@ td {
 			<p>'.$bar[week12_desc].'</p>
 			<table cellspacing="2" cellpadding="2">
 	<tr>
-		<td><b>T</b><br>
+		<td><b>M</b><br>
 		'.$bar[symbol1_week12].'  
 		</td>
 		
