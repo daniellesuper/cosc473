@@ -3,10 +3,7 @@
 require("session_info.php");
 include('library/tcpdf.php');
 error_reporting(0);
-$servername="localhost";
-$dbname="info-syllabus";
-$username="root";
-$password="";
+include ('session-connection.php');
 $conn= new mysqli($servername, $username, $password, $dbname);
 if($conn-> connect_error){
 die("Connection Failed".$conn->connect_error);
@@ -23,14 +20,13 @@ FROM weeklyinfo WHERE fkcourseid= $_GET[courseID]";
 
 $sql3 = "SELECT title, fullname, officeaddress, email, officephone, monday, tuesday, wednesday, thursday, friday FROM profinfo WHERE PKID = $FKPROFID;";
 $sql4 = "SELECT coursecode, coursename FROM courseinfo WHERE PKID = $_GET[courseID]";
-
 $sql5 = "SELECT coursecode, coursename, bookname, bookisbn, bookAuthor, importantpoints FROM courseinfo WHERE PKID = $_GET[courseID]";
 
 $result1 = $conn->query($sql1); // meeting days and symbol assignments
 $result2 = $conn->query($sql2); // weekly info
 $result3 = $conn->query($sql3); // profinfo
 $result4 = $conn->query($sql4); // courseinfo
-$result5 = $conn->query($sql5);
+$result5 = $conn->query($sql5); 
 
 if($result1->num_rows > 0) {
   //used for profinfo items
@@ -67,40 +63,16 @@ $pdf->AddPage();
 
 // MultiCell($w, $h, $txt, $border=0, $align='J', $fill=0, $ln=1, $x='', $y='', $reseth=true, $stretch=0, $ishtml=false, $autopadding=true, $maxh=0)
 
-$text = '';
 // header box
 $titlename = $bar3["title"]." ".$bar3["fullname"]." ";
 $coursenameDecode = $bar4["coursename"];
 $course = $bar4["coursecode"]."\n".html_entity_decode($coursenameDecode);
-
-//$pdf->SetXY(100, 205);
-//$pdf->Image('images/house.png', '', '', 6, 6, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 $officehours = "Office Hours: "."\n"."Mon: ".$bar3["monday"]."\n"."Tues: ".$bar3["tuesday"]."\n"."Wed: ".$bar3["wednesday"]."\n"."Thurs: ".$bar3["thursday"]."\n"."Fri: ".$bar3["friday"];
-
 $officeinfo = "Faculty office"."\n".$bar3["officeaddress"]."\n"."Contact Email"."\n".$bar3["email"]."\n"."Office Phone"."\n".$bar3["officephone"];
 
 $pdf->SetFillColor(178, 178, 178);
 $pdf->MultiCell(200, 62, $text, 0, 'C', 1, 1, '', '', true);
 
-// course info in the bottom banner
-//$pdf->SetFillColor(178, 0, 178);
-//$pdf->MultiCell(35, 30,$course, 1, 'C', 0, 2, 35, 37, false,0, false, true, 40, 'C');
-
-// WHITE BOX FOR THE OFFICE INFO WITH DATA INCLUDED
-$pdf->SetFillColor(255, 255, 255);
-$pdf->MultiCell(35, 30,$officeinfo, 0, 'C', 1, 2, 125, 17, true,0, false, true, 40, 'B');
-
-
-// WHITE BOX FOR THE OFFICE HOURS WITH DATA
-$pdf->SetFillColor(255, 255, 255);
-$pdf->MultiCell(35, 30,$officehours, 0, 'C', 1, 2, 165, 17, true,0, false, true, 40, 'B');
-
-// book info
-$bookinfo = $bar5["bookname"]."\n".$bar5["bookAuthor"]."\n".$bar5["bookisbn"];
-$pdf->SetFillColor(230, 230, 230);
-$pdf->MultiCell(100, 61, 'Book Info '."\n".$bookinfo, 0, 'C', 1, 0, 5, 67, true,0, false, true, 40, 'B');
-
-//
 // THIS IS THE LEFT PART OF BANNER IN TOP LEFT OF PDF
 $pdf->SetXY(5, 10);
 $pdf->Image('images/bannerleft.png', '', '', 70, 15, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
@@ -108,13 +80,11 @@ $pdf->Image('images/bannerleft.png', '', '', 70, 15, '', '', 'T', false, 300, ''
 // THIS IS THE TEXT ON THE TOP BANNER FOR PROF INFO
 $pdf->SetFont('helvetica','C',12);
 $pdf->MultiCell(55, 10,$titlename, 0, 'C', 0, 2, 15, 13, true,0, false, true, 40, 'C');
-//
 
 // THIS IS THE MIDDLE PART OF THE BANNER
 $pdf->SetXY(25, 23);
 $pdf->Image('images/bannermiddle.png', '', '', 50, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
-//
 // THIS THE RIGHT SIDE OF THE BANNER IN TOP LEFT OF PDF // BOTTOM WITH RIBBON ON RIGHT SIDE
 $pdf->SetXY(25, 35);
 $pdf->Image('images/bannerright.png', '', '', 70, 15, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
@@ -123,9 +93,19 @@ $pdf->Image('images/bannerright.png', '', '', 70, 15, '', '', 'T', false, 300, '
 $course= str_replace( "&#039;", "'", $course );
 $pdf->MultiCell(75, 10,$course, 0, 'L', 0, 2, 30, 37, true,0, false, true, 40, 'C');
 
-// THIS IS THE IMPORTANT POINT SECTION
-$pdf->SetXY(106, 68);
-$pdf->Image('images/imppointsbanner.png', '', '', 100, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+// WHITE BOX FOR THE OFFICE INFO WITH DATA INCLUDED
+$pdf->SetFillColor(255, 255, 255);
+$pdf->MultiCell(35, 30,$officeinfo, 0, 'C', 1, 2, 125, 17, true,0, false, true, 40, 'B');
+
+// WHITE BOX FOR THE OFFICE HOURS WITH DATA
+$pdf->SetFillColor(255, 255, 255);
+$pdf->MultiCell(35, 30,$officehours, 0, 'C', 1, 2, 165, 17, true,0, false, true, 40, 'B');
+
+// BOOK INFO
+$bookinfo = $bar5["bookname"]."\n".$bar5["bookAuthor"]."\n".$bar5["bookisbn"];
+$pdf->SetFillColor(230, 230, 230);
+$pdf->MultiCell(100, 61, 'Book Info '."\n".$bookinfo, 0, 'C', 1, 0, 5, 67, true,0, false, true, 40, 'B');
 
 // THIS THE PENCIL IMAGE IN THE BOOK INFO SECTION
 $pdf->SetXY(77, 77);
@@ -138,12 +118,16 @@ $pdf->Image('images/book.png', '', '', 20, 20, '', '', 'T', false, 300, '', fals
 // imp points
 $importantpoints = $bar5["importantpoints"];
 $importantpoints = html_entity_decode($importantpoints);
-$html = '<span align = "right">'.$importantpoints.'</span>';
+$html = '<span align="right">'.$importantpoints.'</span>';
 $pdf->writeHTML($html, true,false,true,false,'');
+
+// THIS IS THE IMPORTANT POINT SECTION
+$pdf->SetXY(106, 68);
+$pdf->Image('images/imppointsbanner.png', '', '', 100, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
 
 
 // pie chart
-
 $pointvalue1 = $row["pointvalue1"];
 $pointvalue2 = $row["pointvalue2"];
 $pointvalue3 = $row["pointvalue3"];
@@ -154,7 +138,6 @@ $pointvalue7 = $row["pointvalue7"];
 $pointvalue8 = $row["pointvalue8"];
 $pointvalue9 = $row["pointvalue9"];
 $pointvalue10 = $row["pointvalue10"];
-
 
 $pdf->SetFillColor(178, 178, 178);
 $pdf->MultiCell(100, 145, 'Pie Chart'."\n", 0, 'C', 1, 0, '5', '130', true);
@@ -639,7 +622,7 @@ td {
 	</tr> 
 </table>
 		</td>
-		<td>
+		<td style="padding:0;border:1px solid blue;height:50px; ">
 			<h1>Key</h1><br>
 			<p>'.$row[symbol1]." ".$row[assign1].'</p>
 			<p>'.$row[symbol2]." ".$row[assign2].'</p>

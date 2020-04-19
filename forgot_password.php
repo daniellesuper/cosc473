@@ -3,10 +3,7 @@
 //error_reporting(0);
 
 
-$servername="localhost";
-$dbname="info-syllabus";
-$username="root";
-$password="";
+include ('session-connection.php');
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 			if($_POST)
