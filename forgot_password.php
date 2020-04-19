@@ -4,9 +4,9 @@
 
 
 $servername="localhost";
-$dbname="info-syllabus";
-$username="root";
-$password="";
+$dbname="infosyll_info-syllabus";
+$username="infosyll_infosyllteam";
+$password="#67ivGL#,}yG";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 			if($_POST)
@@ -24,8 +24,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 
 
-require('PHPMailer\src\PHPMailer.php');
-require('PHPMailer\src\SMTP.php');
+require('home/infosyll/public_html/PHPMailer/src/PHPMailer.php');
+require('home/infosyll/public_html/PHPMailer/src/SMTP.php');
 
 //$mail = new PHPMailer(); // create a new object
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -74,7 +74,7 @@ header("location:email_sent.php");
 	
 		<form method="post">
 		<div class"col-md-6 col-offset-3" align="center">
-		 <img src="images/logo.jpg" style="max-width:550; width:550; max-height:250; height:250;"><br><br>
+		 <img src="images/logo.JPG" style="max-width:550; width:550; max-height:250; height:250;"><br><br>
 		 
 		 <h1>Forgot Your Password</h1><br>
 		 <?php echo"If you have forgotten your password, don't worry. Please enter your account's email address below and click 'Send Email' button. You will recieve an email with your password."?><br><br>

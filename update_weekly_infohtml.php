@@ -6,9 +6,9 @@ error_reporting(0);
 $courseID = $_GET['courseID'];
 
 $servername="localhost";
-$dbname="info-syllabus";
-$username="root";
-$password="";
+$dbname="infosyll_info-syllabus";
+$username="infosyll_infosyllteam";
+$password="#67ivGL#,}yG";
 
 $conn= new mysqli($servername, $username, $password, $dbname);
 if($conn-> connect_error){

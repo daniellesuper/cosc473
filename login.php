@@ -6,6 +6,7 @@ if($_GET['error']==1){
 }
 ?>
 <head>
+<link rel="icon" href="images/favicon.ico" type="image"/>
 <!-- google login button located at bottom of page -->
  	<link rel="stylesheet" type="text/css" href="landingpage.css">
  	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
@@ -25,7 +26,6 @@ if($_GET['error']==1){
         <div id="links">
   	  	   <ul>
             <li class="current"><a href="index.html">Home</a></li>
-            <li class="current"><a href="contact.html">Contact</a></li>
             <li class="current"><a href="register.php">Register</a></li>
             <li class="current"><a href="login.php">Login</a></li>  
           </ul>
@@ -62,6 +62,6 @@ if($_GET['error']==1){
 </div>
 </form>
 <footer>
-  	<p>PSH Web Design, Don't Copy This &copy; 2020</p>
-  </footer>
+	<p>Info-Syllabus Team, &copy; 2020</p>
+</footer>
 </body>

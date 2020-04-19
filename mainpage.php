@@ -3,9 +3,9 @@ require("session_info.php");
 error_reporting(0);
  
 $servername="localhost";
-$dbname="info-syllabus";
-$username="root";
-$password="";
+$dbname="infosyll_info-syllabus";
+$username="infosyll_infosyllteam";
+$password="#67ivGL#,}yG";
 
 $conn= new mysqli($servername, $username, $password, $dbname);
 if($conn-> connect_error){
@@ -23,6 +23,7 @@ $courseID = $_GET["courseID"];
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> 
+	<link rel="icon" href="images/favicon.ico" type="image"/>
 	</head>
 	<body>
 	<header>
@@ -31,10 +32,6 @@ $courseID = $_GET["courseID"];
     <div class="navbar-header">
       <a class="navbar-brand" href="index.html">InfoSyllabus&copy;</a>
     </div>
-    <ul class="nav navbar-nav">
-      <!-- <li class="active"><a href="#">Home</a></li> -->
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="index.html"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
     </ul>
@@ -84,11 +81,11 @@ $courseID = $_GET["courseID"];
 										Update Course Info 
 									</a>
 								</button>
-								<button type="button" class="btn btn-primary btn-lg">
+								<!-- <button type="button" class="btn btn-primary btn-lg">
 									<a href="pdf.php?courseID=<?php echo $courseID ?>">
 										HTML 1st Page(Useless)
 									</a>
-								</button>
+								</button> -->
 								<button type="button" class="btn btn-primary btn-lg">
 									<a href="weeklyschedule1.php?courseID=<?php echo $courseID ?>"> 
 										Create Weekly Info

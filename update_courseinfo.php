@@ -7,9 +7,9 @@ if(isset($_GET['courseID'])){
 	
 error_reporting(0);
 $servername="localhost";
-$dbname="info-syllabus";
-$username="root";
-$password="";
+$dbname="infosyll_info-syllabus";
+$username="infosyll_infosyllteam";
+$password="#67ivGL#,}yG";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if($conn-> connect_error){
@@ -98,6 +98,7 @@ $assign10 = $row['assign10'];
 
 <html>
 <head>
+  <link rel="icon" href="images/favicon.ico" type="image"/>
 	<link href="mainpage.css" type="text/css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

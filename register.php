@@ -1,4 +1,7 @@
 <html>
+<head>
+  <link rel="icon" href="images/favicon.ico" type="image"/>
+</head>
 <body>
 <link rel="stylesheet" type="text/css" href="landingpage.css">
 <header>
@@ -10,7 +13,6 @@
         <div id="links">
         <ul>
           <li class="current"><a href="index.html">Home</a></li>
-          <li class="current"><a href="contact.html">Contact</a></li>
           <li class="current"><a href="register.php">Register</a></li>
           <li class="current"><a href="login.php">Login</a></li>  
         </ul>
@@ -143,6 +145,6 @@
 </form>
 </body>
 <footer>
-    <p>PSH Gladiator Design, &copy; 2020</p>
-  </footer>
+  <p>Info-Syllabus Team, &copy; 2020</p>
+</footer>
 </html>
