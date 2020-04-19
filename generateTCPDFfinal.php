@@ -96,36 +96,40 @@ $pdf->MultiCell(75, 10,$course, 0, 'L', 0, 2, 30, 37, true,0, false, true, 40, '
 
 // WHITE BOX FOR THE OFFICE INFO WITH DATA INCLUDED
 $pdf->SetFillColor(255, 255, 255);
-$pdf->MultiCell(35, 30,$officeinfo, 0, 'C', 1, 2, 125, 17, true,0, false, true, 40, 'B');
+$pdf->MultiCell(40, 40,$officeinfo, 0, 'C', 1, 2, 115, 17, true,0, false, true, 40, 'B');
 
 // WHITE BOX FOR THE OFFICE HOURS WITH DATA
 $pdf->SetFillColor(255, 255, 255);
-$pdf->MultiCell(35, 30,$officehours, 0, 'C', 1, 2, 165, 17, true,0, false, true, 40, 'B');
+$pdf->MultiCell(35, 40,$officehours, 0, 'C', 1, 2, 165, 17, true,0, false, true, 40, 'B');
+
+// THIS IS THE IMPORTANT POINT SECTION
+$pdf->SetXY(55, 68);
+$pdf->Image('images/imppointsbanner.png', '', '', 100, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+
+// imp points data
+$importantpoints = $bar5["importantpoints"];
+$importantpoints = html_entity_decode($importantpoints);
+$html = '
+<p>
+	<br><br><br><br>'.$importantpoints.'
+</p>';
+$pdf->writeHTML($html, true,false,true,false,'');
 
 // BOOK INFO
 $bookinfo = $bar5["bookname"]."\n".$bar5["bookAuthor"]."\n".$bar5["bookisbn"];
 $pdf->SetFillColor(230, 230, 230);
-$pdf->MultiCell(100, 61, 'Book Info '."\n".$bookinfo, 0, 'C', 1, 0, 5, 67, true,0, false, true, 40, 'B');
+$pdf->MultiCell(100, 50, "Book Info"."\n\n".$bookinfo, 0, 'C', 1, 0, 105, 150, true,0, false, true, 40, 'B');
 
-// THIS THE PENCIL IMAGE IN THE BOOK INFO SECTION
-$pdf->SetXY(77, 77);
+// PENCIL IMAGE IN THE BOOK INFO SECTION
+$pdf->SetXY(177, 160);
 $pdf->Image('images/pencil.png', '', '', 20, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
-// THIS IS THE BOOK IMAGE IN THE BOOK SECTION
-$pdf->SetXY(7, 105);
+// BOOK IMAGE IN THE BOOK SECTION
+$pdf->SetXY(110, 175);
 $pdf->Image('images/book.png', '', '', 20, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
-// imp points
-$importantpoints = $bar5["importantpoints"];
-$importantpoints = html_entity_decode($importantpoints);
-$html = '<span align="right">'.$importantpoints.'</span>';
-$pdf->writeHTML($html, true,false,true,false,'');
-
-// THIS IS THE IMPORTANT POINT SECTION
-$pdf->SetXY(106, 68);
-$pdf->Image('images/imppointsbanner.png', '', '', 100, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
-
-
+// MultiCell($w, $h, $txt, $border=0, $align='J', $fill=0, $ln=1, $x='', $y='', $reseth=true, $stretch=0, $ishtml=false, $autopadding=true, $maxh=0)
 
 // pie chart
 $pointvalue1 = $row["pointvalue1"];
@@ -140,18 +144,18 @@ $pointvalue9 = $row["pointvalue9"];
 $pointvalue10 = $row["pointvalue10"];
 
 $pdf->SetFillColor(178, 178, 178);
-$pdf->MultiCell(100, 145, 'Pie Chart'."\n", 0, 'C', 1, 0, '5', '130', true);
+$pdf->MultiCell(100, 127, "", 0, 'C', 1, 0, '5', '150', true);
 
 // HOUSE IMAGE AT TOP RIGHT OF PAGE 1
-$pdf->SetXY(177, 10);
+$pdf->SetXY(178, 10);
 $pdf->Image('images/house.png', '', '', 10, 10, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 //ENVELOPE IMAGE TO THE LEFT OF THE HOUSE IMAGE TOP RIGHT OF PAGE ON
-$pdf->SetXY(137, 11);
+$pdf->SetXY(130, 11);
 $pdf->Image('images/email-logo.png', '', '', 10, 10, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
-// THIS IS THE BANNER FOR GRADES
-$pdf->SetXY(10, 130);
+// BANNER FOR GRADES
+$pdf->SetXY(10, 170);
 $pdf->Image('images/gradesbanner.png', '', '', 90, 20, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 // Start of the pie chart
@@ -169,7 +173,7 @@ $pointvalue10 = $row["pointvalue10"];
 $assign1 = $row["assign1"];
 
 $xc = 55; // start of x axis
-$yc = 200; // start of y axis
+$yc = 230; // start of y axis
 $r = 40; // radius length of circle
 
 $pdf->SetFillColor(51, 153, 255);
@@ -318,49 +322,97 @@ $row[pointvalue9] = '';;}
 if ($row[pointvalue10] == "0"){
 $row[pointvalue10] = '';;}
 
+// BREAKDOWN
 $pdf->SetFillColor(178, 178, 178);
-$pdf->MultiCell(100, 10, 'Grade Breakdown ', 0, 'C', 1, 0, 105, 200, true);
+$pdf->MultiCell(100, 10, 'Breakdown ', 0, 'C', 1, 0, 100, 200, true);
 
-$topicname = $row["topicname1"]. " ".$row["pointvalue1"]."\n";
-$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 207, true);
+$topicname = $row["topicname1"];
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 90, 207, true);
 
-$topicname = $row["topicname2"]." ".$row["pointvalue2"]."\n";
-$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 214, true);
+$topicname = $row["topicname2"];
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 90, 214, true);
 
-$topicname = $row["topicname3"]." ".$row["pointvalue3"]."\n";
-$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 221, true);
+$topicname = $row["topicname3"];
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 90, 221, true);
 
-$topicname = $row["topicname4"]." ".$row["pointvalue4"]."\n";
-$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 228, true);
+$topicname = $row["topicname4"];
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 90, 228, true);
 
-$topicname = $row["topicname5"]." ".$row["pointvalue5"]."\n";
-$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 235, true);
+$topicname = $row["topicname5"];
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 90, 235, true);
 
-$topicname = $row["topicname6"]." ".$row["pointvalue6"]."\n";
-$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 242, true);
+$topicname = $row["topicname6"];
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 90, 242, true);
 
-$topicname = $row["topicname7"]." ".$row["pointvalue7"]."\n";
-$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 249, true);
+$topicname = $row["topicname7"];
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 90, 249, true);
 
-$topicname = $row["topicname8"]." ".$row["pointvalue8"]."\n";
-$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 256, true);
+$topicname = $row["topicname8"];
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 90, 256, true);
 
-$topicname = $row["topicname9"]." ".$row["pointvalue9"]."\n";
-$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 263, true);
+$topicname = $row["topicname9"];
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 90, 263, true);
 
-$topicname = $row["topicname10"]." ".$row["pointvalue10"];
-$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 105, 270, true);
+$topicname = $row["topicname10"];
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 90, 270, true);
 
+// GRADE %
+$pdf->MultiCell(100, 10, '% of Grade', 0, 'C', 1, 0, 135, 200, true);
+
+$topicname = $row["pointvalue1"]."\n";
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 135, 207, true);
+
+$topicname = $row["pointvalue2"]."\n";
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 135, 214, true);
+
+$topicname = $row["pointvalue3"]."\n";
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 135, 221, true);
+
+$topicname = $row["pointvalue4"]."\n";
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 135, 228, true);
+
+$topicname = $row["pointvalue5"]."\n";
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 135, 235, true);
+
+$topicname = $row["pointvalue6"]."\n";
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 135, 242, true);
+
+$topicname = $row["pointvalue7"]."\n";
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 135, 249, true);
+
+$topicname = $row["pointvalue8"]."\n";
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 135, 256, true);
+
+$topicname = $row["pointvalue9"]."\n";
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 135, 263, true);
+
+$topicname = $row["pointvalue10"];
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 135, 270, true);
 
 // END OF PAGE 1 OF PDF
 
-// add 2nd page
+// START 2ND PAGE
 $pdf->AddPage();
-//$pdf->writeHTML($html, true,false,true,false,'');
+// $html = '<img src="images/weeklyschedule.png" alt="weeklyschedule" align="center">';
+// $pdf->writeHTML($html, true,false,true,false,'');
+
+$pdf->SetXY(10, 0);
+$pdf->Image('images/weeklyschedule.png', '', '', 180, 11, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+
+// $html = '<span style = "color: red"; align = "center">'.$bar[holiday].' Break: '. $bar[startdate]. ' to '. $bar[enddate].'</span>'; 
+// $pdf->writeHTML($html, true,false,true,false,'');
+
+// $html = '<span style = "color: red"; align = "center">'.$bar[custombreakname].$bar[custombreakstartdate]. ' to '. $bar[custombreakenddate].'</span>'; 
+// $pdf->writeHTML($html, true,false,true,false,'');
+
 $html = '<img src="images/weeklyschedule.png" alt="weeklyschedule" align="center">';
 $pdf->writeHTML($html, true,false,true,false,'');
 $html = '<span style = "color: red"; align = "center">'.$bar[holiday].' Break: '. $bar[startdate]. ' to '. $bar[enddate].'</span>'; 
 $pdf->writeHTML($html, true,false,true,false,'');
+$html = '<span style = "color: red"; align = "center">'.$bar[custombreakname].$bar[custombreakstartdate]. ' to '. $bar[custombreakenddate].'</span>'; 
+$pdf->writeHTML($html, true,false,true,false,'');
+
+
 //
 // start of the if statememt for outputting correct # of boxes and info
 //
@@ -622,18 +674,18 @@ td {
 	</tr> 
 </table>
 		</td>
-		<td style="padding:0;border:1px solid blue;height:50px; ">
-			<h1>Key</h1><br>
-			<p>'.$row[symbol1]." ".$row[assign1].'</p>
-			<p>'.$row[symbol2]." ".$row[assign2].'</p>
-			<p>'.$row[symbol3]." ".$row[assign3].'</p>
-			<p>'.$row[symbol4]." ".$row[assign4].'</p>
-			<p>'.$row[symbol5]." ".$row[assign5].'</p>
-			<p>'.$row[symbol6]." ".$row[assign6].'</p>
-			<p>'.$row[symbol7]." ".$row[assign7].'</p>
-			<p>'.$row[symbol8]." ".$row[assign8].'</p>
-			<p>'.$row[symbol9]." ".$row[assign9].'</p>
-			<p>'.$row[symbol10]." ".$row[assign10].'</p>
+		<td>
+			<strong style="font-size:18pt";>Key</strong><br>
+			'.$row[symbol1]." ".$row[assign1].'<br>
+			'.$row[symbol2]." ".$row[assign2].'<br>
+			'.$row[symbol3]." ".$row[assign3].'<br>
+			'.$row[symbol4]." ".$row[assign4].'<br>
+			'.$row[symbol5]." ".$row[assign5].'<br>
+			'.$row[symbol6]." ".$row[assign6].'<br>
+			'.$row[symbol7]." ".$row[assign7].'<br>
+			'.$row[symbol8]." ".$row[assign8].'<br>
+			'.$row[symbol9]." ".$row[assign9].'<br>
+			'.$row[symbol10]." ".$row[assign10].'<br>
 		</td>
 	</tr>
 </table>
@@ -863,17 +915,17 @@ td {
 </table>
 		</td>
 		<td>
-			<h1>Key</h1><br>
-			<p>'.$row[symbol1]." ".$row[assign1].'</p>
-			<p>'.$row[symbol2]." ".$row[assign2].'</p>
-			<p>'.$row[symbol3]." ".$row[assign3].'</p>
-			<p>'.$row[symbol4]." ".$row[assign4].'</p>
-			<p>'.$row[symbol5]." ".$row[assign5].'</p>
-			<p>'.$row[symbol6]." ".$row[assign6].'</p>
-			<p>'.$row[symbol7]." ".$row[assign7].'</p>
-			<p>'.$row[symbol8]." ".$row[assign8].'</p>
-			<p>'.$row[symbol9]." ".$row[assign9].'</p>
-			<p>'.$row[symbol10]." ".$row[assign10].'</p>
+		<strong style="font-size:18pt";>Key</strong><br>
+		'.$row[symbol1]." ".$row[assign1].'<br>
+		'.$row[symbol2]." ".$row[assign2].'<br>
+		'.$row[symbol3]." ".$row[assign3].'<br>
+		'.$row[symbol4]." ".$row[assign4].'<br>
+		'.$row[symbol5]." ".$row[assign5].'<br>
+		'.$row[symbol6]." ".$row[assign6].'<br>
+		'.$row[symbol7]." ".$row[assign7].'<br>
+		'.$row[symbol8]." ".$row[assign8].'<br>
+		'.$row[symbol9]." ".$row[assign9].'<br>
+		'.$row[symbol10]." ".$row[assign10].'<br>
 		</td>
 	</tr>
 </table>
@@ -1336,17 +1388,17 @@ td {
 </table>
 		</td>
 		<td>
-			<h1>Key</h1><br>
-			<p>'.$row[symbol1]." ".$row[assign1].'</p>
-			<p>'.$row[symbol2]." ".$row[assign2].'</p>
-			<p>'.$row[symbol3]." ".$row[assign3].'</p>
-			<p>'.$row[symbol4]." ".$row[assign4].'</p>
-			<p>'.$row[symbol5]." ".$row[assign5].'</p>
-			<p>'.$row[symbol6]." ".$row[assign6].'</p>
-			<p>'.$row[symbol7]." ".$row[assign7].'</p>
-			<p>'.$row[symbol8]." ".$row[assign8].'</p>
-			<p>'.$row[symbol9]." ".$row[assign9].'</p>
-			<p>'.$row[symbol10]." ".$row[assign10].'</p>
+		<strong style="font-size:18pt";>Key</strong><br>
+		'.$row[symbol1]." ".$row[assign1].'<br>
+		'.$row[symbol2]." ".$row[assign2].'<br>
+		'.$row[symbol3]." ".$row[assign3].'<br>
+		'.$row[symbol4]." ".$row[assign4].'<br>
+		'.$row[symbol5]." ".$row[assign5].'<br>
+		'.$row[symbol6]." ".$row[assign6].'<br>
+		'.$row[symbol7]." ".$row[assign7].'<br>
+		'.$row[symbol8]." ".$row[assign8].'<br>
+		'.$row[symbol9]." ".$row[assign9].'<br>
+		'.$row[symbol10]." ".$row[assign10].'<br>
 		</td>
 	</tr>
 </table>
@@ -1573,17 +1625,17 @@ td {
 </table>
 		</td>
 		<td>
-			<h1>Key</h1><br>
-			<p>'.$row[symbol1]." ".$row[assign1].'</p>
-			<p>'.$row[symbol2]." ".$row[assign2].'</p>
-			<p>'.$row[symbol3]." ".$row[assign3].'</p>
-			<p>'.$row[symbol4]." ".$row[assign4].'</p>
-			<p>'.$row[symbol5]." ".$row[assign5].'</p>
-			<p>'.$row[symbol6]." ".$row[assign6].'</p>
-			<p>'.$row[symbol7]." ".$row[assign7].'</p>
-			<p>'.$row[symbol8]." ".$row[assign8].'</p>
-			<p>'.$row[symbol9]." ".$row[assign9].'</p>
-			<p>'.$row[symbol10]." ".$row[assign10].'</p>
+		<strong style="font-size:18pt";>Key</strong><br>
+		'.$row[symbol1]." ".$row[assign1].'<br>
+		'.$row[symbol2]." ".$row[assign2].'<br>
+		'.$row[symbol3]." ".$row[assign3].'<br>
+		'.$row[symbol4]." ".$row[assign4].'<br>
+		'.$row[symbol5]." ".$row[assign5].'<br>
+		'.$row[symbol6]." ".$row[assign6].'<br>
+		'.$row[symbol7]." ".$row[assign7].'<br>
+		'.$row[symbol8]." ".$row[assign8].'<br>
+		'.$row[symbol9]." ".$row[assign9].'<br>
+		'.$row[symbol10]." ".$row[assign10].'<br>
 		</td>
 	</tr>
 </table>
@@ -1810,17 +1862,17 @@ td {
 </table>
 		</td>
 		<td>
-			<h1>Key</h1><br>
-			<p>'.$row[symbol1]." ".$row[assign1].'</p>
-			<p>'.$row[symbol2]." ".$row[assign2].'</p>
-			<p>'.$row[symbol3]." ".$row[assign3].'</p>
-			<p>'.$row[symbol4]." ".$row[assign4].'</p>
-			<p>'.$row[symbol5]." ".$row[assign5].'</p>
-			<p>'.$row[symbol6]." ".$row[assign6].'</p>
-			<p>'.$row[symbol7]." ".$row[assign7].'</p>
-			<p>'.$row[symbol8]." ".$row[assign8].'</p>
-			<p>'.$row[symbol9]." ".$row[assign9].'</p>
-			<p>'.$row[symbol10]." ".$row[assign10].'</p>
+		<strong style="font-size:18pt";>Key</strong><br>
+		'.$row[symbol1]." ".$row[assign1].'<br>
+		'.$row[symbol2]." ".$row[assign2].'<br>
+		'.$row[symbol3]." ".$row[assign3].'<br>
+		'.$row[symbol4]." ".$row[assign4].'<br>
+		'.$row[symbol5]." ".$row[assign5].'<br>
+		'.$row[symbol6]." ".$row[assign6].'<br>
+		'.$row[symbol7]." ".$row[assign7].'<br>
+		'.$row[symbol8]." ".$row[assign8].'<br>
+		'.$row[symbol9]." ".$row[assign9].'<br>
+		'.$row[symbol10]." ".$row[assign10].'<br>
 		</td>
 	</tr>
 </table>
@@ -2121,17 +2173,17 @@ td {
 </table>
 		</td>
 		<td>
-			<h1>Key</h1><br>
-			<p>'.$row[symbol1]."".$row[assign1].'</p>
-			<p>'.$row[symbol2]."".$row[assign2].'</p>
-			<p>'.$row[symbol3]."".$row[assign3].'</p>
-			<p>'.$row[symbol4]."".$row[assign4].'</p>
-			<p>'.$row[symbol5]."".$row[assign5].'</p>
-			<p>'.$row[symbol6]."".$row[assign6].'</p>
-			<p>'.$row[symbol7]."".$row[assign7].'</p>
-			<p>'.$row[symbol8]."".$row[assign8].'</p>
-			<p>'.$row[symbol9]."".$row[assign9].'</p>
-			<p>'.$row[symbol10]."".$row[assign10].'</p>
+		<strong style="font-size:18pt";>Key</strong><br>
+		'.$row[symbol1]." ".$row[assign1].'<br>
+		'.$row[symbol2]." ".$row[assign2].'<br>
+		'.$row[symbol3]." ".$row[assign3].'<br>
+		'.$row[symbol4]." ".$row[assign4].'<br>
+		'.$row[symbol5]." ".$row[assign5].'<br>
+		'.$row[symbol6]." ".$row[assign6].'<br>
+		'.$row[symbol7]." ".$row[assign7].'<br>
+		'.$row[symbol8]." ".$row[assign8].'<br>
+		'.$row[symbol9]." ".$row[assign9].'<br>
+		'.$row[symbol10]." ".$row[assign10].'<br>
 		</td>
 	</tr>
 </table>
@@ -2432,22 +2484,23 @@ td {
 </table>
 		</td>
 		<td>
-			<h1>Key</h1><br>
-			<p>'.$row[symbol1]."".$row[assign1].'</p>
-			<p>'.$row[symbol2]."".$row[assign2].'</p>
-			<p>'.$row[symbol3]."".$row[assign3].'</p>
-			<p>'.$row[symbol4]."".$row[assign4].'</p>
-			<p>'.$row[symbol5]."".$row[assign5].'</p>
-			<p>'.$row[symbol6]."".$row[assign6].'</p>
-			<p>'.$row[symbol7]."".$row[assign7].'</p>
-			<p>'.$row[symbol8]."".$row[assign8].'</p>
-			<p>'.$row[symbol9]."".$row[assign9].'</p>
-			<p>'.$row[symbol10]."".$row[assign10].'</p>
+		<strong style="font-size:18pt";>Key</strong><br>
+		'.$row[symbol1]." ".$row[assign1].'<br>
+		'.$row[symbol2]." ".$row[assign2].'<br>
+		'.$row[symbol3]." ".$row[assign3].'<br>
+		'.$row[symbol4]." ".$row[assign4].'<br>
+		'.$row[symbol5]." ".$row[assign5].'<br>
+		'.$row[symbol6]." ".$row[assign6].'<br>
+		'.$row[symbol7]." ".$row[assign7].'<br>
+		'.$row[symbol8]." ".$row[assign8].'<br>
+		'.$row[symbol9]." ".$row[assign9].'<br>
+		'.$row[symbol10]." ".$row[assign10].'<br>
 		</td>
 	</tr>
 </table>
 ';
 $pdf->writeHTML($html, true, false, true, false, '');
+$pdf->deletePage(3);
 }// else bracket
 }
 $pdf->output('weeklyschedule.pdf', 'I'); // PUT D INSTEAD OF I FOR DOWNLOADING AUTOMATICALLY PDF
