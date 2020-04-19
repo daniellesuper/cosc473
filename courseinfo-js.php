@@ -20,7 +20,7 @@ bookname, bookisbn, bookauthor, bookpicture, bookpicture, img_mime, important_po
 $result = $conn->query($sql);
 
 $row=mysqli_num_rows($result);
-  
+   
 
 
 if($row>0){ // if course info avaliable
