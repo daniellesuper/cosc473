@@ -8,10 +8,7 @@ require('PHPMailer\src\PHPMailer.php');
 require('PHPMailer\src\SMTP.php');
 
 
-$servername="localhost";
-$dbname="info-syllabus";
-$username="root";
-$password="";
+include ('session-connection.php');
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 			if($_POST)
