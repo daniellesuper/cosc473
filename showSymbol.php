@@ -2834,7 +2834,7 @@ $row[symbol1]= '<img src="images/Square.jpeg"  width="15px" height="15px"/>';
 
 if ($row[symbol1] == "Rectangle"){
 
-$row[symbol1]= '<img src="images/Rectangle.png"  width="15px" height="15px"/>';
+$row[symbol1]= '<img src="images/Rectangle.png"  width="30px" height="15px"/>';
 
 ; }
 
@@ -2896,7 +2896,7 @@ $row[symbol2]= '<img src="images/Square.jpeg"  width="15px" height="15px"/>';
 
 if ($row[symbol2] == "Rectangle"){
 
-$row[symbol2]= '<img src="images/Rectangle.png"  width="15px" height="15px"/>';
+$row[symbol2]= '<img src="images/Rectangle.png"  width="30px" height="15px"/>';
 
 ; }
 
@@ -2958,7 +2958,7 @@ $row[symbol3]= '<img src="images/Square.jpeg"  width="15px" height="15px"/>';
 
 if ($row[symbol3] == "Rectangle"){
 
-$row[symbol3]= '<img src="images/Rectangle.png"  width="15px" height="15px"/>';
+$row[symbol3]= '<img src="images/Rectangle.png"  width="30px" height="15px"/>';
 
 ; }
 
@@ -3020,7 +3020,7 @@ $row[symbol4]= '<img src="images/Square.jpeg"  width="15px" height="15px"/>';
 
 if ($row[symbol4] == "Rectangle"){
 
-$row[symbol4]= '<img src="images/Rectangle.png"  width="15px" height="15px"/>';
+$row[symbol4]= '<img src="images/Rectangle.png"  width="30px" height="15px"/>';
 
 ; }
 
@@ -3082,7 +3082,7 @@ $row[symbol5]= '<img src="images/Square.jpeg"  width="15px" height="15px"/>';
 
 if ($row[symbol5] == "Rectangle"){
 
-$row[symbol5]= '<img src="images/Rectangle.png"  width="15px" height="15px"/>';
+$row[symbol5]= '<img src="images/Rectangle.png"  width="30px" height="15px"/>';
 
 ; }
 
@@ -3144,7 +3144,7 @@ $row[symbol6]= '<img src="images/Square.jpeg"  width="15px" height="15px"/>';
 
 if ($row[symbol6] == "Rectangle"){
 
-$row[symbol6]= '<img src="images/Rectangle.png"  width="15px" height="15px"/>';
+$row[symbol6]= '<img src="images/Rectangle.png"  width="30px" height="15px"/>';
 
 ; }
 
@@ -3206,7 +3206,7 @@ $row[symbol7]= '<img src="images/Square.jpeg"  width="15px" height="15px"/>';
 
 if ($row[symbol7] == "Rectangle"){
 
-$row[symbol7]= '<img src="images/Rectangle.png"  width="15px" height="15px"/>';
+$row[symbol7]= '<img src="images/Rectangle.png"  width="30px" height="15px"/>';
 
 ; }
 
@@ -3268,7 +3268,7 @@ $row[symbol8]= '<img src="images/Square.jpeg"  width="15px" height="15px"/>';
 
 if ($row[symbol8] == "Rectangle"){
 
-$row[symbol8]= '<img src="images/Rectangle.png"  width="15px" height="15px"/>';
+$row[symbol8]= '<img src="images/Rectangle.png"  width="30px" height="15px"/>';
 
 ; }
 
@@ -3330,7 +3330,7 @@ $row[symbol9]= '<img src="images/Square.jpeg"  width="15px" height="15px"/>';
 
 if ($row[symbol9] == "Rectangle"){
 
-$row[symbol9]= '<img src="images/Rectangle.png"  width="15px" height="15px"/>';
+$row[symbol9]= '<img src="images/Rectangle.png"  width="30px" height="15px"/>';
 
 ; }
 
@@ -3393,7 +3393,7 @@ $row[symbol10]= '<img src="images/Square.jpeg"  width="15px" height="15px"/>';
 
 if ($row[symbol10] == "Rectangle"){
 
-$row[symbol10]= '<img src="images/Rectangle.png"  width="15px" height="15px"/>';
+$row[symbol10]= '<img src="images/Rectangle.png"  width="30px" height="15px"/>';
 
 ; }
 
