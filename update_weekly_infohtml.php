@@ -5,10 +5,7 @@ error_reporting(0);
 
 $courseID = $_GET['courseID'];
 
-$servername="localhost";
-$dbname="info-syllabus";
-$username="root";
-$password="";
+include ('session-connection.php');
 
 $conn= new mysqli($servername, $username, $password, $dbname);
 if($conn-> connect_error){
