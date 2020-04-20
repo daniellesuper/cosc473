@@ -21,8 +21,7 @@ $strQuery= "select * from profinfo
             ";
 			
 		
-$result=$conn->query($strQuery);	
-
+$result=$conn->query($strQuery);	  
 $row=mysqli_num_rows($result);
 
 
