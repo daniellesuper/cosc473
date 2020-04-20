@@ -296,8 +296,8 @@ Weight: &nbsp; <input type="text" length="25" name="weight10" value="<?php echo 
 </p><br>
 </div>
 
-Course symbol & Name: Choose a listed symbol to denote which assignment it will represent <br><br><!-- make dropdown -->
 
+Course symbol & Name: Choose a listed symbol to denote which assignment it will represent <br><br><!-- make dropdown -->
 
 <div id="symbol_Name">      
 <?php

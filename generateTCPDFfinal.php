@@ -160,11 +160,11 @@ $pdf->SetFillColor(178, 178, 178);
 $pdf->MultiCell(100, 145, 'Pie Chart'."\n", 0, 'C', 1, 0, '5', '130', true);
 
 // HOUSE IMAGE AT TOP RIGHT OF PAGE 1
-$pdf->SetXY(177, 10);
+$pdf->SetXY(177, 7);
 $pdf->Image('images/house.png', '', '', 10, 10, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 //ENVELOPE IMAGE TO THE LEFT OF THE HOUSE IMAGE TOP RIGHT OF PAGE ON
-$pdf->SetXY(137, 11);
+$pdf->SetXY(137, 8);
 $pdf->Image('images/email-logo.png', '', '', 10, 10, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 // THIS IS THE BANNER FOR GRADES

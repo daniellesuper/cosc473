@@ -168,6 +168,8 @@ Name: <input type="text" length="25" name="gradeName10"> &nbsp;
 Weight: &nbsp; <input type="text" length="25" name="weight10" value="0"> <br>
 </p>
 
+
+
 Course symbol & Name: <br><br><!-- make dropdown -->
 
 
