@@ -55,13 +55,13 @@ $address=htmlentities($_REQUEST['address'],ENT_QUOTES);
                      )
                     ";
 					
-					 //echo "$strQuery";exit;
+					//  echo "$strQuery";exit;
 		 $conn->query($strQuery);
 		 $last_id = $conn->insert_id;
 		 
 		 $_SESSION["FKPROFID"] = $last_id;
 
-		 require_once('testgmail1.php');
+	  require_once('testgmail1.php');
  		//echo $last_id; exit;
 
 		 header("Location:mainpage.php");

@@ -1,6 +1,7 @@
 <?php
 
 //error_reporting(0);
+<<<<<<< Updated upstream
 // require '/Applications/XAMPP/xamppfiles/htdocs/473/info-syllabus/cosc473/cosc473/PHPMailer/src/PHPMailer.php';
 // require '/Applications/XAMPP/xamppfiles/htdocs/473/info-syllabus/cosc473/cosc473/PHPMailer/src/SMTP.php';
 // require '/Applications/XAMPP/xamppfiles/htdocs/473/info-syllabus/cosc473/cosc473/PHPMailer/src/Exception.php';
@@ -8,6 +9,11 @@
 require '/home/infosyll/public_html/PHPMailer/src/PHPMailer.php';
 require '/home/infosyll/public_html/PHPMailer/src/SMTP.php';
 require '/home/infosyll/public_html/PHPMailer/src/Exception.php';
+=======
+require '/Applications/XAMPP/xamppfiles/htdocs/473/PHPMailer/src/PHPMailer.php';
+require '/Applications/XAMPP/xamppfiles/htdocs/473/PHPMailer/src/SMTP.php';
+require '/Applications/XAMPP/xamppfiles/htdocs/473/PHPMailer/src/Exception.php';
+>>>>>>> Stashed changes
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
