@@ -2653,7 +2653,7 @@ Description   &nbsp; <input type="text" length="255" name="week13_desc" value="<
                         display_options();
                ?>
            </select>
-           <?php echo "F" ?><br>
+           <?php echo "" ?><br>
 
        <?php
              
