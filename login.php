@@ -7,6 +7,7 @@ if($_GET['error']==1){
 ?>
 <head>
 	<link rel="stylesheet" type="text/css" href="landingpage.css">
+	<link rel="icon" href="images/favicon.ico" type="image/ico">	
 </head>
 <header>
   	<div class="container"> 

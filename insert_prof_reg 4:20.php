@@ -1,13 +1,8 @@
-
-
 <?php
 error_reporting(0);
 require("session_info.php");
 
-$servername="localhost";
-$dbname="info-syllabus";
-$username="root";
-$password="";
+include ('session-connection.php');
 
 $conn= new mysqli($servername, $username, $password, $dbname);
 if($conn-> connect_error){
@@ -19,8 +14,8 @@ $email=htmlentities($_REQUEST['email'],ENT_QUOTES);
 
 
 $strQuery= "select * from profinfo
-            where email = '$email'
-           ";
+             where email = '$email'
+            ";
 			
 		
 $result=$conn->query($strQuery);	
@@ -47,10 +42,15 @@ $address=htmlentities($_REQUEST['address'],ENT_QUOTES);
 	if (!empty($user_pw)){
 		if ($user_pw==$password2) {
 
-	$strQuery="insert into profinfo
-		(title, fullname, username, password, officephone, email, officeaddress, insertdate)
-		values
-    ('$title', '$full_name', '$user_name', '$user_pw', '$phone_no', '$email', '$address', now())";
+ $strQuery="insert into profinfo
+                      (
+                       title, fullname, username, password, officephone, email, officeaddress, insertdate
+                      )
+                     values
+                     (
+                      '$title', '$full_name', '$user_name', '$user_pw', '$phone_no', '$email', '$address', now()
+                     )
+                    ";
 					
 					 //echo "$strQuery";exit;
 		 $conn->query($strQuery);
@@ -59,20 +59,19 @@ $address=htmlentities($_REQUEST['address'],ENT_QUOTES);
 		 $_SESSION["FKPROFID"] = $last_id;
 
 		 require_once('testgmail1.php');
-		//echo $last_id; exit;
+ 		//echo $last_id; exit;
 
 		 header("Location:mainpage.php");
 }
 else {
 	echo "Passwords Do Not Match. Please Try Again.";	
 }
-
 }
-require_once('testgmail1.php');	
+else {	
 		 header("Location: mainpage.php?error=1");
-		 	  //this page reroutes to main/home page once registered
+			//this page reroutes to main/home page once registered
 		 //exit;
 
-} // end if		 
+} 	 
 
 ?>

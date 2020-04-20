@@ -111,6 +111,7 @@ $symbol3_week15 = $bar['symbol3_week15'];
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Weekly Schedule</title>
  <link href="weeklyschedule.css" type="text/css" rel="stylesheet" />
+ <link rel="icon" href="images/favicon.ico" type="image/ico">	
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

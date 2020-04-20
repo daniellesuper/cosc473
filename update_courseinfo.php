@@ -102,6 +102,7 @@ $assign10 = $row['assign10'];
   <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> 
   <script src="https://cdn.ckeditor.com/4.11.2/standard/ckeditor.js"></script>
   <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
+  <link rel="icon" href="images/favicon.ico" type="image/ico">	
 
 </head>
 

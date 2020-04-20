@@ -20,6 +20,7 @@ $courseID = $_GET["courseID"];
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> 
+	<link rel="icon" href="images/favicon.ico" type="image/ico">	
 	</head>
 	<body>
 	<header>

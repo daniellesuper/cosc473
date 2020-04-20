@@ -15,7 +15,7 @@ $FKPROFID = $_SESSION["FKPROFID"];
 $courseID = $_GET["courseID"];
 $sql1 = "SELECT  meetingDays, symbol1, symbol2, symbol3, symbol4, symbol5, symbol6, symbol7, symbol8, symbol9, symbol10, assign1, assign2, assign3, assign4, assign5, assign6, assign7, assign8, assign9, assign10,topicname1,topicname2,topicname3,topicname4,topicname5,topicname6,topicname7,topicname8, topicname9, topicname10, pointvalue1, pointvalue2, pointvalue3, pointvalue4, pointvalue5, pointvalue6, pointvalue7, pointvalue8, pointvalue9, pointvalue10 FROM courseinfo WHERE PKID = $_GET[courseID]";
 
-$sql2 = "SELECT week1_of, week2_of, week3_of, week4_of, week5_of, week6_of, week7_of, week8_of, week9_of, week10_of, week11_of, week12_of, week13_of, week14_of, week15_of, week1_desc, week2_desc, week3_desc, week4_desc, week5_desc, week6_desc, week7_desc, week8_desc, week9_desc, week10_desc, week11_desc, week12_desc, week13_desc, week14_desc, week15_desc, holiday, startdate, enddate, symbol1_week1, symbol2_week1, symbol3_week1, symbol1_week2, symbol2_week2, symbol3_week2, symbol1_week3, symbol2_week3, symbol3_week3, symbol1_week4, symbol2_week4, symbol3_week4, symbol1_week5, symbol2_week5, symbol3_week5, symbol1_week6, symbol2_week6, symbol3_week6, symbol1_week7, symbol2_week7, symbol3_week7, symbol1_week8, symbol2_week8, symbol3_week8, symbol1_week9, symbol2_week9 , symbol3_week9, symbol1_week10, symbol2_week10, symbol3_week10, symbol1_week11, symbol2_week11, symbol3_week11, symbol1_week12, symbol2_week12, symbol3_week12, symbol1_week13, symbol2_week13, symbol3_week13, symbol1_week14, symbol2_week14, symbol3_week14, symbol1_week15, symbol2_week15, symbol3_week15 
+$sql2 = "SELECT week1_of, week2_of, week3_of, week4_of, week5_of, week6_of, week7_of, week8_of, week9_of, week10_of, week11_of, week12_of, week13_of, week14_of, week15_of, week1_desc, week2_desc, week3_desc, week4_desc, week5_desc, week6_desc, week7_desc, week8_desc, week9_desc, week10_desc, week11_desc, week12_desc, week13_desc, week14_desc, week15_desc, holiday, startdate, enddate, custombreakname, customstartdate, customenddate, symbol1_week1, symbol2_week1, symbol3_week1, symbol1_week2, symbol2_week2, symbol3_week2, symbol1_week3, symbol2_week3, symbol3_week3, symbol1_week4, symbol2_week4, symbol3_week4, symbol1_week5, symbol2_week5, symbol3_week5, symbol1_week6, symbol2_week6, symbol3_week6, symbol1_week7, symbol2_week7, symbol3_week7, symbol1_week8, symbol2_week8, symbol3_week8, symbol1_week9, symbol2_week9 , symbol3_week9, symbol1_week10, symbol2_week10, symbol3_week10, symbol1_week11, symbol2_week11, symbol3_week11, symbol1_week12, symbol2_week12, symbol3_week12, symbol1_week13, symbol2_week13, symbol3_week13, symbol1_week14, symbol2_week14, symbol3_week14, symbol1_week15, symbol2_week15, symbol3_week15 
 FROM weeklyinfo WHERE fkcourseid= $_GET[courseID]";
 
 $sql3 = "SELECT title, fullname, officeaddress, email, officephone, monday, tuesday, wednesday, thursday, friday FROM profinfo WHERE PKID = $FKPROFID;";
@@ -119,7 +119,7 @@ $pdf->writeHTML($html, true,false,true,false,'');
 // BOOK INFO
 $bookinfo = $bar5["bookname"]."\n".$bar5["bookAuthor"]."\n".$bar5["bookisbn"];
 $pdf->SetFillColor(230, 230, 230);
-$pdf->MultiCell(100, 50, "Book Info"."\n\n".$bookinfo, 0, 'C', 1, 0, 105, 150, true,0, false, true, 40, 'B');
+$pdf->MultiCell(100, 40, "Book Info"."\n\n".$bookinfo, 0, 'C', 1, 0, 105, 160, true,0, false, true, 40, 'B');
 
 // PENCIL IMAGE IN THE BOOK INFO SECTION
 $pdf->SetXY(177, 160);
@@ -144,7 +144,7 @@ $pointvalue9 = $row["pointvalue9"];
 $pointvalue10 = $row["pointvalue10"];
 
 $pdf->SetFillColor(178, 178, 178);
-$pdf->MultiCell(100, 127, "", 0, 'C', 1, 0, '5', '150', true);
+$pdf->MultiCell(100, 107, "", 0, 'C', 1, 0, '5', '170', true);
 
 // HOUSE IMAGE AT TOP RIGHT OF PAGE 1
 $pdf->SetXY(178, 10);
@@ -327,34 +327,34 @@ $pdf->SetFillColor(178, 178, 178);
 $pdf->MultiCell(100, 10, 'Breakdown ', 0, 'C', 1, 0, 100, 200, true);
 
 $topicname = $row["topicname1"];
-$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 90, 207, true);
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 100, 207, true);
 
 $topicname = $row["topicname2"];
-$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 90, 214, true);
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 100, 214, true);
 
 $topicname = $row["topicname3"];
-$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 90, 221, true);
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 100, 221, true);
 
 $topicname = $row["topicname4"];
-$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 90, 228, true);
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 100, 228, true);
 
 $topicname = $row["topicname5"];
-$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 90, 235, true);
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 100, 235, true);
 
 $topicname = $row["topicname6"];
-$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 90, 242, true);
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 100, 242, true);
 
 $topicname = $row["topicname7"];
-$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 90, 249, true);
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 100, 249, true);
 
 $topicname = $row["topicname8"];
-$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 90, 256, true);
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 100, 256, true);
 
 $topicname = $row["topicname9"];
-$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 90, 263, true);
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 100, 263, true);
 
 $topicname = $row["topicname10"];
-$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 90, 270, true);
+$pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 100, 270, true);
 
 // GRADE %
 $pdf->MultiCell(100, 10, '% of Grade', 0, 'C', 1, 0, 135, 200, true);
@@ -393,18 +393,9 @@ $pdf->MultiCell(100, 10, $topicname, 0, 'C', 1, 0, 135, 270, true);
 
 // START 2ND PAGE
 $pdf->AddPage();
-// $html = '<img src="images/weeklyschedule.png" alt="weeklyschedule" align="center">';
-// $pdf->writeHTML($html, true,false,true,false,'');
 
 $pdf->SetXY(10, 0);
 $pdf->Image('images/weeklyschedule.png', '', '', 180, 11, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
-
-// $html = '<span style = "color: red"; align = "center">'.$bar[holiday].' Break: '. $bar[startdate]. ' to '. $bar[enddate].'</span>'; 
-// $pdf->writeHTML($html, true,false,true,false,'');
-
-// $html = '<span style = "color: red"; align = "center">'.$bar[custombreakname].$bar[custombreakstartdate]. ' to '. $bar[custombreakenddate].'</span>'; 
-// $pdf->writeHTML($html, true,false,true,false,'');
-
 $html = '<img src="images/weeklyschedule.png" alt="weeklyschedule" align="center">';
 $pdf->writeHTML($html, true,false,true,false,'');
 $html = '<span style = "color: red"; align = "center">'.$bar[holiday].' Break: '. $bar[startdate]. ' to '. $bar[enddate].'</span>'; 
@@ -412,10 +403,7 @@ $pdf->writeHTML($html, true,false,true,false,'');
 $html = '<span style = "color: red"; align = "center">'.$bar[custombreakname].$bar[custombreakstartdate]. ' to '. $bar[custombreakenddate].'</span>'; 
 $pdf->writeHTML($html, true,false,true,false,'');
 
-
-//
 // start of the if statememt for outputting correct # of boxes and info
-//
 $sql3 = "SELECT  symbol1_week1, symbol2_week1, symbol3_week1, symbol1_week2, symbol2_week2, symbol3_week2, symbol1_week3, symbol2_week3, symbol3_week3, symbol1_week4, symbol2_week4, symbol3_week4, symbol1_week5, symbol2_week5, symbol3_week5, symbol1_week6, symbol2_week6, symbol3_week6, symbol1_week7, symbol2_week7, symbol3_week7, symbol1_week8, symbol2_week8, symbol3_week8, symbol1_week9, symbol2_week9	, symbol3_week9, symbol1_week10, symbol2_week10, symbol3_week10, symbol1_week11, symbol2_week11, symbol3_week11, symbol1_week12, symbol2_week12, symbol3_week12, symbol1_week13, symbol2_week13, symbol3_week13, symbol1_week14, symbol2_week14, symbol3_week14, symbol1_week15, symbol2_week15, symbol3_week15
 FROM weeklyinfo WHERE fkcourseid= $_GET[courseID]";
 

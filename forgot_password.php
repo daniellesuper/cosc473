@@ -2,7 +2,6 @@
 
 //error_reporting(0);
 
-
 include ('session-connection.php');
 
 $conn = new mysqli($servername, $username, $password, $dbname);

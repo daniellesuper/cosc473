@@ -141,3 +141,13 @@ footer {
 footer p {
 	padding-left: 10px;
 }
+
+#gradeBreakdownL {
+	float: left;
+	width: 30px;
+	border: 1px solid hotpink;
+}
+#gradeBreakdownR {
+	float: right;
+	clear: left;
+}
