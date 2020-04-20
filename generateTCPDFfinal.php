@@ -398,8 +398,9 @@ $pdf->SetXY(10, 0);
 $pdf->Image('images/weeklyschedule.png', '', '', 180, 11, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 $html = '<img src="images/weeklyschedule.png" alt="weeklyschedule" align="center">';
 $pdf->writeHTML($html, true,false,true,false,'');
-$html = '<span style = "color: red"; align = "center">'.$bar[holiday].' Break: '. $bar[startdate]. ' to '. $bar[enddate].'</span>'; 
+$html = '<span style = "color: red"; align = "center">'.$bar[holiday].' Break: '. $bar[startdate]." ". $bar[enddate].'</span>'; 
 $pdf->writeHTML($html, true,false,true,false,'');
+
 $html = '<span style = "color: red"; align = "center">'.$bar[custombreakname].$bar[custombreakstartdate]. ' to '. $bar[custombreakenddate].'</span>'; 
 $pdf->writeHTML($html, true,false,true,false,'');
 
