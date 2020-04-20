@@ -4,7 +4,7 @@ require("session_info.php");
 
 $servername="localhost";
 $dbname="info-syllabus";
-$username="root";
+$username="root"; 
 $password="";
 
 $conn= new mysqli($servername, $username, $password, $dbname);
