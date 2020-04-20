@@ -5,10 +5,7 @@ if(isset($_GET['courseID'])){
 	$courseID = $_GET['courseID'];
 	
 error_reporting(0);
-$servername="localhost";
-$dbname="info-syllabus";
-$username="root";
-$password="";
+include ('session-connection.php');
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if($conn-> connect_error){
@@ -23,7 +20,7 @@ bookname, bookisbn, bookauthor, bookpicture, bookpicture, img_mime, important_po
 $result = $conn->query($sql);
 
 $row=mysqli_num_rows($result);
-  
+   
 
 
 if($row>0){ // if course info avaliable

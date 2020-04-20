@@ -2,10 +2,7 @@
 require("session_info.php");
 error_reporting(0);
  
-$servername="localhost";
-$dbname="info-syllabus";
-$username="root";
-$password="";
+include ('session-connection.php');
 
 $conn= new mysqli($servername, $username, $password, $dbname);
 if($conn-> connect_error){
@@ -31,10 +28,6 @@ $courseID = $_GET["courseID"];
     <div class="navbar-header">
       <a class="navbar-brand" href="index.html">InfoSyllabus&copy;</a>
     </div>
-    <ul class="nav navbar-nav">
-      <!-- <li class="active"><a href="#">Home</a></li> -->
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="index.html"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
     </ul>
@@ -84,11 +77,11 @@ $courseID = $_GET["courseID"];
 										Update Course Info 
 									</a>
 								</button>
-								<button type="button" class="btn btn-primary btn-lg">
+								<!-- <button type="button" class="btn btn-primary btn-lg">
 									<a href="pdf.php?courseID=<?php echo $courseID ?>">
 										HTML 1st Page(Useless)
 									</a>
-								</button>
+								</button> -->
 								<button type="button" class="btn btn-primary btn-lg">
 									<a href="weeklyschedule1.php?courseID=<?php echo $courseID ?>"> 
 										Create Weekly Info
@@ -121,6 +114,6 @@ $courseID = $_GET["courseID"];
 	<div id="spacer"></div>
 	<footer>
 		<hr />
-		<p>&copy; 2020 Info-Syllabus</p>
+		<p>PSH Web Design, &copy; 2020</p>
 	</footer>
 </html>
