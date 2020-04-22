@@ -3082,34 +3082,34 @@ if($result->num_rows > 0) {
            <?php
                foreach($row as $symbol){ 
                    if ($symbol == "Star"){
-                     echo '<img src="images/star.jpeg"  width="30px" height="30px"/>'."<br>"."<br>";
+                     echo '<img src="images/star.jpeg"  width="15px" height="15px"/>'."<br>"."<br>";
                    } 
                    if ($symbol == "X"){
-                     echo '<img src="images/x.jpeg"  width="30px" height="30px"/>'."<br>"."<br>";
+                     echo '<img src="images/x.jpeg"  width="15px" height="15"/>'."<br>"."<br>";
                    }
                    if ($symbol == "CheckMark"){
-                     echo '<img src="images/checkmark.jpeg"  width="30px" height="20px"/>'."<br>"."<br>";
+                     echo '<img src="images/checkmark.jpeg"  width="15" height="15"/>'."<br>"."<br>";
                    }
                    if ($symbol == "Exclamationpoint"){
-                     echo '<img src="images/exclamation1.png"  width="30px" height="30px"/>'."<br>"."<br>";
+                     echo '<img src="images/exclamation1.png"  width="15" height="15"/>'."<br>"."<br>";
                    }
                    if ($symbol == "Circle"){
-                     echo '<img src="images/circle.png"  width="30px" height="30px"/>'."<br>"."<br>";
+                     echo '<img src="images/circle.png"  width="15" height="15"/>'."<br>"."<br>";
                    }
                    if ($symbol == "Kite"){
-                     echo '<img src="images/Kite.png"  width="30px" height="30px"/>'."<br>"."<br>";
+                     echo '<img src="images/Kite.png"  width="15" height="15"/>'."<br>"."<br>";
                    }
                    if ($symbol == "Square"){
-                     echo '<img src="images/Square.jpeg"  width="20px" height="20px"/>'."<br>"."<br>";
+                     echo '<img src="images/Square.jpeg"  width="15" height="15"/>'."<br>"."<br>";
                    }
                    if ($symbol == "Rectangle"){
-                     echo '<img src="images/Rectangle.png"  width="40px" height="20px"/>'."<br>"."<br>";
+                     echo '<img src="images/Rectangle.png"  width="30" height="15"/>'."<br>"."<br>";
                    }
                    if ($symbol == "Trefoil"){
-                     echo '<img src="images/Trefoil.png"  width="30px" height="30px"/>'."<br>"."<br>";
+                     echo '<img src="images/Trefoil.png"  width="15" height="15"/>'."<br>"."<br>";
                    }
                    if ($symbol == "Heart"){
-                     echo '<img src="images/Heart.png"  width="30px" height="30px"/>'."<br>";
+                     echo '<img src="images/Heart.png"  width="15" height="15"/>'."<br>";
                    } 
                } 
               ?>  

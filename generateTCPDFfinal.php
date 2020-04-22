@@ -154,11 +154,11 @@ $pdf->Image('images/house.png', '', '', 10, 10, '', '', 'T', false, 300, '', fal
 //ENVELOPE IMAGE TO THE LEFT OF THE HOUSE IMAGE TOP RIGHT OF PAGE ON
 $pdf->SetXY(137, 8);
 
-$pdf->SetXY(178, 10);
-$pdf->Image('images/house.png', '', '', 10, 10, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
+//$pdf->SetXY(178, 10);
+//$pdf->Image('images/house.png', '', '', 10, 10, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 
 //ENVELOPE IMAGE TO THE LEFT OF THE HOUSE IMAGE TOP RIGHT OF PAGE ON
-$pdf->SetXY(130, 11);
+$pdf->SetXY(130, 9);
 
 $pdf->Image('images/email-logo.png', '', '', 10, 10, '', '', 'T', false, 300, '', false, false, 1, false, false, false);
 

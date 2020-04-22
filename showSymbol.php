@@ -2834,7 +2834,7 @@ $row[symbol1]= '<img src="images/Square.jpeg"  width="15px" height="15px"/>';
 
 if ($row[symbol1] == "Rectangle"){
 
-$row[symbol1]= '<img src="images/Rectangle.png"  width="25px" height="15px"/>';
+$row[symbol1]= '<img src="images/Rectangle.png"  width="30px" height="15px"/>';
 
 ; }
 
@@ -2896,7 +2896,7 @@ $row[symbol2]= '<img src="images/Square.jpeg"  width="15px" height="15px"/>';
 
 if ($row[symbol2] == "Rectangle"){
 
-$row[symbol2]= '<img src="images/Rectangle.png"  width="15px" height="15px"/>';
+$row[symbol2]= '<img src="images/Rectangle.png"  width="30px" height="15px"/>';
 
 ; }
 
@@ -2958,7 +2958,7 @@ $row[symbol3]= '<img src="images/Square.jpeg"  width="15px" height="15px"/>';
 
 if ($row[symbol3] == "Rectangle"){
 
-$row[symbol3]= '<img src="images/Rectangle.png"  width="15px" height="15px"/>';
+$row[symbol3]= '<img src="images/Rectangle.png"  width="30px" height="15px"/>';
 
 ; }
 
@@ -3014,25 +3014,25 @@ $row[symbol4]= '<img src="images/Kite.png"  width="15px" height="15px"/>';
 
 if ($row[symbol4] == "Square"){
 
-$row[symbol4]= '<img src="images/Square.jpeg"  width="20px" height="20px"/>';
+$row[symbol4]= '<img src="images/Square.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol4] == "Rectangle"){
 
-$row[symbol4]= '<img src="images/Rectangle.png"  width="40px" height="20px"/>';
+$row[symbol4]= '<img src="images/Rectangle.png"  width="30px" height="15px"/>';
 
 ; }
 
 if ($row[symbol4] == "Trefoil"){
 
-$row[symbol4]= '<img src="images/Trefoil.png"  width="30px" height="30px"/>';
+$row[symbol4]= '<img src="images/Trefoil.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol4] == "Heart"){
 
-$row[symbol4]= '<img src="images/Heart.png"  width="30px" height="30px"/>';
+$row[symbol4]= '<img src="images/Heart.png"  width="15px" height="15px"/>';
 
 ; }
 //
@@ -3040,61 +3040,61 @@ $row[symbol4]= '<img src="images/Heart.png"  width="30px" height="30px"/>';
 //
 if ($row[symbol5] == "Star"){
 
-$row[symbol5]= '<img src="images/star.jpeg"  width="30px" height="30px"/>';
+$row[symbol5]= '<img src="images/star.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol5] == "X"){
 
-$row[symbol5]= '<img src="images/x.jpeg"  width="30px" height="30px"/>';
+$row[symbol5]= '<img src="images/x.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol5] == "CheckMark"){
 
-$row[symbol5]= '<img src="images/checkmark.jpeg"  width="30px" height="20px"/>';
+$row[symbol5]= '<img src="images/checkmark.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol5] == "Exclamationpoint"){
 
-$row[symbol5]= '<img src="images/exclamation1.png"  width="30px" height="30px"/>';
+$row[symbol5]= '<img src="images/exclamation1.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol5] == "Circle"){
 
-$row[symbol5]= '<img src="images/circle.png"  width="30px" height="30px"/>';
+$row[symbol5]= '<img src="images/circle.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol5] == "Kite"){
 
-$row[symbol5]= '<img src="images/Kite.png"  width="30px" height="30px"/>';
+$row[symbol5]= '<img src="images/Kite.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol5] == "Square"){
 
-$row[symbol5]= '<img src="images/Square.jpeg"  width="20px" height="20px"/>';
+$row[symbol5]= '<img src="images/Square.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol5] == "Rectangle"){
 
-$row[symbol5]= '<img src="images/Rectangle.png"  width="40px" height="20px"/>';
+$row[symbol5]= '<img src="images/Rectangle.png"  width="30px" height="15px"/>';
 
 ; }
 
 if ($row[symbol5] == "Trefoil"){
 
-$row[symbol5]= '<img src="images/Trefoil.png"  width="30px" height="30px"/>';
+$row[symbol5]= '<img src="images/Trefoil.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol5] == "Heart"){
 
-$row[symbol5]= '<img src="images/Heart.png"  width="30px" height="30px"/>';
+$row[symbol5]= '<img src="images/Heart.png"  width="15px" height="15px"/>';
 
 ; }
 //
@@ -3102,61 +3102,61 @@ $row[symbol5]= '<img src="images/Heart.png"  width="30px" height="30px"/>';
 //
 if ($row[symbol6] == "Star"){
 
-$row[symbol6]= '<img src="images/star.jpeg"  width="30px" height="30px"/>';
+$row[symbol6]= '<img src="images/star.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol6] == "X"){
 
-$row[symbol6]= '<img src="images/x.jpeg"  width="30px" height="30px"/>';
+$row[symbol6]= '<img src="images/x.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol6] == "CheckMark"){
 
-$row[symbol6]= '<img src="images/checkmark.jpeg"  width="30px" height="20px"/>';
+$row[symbol6]= '<img src="images/checkmark.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol6] == "Exclamationpoint"){
 
-$row[symbol6]= '<img src="images/exclamation1.png"  width="30px" height="30px"/>';
+$row[symbol6]= '<img src="images/exclamation1.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol6] == "Circle"){
 
-$row[symbol6]= '<img src="images/circle.png"  width="30px" height="30px"/>';
+$row[symbol6]= '<img src="images/circle.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol6] == "Kite"){
 
-$row[symbol6]= '<img src="images/Kite.png"  width="30px" height="30px"/>';
+$row[symbol6]= '<img src="images/Kite.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol6] == "Square"){
 
-$row[symbol6]= '<img src="images/Square.jpeg"  width="20px" height="20px"/>';
+$row[symbol6]= '<img src="images/Square.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol6] == "Rectangle"){
 
-$row[symbol6]= '<img src="images/Rectangle.png"  width="40px" height="20px"/>';
+$row[symbol6]= '<img src="images/Rectangle.png"  width="30px" height="15px"/>';
 
 ; }
 
 if ($row[symbol6] == "Trefoil"){
 
-$row[symbol6]= '<img src="images/Trefoil.png"  width="30px" height="30px"/>';
+$row[symbol6]= '<img src="images/Trefoil.png" width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol6] == "Heart"){
 
-$row[symbol6]= '<img src="images/Heart.png"  width="30px" height="30px"/>';
+$row[symbol6]= '<img src="images/Heart.png"  width="15px" height="15px"/>';
 
 ; }
 //
@@ -3164,61 +3164,61 @@ $row[symbol6]= '<img src="images/Heart.png"  width="30px" height="30px"/>';
 //
 if ($row[symbol7] == "Star"){
 
-$row[symbol7]= '<img src="images/star.jpeg"  width="30px" height="30px"/>';
+$row[symbol7]= '<img src="images/star.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol7] == "X"){
 
-$row[symbol7]= '<img src="images/x.jpeg"  width="30px" height="30px"/>';
+$row[symbol7]= '<img src="images/x.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol7] == "CheckMark"){
 
-$row[symbol7]= '<img src="images/checkmark.jpeg"  width="30px" height="20px"/>';
+$row[symbol7]= '<img src="images/checkmark.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol7] == "Exclamationpoint"){
 
-$row[symbol7]= '<img src="images/exclamation1.png"  width="30px" height="30px"/>';
+$row[symbol7]= '<img src="images/exclamation1.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol7] == "Circle"){
 
-$row[symbol7]= '<img src="images/circle.png"  width="30px" height="30px"/>';
+$row[symbol7]= '<img src="images/circle.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol7] == "Kite"){
 
-$row[symbol7]= '<img src="images/Kite.png"  width="30px" height="30px"/>';
+$row[symbol7]= '<img src="images/Kite.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol7] == "Square"){
 
-$row[symbol7]= '<img src="images/Square.jpeg"  width="20px" height="20px"/>';
+$row[symbol7]= '<img src="images/Square.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol7] == "Rectangle"){
 
-$row[symbol7]= '<img src="images/Rectangle.png"  width="40px" height="20px"/>';
+$row[symbol7]= '<img src="images/Rectangle.png"  width="30px" height="15px"/>';
 
 ; }
 
 if ($row[symbol7] == "Trefoil"){
 
-$row[symbol7]= '<img src="images/Trefoil.png"  width="30px" height="30px"/>';
+$row[symbol7]= '<img src="images/Trefoil.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol7] == "Heart"){
 
-$row[symbol7]= '<img src="images/Heart.png"  width="30px" height="30px"/>';
+$row[symbol7]= '<img src="images/Heart.png"  width="15px" height="15px"/>';
 
 ; }
 //
@@ -3226,61 +3226,61 @@ $row[symbol7]= '<img src="images/Heart.png"  width="30px" height="30px"/>';
 //
 if ($row[symbol8] == "Star"){
 
-$row[symbol8]= '<img src="images/star.jpeg"  width="30px" height="30px"/>';
+$row[symbol8]= '<img src="images/star.jpeg" width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol8] == "X"){
 
-$row[symbol8]= '<img src="images/x.jpeg"  width="30px" height="30px"/>';
+$row[symbol8]= '<img src="images/x.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol8] == "CheckMark"){
 
-$row[symbol8]= '<img src="images/checkmark.jpeg"  width="30px" height="20px"/>';
+$row[symbol8]= '<img src="images/checkmark.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol8] == "Exclamationpoint"){
 
-$row[symbol8]= '<img src="images/exclamation1.png"  width="30px" height="30px"/>';
+$row[symbol8]= '<img src="images/exclamation1.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol8] == "Circle"){
 
-$row[symbol8]= '<img src="images/circle.png"  width="30px" height="30px"/>';
+$row[symbol8]= '<img src="images/circle.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol8] == "Kite"){
 
-$row[symbol8]= '<img src="images/Kite.png"  width="30px" height="30px"/>';
+$row[symbol8]= '<img src="images/Kite.png" width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol8] == "Square"){
 
-$row[symbol8]= '<img src="images/Square.jpeg"  width="20px" height="20px"/>';
+$row[symbol8]= '<img src="images/Square.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol8] == "Rectangle"){
 
-$row[symbol8]= '<img src="images/Rectangle.png"  width="40px" height="20px"/>';
+$row[symbol8]= '<img src="images/Rectangle.png"  width="30px" height="15px"/>';
 
 ; }
 
 if ($row[symbol8] == "Trefoil"){
 
-$row[symbol8]= '<img src="images/Trefoil.png"  width="30px" height="30px"/>';
+$row[symbol8]= '<img src="images/Trefoil.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol8] == "Heart"){
 
-$row[symbol8]= '<img src="images/Heart.png"  width="30px" height="30px"/>';
+$row[symbol8]= '<img src="images/Heart.png"  width="15px" height="15px"/>';
 
 ; }
 //
@@ -3288,61 +3288,61 @@ $row[symbol8]= '<img src="images/Heart.png"  width="30px" height="30px"/>';
 //
 if ($row[symbol9] == "Star"){
 
-$row[symbol9]= '<img src="images/star.jpeg"  width="30px" height="30px"/>';
+$row[symbol9]= '<img src="images/star.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol9] == "X"){
 
-$row[symbol9]= '<img src="images/x.jpeg"  width="30px" height="30px"/>';
+$row[symbol9]= '<img src="images/x.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol9] == "CheckMark"){
 
-$row[symbol9]= '<img src="images/checkmark.jpeg"  width="30px" height="20px"/>';
+$row[symbol9]= '<img src="images/checkmark.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol9] == "Exclamationpoint"){
 
-$row[symbol9]= '<img src="images/exclamation1.png"  width="30px" height="30px"/>';
+$row[symbol9]= '<img src="images/exclamation1.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol9] == "Circle"){
 
-$row[symbol9]= '<img src="images/circle.png"  width="30px" height="30px"/>';
+$row[symbol9]= '<img src="images/circle.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol9] == "Kite"){
 
-$row[symbol9]= '<img src="images/Kite.png"  width="30px" height="30px"/>';
+$row[symbol9]= '<img src="images/Kite.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol9] == "Square"){
 
-$row[symbol9]= '<img src="images/Square.jpeg"  width="20px" height="20px"/>';
+$row[symbol9]= '<img src="images/Square.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol9] == "Rectangle"){
 
-$row[symbol9]= '<img src="images/Rectangle.png"  width="40px" height="20px"/>';
+$row[symbol9]= '<img src="images/Rectangle.png"  width="30px" height="15px"/>';
 
 ; }
 
 if ($row[symbol9] == "Trefoil"){
 
-$row[symbol9]= '<img src="images/Trefoil.png"  width="30px" height="30px"/>';
+$row[symbol9]= '<img src="images/Trefoil.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol9] == "Heart"){
 
-$row[symbol9]= '<img src="images/Heart.png"  width="30px" height="30px"/>';
+$row[symbol9]= '<img src="images/Heart.png"  width="15px" height="15px"/>';
 
 ; }
 //
@@ -3351,61 +3351,61 @@ $row[symbol9]= '<img src="images/Heart.png"  width="30px" height="30px"/>';
 
 if ($row[symbol10] == "Star"){
 
-$row[symbol10]= '<img src="images/star.jpeg"  width="30px" height="30px"/>';
+$row[symbol10]= '<img src="images/star.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol10] == "X"){
 
-$row[symbol10]= '<img src="images/x.jpeg"  width="30px" height="30px"/>';
+$row[symbol10]= '<img src="images/x.jpeg" width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol10] == "CheckMark"){
 
-$row[symbol10]= '<img src="images/checkmark.jpeg"  width="30px" height="20px"/>';
+$row[symbol10]= '<img src="images/checkmark.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol10] == "Exclamationpoint"){
 
-$row[symbol10]= '<img src="images/exclamation1.png"  width="30px" height="30px"/>';
+$row[symbol10]= '<img src="images/exclamation1.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol10] == "Circle"){
 
-$row[symbol10]= '<img src="images/circle.png"  width="30px" height="30px"/>';
+$row[symbol10]= '<img src="images/circle.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol10] == "Kite"){
 
-$row[symbol10]= '<img src="images/Kite.png"  width="30px" height="30px"/>';
+$row[symbol10]= '<img src="images/Kite.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol10] == "Square"){
 
-$row[symbol10]= '<img src="images/Square.jpeg"  width="20px" height="20px"/>';
+$row[symbol10]= '<img src="images/Square.jpeg"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol10] == "Rectangle"){
 
-$row[symbol10]= '<img src="images/Rectangle.png"  width="40px" height="20px"/>';
+$row[symbol10]= '<img src="images/Rectangle.png"  width="30px" height="15px"/>';
 
 ; }
 
 if ($row[symbol10] == "Trefoil"){
 
-$row[symbol10]= '<img src="images/Trefoil.png"  width="30px" height="30px"/>';
+$row[symbol10]= '<img src="images/Trefoil.png"  width="15px" height="15px"/>';
 
 ; }
 
 if ($row[symbol10] == "Heart"){
 
-$row[symbol10]= '<img src="images/Heart.png"  width="30px" height="30px"/>';
+$row[symbol10]= '<img src="images/Heart.png"  width="15px" height="15px"/>';
 
 ; }
 //
