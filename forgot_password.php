@@ -2,7 +2,6 @@
 
 //error_reporting(0);
 
-
 include ('session-connection.php');
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -12,11 +11,11 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 					$selectquery = mysqli_query($conn,"select * from profinfo where email='{$email}'") or die(mysqli_error($conn));
 					$count = mysqli_num_rows($selectquery);
 					$row = mysqli_fetch_array($selectquery);
+					//echo $count;exit;
 					
 					if($count>0)
 					{	
 //----------------------------------------
-
 
 
 
@@ -84,3 +83,4 @@ header("location:email_sent.php");
 		</form>
 	</body>
 	</html>
+	
