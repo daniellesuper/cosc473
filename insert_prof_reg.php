@@ -36,21 +36,13 @@ $password2=htmlentities($_REQUEST['password2'],ENT_QUOTES);
 $phone_no=htmlentities($_REQUEST['phone_no'],ENT_QUOTES);
 $address=htmlentities($_REQUEST['address'],ENT_QUOTES);
 
-
-
 	if (!empty($user_pw)){
 		if ($user_pw==$password2) {
 
  $strQuery="insert into profinfo
-                      (
-                       title, fullname, username, password, officephone, email, officeaddress, insertdate
-                      )
-                     values
-                     (
-                      '$title', '$full_name', '$user_name', '$user_pw', '$phone_no', '$email', '$address', now()
-                     )
-                    ";
-					
+          (title, fullname, username, password, officephone, email, officeaddress, insertdate)
+          values
+          ('$title', '$full_name', '$user_name', '$user_pw', '$phone_no', '$email', '$address', now())";
 					 //echo "$strQuery";exit;
 		 $conn->query($strQuery);
 		 $last_id = $conn->insert_id;

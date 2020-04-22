@@ -3156,7 +3156,6 @@ $conn->close();
     function myFunction(){
        alert('Weekly Schedule has been updated!');
     }
-
 </script>
 
 <?php //echo $conn->query($strQuery);?>
