@@ -198,8 +198,8 @@ if($result1->num_rows > 0) {
            if($row["meetingDays"] == "TTR"){
            ?>
             Week of &nbsp; <input type="text" name="week1_of" value ="<?php echo $bar[week1_of]; ?>"> &nbsp; <br>
-            Description &nbsp; <input type="text" length="255" name="week1_desc" value="<?php echo $bar[week1_desc]; ?>" > 
-           <select name="symbol1_week1" value="<?php echo $bar[symbol1_week1]; ?>">
+            Description &nbsp; <input type="text" length="255" name="week1_desc" value="<?php echo $bar[week1_desc]; ?>" >
+          <select name="symbol1_week1" value="<?php echo $bar[symbol1_week1]; ?>">
                <?php
                   display_options();
                ?>
